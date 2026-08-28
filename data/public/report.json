@@ -1,0 +1,116 @@
+{
+  "executive_summary": {
+    "key_findings": [
+      "HBV功能性治愈领域研究进展显著（证据强度：中）",
+      "中国HBV功能性治愈证据仍显不足（证据强度：中）",
+      "HBV功能性治愈临床实践模式正在转变（证据强度：中）",
+      "HBV现有治疗优化领域研究进展显著（证据强度：中）",
+      "中国HBV现有治疗优化证据仍显不足（证据强度：中）"
+    ],
+    "key_gaps": [
+      "中国本土研究证据不足，多数数据来自国际研究",
+      "HBV筛查覆盖率低，诊断缺口巨大",
+      "功能性治愈可及性有限，仅少数患者有机会",
+      "HCC监测率不高，早期诊断率有待提升",
+      "基层医疗机构能力不足，地区差异显著"
+    ],
+    "priority_actions": [
+      "建立全国HBV筛查与早诊体系（优先级：高）",
+      "推广HBV规范化治疗路径（优先级：高）",
+      "构建HBV功能性治愈临床研究网络（优先级：高）",
+      "建立HCC风险分层监测体系（优先级：高）"
+    ],
+    "alliance_value": "联盟作为国家级-省级-市级三级协作网络，可在推动规范化诊疗、开展多中心研究、建设真实世界数据库、培养基层能力等方面发挥核心作用，加速实现2030消除乙肝目标。"
+  },
+  "goal_2030": {
+    "who_targets": {
+      "prevention": "乙肝疫苗接种覆盖率≥90%，母婴传播率≤2%",
+      "diagnosis": "90%的HBV感染者得到诊断",
+      "treatment": "80%符合指征的患者接受治疗",
+      "mortality_reduction": "病毒性肝炎死亡率降低65%"
+    },
+    "china_gaps": {
+      "diagnosis_rate": "当前约20-30%，距90%目标差距巨大",
+      "treatment_rate": "当前约30%，距80%目标仍有差距",
+      "functional_cure_rate": "当前<5%，可及性极低"
+    },
+    "policy_context": "中国已将病毒性肝炎防控纳入健康中国行动，国家卫健委发布《消除丙型肝炎公共卫生危害行动工作方案》，乙肝防控也在持续推进。"
+  },
+  "topics": {
+    "T1": {
+      "title": "2030行动与政策环境",
+      "summary": "本专题纳入1篇文献，涵盖指南、共识、卫生政策、筛查策略、消除目标，为临床实践提供新证据。",
+      "key_data": {
+        "total_studies": 1,
+        "high_evidence": 1,
+        "china_relevant": 0
+      }
+    },
+    "T2": {
+      "title": "HBV筛查与早诊",
+      "summary": "暂无相关研究数据",
+      "key_data": {
+        "total_studies": 0,
+        "high_evidence": 0,
+        "china_relevant": 0
+      }
+    },
+    "T3": {
+      "title": "HBV现有治疗优化",
+      "summary": "本专题纳入9篇文献，涵盖NA治疗、干扰素治疗、联合治疗、治疗监测，为临床实践提供新证据。",
+      "key_data": {
+        "total_studies": 9,
+        "high_evidence": 0,
+        "china_relevant": 5
+      }
+    },
+    "T4": {
+      "title": "HBV功能性治愈",
+      "summary": "本专题纳入32篇文献，涵盖新型治愈药物、免疫治疗、基因治疗、HBsAg清除，为临床实践提供新证据。",
+      "key_data": {
+        "total_studies": 32,
+        "high_evidence": 3,
+        "china_relevant": 27
+      }
+    },
+    "T5": {
+      "title": "HBV→HCC进展与防控",
+      "summary": "本专题纳入4篇文献，涵盖致癌机制、HCC风险预测、化学预防，为临床实践提供新证据。",
+      "key_data": {
+        "total_studies": 4,
+        "high_evidence": 0,
+        "china_relevant": 2
+      }
+    },
+    "T6": {
+      "title": "HCC全病程管理",
+      "summary": "本专题纳入3篇文献，涵盖HCC筛查、诊断、治疗、随访全流程，为临床实践提供新证据。",
+      "key_data": {
+        "total_studies": 3,
+        "high_evidence": 1,
+        "china_relevant": 1
+      }
+    },
+    "T7": {
+      "title": "患者管理与真实世界研究",
+      "summary": "暂无相关研究数据",
+      "key_data": {
+        "total_studies": 0,
+        "high_evidence": 0,
+        "china_relevant": 0
+      }
+    }
+  },
+  "controversies": [
+    "HBsAg清除后是否可以停止HCC监测仍存在争议，需个体化风险分层",
+    "长期NA治疗后能否降级HCC监测频率证据不足",
+    "功能性治愈的适应症和停药标准尚未统一"
+  ],
+  "evidence_gaps": [
+    "中国人群HBV自然史和治疗应答数据缺乏",
+    "功能性治愈长期安全性和持久性数据不足",
+    "HBV相关HCC风险预测模型在中国人群中的验证数据少",
+    "基层HBV诊疗能力和筛查模式的真实世界研究缺乏",
+    "儿童和特殊人群HBV管理证据不足"
+  ]
+}

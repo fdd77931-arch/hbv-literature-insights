@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>2030肝病联盟战略洞察平台</title>
+<link rel="stylesheet" href="assets/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<script src="assets/data.js"></script>
+<script src="assets/data-adapter.js"></script>
+</head>
+<body>
+
+<!-- ========== 顶部导航 ========== -->
+<nav class="top-nav" id="topNav">
+  <div class="nav-container">
+    <div class="nav-brand" onclick="navigate('overview')">
+      <div class="brand-logo">
+        <svg viewBox="0 0 40 40" width="32" height="32">
+          <circle cx="20" cy="20" r="18" fill="none" stroke="#00A896" stroke-width="2"/>
+          <path d="M20 6 L20 34 M6 20 L34 20" stroke="#005691" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="20" cy="20" r="6" fill="#005691"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <div class="brand-title">2030肝病联盟</div>
+        <div class="brand-subtitle">战略洞察平台</div>
+      </div>
+    </div>
+    <ul class="nav-menu" id="navMenu">
+      <li class="nav-item active" data-page="overview" onclick="navigate('overview')">战略总览</li>
+      <li class="nav-item" data-page="goals2030" onclick="navigate('goals2030')">2030目标</li>
+      <li class="nav-item has-sub">
+        <span class="nav-link">筛诊治管康</span>
+        <ul class="submenu">
+          <li onclick="navigate('screening')">筛查</li>
+          <li onclick="navigate('diagnosis')">诊断</li>
+          <li onclick="navigate('treatment')">治疗</li>
+          <li onclick="navigate('management')">管理/康复</li>
+          <li onclick="navigate('hbvhcc')">HBV→HCC</li>
+        </ul>
+      </li>
+      <li class="nav-item" data-page="alliance" onclick="navigate('alliance')">全国联盟</li>
+      <li class="nav-item" data-page="roadmap" onclick="navigate('roadmap')">行动路线图</li>
+      <li class="nav-item" data-page="evidence" onclick="navigate('evidence')">证据库</li>
+    </ul>
+    <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="toggleMobileMenu()">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li onclick="navigate('overview'); toggleMobileMenu()">战略总览</li>
+      <li onclick="navigate('goals2030'); toggleMobileMenu()">2030目标</li>
+      <li class="mobile-sub-title">筛诊治管康</li>
+      <li class="mobile-sub-item" onclick="navigate('screening'); toggleMobileMenu()">筛查</li>
+      <li class="mobile-sub-item" onclick="navigate('diagnosis'); toggleMobileMenu()">诊断</li>
+      <li class="mobile-sub-item" onclick="navigate('treatment'); toggleMobileMenu()">治疗</li>
+      <li class="mobile-sub-item" onclick="navigate('management'); toggleMobileMenu()">管理/康复</li>
+      <li class="mobile-sub-item" onclick="navigate('hbvhcc'); toggleMobileMenu()">HBV→HCC</li>
+      <li onclick="navigate('alliance'); toggleMobileMenu()">全国联盟</li>
+      <li onclick="navigate('roadmap'); toggleMobileMenu()">行动路线图</li>
+      <li onclick="navigate('evidence'); toggleMobileMenu()">证据库</li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ========== 主内容区 ========== -->
+<main id="mainContent">
+
+<!-- ============================================================ -->
+<!-- 页面：战略总览（首页） -->
+<!-- ============================================================ -->
+<section class="page active" id="page-overview">
+
+  <!-- Hero区 -->
+  <header class="hero-section">
+    <div class="hero-bg-pattern"></div>
+    <div class="container">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>WHO 2030 消除肝炎目标 · 中国行动</span>
+      </div>
+      <h1 class="hero-title">面向2030行动的慢乙肝—HBV相关HCC<br>全国肝病联盟战略洞察</h1>
+      <p class="hero-subtitle">基于近千篇循证医学证据的国家级战略行动平台</p>
+      <div class="hero-meta-row">
+        <div class="hero-meta-item">
+          <span class="meta-label">数据更新</span>
+          <span class="meta-value" id="updateDate">2026年8月</span>
+        </div>
+        <div class="hero-meta-divider"></div>
+        <div class="hero-meta-item">
+          <span class="meta-label">文献总数</span>
+          <span class="meta-value" id="totalLiterature">986</span>
+          <span class="meta-unit">篇</span>
+        </div>
+        <div class="hero-meta-divider"></div>
+        <div class="hero-meta-item">
+          <span class="meta-label">中国证据</span>
+          <span class="meta-value highlight-teal" id="chinaEvidence">342</span>
+          <span class="meta-unit">篇</span>
+        </div>
+        <div class="hero-meta-divider"></div>
+        <div class="hero-meta-item">
+          <span class="meta-label">A/B级证据</span>
+          <span class="meta-value highlight-orange" id="abEvidence">417</span>
+          <span class="meta-unit">篇</span>
+        </div>
+      </div>
+      <div class="hero-tag-row">
+        <span class="hero-tag">筛查普及</span>
+        <span class="hero-tag">诊断规范</span>
+        <span class="hero-tag">治疗可及</span>
+        <span class="hero-tag">全程管理</span>
+        <span class="hero-tag">功能性治愈</span>
+        <span class="hero-tag">HCC早诊</span>
+        <span class="hero-tag">全国联盟</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- 核心数字卡片 -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">DATA SNAPSHOT</span>
+        <h2 class="section-title">核心数据概览</h2>
+      </div>
+      <div class="stat-grid-6" id="statGrid6">
+        <!-- 由JS填充 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 执行摘要 -->
+  <section class="section-pad bg-light-gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">EXECUTIVE SUMMARY</span>
+        <h2 class="section-title">执行摘要</h2>
+      </div>
+      <div class="exec-summary-grid">
+        <div class="exec-card gap-card">
+          <div class="exec-card-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 9v4m0 4h.01M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/>
+            </svg>
+          </div>
+          <div class="exec-card-label">最重要的差距</div>
+          <div class="exec-card-title">筛查覆盖率不足19%，治疗缺口超7000万人</div>
+          <p class="exec-card-desc">中国慢性HBV感染者约8600万，已知晓率不足19%，仅10.8%接受抗病毒治疗。从筛查到治疗的两级漏斗损失巨大，是实现2030目标的最大障碍。基层检测能力不足、疾病认知率低、治疗可及性不均衡为三大核心瓶颈。</p>
+        </div>
+        <div class="exec-card action-card">
+          <div class="exec-card-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+            </svg>
+          </div>
+          <div class="exec-card-label">最优先行动</div>
+          <div class="exec-card-title">建立全国肝病联盟，推动"筛查-诊断-治疗-管理"全链条闭环</div>
+          <p class="exec-card-desc">以国家级中心为引领、省级中心为枢纽、地市级医院为骨干、县级医院为网底、基层机构为前哨，构建六级联动的肝病防治联盟体系。统一标准、统一路径、统一质控，实现患者全程规范化管理。</p>
+        </div>
+        <div class="exec-card value-card">
+          <div class="exec-card-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+            </svg>
+          </div>
+          <div class="exec-card-label">联盟核心价值</div>
+          <div class="exec-card-title">标准化·同质化·可及化·数据化</div>
+          <p class="exec-card-desc">通过统一的诊疗路径、质控指标和数据平台，消除区域间医疗质量差异；通过分级转诊和远程会诊，让基层患者获得同等优质的诊疗服务；通过真实世界数据积累，持续优化策略并支撑政策决策。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 十大核心战略洞察 -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">STRATEGIC INSIGHTS</span>
+        <h2 class="section-title">十大核心战略洞察</h2>
+        <p class="section-desc">基于循证医学证据提炼的关键战略发现，指导2030行动路径</p>
+      </div>
+      <div class="insight-scroll-container">
+        <div class="insight-scroll" id="insightScroll">
+          <!-- 由JS填充 -->
+        </div>
+      </div>
+      <div class="insight-scroll-hint">
+        <span>← 左右滑动查看更多 →</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 慢乙肝患者管理漏斗 -->
+  <section class="section-pad bg-light-gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">PATIENT FUNNEL</span>
+        <h2 class="section-title">慢乙肝患者管理漏斗</h2>
+        <p class="section-desc">从筛查到HCC长期监测的八个关键阶段，识别脱落风险与干预节点</p>
+      </div>
+      <div class="funnel-chart-wrapper">
+        <div id="funnelChart" class="chart-large"></div>
+      </div>
+      <div class="funnel-stages-grid" id="funnelStagesGrid">
+        <!-- 由JS填充 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 筛诊治管康专题导航 -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">THEMATIC AREAS</span>
+        <h2 class="section-title">筛诊治管康专题</h2>
+        <p class="section-desc">五大专题领域，全面覆盖肝病防治全链条</p>
+      </div>
+      <div class="theme-grid" id="themeGrid">
+        <!-- 由JS填充 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 全国肝病联盟框架 -->
+  <section class="section-pad bg-light-gray">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">ALLIANCE FRAMEWORK</span>
+        <h2 class="section-title">全国肝病联盟六层架构</h2>
+        <p class="section-desc">国家级引领、省级统筹、地市骨干、县级网底、基层前哨、患者为中心</p>
+      </div>
+      <div class="alliance-architecture" id="allianceArch">
+        <!-- 由JS填充 -->
+      </div>
+    </div>
+  </section>
+
+  <!-- 2025-2030路线图预览 -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">ROADMAP 2025-2030</span>
+        <h2 class="section-title">五年行动路线图</h2>
+        <p class="section-desc">分阶段推进，从标准建设到全国覆盖</p>
+      </div>
+      <div class="roadmap-timeline" id="roadmapTimeline">
+        <!-- 由JS填充 -->
+      </div>
+      <div class="text-center mt-3">
+        <button class="btn-primary" onclick="navigate('roadmap')">查看完整路线图 →</button>
+      </div>
+    </div>
+  </section>
+
+</section>
+<!-- / 战略总览页 -->
+
+<!-- ============================================================ -->
+<!-- 页面：2030目标 -->
+<!-- ============================================================ -->
+<section class="page" id="page-goals2030">
+  <div class="page-header">
+    <div class="container">
+      <span class="page-breadcrumb">战略总览 / 2030目标</span>
+      <h1 class="page-title">WHO 2030 消除肝炎目标</h1>
+      <p class="page-subtitle">中国差距分析与行动路径</p>
+    </div>
+  </div>
+  <div class="container page-body">
+    <div class="goal-cards-row">
+      <div class="goal-card">
+        <div class="goal-num">90%</div>
+        <div class="goal-label">诊断率目标</div>
+        <div class="goal-current">当前：<strong>18.7%</strong></div>
+        <div class="goal-gap-bar"><div class="goal-gap-fill" style="width:18.7%"></div></div>
+        <div class="gap-tag">差距 <strong>71.3%</strong></div>
+      </div>
+      <div class="goal-card">
+        <div class="goal-num">80%</div>
+        <div class="goal-label">治疗率目标</div>
+        <div class="goal-current">当前：<strong>10.8%</strong></div>
+        <div class="goal-gap-bar"><div class="goal-gap-fill" style="width:10.8%"></div></div>
+        <div class="gap-tag warning">差距 <strong>69.2%</strong></div>
+      </div>
+      <div class="goal-card">
+        <div class="goal-num">65%</div>
+        <div class="goal-label">病死率下降目标</div>
+        <div class="goal-current">当前：<strong>下降缓慢</strong></div>
+        <div class="goal-gap-bar"><div class="goal-gap-fill partial" style="width:30%"></div></div>
+        <div class="gap-tag danger">差距显著</div>
+      </div>
+    </div>
+
+    <div class="two-col-layout">
+      <div class="col-main">
+        <div class="panel">
+          <div class="panel-header">
+            <h3>2030目标差距分析</h3>
+          </div>
+          <div class="panel-body">
+            <div id="gapChart" class="chart-medium"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-side">
+        <div class="panel">
+          <div class="panel-header">
+            <h3>关键挑战</h3>
+          </div>
+          <div class="panel-body">
+            <div class="challenge-list">
+              <div class="challenge-item">
+                <div class="challenge-icon red">1</div>
+                <div class="challenge-content">
+                  <div class="challenge-title">筛查覆盖率极低</div>
+                  <div class="challenge-desc">80%以上感染者不知晓自身感染状态</div>
+                </div>
+              </div>
+              <div class="challenge-item">
+                <div class="challenge-icon orange">2</div>
+                <div class="challenge-content">
+                  <div class="challenge-title">治疗可及性不均</div>
+                  <div class="challenge-desc">基层诊疗能力不足，区域差异显著</div>
+                </div>
+              </div>
+              <div class="challenge-item">
+                <div class="challenge-icon yellow">3</div>
+                <div class="challenge-content">
+                  <div class="challenge-title">全程管理缺失</div>
+                  <div class="challenge-desc">缺乏从筛查到随访的闭环管理体系</div>
+                </div>
+              </div>
+              <div class="challenge-item">
+                <div class="challenge-icon teal">4</div>
+                <div class="challenge-content">
+                  <div class="challenge-title">HCC早诊率低</div>
+                  <div class="challenge-desc">确诊时多为中晚期，5年生存率不足15%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- / 2030目标页 -->
+
+<!-- ============================================================ -->
+<!-- 专题页模板（筛/诊/治/管康/HBV→HCC 共用） -->
+<!-- ============================================================ -->
+<section class="page" id="page-screening">
+  <div class="page-header theme-screening">
+    <div class="container">
+      <span class="page-breadcrumb">战略总览 / 筛诊治管康 / 筛查</span>
+      <h1 class="page-title">筛查专题</h1>
+      <p class="page-subtitle">扩大HBV筛查覆盖面，提升疾病知晓率</p>
+    </div>
+  </div>
+  <div class="container page-body">
+    <div class="theme-overview-card">
+      <div class="overview-left">
+        <div class="overview-badge">SCREENING</div>
+        <h2>筛查是消除肝炎的第一道关口</h2>
+        <p>当前中国HBV筛查覆盖率不足19%，远低于WHO 2030目标要求的90%诊断率。扩大筛查、提高知晓率是实现消除目标的前提和基础。需要在重点人群、重点地区创新筛查模式，推动"应筛尽筛"。</p>
+        <div class="overview-stats">
+          <div class="ov-stat"><span class="ov-num">18.7%</span><span class="ov-label">当前知晓率</span></div>
+          <div class="ov-stat"><span class="ov-num">90%</span><span class="ov-label">2030目标</span></div>
+          <div class="ov-stat"><span class="ov-num">71.3%</span><span class="ov-label">提升空间</span></div>
+        </div>
+      </div>
+      <div class="overview-right">
+        <div id="screeningDistChart" class="chart-small"></div>
+      </div>
+    </div>
+
+    <div class="section-sub-header">
+      <h3>关键洞察</h3>
+      <span class="header-line"></span>
+    </div>
+    <div class="insight-list" id="screeningInsights">
+      <!-- 由JS填充 -->
+    </div>
+
+    <div class="two-col-layout">
+      <div class="col-main">
+        <div class="panel">
+          <div class="panel-header"><h3>证据分布</h3></div>
+          <div class="panel-body">
+            <div id="screeningEvidenceChart" class="chart-medium"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-side">
+        <div class="panel">
+          <div class="panel-header"><h3>中国证据亮点</h3></div>
+          <div class="panel-body">
+            <ul class="highlight-list">
+              <li><strong>社区筛查模式</strong>：中国社区HBV筛查成本效果比最优</li>
+              <li><strong>母婴阻断</strong>：中国母婴阻断成功率达99%以上</li>
+              <li><strong>体检中心</strong>：体检机会性筛查发现率约1.5-2%</li>
+              <li><strong>POCT检测</strong>：基层快速检测技术逐步成熟</li>
+            </ul>
+          </div>
+        </div>
+        <div class="panel mt-3">
+          <div class="panel-header"><h3>行动建议</h3></div>
+          <div class="panel-body">
+            <ol class="action-list">
+              <li>将HBV筛查纳入基本公共卫生服务项目</li>
+              <li>推广"检测即治疗"（Test & Treat）模式</li>
+              <li>利用体检中心、牙科门诊等机会性筛查</li>
+              <li>加强基层快速检测试剂的配备和使用</li>
+              <li>建立筛查-确诊-治疗的无缝衔接机制</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="page" id="page-diagnosis">
+  <div class="page-header theme-diagnosis">
+    <div class="container">
+      <span class="page-breadcrumb">战略总览 / 筛诊治管康 / 诊断</span>
+      <h1 class="page-title">诊断专题</h1>
+      <p class="page-subtitle">规范诊断评估，精准分型分期</p>
+    </div>
+  </div>
+  <div class="container page-body">
+    <div class="theme-overview-card">
+      <div class="overview-left">
+        <div class="overview-badge diagnosis">DIAGNOSIS</div>
+        <h2>精准诊断是规范化治疗的前提</h2>
+        <p>慢性HBV感染的诊断需要综合病毒学、生化学、影像学等多维度评估。当前基层诊断能力不足，诊断不规范现象普遍。需要统一诊断路径、推广无创肝纤维化评估、提升基层检测能力。</p>
+        <div class="overview-stats">
+          <div class="ov-stat"><span class="ov-num">35%</span><span class="ov-label">基层规范诊断率</span></div>
+          <div class="ov-stat"><span class="ov-num">80%+</span><span class="ov-label">目标规范率</span></div>
+          <div class="ov-stat"><span class="ov-num">2倍</span><span class="ov-label">提升空间</span></div>
+        </div>
+      </div>
+      <div class="overview-right">
+        <div id="diagnosisDistChart" class="chart-small"></div>
+      </div>
+    </div>
+    <div class="section-sub-header"><h3>关键洞察</h3><span class="header-line"></span></div>
+    <div class="insight-list" id="diagnosisInsights"></div>
+  </div>
+</section>
+
+<section class="page" id="page-treatment">
+  <div class="page-header theme-treatment">
+    <div class="container">
+      <span class="page-breadcrumb">战略总览 / 筛诊治管康 / 治疗</span>
+      <h1 class="page-title">治疗专题</h1>
+      <p class="page-subtitle">扩大治疗可及，追求功能性治愈</p>
+    </div>
+  </div>
+  <div class="container page-body">
+    <div class="theme-overview-card">
+      <div class="overview-left">
+        <div class="overview-badge treatment">TREATMENT</div>
+        <h2>从抗病毒治疗到功能性治愈</h2>
+        <p>核苷（酸）类似物已广泛应用，但治疗覆盖率仅10.8%。聚乙二醇干扰素可实现功能性治愈，尤其在优势人群中HBsAg清除率可达20-50%。新药研发快速推进，多种作用机制药物进入临床阶段。</p>
+        <div class="overview-stats">
+          <div class="ov-stat"><span class="ov-num">10.8%</span><span class="ov-label">当前治疗率</span></div>
+          <div class="ov-stat"><span class="ov-num">80%</span><span class="ov-label">2030目标</span></div>
+          <div class="ov-stat"><span class="ov-num">3-5%</span><span class="ov-label">PegIFN年治愈率</span></div>
+        </div>
+      </div>
+      <div class="overview-right">
+        <div id="treatmentDistChart" class="chart-small"></div>
+      </div>
+    </div>
+    <div class="section-sub-header"><h3>关键洞察</h3><span class="header-line"></span></div>
+    <div class="insight-list" id="treatmentInsights"></div>
+  </div>
+</section>
+
+<section class="page" id="page-management">
+  <div class="page-header theme-management">
+    <div class="container">
+      <span class="page-breadcrumb">战略总览 / 筛诊治管康 / 管理康复</span>
+      <h1 class="page-title">管理/康复专题</h1>
+      <p class="page-subtitle">全程规范化管理，改善长期预后</p>
+    </div>
+  </div>
+  <div class="container page-body">
+    <div class="theme-overview-card">
+      <div class="overview-left">
+        <div class="overview-badge management">MANAGEMENT & CARE</div>
+        <h2>全程管理是提升疗效的关键</h2>
+        <p>慢乙肝是慢性疾病，需要长期管理。治疗依从性、定期监测、生活方式干预对预后有重要影响。建立全病程管理体系，实现从医院到社区到家庭的连续管理。</p>
+        <div class="overview-stats">
+          <div class="ov-stat"><span class="ov-num">40%</span><span class="ov-label">1年依从率</span></div>
+          <div class="ov-stat"><span class="ov-num">90%+</span><span class="ov-label">目标依从率</span></div>
+          <div class="ov-stat"><span class="ov-num">50%+</span><span class="ov-label">提升空间</span></div>
+        </div>
+      </div>
+      <div class="overview-right">
+        <div id="managementDistChart" class="chart-small"></div>
+      </div>
+    </div>
+    <div class="section-sub-header"><h3>关键洞察</h3><span class="header-line"></span></div>
+    <div class="insight-list" id="managementInsights"></div>
+  </div>
+</section>
+
+<section class="page" id="page-hbvhcc">
+  <div class="page-header theme-hbvhcc">
+    <div class="container">
+      <span class="page-breadcrumb">战略总览 / 筛诊治管康 / HBV→HCC</span>
+      <h1 class="page-title">HBV相关HCC专题</h1>
+      <p class="page-subtitle">肝癌早诊早治，降低病死率</p>
+    </div>
+  </div>
+  <div class="container page-body">
+    <div class="theme-overview-card">
+      <div class="overview-left">
+        <div class="overview-badge hbvhcc">HBV → HCC</div>
+        <h2>HBV相关HCC是中国肝癌防控的核心</h2>
+        <p>中国HCC病例中约80%与HBV感染相关。HCC早期诊断率低，5年生存率不足15%。加强高危人群筛查监测、提升早期诊断率、规范多学科诊疗是降低病死率的关键。</p>
+        <div class="overview-stats">
+          <div class="ov-stat"><span class="ov-num">15%</span><span class="ov-label">5年生存率</span></div>
+          <div class="ov-stat"><span class="ov-num">40%</span><span class="ov-label">早诊目标</span></div>
+          <div class="ov-stat"><span class="ov-num">80%</span><span class="ov-label">HBV相关占比</span></div>
+        </div>
+      </div>
+      <div class="overview-right">
+        <div id="hbvhccDistChart" class="chart-small"></div>
+      </div>
+    </div>
+    <div class="section-sub-header"><h3>关键洞察</h3><span class="header-line"></span></div>
+    <div class="insight-list" id="hbvhccInsights"></div>
+  </div>
+</section>
+<!-- / 专题页 -->
+
+<!-- ============================================================ -->
+<!-- 页面：全国联盟 -->
+<!-- ============================================================ -->
+<section class="page" id="page-alliance">
+  <div class="page-header">
+    <div class="container">
+      <span class="page-breadcrumb">战略总览 / 全国联盟</span>
+      <h1 class="page-title">全国肝病联盟</h1>
+      <p class="page-subtitle">六级联动的全国肝病防治体系</p>
+    </div>
+  </div>
+  <div class="container page-body">
+    <div class="alliance-intro">
+      <p>全国肝病联盟是落实WHO 2030消除肝炎目标的国家级行动平台。联盟以"统一标准、分级诊疗、全程管理、数据驱动"为核心理念，构建从国家级中心到患者管理平台的六级联动体系，实现肝病防治的标准化、同质化和可及化。</p>
+    </div>
+
+    <div class="section-sub-header"><h3>联盟架构</h3><span class="header-line"></span></div>
+    <div class="alliance-arch-large" id="allianceArchLarge">
+      <!-- 由JS填充 -->
+    </div>
+
+    <div class="two-col-layout">
+      <div class="col-main">
+        <div class="panel">
+          <div class="panel-header"><h3>统一标准体系</h3></div>
+          <div class="panel-body">
+            <div class="standards-grid">
+              <div class="standard-item">
+                <div class="std-icon">📋</div>
+                <div class="std-title">诊疗路径标准</div>
+                <div class="std-desc">统一筛查、诊断、治疗、随访的规范化路径</div>
+              </div>
+              <div class="standard-item">
+                <div class="std-icon">🔬</div>
+                <div class="std-title">检测方法标准</div>
+                <div class="std-desc">统一实验室检测方法、试剂、质控标准</div>
+              </div>
+              <div class="standard-item">
+                <div class="std-icon">📊</div>
+                <div class="std-title">数据指标标准</div>
+                <div class="std-desc">统一数据采集、上报、分析的指标体系</div>
+              </div>
+              <div class="standard-item">
+                <div class="std-icon">🎯</div>
+                <div class="std-title">质量评价标准</div>
+                <div class="std-desc">统一各级机构服务质量评价指标和方法</div>
+              </div>
+              <div class="standard-item">
+                <div class="std-icon">🏥</div>
+                <div class="std-title">转诊对接标准</div>
+                <div class="std-desc">统一上下级机构间转诊指征、流程和对接机制</div>
+              </div>
+              <div class="standard-item">
+                <div class="std-icon">👨‍⚕️</div>
+                <div class="std-title">人员培训标准</div>
+                <div class="std-desc">统一各级医务人员培训内容、考核和认证标准</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-side">
+        <div class="panel">
+          <div class="panel-header"><h3>质量评价指标</h3></div>
+          <div class="panel-body">
+            <div id="kpiHeatmap" class="chart-medium"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-sub-header"><h3>区域模式复制</h3><span class="header-line"></span></div>
+    <div class="region-grid">
+      <div class="region-card">
+        <div class="region-tag">试点</div>
+        <h4>浙江模式</h4>
+        <p>以省域医共体为载体，构建"省-市-县-乡"四级肝病防治网络，筛查覆盖率提升至62%。</p>
+        <div class="region-metrics"><span>筛查率 62%</span><span>治疗率 38%</span></div>
+      </div>
+      <div class="region-card">
+        <div class="region-tag">试点</div>
+        <h4>广东模式</h4>
+        <p>利用体检大数据，推动机会性筛查与主动随访，建立肝癌高危人群登记管理制度。</p>
+        <div class="region-metrics"><span>筛查率 55%</span><span>早诊率 35%</span></div>
+      </div>
+      <div class="region-card">
+        <div class="region-tag">试点</div>
+        <h4>河南模式</h4>
+        <p>以村医为核心的基层管理模式，实现慢乙肝患者的社区化管理与定期随访。</p>
+        <div class="region-metrics"><span>管理率 72%</span><span>依从率 68%</span></div>
+      </div>
+      <div class="region-card">
+        <div class="region-tag plan">规划</div>
+        <h4>四川模式</h4>
+        <p>面向西部农村地区的移动筛查+远程诊断模式，解决地广人稀的医疗可及性问题。</p>
+        <div class="region-metrics"><span>规划中</span><span>2027启动</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- / 全国联盟页 -->
+
+<!-- ============================================================ -->
+<!-- 页面：行动路线图 -->
+<!-- ============================================================ -->
+<section class="page" id="page-roadmap">
+  <div class="page-header">
+    <div class="container">
+      <span class="page-breadcrumb">战略总览 / 行动路线图</span>
+      <h1 class="page-title">2025—2030 行动路线图</h1>
+      <p class="page-subtitle">五年三步走，从标准建设到全国覆盖</p>
+    </div>
+  </div>
+  <div class="container page-body">
+    <div class="roadmap-full" id="roadmapFull">
+      <!-- 由JS填充 -->
+    </div>
+
+    <div class="section-sub-header"><h3>KPI追踪指标</h3><span class="header-line"></span></div>
+    <div class="kpi-track-table">
+      <table>
+        <thead>
+          <tr>
+            <th>指标</th>
+            <th>基线(2024)</th>
+            <th>2025目标</th>
+            <th>2027目标</th>
+            <th>2030目标</th>
+            <th>数据来源</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>人群筛查覆盖率</td>
+            <td>18.7%</td>
+            <td>25%</td>
+            <td>50%</td>
+            <td>90%</td>
+            <td>疾控监测</td>
+          </tr>
+          <tr>
+            <td>诊断率</td>
+            <td>18.7%</td>
+            <td>25%</td>
+            <td>50%</td>
+            <td>90%</td>
+            <td>疾控监测</td>
+          </tr>
+          <tr>
+            <td>治疗覆盖率</td>
+            <td>10.8%</td>
+            <td>15%</td>
+            <td>40%</td>
+            <td>80%</td>
+            <td>医保数据</td>
+          </tr>
+          <tr>
+            <td>病毒抑制率</td>
+            <td>70%</td>
+            <td>80%</td>
+            <td>85%</td>
+            <td>90%</td>
+            <td>联盟质控</td>
+          </tr>
+          <tr>
+            <td>HCC早诊率</td>
+            <td>15%</td>
+            <td>20%</td>
+            <td>30%</td>
+            <td>40%</td>
+            <td>肿瘤登记</td>
+          </tr>
+          <tr>
+            <td>HBV相关病死率</td>
+            <td>基线</td>
+            <td>下降10%</td>
+            <td>下降30%</td>
+            <td>下降65%</td>
+            <td>死因监测</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<!-- / 行动路线图页 -->
+
+<!-- ============================================================ -->
+<!-- 页面：证据库 -->
+<!-- ============================================================ -->
+<section class="page" id="page-evidence">
+  <div class="page-header">
+    <div class="container">
+      <span class="page-breadcrumb">战略总览 / 证据库</span>
+      <h1 class="page-title">证据库</h1>
+      <p class="page-subtitle">近千篇循证医学证据，多维度检索筛选</p>
+    </div>
+  </div>
+  <div class="container page-body">
+    <!-- 搜索框 -->
+    <div class="search-bar">
+      <div class="search-input-wrap">
+        <svg class="search-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+        </svg>
+        <input type="text" id="evidenceSearch" placeholder="搜索文献标题、作者、关键词..." oninput="filterEvidence()">
+      </div>
+      <button class="btn-ghost" onclick="toggleFilterPanel()">高级筛选</button>
+    </div>
+
+    <!-- 筛选面板 -->
+    <div class="filter-panel" id="filterPanel">
+      <div class="filter-row">
+        <div class="filter-group">
+          <label>专题领域</label>
+          <div class="filter-tags" id="filterTheme">
+            <span class="filter-tag active" data-value="all" onclick="setFilter('theme', 'all', this)">全部</span>
+            <span class="filter-tag" data-value="screening" onclick="setFilter('theme', 'screening', this)">筛查</span>
+            <span class="filter-tag" data-value="diagnosis" onclick="setFilter('theme', 'diagnosis', this)">诊断</span>
+            <span class="filter-tag" data-value="treatment" onclick="setFilter('theme', 'treatment', this)">治疗</span>
+            <span class="filter-tag" data-value="management" onclick="setFilter('theme', 'management', this)">管理/康复</span>
+            <span class="filter-tag" data-value="hbvhcc" onclick="setFilter('theme', 'hbvhcc', this)">HBV→HCC</span>
+          </div>
+        </div>
+      </div>
+      <div class="filter-row">
+        <div class="filter-group">
+          <label>证据等级</label>
+          <div class="filter-tags" id="filterLevel">
+            <span class="filter-tag active" data-value="all" onclick="setFilter('level', 'all', this)">全部</span>
+            <span class="filter-tag" data-value="A" onclick="setFilter('level', 'A', this)">A级</span>
+            <span class="filter-tag" data-value="B" onclick="setFilter('level', 'B', this)">B级</span>
+            <span class="filter-tag" data-value="C" onclick="setFilter('level', 'C', this)">C级</span>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label>研究类型</label>
+          <div class="filter-tags" id="filterRegion">
+            <span class="filter-tag active" data-value="all" onclick="setFilter('region', 'all', this)">全部</span>
+            <span class="filter-tag" data-value="china" onclick="setFilter('region', 'china', this)">中国研究</span>
+            <span class="filter-tag" data-value="intl" onclick="setFilter('region', 'intl', this)">国际研究</span>
+          </div>
+        </div>
+      </div>
+      <div class="filter-row">
+        <div class="filter-group">
+          <label>年份</label>
+          <div class="filter-tags" id="filterYear">
+            <span class="filter-tag active" data-value="all" onclick="setFilter('year', 'all', this)">全部</span>
+            <span class="filter-tag" data-value="2024-2026" onclick="setFilter('year', '2024-2026', this)">近3年</span>
+            <span class="filter-tag" data-value="2020-2023" onclick="setFilter('year', '2020-2023', this)">2020-2023</span>
+            <span class="filter-tag" data-value="before2020" onclick="setFilter('year', 'before2020', this)">2020以前</span>
+          </div>
+        </div>
+        <div class="filter-group">
+          <label>2030相关度</label>
+          <div class="filter-tags" id="filterGoal2030">
+            <span class="filter-tag active" data-value="all" onclick="setFilter('goal2030', 'all', this)">全部</span>
+            <span class="filter-tag" data-value="high" onclick="setFilter('goal2030', 'high', this)">高度相关</span>
+            <span class="filter-tag" data-value="mid" onclick="setFilter('goal2030', 'mid', this)">中度相关</span>
+            <span class="filter-tag" data-value="low" onclick="setFilter('goal2030', 'low', this)">一般相关</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 结果统计 -->
+    <div class="results-info">
+      <span>找到 <strong id="resultCount">0</strong> 条文献</span>
+      <div class="sort-by">
+        <label>排序：</label>
+        <select id="sortSelect" onchange="filterEvidence()">
+          <option value="date_desc">最新发表</option>
+          <option value="level_desc">证据等级</option>
+          <option value="relevance">相关度</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- 文献列表 -->
+    <div class="literature-grid" id="literatureGrid">
+      <!-- 由JS填充 -->
+    </div>
+
+    <!-- 空结果 -->
+    <div class="empty-state" id="emptyState" style="display:none;">
+      <div class="empty-icon">📭</div>
+      <h4>未找到匹配的文献</h4>
+      <p>请尝试调整筛选条件或搜索关键词</p>
+    </div>
+  </div>
+</section>
+<!-- / 证据库页 -->
+
+</main>
+
+<!-- ========== 页脚 ========== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <svg viewBox="0 0 40 40" width="28" height="28">
+              <circle cx="20" cy="20" r="18" fill="none" stroke="#00A896" stroke-width="2"/>
+              <path d="M20 6 L20 34 M6 20 L34 20" stroke="#005691" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="20" cy="20" r="6" fill="#005691"/>
+            </svg>
+          </div>
+          <span>2030肝病联盟战略洞察平台</span>
+        </div>
+        <p class="footer-desc">基于循证医学证据的国家级肝病防治战略决策支持平台</p>
+      </div>
+      <div class="footer-col">
+        <h5>专题领域</h5>
+        <ul>
+          <li><a href="#" onclick="navigate('screening');return false;">筛查</a></li>
+          <li><a href="#" onclick="navigate('diagnosis');return false;">诊断</a></li>
+          <li><a href="#" onclick="navigate('treatment');return false;">治疗</a></li>
+          <li><a href="#" onclick="navigate('management');return false;">管理/康复</a></li>
+          <li><a href="#" onclick="navigate('hbvhcc');return false;">HBV→HCC</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>平台功能</h5>
+        <ul>
+          <li><a href="#" onclick="navigate('overview');return false;">战略总览</a></li>
+          <li><a href="#" onclick="navigate('alliance');return false;">全国联盟</a></li>
+          <li><a href="#" onclick="navigate('roadmap');return false;">行动路线图</a></li>
+          <li><a href="#" onclick="navigate('evidence');return false;">证据库</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>数据信息</h5>
+        <ul>
+          <li>数据更新：2026年8月</li>
+          <li>文献总量：986篇</li>
+          <li>中国证据：342篇</li>
+          <li>A/B级证据：417篇</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 2030肝病联盟战略洞察平台 · 仅供医学专业人士参考</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== 文献详情弹窗 ========== -->
+<div class="modal-overlay" id="litModal" onclick="closeLitModal(event)">
+  <div class="modal-content" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeLitModal()">×</button>
+    <div id="litModalBody">
+      <!-- 由JS填充 -->
+    </div>
+  </div>
+</div>
+
+<!-- ========== 洞察详情弹窗 ========== -->
+<div class="modal-overlay" id="insightModal" onclick="closeInsightModal(event)">
+  <div class="modal-content wide" onclick="event.stopPropagation()">
+    <button class="modal-close" onclick="closeInsightModal()">×</button>
+    <div id="insightModalBody">
+      <!-- 由JS填充 -->
+    </div>
+  </div>
+</div>
+
+<!-- ========== 回到顶部 ========== -->
+<button class="back-to-top" id="backToTop" onclick="scrollToTop()" title="回到顶部">
+  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M18 15l-6-6-6 6"/>
+  </svg>
+</button>
+
+<script src="assets/app.js"></script>
+<script src="assets/charts.js"></script>
+
+</body>
+</html>

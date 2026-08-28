@@ -1,0 +1,234 @@
+{
+  "manifest_version": "v1",
+  "format": "ndjson",
+  "base_token": "PWl8b1XQ1atm6ts2WdkcBIOpnfc",
+  "table_id": "tblpOZ48vS3LToFo",
+  "rev": 179,
+  "timezone": "Asia/Shanghai",
+  "query_context": {
+    "field_scope": "selected_fields",
+    "record_scope": "all_records"
+  },
+  "requested_limit": 2000,
+  "records_count": 49,
+  "page_count": 1,
+  "has_more": false,
+  "record_file": "/Users/fanglu/Library/Application Support/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a8fbcf5c5ec3eef23c0a222/hbv_literature.ndjson",
+  "record_file_size_bytes": 217451,
+  "manifest_file": "/Users/fanglu/Library/Application Support/TRAE SOLO CN/ModularData/ai-agent/work-mode-projects/6a8fbcf5c5ec3eef23c0a222/hbv_literature.manifest.json",
+  "columns": {
+    "Abstract": {
+      "field_id": "fldJeFjbni",
+      "field_type": "text",
+      "physical_type": "string|null",
+      "stats": {
+        "null_count": 7,
+        "max_length": 3419
+      },
+      "example": "本研究发现HBV整合可导致肝细胞基因组不稳定，促进肿瘤发生。"
+    },
+    "Why it matters": {
+      "field_id": "fld5Jd75LB",
+      "field_type": "text",
+      "physical_type": "string|null",
+      "stats": {
+        "null_count": 0,
+        "max_length": 300
+      },
+      "example": "该方案可为临床HBV治疗提供新的选择"
+    },
+    "record_id": {
+      "physical_type": "string",
+      "stats": {
+        "max_length": 14
+      },
+      "example": "recvjAnzcLD8Yc"
+    },
+    "一级领域": {
+      "field_id": "fldLUPERku",
+      "field_type": "select",
+      "physical_type": "array<string>",
+      "stats": {
+        "empty_count": 0,
+        "max_length": 1,
+        "avg_length": 1
+      },
+      "example": [
+        "HBV→HCC"
+      ]
+    },
+    "中国市场相关性": {
+      "field_id": "flduJj81ti",
+      "field_type": "select",
+      "physical_type": "array<string>",
+      "stats": {
+        "empty_count": 7,
+        "max_length": 1,
+        "avg_length": 0.8571428571428571
+      },
+      "example": [
+        "低"
+      ]
+    },
+    "中国相关依据": {
+      "field_id": "fldiNW4agw",
+      "field_type": "text",
+      "physical_type": "string|null",
+      "stats": {
+        "null_count": 7,
+        "max_length": 119
+      },
+      "example": "该研究来自埃及，未涉及中国患者或中国机构，与中国临床实践的直接关联有限。"
+    },
+    "中文标题": {
+      "field_id": "fldGU5pmDH",
+      "field_type": "text",
+      "physical_type": "string|null",
+      "stats": {
+        "null_count": 0,
+        "max_length": 84
+      },
+      "example": "HBV抑制10年后能否降级HCC监测？"
+    },
+    "二级主题": {
+      "field_id": "fldipBYZLj",
+      "field_type": "select",
+      "physical_type": "array<string>",
+      "stats": {
+        "empty_count": 11,
+        "max_length": 6,
+        "avg_length": 2.5306122448979593
+      },
+      "example": [
+        "免疫调节"
+      ]
+    },
+    "关联争议点": {
+      "field_id": "flddSwwQNh",
+      "field_type": "select",
+      "physical_type": "array<string>",
+      "stats": {
+        "empty_count": 49,
+        "max_length": 0,
+        "avg_length": 0
+      },
+      "hint": "All values are empty; type inference may be ambiguous. Avoid analyzing this column unless required."
+    },
+    "发表日期": {
+      "field_id": "fldkMyimer",
+      "field_type": "datetime",
+      "physical_type": "string|null",
+      "stats": {
+        "null_count": 0,
+        "min": "2025-04-01T08:00:00.000+08:00",
+        "max": "2026-08-25T08:00:00.000+08:00"
+      },
+      "example": "2025-11-15T08:00:00.000+08:00"
+    },
+    "对我们的启示": {
+      "field_id": "fldGRHhMQ1",
+      "field_type": "text",
+      "physical_type": "string|null",
+      "stats": {
+        "null_count": 0,
+        "max_length": 368
+      },
+      "example": "可尝试在临床中推广该联合治疗方案"
+    },
+    "对我们的启示 副本": {
+      "field_id": "fldZZk0DO5",
+      "field_type": "text",
+      "physical_type": "string|null",
+      "stats": {
+        "null_count": 11,
+        "max_length": 368
+      },
+      "example": "可尝试在临床中推广该联合治疗方案"
+    },
+    "对我们的启示 副本 2": {
+      "field_id": "fldYs5xUkK",
+      "field_type": "text",
+      "physical_type": "string|null",
+      "stats": {
+        "null_count": 11,
+        "max_length": 368
+      },
+      "example": "可尝试在临床中推广该联合治疗方案"
+    },
+    "推荐等级": {
+      "field_id": "fldFcIMQzU",
+      "field_type": "select",
+      "physical_type": "array<string>",
+      "stats": {
+        "empty_count": 49,
+        "max_length": 0,
+        "avg_length": 0
+      },
+      "hint": "All values are empty; type inference may be ambiguous. Avoid analyzing this column unless required."
+    },
+    "文献标题": {
+      "field_id": "fldn2clcie",
+      "field_type": "text",
+      "physical_type": "string|null",
+      "stats": {
+        "null_count": 0,
+        "max_length": 282
+      },
+      "example": "HBV母婴传播阻断方案的效果评估"
+    },
+    "期刊": {
+      "field_id": "fldDiDJzzJ",
+      "field_type": "text",
+      "physical_type": "string|null",
+      "stats": {
+        "null_count": 0,
+        "max_length": 90
+      },
+      "example": "Gut"
+    },
+    "来源类型": {
+      "field_id": "fldfwYgryD",
+      "field_type": "select",
+      "physical_type": "array<string>",
+      "stats": {
+        "empty_count": 0,
+        "max_length": 1,
+        "avg_length": 1
+      },
+      "example": [
+        "国际研究"
+      ]
+    },
+    "核心发现": {
+      "field_id": "fldjqoPaug",
+      "field_type": "text",
+      "physical_type": "string|null",
+      "stats": {
+        "null_count": 0,
+        "max_length": 692
+      },
+      "example": "部分药物可实现HBsAg的持续清除"
+    },
+    "研究阶段": {
+      "field_id": "fldY1NFjVe",
+      "field_type": "select",
+      "physical_type": "array<string>",
+      "stats": {
+        "empty_count": 49,
+        "max_length": 0,
+        "avg_length": 0
+      },
+      "hint": "All values are empty; type inference may be ambiguous. Avoid analyzing this column unless required."
+    },
+    "第一作者": {
+      "field_id": "fld8txq2rT",
+      "field_type": "text",
+      "physical_type": "string|null",
+      "stats": {
+        "null_count": 0,
+        "max_length": 21
+      },
+      "example": "李明"
+    }
+  }
+}

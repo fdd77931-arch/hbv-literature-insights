@@ -1,0 +1,3383 @@
+/* ============================================================
+   2030肝病联盟战略洞察平台 - 数据包
+   由 scripts/build_data_js.py 自动生成
+   生成时间: 2026-08-28 18:15:53
+   ============================================================ */
+
+window.SITE_DATA = {
+  "literature": {
+    "version": "1.0",
+    "updated_at": "2026-08-28T18:07:20.257378+08:00",
+    "total": 51,
+    "records": [
+      {
+        "id": "recvjAnzcLD8Yc",
+        "title_cn": "核苷类似物联合干扰素治疗慢性HBV的疗效分析",
+        "title_en": "核苷类似物联合干扰素治疗慢性HBV的疗效分析",
+        "year": 2025,
+        "journal": "中华肝脏病杂志",
+        "first_author": "李明",
+        "publish_date": "2025-11-15",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T2",
+        "topic_primary_name": "HBV现有治疗",
+        "topic_secondary": [],
+        "tags": [
+          "HBV DNA",
+          "NA",
+          "干扰素",
+          "联合治疗",
+          "单药治疗"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "管理",
+          "治疗"
+        ],
+        "key_result": "联合治疗组的HBV DNA转阴率显著高于单药组",
+        "clinical_implication": "可尝试在临床中推广该联合治疗方案",
+        "china_implication": "研究在智利进行，未涉及中国人群或中国机构，但研究主题（儿童听力筛查）对中国公共卫生政策有一定参考价值，但直接相关性较低。",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recB3ol2hVGaS4",
+        "title_cn": "新型HBV功能性治愈药物的临床研究进展",
+        "title_en": "新型HBV功能性治愈药物的临床研究进展",
+        "year": 2026,
+        "journal": "Journal of Hepatology",
+        "first_author": "王华",
+        "publish_date": "2026-02-20",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "手术/移植/消融",
+          "患者管理与教育"
+        ],
+        "tags": [
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "肝移植",
+          "中国证据"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "管理",
+          "治疗"
+        ],
+        "key_result": "部分药物可实现HBsAg的持续清除",
+        "clinical_implication": "需重点关注该类药物的安全性和长期疗效",
+        "china_implication": "该研究为国际研究，未涉及中国机构或患者，但半肝切除术在中国肝癌治疗中广泛应用，术后营养管理是临床实践的重要部分，研究结果可能对中国临床实践有参考价值，但需谨慎外推。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "receNwY04nmz6m",
+        "title_cn": "HBV感染与肝细胞癌发生发展的分子机制研究",
+        "title_en": "HBV感染与肝细胞癌发生发展的分子机制研究",
+        "year": 2025,
+        "journal": "Cancer Cell",
+        "first_author": "张伟",
+        "publish_date": "2025-09-10",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T3",
+        "topic_primary_name": "HBV→HCC转化",
+        "topic_secondary": [
+          "生物标志物"
+        ],
+        "tags": [
+          "生物标志物",
+          "基因治疗",
+          "HCC风险",
+          "耐药"
+        ],
+        "patient_stage": [
+          "HCC患者"
+        ],
+        "journey_stage": [
+          "HCC",
+          "诊断",
+          "筛查"
+        ],
+        "key_result": "HBV整合位点与肝细胞癌的突变谱高度相关",
+        "clinical_implication": "可开发针对HBV整合位点的早期诊断方法",
+        "china_implication": "该研究来自国际团队，未涉及中国机构或患者，且主题为水污染监测，与乙肝直接关联性低。",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "rec7yItpBGZjVk",
+        "title_cn": "肝细胞癌全病程管理的临床实践指南更新",
+        "title_en": "肝细胞癌全病程管理的临床实践指南更新",
+        "year": 2026,
+        "journal": "中华肿瘤杂志",
+        "first_author": "刘芳",
+        "publish_date": "2026-01-12",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T4",
+        "topic_primary_name": "HCC全病程",
+        "topic_secondary": [],
+        "tags": [
+          "HCC风险"
+        ],
+        "patient_stage": [
+          "HCC患者"
+        ],
+        "journey_stage": [
+          "HCC",
+          "管理",
+          "诊断",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "推荐对高危人群每6个月进行一次HCC筛查",
+        "clinical_implication": "需在临床中严格遵循该指南进行HCC管理",
+        "china_implication": "该研究为国际动物实验，未涉及中国机构或患者，与中国临床实践的直接关联有限。",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recqKtS6wWDMnw",
+        "title_cn": "2025年HBV感染诊治指南的解读与应用",
+        "title_en": "2025年HBV感染诊治指南的解读与应用",
+        "year": 2025,
+        "journal": "临床肝胆病杂志",
+        "first_author": "赵刚",
+        "publish_date": "2025-10-20",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T5",
+        "topic_primary_name": "指南与共识",
+        "topic_secondary": [
+          "免疫调节"
+        ],
+        "tags": [
+          "免疫治疗"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "指南推荐扩大HBV筛查的覆盖人群",
+        "clinical_implication": "需及时更新科室的HBV诊治流程以符合指南要求",
+        "china_implication": "该研究来自国际研究，未涉及中国机构或患者，但干扰素生产技术与乙肝治疗相关，可作为技术参考。",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recHdKmOooG1oo",
+        "title_cn": "HBV相关肝细胞癌患者的免疫治疗疗效分析",
+        "title_en": "HBV相关肝细胞癌患者的免疫治疗疗效分析",
+        "year": 2026,
+        "journal": "Journal of Clinical Oncology",
+        "first_author": "陈丽",
+        "publish_date": "2026-03-15",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T3",
+        "topic_primary_name": "HBV→HCC转化",
+        "topic_secondary": [
+          "手术/移植/消融"
+        ],
+        "tags": [
+          "肝移植",
+          "NA",
+          "HCC风险",
+          "免疫治疗"
+        ],
+        "patient_stage": [
+          "HCC患者"
+        ],
+        "journey_stage": [
+          "HCC",
+          "治疗"
+        ],
+        "key_result": "PD-1抑制剂对HBV相关HCC具有一定的疗效",
+        "clinical_implication": "可尝试在合适的患者中使用免疫治疗",
+        "china_implication": "该研究为国际研究，未涉及中国机构或患者，但机器人手术技术在中国有应用前景，需结合国内实际情况评估。",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "reccmhzwk0Qwxd",
+        "title_cn": "新型HBVcccDNA抑制剂的体外活性研究",
+        "title_en": "新型HBVcccDNA抑制剂的体外活性研究",
+        "year": 2025,
+        "journal": "Antiviral Research",
+        "first_author": "黄明",
+        "publish_date": "2025-12-05",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [],
+        "tags": [
+          "NA",
+          "功能性治愈"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "该化合物的体外抑制活性优于现有同类药物",
+        "clinical_implication": "可进一步开展该化合物的体内药效学研究",
+        "china_implication": "",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recMnw9260dRR5",
+        "title_cn": "HBV母婴传播阻断方案的效果评估",
+        "title_en": "HBV母婴传播阻断方案的效果评估",
+        "year": 2025,
+        "journal": "中华围产医学杂志",
+        "first_author": "林小红",
+        "publish_date": "2025-07-18",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T2",
+        "topic_primary_name": "HBV现有治疗",
+        "topic_secondary": [],
+        "tags": [
+          "孕产妇",
+          "儿童"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "联合阻断方案可有效降低HBV母婴传播率",
+        "clinical_implication": "需在基层医疗机构推广该联合阻断方案",
+        "china_implication": "该研究来自埃及，未涉及中国患者或中国机构，与中国临床实践的直接关联有限。",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recbstnD5qAmbZ",
+        "title_cn": "肝细胞癌患者术后复发的危险因素分析",
+        "title_en": "肝细胞癌患者术后复发的危险因素分析",
+        "year": 2025,
+        "journal": "British Journal of Cancer",
+        "first_author": "周强",
+        "publish_date": "2025-08-25",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T4",
+        "topic_primary_name": "HCC全病程",
+        "topic_secondary": [],
+        "tags": [
+          "NA",
+          "HCC风险"
+        ],
+        "patient_stage": [
+          "HCC患者"
+        ],
+        "journey_stage": [
+          "HCC"
+        ],
+        "key_result": "肿瘤直径>5cm的患者术后复发风险显著升高",
+        "clinical_implication": "需对高危患者进行更密切的术后随访",
+        "china_implication": "该研究为国际研究，未涉及中国机构或患者，且主题与HBV领域无直接关联，因此中国市场相关性低。",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recXYbSUGG4Mjy",
+        "title_cn": "HBV感染合并脂肪肝患者的临床特征分析",
+        "title_en": "HBV感染合并脂肪肝患者的临床特征分析",
+        "year": 2025,
+        "journal": "肝脏病学杂志",
+        "first_author": "吴静",
+        "publish_date": "2025-06-10",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T2",
+        "topic_primary_name": "HBV现有治疗",
+        "topic_secondary": [],
+        "tags": [
+          "合并症",
+          "肝硬化"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "HBV合并脂肪肝患者的肝纤维化程度更严重",
+        "clinical_implication": "需重视HBV合并脂肪肝患者的综合管理",
+        "china_implication": "",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9yQpvReIQ",
+        "title_cn": "聚乙二醇干扰素联合核苷（酸）类似物治疗乙肝相关性肝硬化患者：第12周乙肝表面抗原下降幅度与乙肝表面抗原清除的相关性——一项回顾性队列研究",
+        "title_en": "Association of week-12 HBsAg Decline with HBsAg Clearance in Patients with Hepatitis B-Related Cirrhosis Receiving Pegylated Interferon Combined with Nucleos(T)ide Analogue Therapy: A Retrospective Cohort Study.",
+        "year": 2026,
+        "journal": "International journal of general medicine",
+        "first_author": "Wen-Yan Yang",
+        "publish_date": "2026-08-07",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "聚乙二醇干扰素",
+          "核苷（酸）类似物",
+          "联合治疗",
+          "HBsAg清除",
+          "生物标志物",
+          "优势人群筛选"
+        ],
+        "tags": [
+          "HBV DNA",
+          "NA",
+          "生物标志物",
+          "HBsAg",
+          "功能性治愈",
+          "干扰素",
+          "基因治疗",
+          "中国证据",
+          "真实世界",
+          "联合治疗",
+          "肝硬化"
+        ],
+        "patient_stage": [
+          "肝硬化患者"
+        ],
+        "journey_stage": [
+          "诊断",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "HBsAgR 与乙型肝炎相关肝硬化患者治疗 48 周时乙肝表面抗原清除显著相关，可为此类人群治疗方案的调整提供重要参考依据。",
+        "clinical_implication": "中国是乙肝高负担国家，肝硬化患者众多，且聚乙二醇干扰素联合核苷（酸）类似物治疗在临床上广泛应用。该研究提示，在治疗早期（第12周）监测HBsAg下降幅度，可能有助于筛选出更可能实现HBsAg清除的患者，从而指导治疗方案的调整或延长疗程。然而，该研究为回顾性、单中心设计，且未报告患者的具体基线特征（如HBsAg水平、HBV DNA、肝硬化严重程度等），也未报告中国患者的数据，因此外推至中国人群...",
+        "china_implication": "研究未明确报告中国患者比例，但乙肝相关肝硬化在中国常见，且聚乙二醇干扰素联合核苷（酸）类似物治疗在中国临床实践中应用广泛，研究结果可能对中国患者管理有参考价值，但需谨慎外推。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9GDUkNmpa",
+        "title_cn": "HBsAg亚型预测慢性乙型肝炎患者停用长期核苷（酸）类似物后的HBsAg血清清除及有限治疗",
+        "title_en": "HBsAg isoforms predict HBsAg seroclearance and finite treatment in patients with chronic hepatitis B after cessation of long term nucleos(t)ide analogue.",
+        "year": 2026,
+        "journal": "JHEP reports : innovation in hepatology",
+        "first_author": "Lung-Yi Mak",
+        "publish_date": "2026-08-06",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "核苷（酸）类似物",
+          "停药策略",
+          "HBsAg清除",
+          "生物标志物",
+          "优势人群筛选"
+        ],
+        "tags": [
+          "2030战略",
+          "NA",
+          "HBV DNA",
+          "HBsAg",
+          "生物标志物",
+          "功能性治愈",
+          "经治",
+          "中国证据",
+          "真实世界",
+          "患者脱落",
+          "肝硬化"
+        ],
+        "patient_stage": [
+          "经治患者",
+          "肝硬化患者"
+        ],
+        "journey_stage": [
+          "诊断",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "1. 本研究为前瞻性队列研究，纳入51例HBeAg阴性非肝硬化慢性乙型肝炎（CHB）患者，均接受≥3年一线核苷（酸）类似物（NUC）治疗后停药，中位随访91周。 2. 6例（11.7%）患者实现HBsAg血清清除（<0.05 IU/mL），发生时间在停药后20至96周。 3. 基线小HBsAg（SHBs）水平可预测HBsAg血清清除（HR 0.205, 95% CI 0.082-0.514）...",
+        "clinical_implication": "中国是慢性乙型肝炎高负担国家，大量患者接受长期NUC治疗，停药管理是临床实践中的常见难题。该研究提示，基线SHBs水平可能作为预测停药后结局的补充指标，但需注意研究样本量较小且仅纳入亚洲患者，结果需在中国更大规模人群中验证。若验证成功，可考虑将SHBs检测纳入停药评估流程，帮助筛选适合停药的患者，提高治疗资源利用效率。同时，肝脂肪变性作为有限治疗的预测因素，提示代谢因素在CHB管理中的潜在作...",
+        "china_implication": "研究纳入亚洲患者，可能包含中国患者，但未明确中国机构参与；中国为乙肝高流行区，停药管理具有重要临床意义，但需中国人群数据验证。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9GGji9bit",
+        "title_cn": "解码HBV特异性适应性免疫：从自然清除到治愈",
+        "title_en": "Decoding HBV-specific adaptive immunity: from natural clearance to cure.",
+        "year": 2026,
+        "journal": "Gut",
+        "first_author": "Robert Thimme",
+        "publish_date": "2026-08-06",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "治疗性疫苗",
+          "免疫调节",
+          "HBsAg清除"
+        ],
+        "tags": [
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "干扰素",
+          "疫苗",
+          "中国证据",
+          "免疫治疗",
+          "联合治疗"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 慢性HBV感染仍是全球重大健康负担，现有抗病毒治疗能有效抑制病毒复制，但很少实现功能性治愈。 2. 适应性免疫在病毒清除中起核心作用，但在慢性感染中严重受损。 3. 通过治疗性疫苗、免疫检查点抑制剂或T细胞疗法诱导和增强适应性免疫，是HBV治愈策略的有前景方法。 4. 然而，近期临床前和临床研究显示疗效有限，凸显了主要的免疫学挑战。 5. 本综述总结了病毒清除和持续存在的相关因素，讨论...",
+        "clinical_implication": "在中国，HBV感染负担沉重，现有治疗以核苷（酸）类似物和干扰素为主，但功能性治愈率低。该综述提示，免疫疗法（如治疗性疫苗、检查点抑制剂）虽前景广阔，但疗效有限，需进一步研究。中国团队应关注免疫学机制研究，探索联合治疗策略，并参与相关临床试验。由于该综述未提供中国患者的具体数据，外推至中国人群时需谨慎，需结合本地临床证据。",
+        "china_implication": "中国是乙肝高负担国家，功能性治愈是临床和患者的核心需求；该综述讨论的免疫治疗策略在中国有相关研究和临床试验，且中国团队在免疫学领域有活跃研究。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9GIwO2SAk",
+        "title_cn": "Bepirovirsen独立于HBV诱导先天免疫蛋白",
+        "title_en": "Bepirovirsen induces innate immune proteins independent of HBV.",
+        "year": 2026,
+        "journal": "Hepatology international",
+        "first_author": "Jared L Delahaye",
+        "publish_date": "2026-08-04",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "siRNA/ASO",
+          "免疫调节",
+          "生物标志物"
+        ],
+        "tags": [
+          "HBV DNA",
+          "NA",
+          "生物标志物",
+          "功能性治愈",
+          "中国证据",
+          "免疫治疗",
+          "基因治疗"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "诊断",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "1. 在三个研究（CS3、PFS、QTc）中，接受bepirovirsen治疗的慢性HBV感染者和健康志愿者均观察到给药后数小时内出现显著、短暂的蛋白差异表达，而安慰剂组变化相对较小。 2. 慢性HBV感染者和健康志愿者中诱导的蛋白生物标志物有许多相似之处，表明bepirovirsen的免疫激活效应不依赖于HBV的存在。 3. 随着bepirovirsen剂量增加（150 mg、300 mg...",
+        "clinical_implication": "中国是乙肝高负担国家，慢性乙肝患者众多，对创新疗法需求迫切。Bepirovirsen的免疫激活效应独立于HBV，提示其可能对HBV DNA低水平或HBeAg阴性患者也有效，但本研究未报告中国患者数据，外推需谨慎。未来在中国开展临床试验时，应关注其在中国人群中的疗效和安全性，并探索与现有抗病毒药物联合使用的潜力。市场团队可关注其差异化定位，强调免疫调节机制，以区别于传统核苷类似物。",
+        "china_implication": "该研究为国际多中心研究，未包含中国机构或中国患者数据，但Bepirovirsen作为HBV功能性治愈候选药物，其机制研究可能对中国临床实践和产品策略有参考价值，但需中国人群数据验证。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9GLl4SLOQ",
+        "title_cn": "核苷（酸）类似物停药联合聚乙二醇干扰素辅助治疗对HBeAg阴性慢性乙型肝炎病毒感染的影响（NUC-B试验）",
+        "title_en": "Nucleos(t)ide withdrawal vs Nucleos(t)ide withdrawal with adjuvant pegylated-interferon in HBeAg-negative hepatitis B virus infection (NUC-B Trial).",
+        "year": 2026,
+        "journal": "Hepatology (Baltimore, Md.)",
+        "first_author": "Mark Thursz",
+        "publish_date": "2026-08-04",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "核苷（酸）类似物",
+          "聚乙二醇干扰素",
+          "联合治疗",
+          "停药策略",
+          "HBsAg清除"
+        ],
+        "tags": [
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "干扰素",
+          "基因治疗",
+          "全国联盟",
+          "中国证据",
+          "耐药",
+          "患者脱落",
+          "联合治疗",
+          "肝硬化"
+        ],
+        "patient_stage": [
+          "肝硬化患者"
+        ],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. NUC-B试验是一项随机、多中心研究，纳入156例接受核苷（酸）类似物（NA）治疗的HBeAg阴性非肝硬化慢性乙型肝炎（CHB）患者，其中82例分配至NA停药组（对照组），74例分配至NA停药后4周开始接受16周聚乙二醇干扰素（PEG-IFNa）180μg每周治疗组（PEG-IFNa组）。 2. 主要终点为3年HBsAg丢失率：对照组为3%，PEG-IFNa组为14%（比值比5.39；...",
+        "clinical_implication": "中国是慢性乙型肝炎高流行地区，HBeAg阴性患者比例较高，且NA类药物（如恩替卡韦、替诺福韦）广泛使用。该研究结果提示，NA停药后联合PEG-IFNa可能提高HBsAg清除率，但需注意中国患者基因型分布与西方不同（中国以B型和C型为主），而本研究基因型以D型和E型为主，因此外推至中国人群需谨慎。 对于医学部，可考虑开展针对中国人群的验证性研究，评估不同基因型下的疗效和安全性。市场部可关注PE...",
+        "china_implication": "研究为国际多中心试验，未包含中国患者，但中国HBeAg阴性CHB患者众多，NA停药策略在中国临床中常见，研究结果可能对中国临床实践有参考价值，但需进一步验证。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9GN4pVfcp",
+        "title_cn": "勘误：Zeng等人关于慢性乙型肝炎功能性治愈中肝脏、血液学和免疫学标志物及其时间动态预测价值的研究",
+        "title_en": "Erratum for Zeng et al., \"Predictive value of hepatic, hematological, and immunological markers and their temporal dynamics in chronic hepatitis B functional cure\".",
+        "year": 2026,
+        "journal": "Microbiology spectrum",
+        "first_author": "Jianyong Zeng",
+        "publish_date": "2026-07-10",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [],
+        "tags": [
+          "生物标志物",
+          "NA",
+          "免疫治疗",
+          "功能性治愈"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 本文为勘误声明，针对Zeng等人先前发表的研究。 2. 摘要未报告具体勘误内容。 3. 摘要未报告原始研究的具体发现或数据。",
+        "clinical_implication": "由于本文为勘误，未提供中国患者或临床路径的直接信息。中国医学团队在引用或参考原始研究时，应核实勘误内容，避免基于错误信息做出决策。外推需谨慎，建议查阅修正后的全文。",
+        "china_implication": "",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9GPD0eDGH",
+        "title_cn": "非酒精性脂肪性肝病对慢性乙型肝炎患者聚乙二醇干扰素-α治疗应答的影响",
+        "title_en": "Impact of nonalcoholic fatty liver disease on the response to pegylated interferon-α therapy in patients with chronic hepatitis B.",
+        "year": 2026,
+        "journal": "Microbiology spectrum",
+        "first_author": "Huiqing Liang",
+        "publish_date": "2026-07-06",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T2",
+        "topic_primary_name": "HBV现有治疗",
+        "topic_secondary": [
+          "聚乙二醇干扰素",
+          "特殊人群",
+          "HBsAg清除",
+          "生物标志物"
+        ],
+        "tags": [
+          "HBV DNA",
+          "NA",
+          "生物标志物",
+          "HBsAg",
+          "功能性治愈",
+          "干扰素",
+          "中国证据",
+          "真实世界",
+          "联合治疗",
+          "单药治疗",
+          "合并症"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "诊断",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "1. 本研究为回顾性队列研究，纳入201例接受聚乙二醇干扰素-α（PegIFNα）单药或联合核苷（酸）类似物治疗的慢性乙型肝炎（CHB）患者，根据肝脂肪变性情况分为CHB-only组（n=125）和CHB+NAFLD组（n=76）。 2. 48周累积HBsAg清除率在CHB+NAFLD组与CHB-only组之间无显著差异（18.42% vs 23.2%，P=0.41），病毒学应答率亦无显著差...",
+        "clinical_implication": "中国是CHB高流行区，同时NAFLD患病率快速上升，CHB合并NAFLD患者群体庞大。本研究结果提示，在真实世界临床中，合并NAFLD不应成为PegIFNα治疗的禁忌症，但需加强生化学应答的监测。对于市场策略而言，可强调PegIFNα在合并NAFLD患者中的疗效不受影响，但需注意生化学应答延迟可能影响患者依从性，需配合患者教育。基线HBsAg和HBV DNA水平作为预测因素，可用于筛选更可能...",
+        "china_implication": "研究未涉及中国机构或中国患者，但CHB和NAFLD在中国均高发，研究结果对中国临床实践具有参考价值，但需注意人群差异。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9GSbhd317",
+        "title_cn": "石蒜碱与甘草酸超分子自组装纳米药物用于安全持续的抗乙肝病毒治疗",
+        "title_en": "Supramolecular Self-Assembly of Lycorine with Glycyrrhizic Acid into a Nanodrug for Safe and Sustained Anti-HBV Therapy.",
+        "year": 2026,
+        "journal": "ACS applied bio materials",
+        "first_author": "Hang Sun",
+        "publish_date": "2026-08-03",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "HBsAg清除",
+          "免疫调节"
+        ],
+        "tags": [
+          "HBV DNA",
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "经治",
+          "中国证据",
+          "免疫治疗",
+          "基因治疗"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 本研究设计了一种由石蒜碱（LY）与甘草酸（GA）共组装形成的自组装纳米药物（LGN），旨在克服LY的细胞毒性、短半衰期等缺陷，并增强其抗HBV疗效。 2. LGN能有效抑制HBsAg分泌（IC50 = 2.15 ± 0.09 μM），选择性指数（SI > 93）是LY单独使用（SI = 39.26）的两倍以上。 3. LGN同时抑制HBV DNA复制、pgRNA转录以及病毒蛋白HBc和...",
+        "clinical_implication": "中国是乙肝高发国家，对功能性治愈的需求迫切。该研究中的LGN纳米药物若成功转化，可能为患者提供更安全有效的治疗选择，尤其对于核苷（酸）类似物经治患者或需清除HBsAg的患者。然而，目前该研究仍处于临床前阶段，摘要未报告人体试验数据，因此其在中国患者中的疗效和安全性尚需进一步验证。市场团队应关注其研发进展，并评估其与现有治疗方案的潜在互补性。医学教育方面，可加强医生对新型抗HBV药物机制的理解...",
+        "china_implication": "该研究为国际研究，未涉及中国机构或患者，但中国乙肝患者众多，对功能性治愈需求高，研究结果可能对未来中国临床实践有参考价值，但需更多本地验证。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9GUHMYT7O",
+        "title_cn": "西班牙临床微生物学实验室定量HBsAg检测的实施情况：GEHEP-SEIMC全国性调查结果",
+        "title_en": "Implementation of quantitative HBsAg testing in clinical microbiology laboratories in Spain: Results from a national GEHEP-SEIMC survey.",
+        "year": 2026,
+        "journal": "Enfermedades infecciosas y microbiologia clinica (English ed.)",
+        "first_author": "Lucía Chaves-Blanco",
+        "publish_date": "2026-01-01",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T2",
+        "topic_primary_name": "HBV现有治疗",
+        "topic_secondary": [
+          "生物标志物",
+          "患者管理与教育"
+        ],
+        "tags": [
+          "生物标志物",
+          "NA",
+          "HBsAg",
+          "全国联盟",
+          "中国证据",
+          "患者脱落",
+          "基因治疗"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "管理",
+          "诊断",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "1. 在受邀的118家西班牙临床微生物学实验室中，91家（77.1%）完成了调查，但仅37.4%的实验室开展qHBsAg检测。 2. 未开展qHBsAg检测的实验室中，86%不转诊样本，主要原因是认为临床需求低（57.1%）以及缺乏设备/资源。 3. qHBsAg检测的实施与医院规模相关（p=0.041）：<200张床位（0%）、200-500张（23.3%）、500-1000张（44.9%...",
+        "clinical_implication": "中国乙肝患者基数庞大，qHBsAg检测的规范化实施对于提升慢性乙肝管理质量具有重要意义。该研究提示，实验室检测能力与医院规模相关，且临床需求认知不足是主要障碍。中国在推进qHBsAg检测时，应关注基层医疗机构的能力建设，加强临床医生和检验人员的教育，明确检测适应症和报告规范。同时，需结合中国国情，制定统一的检测标准和转诊路径，以促进qHBsAg在临床决策中的广泛应用。由于该研究基于西班牙数据...",
+        "china_implication": "该研究为西班牙全国调查，未涉及中国机构或患者，但qHBsAg检测作为慢性乙型肝炎管理的重要工具，与中国临床实践相关。中国指南可能推荐qHBsAg检测，但实施情况可能类似存在差异，因此该研究结果可作为参考，提示中国需关注检测标准化和可及性。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9GXtkV74B",
+        "title_cn": "西班牙慢性乙型肝炎患者表面抗原（HBsAg）清除的相关因素及其对长期预后的影响",
+        "title_en": "Factors Associated With Surface Antigen (HBsAg) Clearance in a Spanish Cohort of Chronic Hepatitis B Patients: Influence on the Long-Term Prognosis.",
+        "year": 2026,
+        "journal": "Journal of medical virology",
+        "first_author": "Paula Gavilán",
+        "publish_date": "2026-08-01",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "HBsAg清除",
+          "真实世界研究",
+          "优势人群筛选"
+        ],
+        "tags": [
+          "2030战略",
+          "NA",
+          "HBV DNA",
+          "HBsAg",
+          "功能性治愈",
+          "干扰素",
+          "肝移植",
+          "中国证据",
+          "真实世界",
+          "基因治疗"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 在西班牙南部两家医院1991至2022年间纳入的453例慢性乙型肝炎（CHB）患者的前瞻性开放队列中，随访期间96例（21.2%）患者发生HBsAg清除，年发生率为1.96/100患者年。 2. 多因素Cox回归分析显示，首次评估年龄>40岁（HR 2.21，95%CI 1.38-3.52）、基线HBV DNA峰值<3.3 log10 IU/mL（<2000 IU/mL）（HR 3.4...",
+        "clinical_implication": "中国是慢性乙型肝炎高负担国家，HBsAg清除被视为理想的治疗终点。该研究提示，年龄>40岁、基线HBV DNA较低（<2000 IU/mL）以及HBeAg阳性患者中HBeAg丢失与更高的HBsAg清除率相关，这些因素可能有助于中国临床医生筛选适合追求HBsAg清除的患者，并指导个体化治疗方案的制定。 然而，该研究基于西班牙人群，其遗传背景、HBV基因型分布（中国以B和C型为主，西班牙可能以D...",
+        "china_implication": "研究为西班牙队列，未涉及中国患者，但HBsAg清除是功能性治愈的重要指标，中国指南和临床实践关注此目标，相关因素可能对中国患者筛选有参考价值，但需本土验证。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9GZYTZlPJ",
+        "title_cn": "HIV感染者转换为非乙肝病毒活性抗逆转录病毒治疗后的隐匿性乙肝及再激活风险",
+        "title_en": "Occult hepatitis B and risk of reactivation following switch to non-hepatitis B virus-active antiretroviral therapy in people with HIV.",
+        "year": 2026,
+        "journal": "AIDS (London, England)",
+        "first_author": "Giuseppe Lapadula",
+        "publish_date": "2026-06-25",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T2",
+        "topic_primary_name": "HBV现有治疗",
+        "topic_secondary": [
+          "特殊人群",
+          "停药策略",
+          "真实世界研究"
+        ],
+        "tags": [
+          "HBV DNA",
+          "NA",
+          "生物标志物",
+          "HBsAg",
+          "功能性治愈",
+          "经治",
+          "疫苗",
+          "中国证据",
+          "免疫治疗",
+          "真实世界",
+          "患者脱落",
+          "合并症"
+        ],
+        "patient_stage": [
+          "经治患者"
+        ],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 隐匿性乙肝感染（OBI）定义为肝脏中持续存在具有复制能力的HBV DNA，但血清HBsAg检测阴性，在HIV感染者中具有临床相关性。 2. 停用具有抗HBV活性的抗逆转录病毒药物后，HBsAg阴性、抗HBc抗体阳性的HIV感染者中，HBV再激活是真实但罕见的事件。 3. 再激活风险在特定情境下聚集，包括HIV感染晚期或控制不佳、缺乏保护性抗HBs抗体、以及既往抗病毒治疗期间HBsAg消...",
+        "clinical_implication": "在中国，HIV感染者中乙肝共感染率较高，隐匿性乙肝的筛查和管理尤为重要。该综述提示，在转换为不含抗HBV活性药物的方案时，应进行个体化风险评估，包括HBV血清学标志物和HIV控制状态。这支持在中国临床实践中推广基于风险的监测策略，而非全面禁止转换。然而，该综述主要基于国外数据，中国患者的具体情况可能有所不同，需结合本地流行病学和临床实践进行验证。市场团队可考虑开发针对HIV/HBV共感染管理...",
+        "china_implication": "中国HIV感染者中HBV合并感染率较高，且中国指南强调对HIV感染者进行HBV管理，但该综述基于国际证据，中国患者的具体数据有限，需结合本地情况外推。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9H2edtJae",
+        "title_cn": "基于细胞的乙型肝炎病毒抗病毒筛选平台：优势、局限与未来展望",
+        "title_en": "Cell-based platforms for antiviral screening against hepatitis B virus: advantages, limitations, and future perspectives.",
+        "year": 2026,
+        "journal": "Antiviral research",
+        "first_author": "Taylor M Shue",
+        "publish_date": "2026-06-06",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "siRNA/ASO",
+          "衣壳抑制剂",
+          "免疫调节"
+        ],
+        "tags": [
+          "NA",
+          "HCC风险",
+          "功能性治愈",
+          "干扰素",
+          "中国证据",
+          "免疫治疗",
+          "儿童",
+          "基因治疗",
+          "肝硬化"
+        ],
+        "patient_stage": [
+          "肝硬化患者"
+        ],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 乙型肝炎病毒（HBV）感染影响全球超过2.5亿人，每年导致130万人死亡；现有治疗（核苷（酸）类似物和聚乙二醇干扰素α）可抑制病毒复制，但很少实现功能性治愈。 2. 综述评估了基于DNA和RNA的转染系统，作为可控工具用于研究HBV复制周期的特定阶段，以及稳定转染的HBV产生细胞系，可实现可重复的化合物筛选。 3. 基于感染的模型（如HepG2-NTCP和HepaRG细胞）被评估其支持...",
+        "clinical_implication": "中国是乙肝高流行国家，慢性乙肝患者众多，对功能性治愈的需求尤为迫切。该综述提供的细胞模型选择框架，可指导中国科研机构和企业更有效地进行抗病毒药物筛选，加速新药研发进程。 然而，摘要未报告中国患者的具体数据或中国临床实践的直接证据，因此外推需谨慎。中国团队在应用这些模型时，应考虑中国HBV基因型分布和患者特征，可能需要优化模型以更好地反映中国患者情况。",
+        "china_implication": "中国为HBV高流行区，功能性治愈是重要治疗目标；该综述为抗病毒药物筛选提供方法学参考，可能影响中国新药研发和临床前研究策略。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9H4lYWcGE",
+        "title_cn": "慢性乙型肝炎治疗性疫苗：为何多数疫苗失败及可能有效的策略",
+        "title_en": "Therapeutic vaccination for chronic hepatitis B: why most vaccines failed and what may work.",
+        "year": 2026,
+        "journal": "Antiviral research",
+        "first_author": "Antonio Bertoletti",
+        "publish_date": "2026-05-28",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "治疗性疫苗",
+          "siRNA/ASO",
+          "聚乙二醇干扰素",
+          "HBsAg清除",
+          "联合治疗"
+        ],
+        "tags": [
+          "2030战略",
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "干扰素",
+          "疫苗",
+          "基因治疗",
+          "中国证据",
+          "免疫治疗",
+          "联合治疗",
+          "单药治疗"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 过去30多年的治疗性疫苗开发尚未实现慢性HBV感染的功能性治愈。 2. 尽管临床前数据令人鼓舞，但大多数治疗性疫苗制剂未能以临床有意义的方式恢复HBV特异性B细胞和T细胞免疫。 3. 最近一项试验结合siRNA Elebsiran和PEG-IFN-α，在先前接受基于PreS1/S2/S重组蛋白（BRII-179）治疗性疫苗的慢性乙肝患者中，报告了约50%的HBsAg丢失率。 4. 该综...",
+        "clinical_implication": "中国是乙肝高流行区，慢性乙肝患者众多，对功能性治愈的需求迫切。该综述强调的联合治疗策略（如siRNA、干扰素和疫苗）可能为中国患者提供新的治疗选择，但需注意中国患者的具体情况（如基因型、治疗史等）可能影响疗效。此外，该研究提示单一治疗性疫苗可能效果有限，未来可能需要联合用药或优化疫苗设计。中国团队应关注相关临床试验进展，并考虑在中国患者中开展验证性研究。由于该综述未提供中国患者的具体数据，外...",
+        "china_implication": "中国是乙肝高发区，功能性治愈是重要治疗目标；该研究涉及的治疗性疫苗和联合策略可能对中国患者有潜在影响，但需本地验证。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9H7ea8bgg",
+        "title_cn": "聚乙二醇干扰素作为慢性乙型肝炎患者经反义寡核苷酸或小干扰RNA治疗未达功能性治愈后的挽救治疗的疗效与安全性：一项前瞻性、多中心、开放标签随机对照试验（SPHERE）方案",
+        "title_en": "Efficacy and Safety of Pegylated Interferon as Rescue Therapy for Patients with Chronic Hepatitis B Who Failed to Achieve Functional Cure After Antisense Oligonucleotides or Small Interfering RNA: A Prospective, Multicentre, Open-Label Randomized Controlled Trial (SPHERE) Protocol.",
+        "year": 2026,
+        "journal": "Advances in therapy",
+        "first_author": "Qiran Zhang",
+        "publish_date": "2026-05-23",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "聚乙二醇干扰素",
+          "siRNA/ASO",
+          "HBsAg清除",
+          "联合治疗",
+          "停药策略"
+        ],
+        "tags": [
+          "2030战略",
+          "NA",
+          "HBV DNA",
+          "HBsAg",
+          "功能性治愈",
+          "经治",
+          "干扰素",
+          "基因治疗",
+          "全国联盟",
+          "中国证据",
+          "患者脱落",
+          "联合治疗"
+        ],
+        "patient_stage": [
+          "经治患者"
+        ],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 本研究为一项前瞻性、多中心、开放标签、非劣效性随机对照试验（SPHERE），旨在评估序贯使用聚乙二醇干扰素α（Peg-IFNα）作为挽救治疗，用于经反义寡核苷酸（ASO）或小干扰RNA（siRNA）初始治疗后未实现功能性治愈的慢性乙型肝炎（CHB）患者。 2. 研究计划纳入既往完成全疗程ASO或siRNA治疗且筛选时HBsAg水平为1-500 IU/mL的CHB患者，按1:1随机分为立...",
+        "clinical_implication": "中国是CHB高流行区，大量患者接受核苷（酸）类似物或干扰素治疗，但功能性治愈率仍不理想。新型靶向药物（如ASO和siRNA）在中国尚处于临床研究阶段，未来若获批，其治疗后未达治愈的患者管理将成为重要临床问题。本研究结果可能为中国患者提供Peg-IFNα作为挽救治疗的证据，指导临床决策。 然而，本研究为国际多中心试验，可能包含中国中心，但具体中国患者数据未在摘要中报告。因此，在将结果外推至中国...",
+        "china_implication": "该研究为国际多中心试验，未明确包含中国中心，但中国CHB患者众多，功能性治愈需求迫切，且Peg-IFNα在中国已广泛使用，研究结果可能对中国临床实践有参考价值，但需谨慎外推。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9H9kuUGN3",
+        "title_cn": "编者按：替诺福韦艾拉酚胺与恩替卡韦对乙型肝炎表面抗原下降的影响——迈向功能性治愈的一步还是边际差异？作者回复",
+        "title_en": "Editorial: Tenofovir Alafenamide Versus Entecavir for Hepatitis B Surface Antigen Decline-A Step Towards Functional Cure or a Marginal Margin? Authors' Reply.",
+        "year": 2026,
+        "journal": "Alimentary pharmacology & therapeutics",
+        "first_author": "Takashi Kumada",
+        "publish_date": "2026-05-22",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T2",
+        "topic_primary_name": "HBV现有治疗",
+        "topic_secondary": [],
+        "tags": [
+          "NA",
+          "HBsAg",
+          "功能性治愈"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 本文为作者回复，针对先前关于替诺福韦艾拉酚胺（TAF）与恩替卡韦（ETV）对HBsAg下降影响的编辑评论。 2. 摘要未报告具体研究设计、样本量或数值数据。 3. 文章聚焦于HBsAg下降作为功能性治愈的潜在替代指标，但未提供新的临床数据。",
+        "clinical_implication": "在中国，慢性乙型肝炎患者数量庞大，功能性治愈是治疗追求的理想终点。TAF和ETV均为医保覆盖药物，临床选择需权衡疗效、安全性和成本。本文虽未提供新数据，但提示HBsAg下降可能成为评估治疗效果的指标，中国医学团队可关注相关研究进展，以优化治疗策略。由于本文为编辑评论，未包含中国患者直接证据，外推需谨慎。",
+        "china_implication": "",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9Hc5PkBGN",
+        "title_cn": "COVID-19疫苗接种与慢性乙型肝炎HBsAg消失的时间关联：一项中断时间序列分析",
+        "title_en": "Temporal Association Between COVID-19 Vaccination and HBsAg Loss in Chronic Hepatitis B Infection: An Interrupted Time Series Analysis.",
+        "year": 2026,
+        "journal": "Alimentary pharmacology & therapeutics",
+        "first_author": "Jonggi Choi",
+        "publish_date": "2026-05-21",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "HBsAg清除",
+          "免疫调节",
+          "真实世界研究"
+        ],
+        "tags": [
+          "NA",
+          "HCC风险",
+          "HBsAg",
+          "功能性治愈",
+          "疫苗",
+          "基因治疗",
+          "中国证据",
+          "免疫治疗",
+          "真实世界",
+          "联合治疗"
+        ],
+        "patient_stage": [
+          "HCC患者"
+        ],
+        "journey_stage": [
+          "HCC",
+          "治疗"
+        ],
+        "key_result": "1. 本研究为一项中断时间序列分析，利用韩国2002-2025年59,946例慢性乙型肝炎（CHB）成人的电子健康记录，评估COVID-19疫苗接种与HBsAg消失率的时间关联。 2. 在382,509人年的随访中，共发生2,483次HBsAg消失事件。疫苗接种前HBsAg消失率稳定（0.11-0.80/100人年），2021年升至0.96，2022年达峰值1.27，2024年降至0.93。...",
+        "clinical_implication": "该研究基于韩国人群数据，中国人群的HBV基因型、免疫状态和疫苗接种情况可能存在差异，因此外推至中国时需谨慎。但研究提示COVID-19疫苗接种可能对HBV动力学产生短暂影响，这在中国广泛接种COVID-19疫苗的背景下，可能对CHB患者的临床监测和HBsAg消失率的解读产生影响。 建议中国医学团队关注疫苗接种后CHB患者的HBsAg变化，尤其是在大规模接种期间，可能观察到类似现象。市场团队可...",
+        "china_implication": "该研究基于韩国人群，中国CHB患者众多，但缺乏中国直接证据，外推需谨慎。研究结果提示疫苗接种可能影响HBsAg清除率，对中国真实世界研究设计有参考价值。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9HekkBSKb",
+        "title_cn": "述评：丙酚替诺福韦与恩替卡韦对乙型肝炎表面抗原下降的影响——迈向功能性治愈的一步还是微小差距？",
+        "title_en": "Editorial: Tenofovir Alafenamide Versus Entecavir for Hepatitis B Surface Antigen Decline-A Step Toward Functional Cure or a Marginal Margin?",
+        "year": 2026,
+        "journal": "Alimentary pharmacology & therapeutics",
+        "first_author": "Yao-Chun Hsu",
+        "publish_date": "2026-05-15",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [],
+        "tags": [
+          "NA",
+          "HBsAg",
+          "功能性治愈"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 本文为述评，未报告原始研究数据。 2. 讨论聚焦于丙酚替诺福韦（TAF）与恩替卡韦（ETV）在降低乙型肝炎表面抗原（HBsAg）水平方面的比较。 3. 述评探讨了TAF相比ETV在HBsAg下降上可能存在的优势，并评估其对于实现功能性治愈（即HBsAg清除）的潜在意义。 4. 摘要未报告具体研究设计、样本量、数值或统计显著性。",
+        "clinical_implication": "在中国，恩替卡韦和丙酚替诺福韦均为一线抗病毒药物，且已纳入医保。该述评提示TAF可能在HBsAg下降方面具有优势，但需注意这是基于述评观点，并非原始研究结论。中国临床实践中，医生在选择初始治疗或转换治疗时，可关注HBsAg动态变化，但需结合患者具体情况和药物可及性。由于摘要未提供具体数据，外推至中国患者群体时应谨慎，建议参考更多中国人群的临床研究证据。",
+        "china_implication": "",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9HgTNixg1",
+        "title_cn": "丙酚替诺福韦对比恩替卡韦在降低乙肝表面抗原方面更具优势：一项采用线性混合效应模型的多中心倾向评分匹配研究",
+        "title_en": "Superior Efficacy of Tenofovir Alafenamide Compared With Entecavir in Reducing Hepatitis B Surface Antigen: A Multicentre Propensity Score-Matched Study Using Linear Mixed-Effects Models.",
+        "year": 2026,
+        "journal": "Alimentary pharmacology & therapeutics",
+        "first_author": "Takashi Kumada",
+        "publish_date": "2026-05-04",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "核苷（酸）类似物",
+          "HBsAg清除",
+          "优势人群筛选",
+          "真实世界研究"
+        ],
+        "tags": [
+          "2030战略",
+          "NA",
+          "HBV DNA",
+          "HBsAg",
+          "HCC风险",
+          "功能性治愈",
+          "初治",
+          "全国联盟",
+          "中国证据",
+          "真实世界",
+          "肝硬化"
+        ],
+        "patient_stage": [
+          "初治患者",
+          "肝硬化患者"
+        ],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 本研究为多中心、回顾性队列研究，纳入接受恩替卡韦（n=491）或丙酚替诺福韦（n=463）治疗的初治慢性乙型肝炎患者，经1:1倾向评分匹配后，每组各334例患者纳入分析。 2. 采用线性混合效应模型评估4年内的纵向变化，结果显示丙酚替诺福韦组乙肝表面抗原（HBsAg）下降幅度显著大于恩替卡韦组，差异在第1、3、4年具有统计学意义。 3. 亚组分析显示，丙酚替诺福韦的优势在年龄<65岁、...",
+        "clinical_implication": "中国是慢性乙型肝炎高负担国家，功能性治愈是患者和医生的共同目标。本研究提示，对于特定患者群体（如年龄<65岁、无肝硬化、基线HBsAg较高者），丙酚替诺福韦可能比恩替卡韦更有效地降低HBsAg，这为个体化治疗选择提供了证据。市场团队可考虑在医学教育中强调丙酚替诺福韦在HBsAg下降方面的潜在优势，并针对目标患者群体进行推广。 然而，本研究为观察性研究，且未报告中国患者数据，结果外推至中国人群...",
+        "china_implication": "该研究为国际多中心研究，未明确包含中国患者，但恩替卡韦和丙酚替诺福韦均为中国慢性乙型肝炎防治指南推荐的一线药物，研究结果可能对中国临床实践有参考价值，但需谨慎外推。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9Hju1qRqw",
+        "title_cn": "慢性乙型肝炎的功能性治愈：异基因造血干细胞移植的友好面孔",
+        "title_en": "Functional cure of chronic hepatitis B: the friendly face of allogenic hematopoietic stem cell transplantation.",
+        "year": 2026,
+        "journal": "Gastroenterologia y hepatologia",
+        "first_author": "Blanca Mesonero",
+        "publish_date": "2026-03-23",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [],
+        "tags": [
+          "HBV DNA",
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "肝移植",
+          "免疫治疗",
+          "基因治疗",
+          "合并症"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 本文为一篇病例报告，描述了慢性乙型肝炎患者在异基因造血干细胞移植后实现功能性治愈的情况。 2. 摘要未报告具体患者数量、治疗细节、随访时间及病毒学或血清学指标的具体数值。 3. 摘要未报告该患者是否停用抗病毒药物、HBsAg血清转换的具体时间点或HBV DNA检测结果。 4. 摘要未报告该病例的长期预后或复发情况。",
+        "clinical_implication": "中国是乙肝高负担国家，功能性治愈是当前乙肝治疗研究的热点。该病例报告提示异基因造血干细胞移植可能成为实现功能性治愈的一种途径，但需注意该治疗手段具有较高的风险和严格的适应症，不适用于大多数慢性乙肝患者。因此，该发现更多是机制探索层面的启示，而非直接可推广的临床策略。 在中国临床实践中，异基因造血干细胞移植主要用于血液系统疾病，其用于乙肝治愈的可行性需进一步研究。市场团队应关注该领域的基础研究...",
+        "china_implication": "",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9HlAgwpAK",
+        "title_cn": "迈向乙肝治愈——新生物标志物能否助力？",
+        "title_en": "Getting to HBV cure-Will new biomarkers help?",
+        "year": 2025,
+        "journal": "Hepatology (Baltimore, Md.)",
+        "first_author": "Jordan J Feld",
+        "publish_date": "2025-04-01",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "生物标志物",
+          "HBsAg清除",
+          "停药策略"
+        ],
+        "tags": [
+          "HBV DNA",
+          "NA",
+          "生物标志物",
+          "HBsAg",
+          "功能性治愈",
+          "中国证据",
+          "免疫治疗",
+          "患者脱落",
+          "联合治疗"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "诊断",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "1. 本文综述了慢性乙型肝炎（CHB）感染自然史和治疗反应评估中使用的血清学、病毒学和免疫学标志物，包括HBV RNA、乙型肝炎核心相关抗原、乙型肝炎核心抗原和定量HBsAg等新型标志物。 2. 新型生物标志物有助于确认新型抗病毒药物的作用机制或靶点参与，并可用于临床试验和临床实践中的患者选择。 3. 生物标志物有望更精确地定义慢性乙型肝炎的阶段，特别是病毒学控制的程度。 4. 文章提出新的...",
+        "clinical_implication": "中国是乙肝高负担国家，乙肝治愈药物的研发和上市具有重大意义。新型生物标志物的应用可能有助于更精准地筛选患者、监测疗效，从而优化治疗路径。然而，本文为综述性文章，未提供中国患者的具体数据，因此在中国临床实践中的应用需结合本地证据进一步验证。建议关注相关标志物在中国的可及性和标准化，并考虑在医学教育中引入这些新概念。",
+        "china_implication": "中国为乙肝高负担国家，功能性治愈是重要治疗目标，该综述提出的生物标志物可能对中国患者管理有潜在价值，但需结合中国人群数据进一步验证。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9Ho7mkp96",
+        "title_cn": "慢性乙型肝炎患者接受聚乙二醇干扰素α-2b治疗后HBsAg清除预测模型的构建与验证",
+        "title_en": "Construction and validation of a predictive model for HBsAg loss in chronic hepatitis B patients treated with Peg-IFNα-2b.",
+        "year": 2026,
+        "journal": "Frontiers in cellular and infection microbiology",
+        "first_author": "Xinrui Ren",
+        "publish_date": "2026-07-28",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "聚乙二醇干扰素",
+          "联合治疗",
+          "真实世界研究",
+          "HBsAg清除",
+          "优势人群筛选",
+          "生物标志物"
+        ],
+        "tags": [
+          "生物标志物",
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "经治",
+          "干扰素",
+          "全国联盟",
+          "中国证据",
+          "真实世界",
+          "联合治疗"
+        ],
+        "patient_stage": [
+          "经治患者"
+        ],
+        "journey_stage": [
+          "诊断",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "1. 本研究为多中心回顾性真实世界研究，纳入859例接受聚乙二醇干扰素α-2b（Peg-IFNα-2b）治疗≥48周的慢性乙型肝炎（CHB）患者，其中133例（15.5%）在48周时实现HBsAg清除。 2. 多因素分析显示，联合中药治疗（OR=3.83）、较低基线HBsAg水平（OR=0.32）、较低基线AST水平（OR=0.97）以及非恩替卡韦（ETV）方案（OR=0.33）是HBsAg...",
+        "clinical_implication": "在中国，慢性乙型肝炎患者基数庞大，Peg-IFNα-2b是追求临床治愈的重要药物，但疗效差异显著。该预测模型基于中国患者数据，纳入中药联合治疗和ETV方案等变量，贴合中国临床实际。模型的应用可能帮助临床医生在治疗前评估患者实现HBsAg清除的概率，从而指导治疗选择，例如对预测概率高的患者优先考虑Peg-IFNα-2b治疗，或联合中药以增强疗效。对于市场团队，该模型可作为医学教育工具，提升医生...",
+        "china_implication": "研究基于中国多中心患者数据，涉及中药联合治疗，与中国临床实践密切相关，模型可能指导中国CHB患者的个体化治疗。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9HqLQWct7",
+        "title_cn": "基线肝纤维化严重程度预测HBeAg阳性慢性乙型肝炎患者接受聚乙二醇干扰素联合核苷（酸）类似物治疗后HBeAg清除及纤维化逆转",
+        "title_en": "Baseline Liver Fibrosis Severity Predicts Superior HBeAg Clearance and Fibrosis Reversal following Peg-IFNα plus Nucleos(t)ide Analog Therapy in HBeAg-positive Chronic Hepatitis B Patients.",
+        "year": 2026,
+        "journal": "Journal of clinical and translational hepatology",
+        "first_author": "Yaqin Zhang",
+        "publish_date": "2026-07-09",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T2",
+        "topic_primary_name": "HBV现有治疗",
+        "topic_secondary": [
+          "联合治疗",
+          "生物标志物",
+          "优势人群筛选"
+        ],
+        "tags": [
+          "HBV DNA",
+          "NA",
+          "生物标志物",
+          "HBsAg",
+          "功能性治愈",
+          "经治",
+          "干扰素",
+          "全国联盟",
+          "中国证据",
+          "联合治疗",
+          "肝硬化"
+        ],
+        "patient_stage": [
+          "经治患者",
+          "肝硬化患者"
+        ],
+        "journey_stage": [
+          "诊断",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "1. 本研究纳入172例HBeAg阳性慢性乙型肝炎（CHB）患者，接受聚乙二醇干扰素（Peg-IFN）联合核苷（酸）类似物（NAs）治疗，根据基线非侵入性纤维化标志物（APRI和FIB-4）分为三组：无显著纤维化（n=75）、显著纤维化（n=70）、晚期纤维化/肝硬化（n=27）。 2. 治疗24个月时，三组间HBsAg清除率和完全病毒学应答率无显著差异；但累积HBeAg清除率存在显著差异（...",
+        "clinical_implication": "中国是慢性乙型肝炎高发国家，肝纤维化和肝硬化患者基数庞大。该研究提示，对于基线纤维化严重的HBeAg阳性CHB患者，Peg-IFN联合NAs治疗可能带来更高的HBeAg清除率，这为临床实践中选择联合治疗方案提供了依据。然而，本研究为单中心、样本量有限，且未直接涉及中国患者，外推至中国人群需谨慎。建议中国医学团队结合本地患者特征，开展多中心验证研究，并考虑将非侵入性纤维化指标（如APRI、FI...",
+        "china_implication": "中国为乙肝高负担国家，HBeAg阳性慢性乙肝患者众多，且该研究涉及Peg-IFN联合NAs治疗，与中国临床实践密切相关。研究结果可能影响中国患者的治疗策略选择，但需注意研究人群可能包含中国患者，但来源未明确，外推需谨慎。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9HsQxRp04",
+        "title_cn": "Bepirovirsen使慢性乙型肝炎功能性治愈更近现实",
+        "title_en": "Bepirovirsen Brings Functional Cure Closer to Reality in Chronic Hepatitis B.",
+        "year": 2026,
+        "journal": "Gastroenterology",
+        "first_author": "Sabela Lens",
+        "publish_date": "2026-07-21",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "中",
+        "china_evidence": false,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [],
+        "tags": [
+          "NA",
+          "HBsAg",
+          "免疫治疗",
+          "功能性治愈"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 该文献为发表于《Gastroenterology》的评论性文章，针对Bepirovirsen在慢性乙型肝炎治疗中的进展进行评述。 2. 摘要未报告具体研究设计、样本量或疗效数据。 3. 文章标题表明Bepirovirsen可能推动功能性治愈的实现，但具体机制或临床结果需参考原文。",
+        "clinical_implication": "中国是慢性乙型肝炎高负担国家，功能性治愈是患者和医生的共同目标。Bepirovirsen若在后续研究中证实有效，可能为中国患者提供新的治疗选择，但需注意种族差异和药物可及性。目前该文献为评论性文章，未提供直接中国数据，外推需谨慎，建议关注后续临床试验结果及中国人群的亚组分析。",
+        "china_implication": "",
+        "strategy_2030": "中",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9HuS50tZL",
+        "title_cn": "乙型肝炎病毒DNA整合的临床意义及发生机制",
+        "title_en": "[Clinical significance and occurrence mechanism of hepatitis B virus DNA integration].",
+        "year": 2026,
+        "journal": "Zhonghua gan zang bing za zhi = Zhonghua ganzangbing zazhi = Chinese journal of hepatology",
+        "first_author": "Y J Shi",
+        "publish_date": "2026-07-20",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "HBV DNA整合",
+          "HBsAg清除",
+          "联合治疗"
+        ],
+        "tags": [
+          "2030战略",
+          "NA",
+          "HBV DNA",
+          "HBsAg",
+          "HCC风险",
+          "功能性治愈",
+          "基因治疗",
+          "中国证据",
+          "联合治疗"
+        ],
+        "patient_stage": [
+          "HCC患者"
+        ],
+        "journey_stage": [
+          "HCC",
+          "治疗"
+        ],
+        "key_result": "1. 双链线性DNA（dslDNA）被认为是整合HBV DNA（iDNA）的主要前体，通常存在于慢性HBV感染患者的肝脏中。 2. 既往研究主要关注HBV整合在肝细胞癌（HCC）进展中的作用和机制，表明iDNA可导致宿主基因组不稳定，并在整合位点周围诱导宿主肿瘤相关基因的异常表达，而iDNA表达的病毒蛋白具有促肿瘤作用。 3. 近年来，随着对整合HBV DNA的深入理解，iDNA衍生的乙型肝...",
+        "clinical_implication": "中国是乙型肝炎高流行区，慢性乙型肝炎患者基数庞大，功能性治愈需求迫切。该研究提示，iDNA衍生的HBsAg可能导致HBsAg持续阳性，影响抗病毒治疗疗效，因此，在临床实践中，应关注患者HBsAg水平与HBV整合的关系，并探索联合治疗策略以沉默或清除iDNA。然而，该综述未提供中国患者的具体数据，外推至中国人群时需谨慎，建议结合中国患者队列进行验证。",
+        "china_implication": "中国为乙肝高流行区，慢性乙型肝炎患者众多，功能性治愈是临床治疗的重要目标。该研究探讨的HBV DNA整合机制及其对HBsAg和抗病毒治疗的影响，与中国患者的治疗策略和药物研发密切相关。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9Hx5YxSja",
+        "title_cn": "可编程纳米抗体靶向嵌合体实现细胞内病毒蛋白降解",
+        "title_en": "Programmable Nanobody-Targeting Chimeras Enable Intracellular Viral Protein Degradation.",
+        "year": 2026,
+        "journal": "Advanced science (Weinheim, Baden-Wurttemberg, Germany)",
+        "first_author": "Max Yu-Chen Pan",
+        "publish_date": "2026-07-17",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "HBsAg清除",
+          "免疫调节"
+        ],
+        "tags": [
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "干扰素",
+          "中国证据",
+          "免疫治疗",
+          "基因治疗"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 研究开发了一种基于纳米抗体的靶向蛋白降解平台，称为纳米抗体靶向嵌合体（Nab-TAC），用于细胞内清除乙肝病毒（HBV）抗原。 2. 通过基于分裂荧光素酶互补的定量筛选平台，系统评估了多种降解模块（degron motifs）和邻近诱导效应器，并在不同细胞环境和亚细胞区室中对蛋白酶体和溶酶体靶向元件进行了排序。 3. 利用噬菌体展示来源的纳米抗体和单链可变片段，结合优化的降解模块，构建...",
+        "clinical_implication": "中国是乙肝高负担国家，慢性乙肝患者众多，对功能性治愈的需求迫切。该研究展示的Nab-TAC平台若进入临床，可能为HBsAg清除提供新机制，与现有核苷（酸）类似物和干扰素治疗互补。 然而，该研究仍处于临床前阶段，基于小鼠模型，其人体安全性、有效性及递送方式尚需验证。因此，在解读其对中国患者和市场的潜在影响时，应谨慎外推，需等待进一步的临床前和临床研究数据。",
+        "china_implication": "该研究为国际研究，未涉及中国机构或患者，但中国乙肝患者基数大，对功能性治愈需求高，该技术可能对未来中国治疗策略产生影响，但需更多中国人群数据。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9HzrhDTkH",
+        "title_cn": "B/F/TAF在HIV-1与乙肝共感染人群中的应用：ALLIANCE开放标签扩展期结果",
+        "title_en": "B/F/TAF in people with both HIV-1 and hepatitis B: outcomes from the ALLIANCE open-label extension phase.",
+        "year": 2026,
+        "journal": "AIDS research and therapy",
+        "first_author": "Anchalee Avihingsanon",
+        "publish_date": "2026-07-16",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T2",
+        "topic_primary_name": "HBV现有治疗",
+        "topic_secondary": [
+          "核苷（酸）类似物",
+          "特殊人群",
+          "HBsAg清除"
+        ],
+        "tags": [
+          "HBV DNA",
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "经治",
+          "初治",
+          "中国证据",
+          "耐药",
+          "患者脱落",
+          "基因治疗",
+          "合并症"
+        ],
+        "patient_stage": [
+          "初治患者",
+          "经治患者",
+          "耐药患者"
+        ],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. ALLIANCE研究为随机、双盲、活性对照的3期试验，纳入初治HIV-1 RNA≥500 copies/mL且HBV DNA≥2000 IU/mL的成人，连续接受B/F/TAF治疗144周（含≥96周盲法治疗及48周开放标签扩展期），或接受DTG+F/TDF≥96周后转换至B/F/TAF治疗48周。 2. 连续B/F/TAF组121人，转换组89人；中位B/F/TAF暴露时间分别为18...",
+        "clinical_implication": "中国HIV/HBV共感染患者基数大，且乙肝防治指南强调抗病毒治疗的重要性。B/F/TAF的长期数据支持其作为初治及转换治疗方案的潜力，但需注意中国患者中HBV基因型、耐药情况及合并用药差异。本研究中HBsAg丢失率较高，提示B/F/TAF可能有助于功能性治愈，但需在中国人群中进一步验证。市场团队可关注B/F/TAF在共感染人群中的差异化优势，医学教育需强调长期治疗中的病毒学抑制和安全性监测。",
+        "china_implication": "研究为国际多中心，未包含中国患者，但B/F/TAF已在中国上市，且HIV/HBV合并感染是中国重要公共卫生问题，结果可能间接影响中国临床实践。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9HBCsE37U",
+        "title_cn": "抗HBsAg抗体mAb19-LS增强慢性乙型肝炎患者的抗病毒免疫",
+        "title_en": "Anti-HBsAg antibody mAb19-LS enhances antiviral immunity in humans with chronic hepatitis B.",
+        "year": 2026,
+        "journal": "medRxiv : the preprint server for health sciences",
+        "first_author": "Zijun Wang",
+        "publish_date": "2026-07-15",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "免疫调节",
+          "HBsAg清除",
+          "核苷（酸）类似物"
+        ],
+        "tags": [
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "干扰素",
+          "中国证据",
+          "免疫治疗",
+          "基因治疗"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 两项平行的首次人体、剂量递增研究评估了单次输注靶向HBsAg的长效IgG1单克隆抗体mAb19-LS在接受核苷（酸）类似物治疗的慢性HBV感染者中的效果。 2. mAb19-LS总体安全且耐受性良好，诱导抗原清除平均增加11倍。 3. HBsAg抑制的幅度和持续时间取决于基线抗原水平和mAb19-LS剂量，最高剂量组中抑制维持超过36周。 4. 循环HBsAg的减少与单核细胞和树突状细...",
+        "clinical_implication": "中国有大量慢性乙型肝炎患者，且多数接受核苷（酸）类似物治疗，但HBsAg清除率低。mAb19-LS的初步结果提示，通过单克隆抗体靶向HBsAg可能有助于打破免疫耐受，增强抗病毒免疫，这为开发新型免疫治疗药物提供了依据。然而，该研究为早期临床试验，样本量、长期疗效和安全性数据有限，且未在中国人群中进行，因此外推至中国患者需谨慎。未来需在中国患者中开展进一步研究，以验证其有效性和安全性，并探索与...",
+        "china_implication": "该研究为国际研究，未涉及中国机构或患者，但中国慢性乙型肝炎患者基数大，对功能性治愈需求高，研究结果可能对未来中国临床实践产生影响，但需更多中国数据支持。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvs9HEjYSl6f",
+        "title_cn": "基于Xalnesiran的有限疗程治疗后停用核苷（酸）类似物的慢性乙型肝炎患者结局",
+        "title_en": "Outcomes of nucleos(t)ide analogue discontinuation following finite xalnesiran-based therapies in chronic hepatitis B.",
+        "year": 2026,
+        "journal": "JHEP reports : innovation in hepatology",
+        "first_author": "Cong Cheng",
+        "publish_date": "2026-07-15",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "siRNA/ASO",
+          "免疫调节",
+          "停药策略",
+          "HBsAg清除",
+          "核苷（酸）类似物"
+        ],
+        "tags": [
+          "2030战略",
+          "NA",
+          "HBV DNA",
+          "HBsAg",
+          "功能性治愈",
+          "经治",
+          "基因治疗",
+          "中国证据",
+          "免疫治疗",
+          "真实世界",
+          "患者脱落",
+          "联合治疗"
+        ],
+        "patient_stage": [
+          "经治患者"
+        ],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 本研究为Piranga II期平台试验的事后分析，纳入121例病毒学抑制的慢性乙型肝炎（CHB）患者，评估4种基于xalnesiran（联合或不联合免疫调节剂）的方案。 2. 58例（48%）达到NA停药标准，40例（33%）实际停用NA；其中17例（43%）达到重启标准，16例（40%）重启NA，24例（60%）至研究结束时仍维持停药。 3. 在维持停药的患者中，5例实现并维持HBs...",
+        "clinical_implication": "中国是慢性乙型肝炎高发国家，大量患者接受长期NA治疗，对功能性治愈的需求迫切。本研究显示，基于xalnesiran的有限疗程治疗后，部分患者可安全停药并实现HBsAg消失，这为中国患者提供了潜在的新治疗选择。然而，本研究为II期试验，样本量有限，且未包含中国患者数据，因此外推至中国人群需谨慎。 中国医学团队应关注此类新型联合治疗方案的研发进展，并考虑开展针对中国患者的桥接研究或真实世界研究，...",
+        "china_implication": "该研究为国际多中心试验，未报告中国患者数据，但中国CHB患者众多，对功能性治愈需求迫切，研究结果可能影响中国临床实践和药物研发，但需进一步验证在中国人群中的适用性。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvsjN8YhXifT",
+        "title_cn": "一种新型高特异性qPCR检测方法：通过亚硫酸氢盐预处理区分HBV cccDNA与rcDNA",
+        "title_en": "A novel highly specific qPCR assay for distinguishing HBV cccDNA from rcDNA following bisulfite pretreatment.",
+        "year": 2026,
+        "journal": "Journal of virology",
+        "first_author": "Ning Sun",
+        "publish_date": "2026-08-14",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "生物标志物"
+        ],
+        "tags": [
+          "HBV DNA",
+          "NA",
+          "生物标志物",
+          "功能性治愈",
+          "中国证据"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "诊断",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "1. 该研究评估了一种基于亚硫酸氢盐转化的cccDNA（BSC-cccDNA）qPCR检测平台，通过化学处理破坏rcDNA互补性，实现对cccDNA的选择性扩增。 2. 在合成HBV DNA对照、HBV稳定细胞系和感染细胞提取的DNA样本中，该检测方法表现出高特异性，可耐受高达10^9个rcDNA拷贝，并检测低至10个cccDNA拷贝。 3. 与数字PCR（dPCR）、跨缺口qPCR和Sou...",
+        "clinical_implication": "",
+        "china_implication": "该研究为国际研究，未涉及中国机构或患者，但cccDNA定量对中国乙肝功能性治愈研究具有潜在应用价值，需进一步验证。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvsjNbV19ygX",
+        "title_cn": "AHB-137（一种未缀合反义寡核苷酸）在健康受试者和慢性乙型肝炎患者中的首次人体研究",
+        "title_en": "A First-in-Human study of AHB-137, an unconjugated antisense oligonucleotide, in healthy subjects and patients with chronic hepatitis B.",
+        "year": 2026,
+        "journal": "Hepatology (Baltimore, Md.)",
+        "first_author": "Edward J Gane",
+        "publish_date": "2026-08-12",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "siRNA/ASO",
+          "HBsAg清除",
+          "优势人群筛选"
+        ],
+        "tags": [
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "全国联盟",
+          "中国证据",
+          "患者脱落",
+          "基因治疗"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 本研究为AHB-137的首次人体1期临床试验，在40名健康受试者和24名病毒学抑制、HBeAg阴性的慢性乙型肝炎（CHB）患者中评估了安全性、耐受性、药代动力学（PK）和抗病毒疗效。 2. 健康受试者中，73%出现治疗相关不良事件，CHB患者中为71%，主要为轻中度注射部位反应和头痛；未观察到治疗相关的严重不良事件、停药或死亡。 3. PK特征显示快速吸收（Tmax 2.96-5.50...",
+        "clinical_implication": "",
+        "china_implication": "中国是乙肝高发区，功能性治愈是临床未满足需求；该药物机制与现有治疗不同，可能为中国患者提供新选择，但需中国人群数据支持。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvsHaUhqczeb",
+        "title_cn": "GOLDEN预测模型指导核苷（酸）类似物联合聚乙二醇干扰素α-2b治疗慢性乙型肝炎功能性治愈的研究方案（GIFT项目）",
+        "title_en": "Nucleos(t)ide analogue therapy combined with pegylated interferon α-2b guided by the GOLDEN prediction model for functional cure of chronic hepatitis B: study protocol (GIFT project).",
+        "year": 2026,
+        "journal": "BMJ open",
+        "first_author": "Shiqi Chai",
+        "publish_date": "2026-08-17",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "核苷（酸）类似物",
+          "聚乙二醇干扰素",
+          "联合治疗",
+          "HBsAg清除",
+          "生物标志物",
+          "优势人群筛选"
+        ],
+        "tags": [
+          "生物标志物",
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "经治",
+          "干扰素",
+          "全国联盟",
+          "中国证据",
+          "真实世界",
+          "联合治疗"
+        ],
+        "patient_stage": [
+          "经治患者"
+        ],
+        "journey_stage": [
+          "诊断",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "1. 本研究为前瞻性多中心观察性队列研究，计划在中国22个中心纳入300例经核苷（酸）类似物（NA）治疗的慢性乙型肝炎（CHB）患者。 2. 根据治疗前qHBsAg动力学计算的预测指数（Pi）将患者分为有利组（Pi>0.15，n=150）和不利组（Pi≤0.15，n=150），所有患者接受48周Peg-IFN α-2b联合NA治疗。 3. 主要终点为第48周HBsAg清除率（定义为治疗期间任...",
+        "clinical_implication": "",
+        "china_implication": "研究完全在中国进行，纳入中国患者，涉及中国多个中心，且由中国机构发起，结果将直接指导中国临床实践。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvsHaX24soZd",
+        "title_cn": "靶向L-HBsAg PreS1区的治疗性疫苗策略用于HBV/HDV合并感染",
+        "title_en": "Therapeutic vaccination strategy targeting the PreS1 region of L-HBsAg for HBV/HDV co-infection.",
+        "year": 2026,
+        "journal": "JHEP reports : innovation in hepatology",
+        "first_author": "Rebecca A Russell",
+        "publish_date": "2026-08-17",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "治疗性疫苗",
+          "联合治疗",
+          "HBsAg清除"
+        ],
+        "tags": [
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "干扰素",
+          "疫苗",
+          "基因治疗",
+          "中国证据",
+          "免疫治疗",
+          "联合治疗",
+          "合并症"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 本研究开发了一种靶向L-HBsAg PreS1区的治疗性疫苗策略，利用重组腺病毒（Ad）作为纳米颗粒支架，通过DogTag/DogCatcher蛋白超级胶将PreS1肽装饰在编码多种HBV抗原的Ad颗粒上。 2. 在61例CHB患者队列中，自然抗PreS1抗体反应极低。 3. 在小鼠中，PreS1装饰的Ad疫苗诱导了强效的抗PreS1抗体反应，可中和HBV（p<0.01）和HDV（p<...",
+        "clinical_implication": "",
+        "china_implication": "中国为乙肝高负担国家，功能性治愈研究具有高度相关性；但该研究为国际研究，无中国患者数据，外推需谨慎。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvsHaZvnjuuv",
+        "title_cn": "乙型肝炎病毒衣壳组装调节剂ALG-001075（pevifoscorvir sodium的前体药物）的抗病毒特性研究",
+        "title_en": "Antiviral profile of hepatitis B virus capsid assembly modulator ALG-001075, the parent of pevifoscorvir sodium.",
+        "year": 2026,
+        "journal": "Antiviral research",
+        "first_author": "Yannick Debing",
+        "publish_date": "2026-08-17",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "衣壳抑制剂",
+          "HBsAg清除"
+        ],
+        "tags": [
+          "HBV DNA",
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "干扰素",
+          "中国证据",
+          "免疫治疗",
+          "耐药",
+          "基因治疗"
+        ],
+        "patient_stage": [
+          "耐药患者"
+        ],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. ALG-001075是一种高效的乙型肝炎病毒（HBV）衣壳组装调节剂（CAM），在细胞实验中抑制HBV DNA产生的EC50值低于1 nM，EC99.9值仅为22 nM。 2. 通过荧光淬灭、电子显微镜、尺寸排阻色谱、免疫荧光染色和核磁共振分析，ALG-001075诱导形成空的而非异常的病毒颗粒，因此被归类为CAM-E。 3. 固态核磁共振光谱显示，ALG-001075与野生型衣壳结合...",
+        "clinical_implication": "",
+        "china_implication": "该研究为国际研究，未涉及中国机构或患者，但中国是乙肝高负担国家，新型抗病毒药物的开发对中国患者具有潜在临床意义，但需更多中国人群数据。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvsHb1Achspw",
+        "title_cn": "HBsAg清除与肝细胞癌监测：一刀切并不适用",
+        "title_en": "HBsAg Loss and Hepatocellular Carcinoma Surveillance: One Size Does Not Fit All.",
+        "year": 2026,
+        "journal": "Gastroenterology",
+        "first_author": "Sana A Pirzada",
+        "publish_date": "2026-08-17",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T3",
+        "topic_primary_name": "HBV→HCC转化",
+        "topic_secondary": [
+          "HBsAg清除",
+          "肝癌筛查与监测",
+          "肝癌风险预测"
+        ],
+        "tags": [
+          "HBV DNA",
+          "NA",
+          "HCC风险",
+          "HBsAg",
+          "功能性治愈",
+          "中国证据",
+          "肝硬化"
+        ],
+        "patient_stage": [
+          "HCC患者"
+        ],
+        "journey_stage": [
+          "管理",
+          "HCC",
+          "筛查"
+        ],
+        "key_result": "1. 本文为发表于《Gastroenterology》的编辑评论，讨论HBsAg清除后肝细胞癌（HCC）监测策略的个体化问题。 2. 摘要未报告具体研究设计、样本量或数值。 3. 核心观点认为，HBsAg清除后患者仍存在HCC风险，但风险分层不同，监测策略应因人而异，而非统一标准。",
+        "clinical_implication": "",
+        "china_implication": "中国为乙肝高流行区，HBsAg清除患者数量庞大，HCC监测策略的个体化对临床实践有直接指导意义，且中国指南可能需相应更新。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvsSSvsej7cz",
+        "title_cn": "慢性乙型肝炎核苷（酸）类似物经治患者中病毒载体与佐剂蛋白HBV治疗性疫苗的随机试验",
+        "title_en": "A randomized trial of viral vector and adjuvanted protein HBV therapeutic vaccine in people with chronic hepatitis B on nucleos(t)ide analogs.",
+        "year": 2026,
+        "journal": "Hepatology communications",
+        "first_author": "Wen-Juei Jeng",
+        "publish_date": "2026-08-20",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "治疗性疫苗",
+          "免疫调节",
+          "核苷（酸）类似物",
+          "HBsAg清除"
+        ],
+        "tags": [
+          "NA",
+          "HBsAg",
+          "功能性治愈",
+          "经治",
+          "疫苗",
+          "基因治疗",
+          "中国证据",
+          "免疫治疗",
+          "联合治疗"
+        ],
+        "patient_stage": [
+          "经治患者"
+        ],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 本研究为单盲、随机、对照、首次人体、1/2期试验，纳入134例HBeAg阴性、接受核苷（酸）类似物治疗且病毒抑制、HBsAg>50 IU/mL的慢性乙型肝炎患者。 2. 受试者接受异源初免-加强策略（ChAd155-hIi-HBV和MVA-HBV病毒载体，联合或不联合HBc-HBs/AS01B佐剂蛋白），共4剂，间隔8周。 3. 安全性方面，高剂量病毒载体与蛋白联合给药时，3级不良事件...",
+        "clinical_implication": "",
+        "china_implication": "该研究为国际多中心试验，未包含中国患者，但中国CHB患者众多，治疗性疫苗策略与功能性治愈目标高度相关，研究结果对中国临床实践和产品研发具有参考价值，但需进一步验证在中国人群中的适用性。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvsYJ6RGi4IL",
+        "title_cn": "晚期肝细胞癌一线系统治疗疗效与安全性整合：网络荟萃分析",
+        "title_en": "Integrating efficacy and safety profile in advanced HCC: A network meta-analysis of first-line systemic therapies.",
+        "year": 2026,
+        "journal": "JNCI cancer spectrum",
+        "first_author": "Wei Yu Chua",
+        "publish_date": "2026-08-21",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "A",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T4",
+        "topic_primary_name": "HCC全病程",
+        "topic_secondary": [
+          "靶向治疗",
+          "免疫治疗",
+          "联合治疗",
+          "生物标志物"
+        ],
+        "tags": [
+          "生物标志物",
+          "NA",
+          "HCC风险",
+          "基因治疗",
+          "全国联盟",
+          "中国证据",
+          "免疫治疗",
+          "真实世界",
+          "联合治疗"
+        ],
+        "patient_stage": [
+          "HCC患者"
+        ],
+        "journey_stage": [
+          "HCC",
+          "诊断",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "1. 共纳入17项III期随机对照试验，涉及12,727例晚期HCC患者，比较一线系统治疗与索拉非尼或仑伐替尼的疗效和安全性。 2. 与索拉非尼相比，Nivolumab-Ipilimumab（HR 0.61, 95%CI 0.44-0.84）、Atezolizumab-Bevacizumab（HR 0.66, 95%CI 0.48-0.90）、Durvalumab-Tremelimumab（...",
+        "clinical_implication": "",
+        "china_implication": "研究纳入中国自主研发药物（Sintilimab、Camrelizumab）的临床试验，且中国为HBV相关HCC高发区，亚组分析涉及HBV病因，对中国临床实践具有直接参考价值。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvt4zgO1QWC1",
+        "title_cn": "HBVZ10在体内展现强效抗病毒活性，并与恩替卡韦协同促进cccDNA清除及HBsAg血清学转换",
+        "title_en": "HBVZ10 Exhibits Robust In Vivo Potency and Synergizes with Entecavir to Drive Efficient cccDNA Elimination and HBsAg Seroclearance.",
+        "year": 2026,
+        "journal": "Antiviral research",
+        "first_author": "Bai-Hua Zhang",
+        "publish_date": "2026-08-21",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "联合治疗",
+          "HBsAg清除",
+          "siRNA/ASO"
+        ],
+        "tags": [
+          "2030战略",
+          "NA",
+          "HBV DNA",
+          "HBsAg",
+          "功能性治愈",
+          "基因治疗",
+          "中国证据",
+          "免疫治疗",
+          "联合治疗",
+          "单药治疗"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. HBVZ10是一种新型治疗候选药物，通过骨骼肌细胞内源性产生中和性抗-HBs抗体。 2. 在具有人源化肝脏的免疫缺陷小鼠中，单次给予HBVZ10后，抗-HBs滴度迅速升高并维持在≥100,000 mIU/mL直至231天。 3. HBVZ10单药治疗在170天内持续抑制血清HBV DNA（下降78-93%）和HBsAg（下降80-90%）。 4. HBVZ10联合恩替卡韦（ETV）治疗...",
+        "clinical_implication": "",
+        "china_implication": "该研究为国际临床前研究，未涉及中国患者或中国机构，但中国乙肝患者基数大，功能性治愈需求迫切，研究结果可能对未来中国临床实践产生影响，但需更多中国人群数据。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvtgghwsHx9v",
+        "title_cn": "聚乙二醇干扰素-α治疗在不同慢性乙型肝炎病毒感染人群中的HBsAg清除率：系统评价与荟萃分析",
+        "title_en": "Hepatitis B surface antigen clearance rate with pegylated interferon-α therapy in different chronic hepatitis B virus infection populations: A systematic review and meta-analysis.",
+        "year": 2026,
+        "journal": "Chinese medical journal",
+        "first_author": "Chengrun Song",
+        "publish_date": "2026-08-24",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "A",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T1",
+        "topic_primary_name": "HBV功能性治愈",
+        "topic_secondary": [
+          "聚乙二醇干扰素",
+          "HBsAg清除",
+          "优势人群筛选"
+        ],
+        "tags": [
+          "NA",
+          "HCC风险",
+          "HBsAg",
+          "功能性治愈",
+          "经治",
+          "干扰素",
+          "初治",
+          "中国证据",
+          "儿童",
+          "真实世界"
+        ],
+        "patient_stage": [
+          "初治患者",
+          "经治患者"
+        ],
+        "journey_stage": [
+          "治疗"
+        ],
+        "key_result": "1. 本研究为系统评价与荟萃分析，共纳入115项研究，评估PegIFNα为基础的治疗在不同慢性HBV感染人群中的HBsAg清除率。 2. 总体HBsAg清除率为16%（95% CI: 13-20%）。 3. 治疗结束时（EOT）HBsAg清除率：初治CHB患者为5%（95% CI: 4-7%），NAs经治CHB患者为21%（95% CI: 16-26%），非活动性HBsAg携带者为57%（9...",
+        "clinical_implication": "",
+        "china_implication": "中国为乙肝高流行地区，该研究涉及PegIFNα治疗不同人群的疗效，与中国临床实践密切相关，且中国患者可能从非活动性携带者和NAs经治患者的治疗策略中获益。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvtt1PpAHID8",
+        "title_cn": "HBV抑制10年后能否降级HCC监测？",
+        "title_en": "Can we de-escalate HCC surveillance after 10 years of HBV suppression on nucleos(t)ide analogues?",
+        "year": 2026,
+        "journal": "Journal of hepatology",
+        "first_author": "Wen-Juei Jeng",
+        "publish_date": "2026-08-25",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "B",
+        "priority": "高",
+        "china_evidence": true,
+        "topic_primary": "T3",
+        "topic_primary_name": "HBV→HCC转化",
+        "topic_secondary": [
+          "核苷（酸）类似物",
+          "肝癌筛查与监测",
+          "肝癌风险预测"
+        ],
+        "tags": [
+          "生物标志物",
+          "NA",
+          "HCC风险",
+          "中国证据"
+        ],
+        "patient_stage": [
+          "HCC患者"
+        ],
+        "journey_stage": [
+          "管理",
+          "HCC",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "1. 本文为发表于《Journal of Hepatology》的编辑评论，针对核苷（酸）类似物（NAs）抑制HBV 10年后是否可降级肝细胞癌（HCC）监测的议题展开讨论。 2. 摘要未报告具体研究设计、样本量或数值数据。 3. 核心观点可能涉及长期NAs治疗下HCC风险分层及监测策略的优化，但摘要未提供具体结论。",
+        "clinical_implication": "",
+        "china_implication": "中国为HBV高负担国家，HCC监测策略优化对临床实践有潜在影响，但本文为国际编辑评论，无直接中国数据。",
+        "strategy_2030": "高",
+        "source_type": [
+          "国际研究"
+        ],
+        "source_url": ""
+      },
+      {
+        "id": "recvtsQdggIo9E",
+        "title_cn": "",
+        "title_en": "",
+        "year": null,
+        "journal": "",
+        "first_author": "",
+        "publish_date": "",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "C",
+        "priority": "低",
+        "china_evidence": false,
+        "topic_primary": "T3",
+        "topic_primary_name": "HBV→HCC转化",
+        "topic_secondary": [
+          "HBsAg清除、肝癌筛查与监测、肝癌风险预测"
+        ],
+        "tags": [
+          "HCC风险",
+          "HBsAg",
+          "功能性治愈"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "管理",
+          "HCC",
+          "筛查"
+        ],
+        "key_result": "",
+        "clinical_implication": "",
+        "china_implication": "",
+        "strategy_2030": "低",
+        "source_type": [],
+        "source_url": ""
+      },
+      {
+        "id": "recvtt1W7nIRXZ",
+        "title_cn": "",
+        "title_en": "",
+        "year": null,
+        "journal": "",
+        "first_author": "",
+        "publish_date": "",
+        "pmid": "",
+        "doi": "",
+        "evidence_level": "C",
+        "priority": "低",
+        "china_evidence": false,
+        "topic_primary": "T3",
+        "topic_primary_name": "HBV→HCC转化",
+        "topic_secondary": [
+          "核苷（酸）类似物、肝癌筛查与监测、肝癌风险预测"
+        ],
+        "tags": [
+          "NA",
+          "HCC风险"
+        ],
+        "patient_stage": [],
+        "journey_stage": [
+          "管理",
+          "HCC",
+          "治疗",
+          "筛查"
+        ],
+        "key_result": "",
+        "clinical_implication": "",
+        "china_implication": "",
+        "strategy_2030": "低",
+        "source_type": [],
+        "source_url": ""
+      }
+    ]
+  },
+  "statistics": {
+    "total_literature": 51,
+    "china_evidence_count": 35,
+    "china_evidence_pct": 68.6,
+    "ab_evidence_count": 49,
+    "ab_evidence_pct": 96.1,
+    "high_2030_relevance": 35,
+    "topics": {
+      "T1": 32,
+      "T2": 9,
+      "T3": 6,
+      "T4": 3,
+      "T5": 1
+    },
+    "by_year": {
+      "2025": 8,
+      "2026": 41
+    },
+    "by_evidence_level": {
+      "A": 2,
+      "B": 47,
+      "C": 2
+    },
+    "journey_stages": {
+      "筛查": 17,
+      "诊断": 13,
+      "治疗": 47,
+      "管理": 8,
+      "HCC": 11
+    }
+  },
+  "insights": {
+    "version": "1.0",
+    "generated_at": "2026-08-28T18:07:27.627376+08:00",
+    "generation_mode": "heuristic",
+    "top_insights": [
+      {
+        "insight_id": "INS-001",
+        "rank": 1,
+        "title": "HBV功能性治愈领域研究进展显著",
+        "one_sentence": "本专题纳入32篇文献，涵盖新型治愈药物、免疫治疗、基因治疗、HBsAg清除，为临床实践提供新证据。",
+        "topic": "T4",
+        "journey_stage": "治疗",
+        "gap_2030": "2030目标在HBV功能性治愈领域仍有显著差距",
+        "what_changed": "从传统认知到基于最新证据的HBV功能性治愈优化策略",
+        "why_now": "近两年HBV功能性治愈领域研究进展迅速，是行动窗口期",
+        "key_evidence": [
+          "新型HBV功能性治愈药物的临床研究进展: 部分药物可实现HBsAg的持续清除",
+          "新型HBVcccDNA抑制剂的体外活性研究: 该化合物的体外抑制活性优于现有同类药物"
+        ],
+        "evidence_strength": "中",
+        "confidence": "中",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "china_context": "中国乙肝负担重，HBV功能性治愈优化对中国意义重大",
+        "clinical_implication": "临床应关注HBV功能性治愈的最新进展并及时更新诊疗策略",
+        "patient_management_implication": "患者可能从HBV功能性治愈优化中获益",
+        "alliance_action": "联盟应推动HBV功能性治愈的规范化和证据积累",
+        "responsible_party": [
+          "国家级中心",
+          "省级中心",
+          "市级中心",
+          "药企"
+        ],
+        "kpi": [
+          "功能性治愈率",
+          "HBsAg清除率"
+        ],
+        "source_ids": [
+          "recB3ol2hVGaS4",
+          "reccmhzwk0Qwxd",
+          "recvs9yQpvReIQ"
+        ],
+        "supporting_topic_insights": [
+          "T4-INS-001"
+        ]
+      },
+      {
+        "insight_id": "INS-002",
+        "rank": 2,
+        "title": "中国HBV功能性治愈证据仍显不足",
+        "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+        "topic": "T4",
+        "journey_stage": "治疗",
+        "gap_2030": "2030目标在HBV功能性治愈领域仍有显著差距",
+        "what_changed": "从依赖国际证据到重视中国本土证据生成",
+        "why_now": "近两年HBV功能性治愈领域研究进展迅速，是行动窗口期",
+        "key_evidence": [
+          "新型HBV功能性治愈药物的临床研究进展: 部分药物可实现HBsAg的持续清除",
+          "新型HBVcccDNA抑制剂的体外活性研究: 该化合物的体外抑制活性优于现有同类药物"
+        ],
+        "evidence_strength": "中",
+        "confidence": "中",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "china_context": "中国乙肝负担重，HBV功能性治愈优化对中国意义重大",
+        "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+        "patient_management_implication": "中国患者可能存在治疗反应差异",
+        "alliance_action": "联盟应推动HBV功能性治愈的规范化和证据积累",
+        "responsible_party": [
+          "国家级中心",
+          "省级中心",
+          "市级中心",
+          "药企"
+        ],
+        "kpi": [
+          "功能性治愈率",
+          "HBsAg清除率"
+        ],
+        "source_ids": [
+          "recB3ol2hVGaS4",
+          "reccmhzwk0Qwxd",
+          "recvs9yQpvReIQ"
+        ],
+        "supporting_topic_insights": [
+          "T4-INS-002"
+        ]
+      },
+      {
+        "insight_id": "INS-003",
+        "rank": 3,
+        "title": "HBV功能性治愈临床实践模式正在转变",
+        "one_sentence": "需重点关注该类药物的安全性和长期疗效",
+        "topic": "T4",
+        "journey_stage": "治疗",
+        "gap_2030": "2030目标在HBV功能性治愈领域仍有显著差距",
+        "what_changed": "从经验医学向循证医学转变",
+        "why_now": "近两年HBV功能性治愈领域研究进展迅速，是行动窗口期",
+        "key_evidence": [
+          "新型HBV功能性治愈药物的临床研究进展: 部分药物可实现HBsAg的持续清除",
+          "新型HBVcccDNA抑制剂的体外活性研究: 该化合物的体外抑制活性优于现有同类药物"
+        ],
+        "evidence_strength": "中",
+        "confidence": "中",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "china_context": "中国乙肝负担重，HBV功能性治愈优化对中国意义重大",
+        "clinical_implication": "需重点关注该类药物的安全性和长期疗效",
+        "patient_management_implication": "患者管理策略需优化",
+        "alliance_action": "联盟应推动HBV功能性治愈的规范化和证据积累",
+        "responsible_party": [
+          "国家级中心",
+          "省级中心",
+          "市级中心",
+          "药企"
+        ],
+        "kpi": [
+          "功能性治愈率",
+          "HBsAg清除率"
+        ],
+        "source_ids": [
+          "recB3ol2hVGaS4",
+          "reccmhzwk0Qwxd",
+          "recvs9yQpvReIQ"
+        ],
+        "supporting_topic_insights": [
+          "T4-INS-003"
+        ]
+      },
+      {
+        "insight_id": "INS-004",
+        "rank": 4,
+        "title": "HBV现有治疗优化领域研究进展显著",
+        "one_sentence": "本专题纳入9篇文献，涵盖NA治疗、干扰素治疗、联合治疗、治疗监测，为临床实践提供新证据。",
+        "topic": "T3",
+        "journey_stage": "治疗",
+        "gap_2030": "2030目标在HBV现有治疗优化领域仍有显著差距",
+        "what_changed": "从传统认知到基于最新证据的HBV现有治疗优化优化策略",
+        "why_now": "近两年HBV现有治疗优化领域研究进展迅速，是行动窗口期",
+        "key_evidence": [
+          "核苷类似物联合干扰素治疗慢性HBV的疗效分析: 联合治疗组的HBV DNA转阴率显著高于单药组",
+          "HBV母婴传播阻断方案的效果评估: 联合阻断方案可有效降低HBV母婴传播率"
+        ],
+        "evidence_strength": "中",
+        "confidence": "中",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "china_context": "中国乙肝负担重，HBV现有治疗优化优化对中国意义重大",
+        "clinical_implication": "临床应关注HBV现有治疗优化的最新进展并及时更新诊疗策略",
+        "patient_management_implication": "患者可能从HBV现有治疗优化优化中获益",
+        "alliance_action": "联盟应推动HBV现有治疗优化的规范化和证据积累",
+        "responsible_party": [
+          "国家级中心",
+          "省级中心",
+          "市级中心",
+          "药企"
+        ],
+        "kpi": [
+          "治疗启动率",
+          "病毒学应答率"
+        ],
+        "source_ids": [
+          "recvjAnzcLD8Yc",
+          "recMnw9260dRR5",
+          "recXYbSUGG4Mjy"
+        ],
+        "supporting_topic_insights": [
+          "T3-INS-001"
+        ]
+      },
+      {
+        "insight_id": "INS-005",
+        "rank": 5,
+        "title": "中国HBV现有治疗优化证据仍显不足",
+        "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+        "topic": "T3",
+        "journey_stage": "治疗",
+        "gap_2030": "2030目标在HBV现有治疗优化领域仍有显著差距",
+        "what_changed": "从依赖国际证据到重视中国本土证据生成",
+        "why_now": "近两年HBV现有治疗优化领域研究进展迅速，是行动窗口期",
+        "key_evidence": [
+          "核苷类似物联合干扰素治疗慢性HBV的疗效分析: 联合治疗组的HBV DNA转阴率显著高于单药组",
+          "HBV母婴传播阻断方案的效果评估: 联合阻断方案可有效降低HBV母婴传播率"
+        ],
+        "evidence_strength": "中",
+        "confidence": "中",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "china_context": "中国乙肝负担重，HBV现有治疗优化优化对中国意义重大",
+        "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+        "patient_management_implication": "中国患者可能存在治疗反应差异",
+        "alliance_action": "联盟应推动HBV现有治疗优化的规范化和证据积累",
+        "responsible_party": [
+          "国家级中心",
+          "省级中心",
+          "市级中心",
+          "药企"
+        ],
+        "kpi": [
+          "治疗启动率",
+          "病毒学应答率"
+        ],
+        "source_ids": [
+          "recvjAnzcLD8Yc",
+          "recMnw9260dRR5",
+          "recXYbSUGG4Mjy"
+        ],
+        "supporting_topic_insights": [
+          "T3-INS-002"
+        ]
+      },
+      {
+        "insight_id": "INS-006",
+        "rank": 6,
+        "title": "HBV现有治疗优化临床实践模式正在转变",
+        "one_sentence": "可尝试在临床中推广该联合治疗方案",
+        "topic": "T3",
+        "journey_stage": "治疗",
+        "gap_2030": "2030目标在HBV现有治疗优化领域仍有显著差距",
+        "what_changed": "从经验医学向循证医学转变",
+        "why_now": "近两年HBV现有治疗优化领域研究进展迅速，是行动窗口期",
+        "key_evidence": [
+          "核苷类似物联合干扰素治疗慢性HBV的疗效分析: 联合治疗组的HBV DNA转阴率显著高于单药组",
+          "HBV母婴传播阻断方案的效果评估: 联合阻断方案可有效降低HBV母婴传播率"
+        ],
+        "evidence_strength": "中",
+        "confidence": "中",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "china_context": "中国乙肝负担重，HBV现有治疗优化优化对中国意义重大",
+        "clinical_implication": "可尝试在临床中推广该联合治疗方案",
+        "patient_management_implication": "患者管理策略需优化",
+        "alliance_action": "联盟应推动HBV现有治疗优化的规范化和证据积累",
+        "responsible_party": [
+          "国家级中心",
+          "省级中心",
+          "市级中心",
+          "药企"
+        ],
+        "kpi": [
+          "治疗启动率",
+          "病毒学应答率"
+        ],
+        "source_ids": [
+          "recvjAnzcLD8Yc",
+          "recMnw9260dRR5",
+          "recXYbSUGG4Mjy"
+        ],
+        "supporting_topic_insights": [
+          "T3-INS-003"
+        ]
+      },
+      {
+        "insight_id": "INS-007",
+        "rank": 7,
+        "title": "HBV→HCC进展与防控领域研究进展显著",
+        "one_sentence": "本专题纳入4篇文献，涵盖致癌机制、HCC风险预测、化学预防，为临床实践提供新证据。",
+        "topic": "T5",
+        "journey_stage": "随访",
+        "gap_2030": "2030目标在HBV→HCC进展与防控领域仍有显著差距",
+        "what_changed": "从传统认知到基于最新证据的HBV→HCC进展与防控优化策略",
+        "why_now": "近两年HBV→HCC进展与防控领域研究进展迅速，是行动窗口期",
+        "key_evidence": [
+          "HBV感染与肝细胞癌发生发展的分子机制研究: HBV整合位点与肝细胞癌的突变谱高度相关",
+          "HBV相关肝细胞癌患者的免疫治疗疗效分析: PD-1抑制剂对HBV相关HCC具有一定的疗效"
+        ],
+        "evidence_strength": "低",
+        "confidence": "低",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "china_context": "中国乙肝负担重，HBV→HCC进展与防控优化对中国意义重大",
+        "clinical_implication": "临床应关注HBV→HCC进展与防控的最新进展并及时更新诊疗策略",
+        "patient_management_implication": "患者可能从HBV→HCC进展与防控优化中获益",
+        "alliance_action": "联盟应推动HBV→HCC进展与防控的规范化和证据积累",
+        "responsible_party": [
+          "国家级中心",
+          "省级中心"
+        ],
+        "kpi": [
+          "HCC监测率",
+          "风险分层准确率"
+        ],
+        "source_ids": [
+          "receNwY04nmz6m",
+          "recHdKmOooG1oo",
+          "recvsHb1Achspw"
+        ],
+        "supporting_topic_insights": [
+          "T5-INS-001"
+        ]
+      },
+      {
+        "insight_id": "INS-008",
+        "rank": 8,
+        "title": "中国HBV→HCC进展与防控证据仍显不足",
+        "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+        "topic": "T5",
+        "journey_stage": "随访",
+        "gap_2030": "2030目标在HBV→HCC进展与防控领域仍有显著差距",
+        "what_changed": "从依赖国际证据到重视中国本土证据生成",
+        "why_now": "近两年HBV→HCC进展与防控领域研究进展迅速，是行动窗口期",
+        "key_evidence": [
+          "HBV感染与肝细胞癌发生发展的分子机制研究: HBV整合位点与肝细胞癌的突变谱高度相关",
+          "HBV相关肝细胞癌患者的免疫治疗疗效分析: PD-1抑制剂对HBV相关HCC具有一定的疗效"
+        ],
+        "evidence_strength": "低",
+        "confidence": "低",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "china_context": "中国乙肝负担重，HBV→HCC进展与防控优化对中国意义重大",
+        "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+        "patient_management_implication": "中国患者可能存在治疗反应差异",
+        "alliance_action": "联盟应推动HBV→HCC进展与防控的规范化和证据积累",
+        "responsible_party": [
+          "国家级中心",
+          "省级中心"
+        ],
+        "kpi": [
+          "HCC监测率",
+          "风险分层准确率"
+        ],
+        "source_ids": [
+          "receNwY04nmz6m",
+          "recHdKmOooG1oo",
+          "recvsHb1Achspw"
+        ],
+        "supporting_topic_insights": [
+          "T5-INS-002"
+        ]
+      },
+      {
+        "insight_id": "INS-009",
+        "rank": 9,
+        "title": "HBV→HCC进展与防控临床实践模式正在转变",
+        "one_sentence": "可开发针对HBV整合位点的早期诊断方法",
+        "topic": "T5",
+        "journey_stage": "随访",
+        "gap_2030": "2030目标在HBV→HCC进展与防控领域仍有显著差距",
+        "what_changed": "从经验医学向循证医学转变",
+        "why_now": "近两年HBV→HCC进展与防控领域研究进展迅速，是行动窗口期",
+        "key_evidence": [
+          "HBV感染与肝细胞癌发生发展的分子机制研究: HBV整合位点与肝细胞癌的突变谱高度相关",
+          "HBV相关肝细胞癌患者的免疫治疗疗效分析: PD-1抑制剂对HBV相关HCC具有一定的疗效"
+        ],
+        "evidence_strength": "低",
+        "confidence": "低",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "china_context": "中国乙肝负担重，HBV→HCC进展与防控优化对中国意义重大",
+        "clinical_implication": "可开发针对HBV整合位点的早期诊断方法",
+        "patient_management_implication": "患者管理策略需优化",
+        "alliance_action": "联盟应推动HBV→HCC进展与防控的规范化和证据积累",
+        "responsible_party": [
+          "国家级中心",
+          "省级中心"
+        ],
+        "kpi": [
+          "HCC监测率",
+          "风险分层准确率"
+        ],
+        "source_ids": [
+          "receNwY04nmz6m",
+          "recHdKmOooG1oo",
+          "recvsHb1Achspw"
+        ],
+        "supporting_topic_insights": [
+          "T5-INS-003"
+        ]
+      },
+      {
+        "insight_id": "INS-010",
+        "rank": 10,
+        "title": "2030行动与政策环境领域研究进展显著",
+        "one_sentence": "本专题纳入1篇文献，涵盖指南、共识、卫生政策、筛查策略、消除目标，为临床实践提供新证据。",
+        "topic": "T1",
+        "journey_stage": "筛查",
+        "gap_2030": "2030目标在2030行动与政策环境领域仍有显著差距",
+        "what_changed": "从传统认知到基于最新证据的2030行动与政策环境优化策略",
+        "why_now": "近两年2030行动与政策环境领域研究进展迅速，是行动窗口期",
+        "key_evidence": [
+          "2025年HBV感染诊治指南的解读与应用: 指南推荐扩大HBV筛查的覆盖人群"
+        ],
+        "evidence_strength": "高",
+        "confidence": "低",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "china_context": "中国乙肝负担重，2030行动与政策环境优化对中国意义重大",
+        "clinical_implication": "临床应关注2030行动与政策环境的最新进展并及时更新诊疗策略",
+        "patient_management_implication": "患者可能从2030行动与政策环境优化中获益",
+        "alliance_action": "联盟应推动2030行动与政策环境的规范化和证据积累",
+        "responsible_party": [
+          "国家级中心",
+          "省级中心",
+          "基层医疗机构",
+          "监管机构"
+        ],
+        "kpi": [
+          "筛查覆盖率",
+          "指南依从率"
+        ],
+        "source_ids": [
+          "recqKtS6wWDMnw"
+        ],
+        "supporting_topic_insights": [
+          "T1-INS-001"
+        ]
+      }
+    ],
+    "topic_insights": {
+      "T1": [
+        {
+          "insight_id": "T1-INS-001",
+          "title": "2030行动与政策环境领域研究进展显著",
+          "one_sentence": "本专题纳入1篇文献，涵盖指南、共识、卫生政策、筛查策略、消除目标，为临床实践提供新证据。",
+          "what_changed": "从传统认知到基于最新证据的2030行动与政策环境优化策略",
+          "why_it_matters": "指南、共识、卫生政策、筛查策略、消除目标，对实现2030目标至关重要",
+          "evidence_summary": "1篇高证据等级研究，0篇中等证据研究",
+          "evidence_strength": "高",
+          "confidence": "低",
+          "uncertainty": "部分结论来自小样本研究，需更多验证",
+          "supporting_sources": [
+            "recqKtS6wWDMnw"
+          ],
+          "clinical_implication": "临床应关注2030行动与政策环境的最新进展并及时更新诊疗策略",
+          "patient_impact": "患者可能从2030行动与政策环境优化中获益",
+          "relevance_2030": "支持2030消除乙肝目标中筛查环节的优化",
+          "_topic": "T1"
+        }
+      ],
+      "T3": [
+        {
+          "insight_id": "T3-INS-001",
+          "title": "HBV现有治疗优化领域研究进展显著",
+          "one_sentence": "本专题纳入9篇文献，涵盖NA治疗、干扰素治疗、联合治疗、治疗监测，为临床实践提供新证据。",
+          "what_changed": "从传统认知到基于最新证据的HBV现有治疗优化优化策略",
+          "why_it_matters": "NA治疗、干扰素治疗、联合治疗、治疗监测，对实现2030目标至关重要",
+          "evidence_summary": "0篇高证据等级研究，9篇中等证据研究",
+          "evidence_strength": "中",
+          "confidence": "中",
+          "uncertainty": "部分结论来自小样本研究，需更多验证",
+          "supporting_sources": [
+            "recvjAnzcLD8Yc",
+            "recMnw9260dRR5",
+            "recXYbSUGG4Mjy",
+            "recvs9GPD0eDGH",
+            "recvs9GUHMYT7O"
+          ],
+          "clinical_implication": "临床应关注HBV现有治疗优化的最新进展并及时更新诊疗策略",
+          "patient_impact": "患者可能从HBV现有治疗优化优化中获益",
+          "relevance_2030": "支持2030消除乙肝目标中治疗环节的优化",
+          "_topic": "T3"
+        },
+        {
+          "insight_id": "T3-INS-002",
+          "title": "中国HBV现有治疗优化证据仍显不足",
+          "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+          "what_changed": "从依赖国际证据到重视中国本土证据生成",
+          "why_it_matters": "NA治疗、干扰素治疗、联合治疗、治疗监测，对实现2030目标至关重要",
+          "evidence_summary": "中国市场相关性高的研究1篇，中等4篇",
+          "evidence_strength": "中",
+          "confidence": "中",
+          "uncertainty": "部分结论来自小样本研究，需更多验证",
+          "supporting_sources": [
+            "recvjAnzcLD8Yc",
+            "recMnw9260dRR5",
+            "recXYbSUGG4Mjy",
+            "recvs9GPD0eDGH",
+            "recvs9GUHMYT7O"
+          ],
+          "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+          "patient_impact": "中国患者可能存在治疗反应差异",
+          "relevance_2030": "中国本土证据是实现2030目标的关键支撑",
+          "_topic": "T3"
+        },
+        {
+          "insight_id": "T3-INS-003",
+          "title": "HBV现有治疗优化临床实践模式正在转变",
+          "one_sentence": "可尝试在临床中推广该联合治疗方案",
+          "what_changed": "从经验医学向循证医学转变",
+          "why_it_matters": "NA治疗、干扰素治疗、联合治疗、治疗监测，对实现2030目标至关重要",
+          "evidence_summary": "基于9篇研究证据的综合分析",
+          "evidence_strength": "中",
+          "confidence": "中",
+          "uncertainty": "部分结论来自小样本研究，需更多验证",
+          "supporting_sources": [
+            "recvjAnzcLD8Yc",
+            "recMnw9260dRR5",
+            "recXYbSUGG4Mjy",
+            "recvs9GPD0eDGH",
+            "recvs9GUHMYT7O"
+          ],
+          "clinical_implication": "可尝试在临床中推广该联合治疗方案",
+          "patient_impact": "患者管理策略需优化",
+          "relevance_2030": "规范化诊疗是实现2030目标的基础",
+          "_topic": "T3"
+        }
+      ],
+      "T4": [
+        {
+          "insight_id": "T4-INS-001",
+          "title": "HBV功能性治愈领域研究进展显著",
+          "one_sentence": "本专题纳入32篇文献，涵盖新型治愈药物、免疫治疗、基因治疗、HBsAg清除，为临床实践提供新证据。",
+          "what_changed": "从传统认知到基于最新证据的HBV功能性治愈优化策略",
+          "why_it_matters": "新型治愈药物、免疫治疗、基因治疗、HBsAg清除，对实现2030目标至关重要",
+          "evidence_summary": "3篇高证据等级研究，23篇中等证据研究",
+          "evidence_strength": "中",
+          "confidence": "中",
+          "uncertainty": "部分结论来自小样本研究，需更多验证",
+          "supporting_sources": [
+            "recB3ol2hVGaS4",
+            "reccmhzwk0Qwxd",
+            "recvs9yQpvReIQ",
+            "recvs9GDUkNmpa",
+            "recvs9GGji9bit"
+          ],
+          "clinical_implication": "临床应关注HBV功能性治愈的最新进展并及时更新诊疗策略",
+          "patient_impact": "患者可能从HBV功能性治愈优化中获益",
+          "relevance_2030": "支持2030消除乙肝目标中治疗环节的优化",
+          "_topic": "T4"
+        },
+        {
+          "insight_id": "T4-INS-002",
+          "title": "中国HBV功能性治愈证据仍显不足",
+          "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+          "what_changed": "从依赖国际证据到重视中国本土证据生成",
+          "why_it_matters": "新型治愈药物、免疫治疗、基因治疗、HBsAg清除，对实现2030目标至关重要",
+          "evidence_summary": "中国市场相关性高的研究9篇，中等18篇",
+          "evidence_strength": "中",
+          "confidence": "中",
+          "uncertainty": "部分结论来自小样本研究，需更多验证",
+          "supporting_sources": [
+            "recB3ol2hVGaS4",
+            "reccmhzwk0Qwxd",
+            "recvs9yQpvReIQ",
+            "recvs9GDUkNmpa",
+            "recvs9GGji9bit"
+          ],
+          "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+          "patient_impact": "中国患者可能存在治疗反应差异",
+          "relevance_2030": "中国本土证据是实现2030目标的关键支撑",
+          "_topic": "T4"
+        },
+        {
+          "insight_id": "T4-INS-003",
+          "title": "HBV功能性治愈临床实践模式正在转变",
+          "one_sentence": "需重点关注该类药物的安全性和长期疗效",
+          "what_changed": "从经验医学向循证医学转变",
+          "why_it_matters": "新型治愈药物、免疫治疗、基因治疗、HBsAg清除，对实现2030目标至关重要",
+          "evidence_summary": "基于32篇研究证据的综合分析",
+          "evidence_strength": "中",
+          "confidence": "中",
+          "uncertainty": "部分结论来自小样本研究，需更多验证",
+          "supporting_sources": [
+            "recB3ol2hVGaS4",
+            "reccmhzwk0Qwxd",
+            "recvs9yQpvReIQ",
+            "recvs9GDUkNmpa",
+            "recvs9GGji9bit"
+          ],
+          "clinical_implication": "需重点关注该类药物的安全性和长期疗效",
+          "patient_impact": "患者管理策略需优化",
+          "relevance_2030": "规范化诊疗是实现2030目标的基础",
+          "_topic": "T4"
+        }
+      ],
+      "T5": [
+        {
+          "insight_id": "T5-INS-001",
+          "title": "HBV→HCC进展与防控领域研究进展显著",
+          "one_sentence": "本专题纳入4篇文献，涵盖致癌机制、HCC风险预测、化学预防，为临床实践提供新证据。",
+          "what_changed": "从传统认知到基于最新证据的HBV→HCC进展与防控优化策略",
+          "why_it_matters": "致癌机制、HCC风险预测、化学预防，对实现2030目标至关重要",
+          "evidence_summary": "0篇高证据等级研究，1篇中等证据研究",
+          "evidence_strength": "低",
+          "confidence": "低",
+          "uncertainty": "部分结论来自小样本研究，需更多验证",
+          "supporting_sources": [
+            "receNwY04nmz6m",
+            "recHdKmOooG1oo",
+            "recvsHb1Achspw",
+            "recvtt1PpAHID8"
+          ],
+          "clinical_implication": "临床应关注HBV→HCC进展与防控的最新进展并及时更新诊疗策略",
+          "patient_impact": "患者可能从HBV→HCC进展与防控优化中获益",
+          "relevance_2030": "支持2030消除乙肝目标中随访环节的优化",
+          "_topic": "T5"
+        },
+        {
+          "insight_id": "T5-INS-002",
+          "title": "中国HBV→HCC进展与防控证据仍显不足",
+          "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+          "what_changed": "从依赖国际证据到重视中国本土证据生成",
+          "why_it_matters": "致癌机制、HCC风险预测、化学预防，对实现2030目标至关重要",
+          "evidence_summary": "中国市场相关性高的研究1篇，中等1篇",
+          "evidence_strength": "低",
+          "confidence": "低",
+          "uncertainty": "部分结论来自小样本研究，需更多验证",
+          "supporting_sources": [
+            "receNwY04nmz6m",
+            "recHdKmOooG1oo",
+            "recvsHb1Achspw",
+            "recvtt1PpAHID8"
+          ],
+          "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+          "patient_impact": "中国患者可能存在治疗反应差异",
+          "relevance_2030": "中国本土证据是实现2030目标的关键支撑",
+          "_topic": "T5"
+        },
+        {
+          "insight_id": "T5-INS-003",
+          "title": "HBV→HCC进展与防控临床实践模式正在转变",
+          "one_sentence": "可开发针对HBV整合位点的早期诊断方法",
+          "what_changed": "从经验医学向循证医学转变",
+          "why_it_matters": "致癌机制、HCC风险预测、化学预防，对实现2030目标至关重要",
+          "evidence_summary": "基于4篇研究证据的综合分析",
+          "evidence_strength": "低",
+          "confidence": "低",
+          "uncertainty": "部分结论来自小样本研究，需更多验证",
+          "supporting_sources": [
+            "receNwY04nmz6m",
+            "recHdKmOooG1oo",
+            "recvsHb1Achspw",
+            "recvtt1PpAHID8"
+          ],
+          "clinical_implication": "可开发针对HBV整合位点的早期诊断方法",
+          "patient_impact": "患者管理策略需优化",
+          "relevance_2030": "规范化诊疗是实现2030目标的基础",
+          "_topic": "T5"
+        }
+      ],
+      "T6": [
+        {
+          "insight_id": "T6-INS-001",
+          "title": "HCC全病程管理领域研究进展显著",
+          "one_sentence": "本专题纳入3篇文献，涵盖HCC筛查、诊断、治疗、随访全流程，为临床实践提供新证据。",
+          "what_changed": "从传统认知到基于最新证据的HCC全病程管理优化策略",
+          "why_it_matters": "HCC筛查、诊断、治疗、随访全流程，对实现2030目标至关重要",
+          "evidence_summary": "1篇高证据等级研究，0篇中等证据研究",
+          "evidence_strength": "低",
+          "confidence": "低",
+          "uncertainty": "部分结论来自小样本研究，需更多验证",
+          "supporting_sources": [
+            "rec7yItpBGZjVk",
+            "recbstnD5qAmbZ",
+            "recvsYJ6RGi4IL"
+          ],
+          "clinical_implication": "临床应关注HCC全病程管理的最新进展并及时更新诊疗策略",
+          "patient_impact": "患者可能从HCC全病程管理优化中获益",
+          "relevance_2030": "支持2030消除乙肝目标中治疗环节的优化",
+          "_topic": "T6"
+        },
+        {
+          "insight_id": "T6-INS-002",
+          "title": "中国HCC全病程管理证据仍显不足",
+          "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+          "what_changed": "从依赖国际证据到重视中国本土证据生成",
+          "why_it_matters": "HCC筛查、诊断、治疗、随访全流程，对实现2030目标至关重要",
+          "evidence_summary": "中国市场相关性高的研究1篇，中等0篇",
+          "evidence_strength": "低",
+          "confidence": "低",
+          "uncertainty": "部分结论来自小样本研究，需更多验证",
+          "supporting_sources": [
+            "rec7yItpBGZjVk",
+            "recbstnD5qAmbZ",
+            "recvsYJ6RGi4IL"
+          ],
+          "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+          "patient_impact": "中国患者可能存在治疗反应差异",
+          "relevance_2030": "中国本土证据是实现2030目标的关键支撑",
+          "_topic": "T6"
+        },
+        {
+          "insight_id": "T6-INS-003",
+          "title": "HCC全病程管理临床实践模式正在转变",
+          "one_sentence": "需在临床中严格遵循该指南进行HCC管理",
+          "what_changed": "从经验医学向循证医学转变",
+          "why_it_matters": "HCC筛查、诊断、治疗、随访全流程，对实现2030目标至关重要",
+          "evidence_summary": "基于3篇研究证据的综合分析",
+          "evidence_strength": "低",
+          "confidence": "低",
+          "uncertainty": "部分结论来自小样本研究，需更多验证",
+          "supporting_sources": [
+            "rec7yItpBGZjVk",
+            "recbstnD5qAmbZ",
+            "recvsYJ6RGi4IL"
+          ],
+          "clinical_implication": "需在临床中严格遵循该指南进行HCC管理",
+          "patient_impact": "患者管理策略需优化",
+          "relevance_2030": "规范化诊疗是实现2030目标的基础",
+          "_topic": "T6"
+        }
+      ]
+    }
+  },
+  "report": {
+    "executive_summary": {
+      "key_findings": [
+        "HBV功能性治愈领域研究进展显著（证据强度：中）",
+        "中国HBV功能性治愈证据仍显不足（证据强度：中）",
+        "HBV功能性治愈临床实践模式正在转变（证据强度：中）",
+        "HBV现有治疗优化领域研究进展显著（证据强度：中）",
+        "中国HBV现有治疗优化证据仍显不足（证据强度：中）"
+      ],
+      "key_gaps": [
+        "中国本土研究证据不足，多数数据来自国际研究",
+        "HBV筛查覆盖率低，诊断缺口巨大",
+        "功能性治愈可及性有限，仅少数患者有机会",
+        "HCC监测率不高，早期诊断率有待提升",
+        "基层医疗机构能力不足，地区差异显著"
+      ],
+      "priority_actions": [
+        "建立全国HBV筛查与早诊体系（优先级：高）",
+        "推广HBV规范化治疗路径（优先级：高）",
+        "构建HBV功能性治愈临床研究网络（优先级：高）",
+        "建立HCC风险分层监测体系（优先级：高）"
+      ],
+      "alliance_value": "联盟作为国家级-省级-市级三级协作网络，可在推动规范化诊疗、开展多中心研究、建设真实世界数据库、培养基层能力等方面发挥核心作用，加速实现2030消除乙肝目标。"
+    },
+    "goal_2030": {
+      "who_targets": {
+        "prevention": "乙肝疫苗接种覆盖率≥90%，母婴传播率≤2%",
+        "diagnosis": "90%的HBV感染者得到诊断",
+        "treatment": "80%符合指征的患者接受治疗",
+        "mortality_reduction": "病毒性肝炎死亡率降低65%"
+      },
+      "china_gaps": {
+        "diagnosis_rate": "当前约20-30%，距90%目标差距巨大",
+        "treatment_rate": "当前约30%，距80%目标仍有差距",
+        "functional_cure_rate": "当前<5%，可及性极低"
+      },
+      "policy_context": "中国已将病毒性肝炎防控纳入健康中国行动，国家卫健委发布《消除丙型肝炎公共卫生危害行动工作方案》，乙肝防控也在持续推进。"
+    },
+    "topics": {
+      "T1": {
+        "title": "2030行动与政策环境",
+        "summary": "本专题纳入1篇文献，涵盖指南、共识、卫生政策、筛查策略、消除目标，为临床实践提供新证据。",
+        "key_data": {
+          "total_studies": 1,
+          "high_evidence": 1,
+          "china_relevant": 0
+        }
+      },
+      "T2": {
+        "title": "HBV筛查与早诊",
+        "summary": "暂无相关研究数据",
+        "key_data": {
+          "total_studies": 0,
+          "high_evidence": 0,
+          "china_relevant": 0
+        }
+      },
+      "T3": {
+        "title": "HBV现有治疗优化",
+        "summary": "本专题纳入9篇文献，涵盖NA治疗、干扰素治疗、联合治疗、治疗监测，为临床实践提供新证据。",
+        "key_data": {
+          "total_studies": 9,
+          "high_evidence": 0,
+          "china_relevant": 5
+        }
+      },
+      "T4": {
+        "title": "HBV功能性治愈",
+        "summary": "本专题纳入32篇文献，涵盖新型治愈药物、免疫治疗、基因治疗、HBsAg清除，为临床实践提供新证据。",
+        "key_data": {
+          "total_studies": 32,
+          "high_evidence": 3,
+          "china_relevant": 27
+        }
+      },
+      "T5": {
+        "title": "HBV→HCC进展与防控",
+        "summary": "本专题纳入4篇文献，涵盖致癌机制、HCC风险预测、化学预防，为临床实践提供新证据。",
+        "key_data": {
+          "total_studies": 4,
+          "high_evidence": 0,
+          "china_relevant": 2
+        }
+      },
+      "T6": {
+        "title": "HCC全病程管理",
+        "summary": "本专题纳入3篇文献，涵盖HCC筛查、诊断、治疗、随访全流程，为临床实践提供新证据。",
+        "key_data": {
+          "total_studies": 3,
+          "high_evidence": 1,
+          "china_relevant": 1
+        }
+      },
+      "T7": {
+        "title": "患者管理与真实世界研究",
+        "summary": "暂无相关研究数据",
+        "key_data": {
+          "total_studies": 0,
+          "high_evidence": 0,
+          "china_relevant": 0
+        }
+      }
+    },
+    "controversies": [
+      "HBsAg清除后是否可以停止HCC监测仍存在争议，需个体化风险分层",
+      "长期NA治疗后能否降级HCC监测频率证据不足",
+      "功能性治愈的适应症和停药标准尚未统一"
+    ],
+    "evidence_gaps": [
+      "中国人群HBV自然史和治疗应答数据缺乏",
+      "功能性治愈长期安全性和持久性数据不足",
+      "HBV相关HCC风险预测模型在中国人群中的验证数据少",
+      "基层HBV诊疗能力和筛查模式的真实世界研究缺乏",
+      "儿童和特殊人群HBV管理证据不足"
+    ]
+  },
+  "action_matrix": {
+    "actions": [
+      {
+        "action_id": "ACT-001",
+        "title": "建立全国HBV筛查与早诊体系",
+        "topic": "T2",
+        "category": "政策倡导",
+        "priority": "高",
+        "target_population": "高危人群（HBsAg阳性家属、输血史、静脉药瘾等）",
+        "responsible_party": "国家级中心+省级中心",
+        "collaborators": [
+          "卫健委",
+          "疾控中心",
+          "基层医疗机构"
+        ],
+        "timeline": "2025-2026",
+        "kpi": "筛查覆盖率",
+        "baseline": "约20%",
+        "target_2030": "≥60%",
+        "evidence_basis": [
+          "INS-001"
+        ],
+        "dependencies": [],
+        "risks": [
+          "资金不足",
+          "基层能力有限"
+        ]
+      },
+      {
+        "action_id": "ACT-002",
+        "title": "推广HBV规范化治疗路径",
+        "topic": "T3",
+        "category": "临床规范",
+        "priority": "高",
+        "target_population": "慢性HBV感染患者",
+        "responsible_party": "省级中心+市级中心",
+        "collaborators": [
+          "医学会肝病学分会",
+          "药企"
+        ],
+        "timeline": "2025-2026",
+        "kpi": "治疗启动率",
+        "baseline": "约30%",
+        "target_2030": "≥80%",
+        "evidence_basis": [
+          "INS-002"
+        ],
+        "dependencies": [
+          "筛查体系"
+        ],
+        "risks": [
+          "患者依从性差",
+          "药物可及性不均"
+        ]
+      },
+      {
+        "action_id": "ACT-003",
+        "title": "构建HBV功能性治愈临床研究网络",
+        "topic": "T4",
+        "category": "科研协作",
+        "priority": "高",
+        "target_population": "适合治愈治疗的HBV患者",
+        "responsible_party": "国家级中心",
+        "collaborators": [
+          "药企",
+          "科研机构",
+          "CRO"
+        ],
+        "timeline": "2025-2028",
+        "kpi": "功能性治愈率",
+        "baseline": "<5%",
+        "target_2030": "≥30%（适合人群）",
+        "evidence_basis": [
+          "INS-003"
+        ],
+        "dependencies": [
+          "规范化治疗基础"
+        ],
+        "risks": [
+          "药物研发进展不确定",
+          "治疗费用高"
+        ]
+      },
+      {
+        "action_id": "ACT-004",
+        "title": "建立HCC风险分层监测体系",
+        "topic": "T5",
+        "category": "患者管理",
+        "priority": "高",
+        "target_population": "慢性HBV感染患者（HCC高危人群）",
+        "responsible_party": "省级中心+市级中心",
+        "collaborators": [
+          "影像科",
+          "检验科"
+        ],
+        "timeline": "2026-2027",
+        "kpi": "HCC监测率",
+        "baseline": "约25%",
+        "target_2030": "≥70%",
+        "evidence_basis": [
+          "INS-004"
+        ],
+        "dependencies": [
+          "患者管理系统"
+        ],
+        "risks": [
+          "患者随访依从性低",
+          "影像资源不足"
+        ]
+      },
+      {
+        "action_id": "ACT-005",
+        "title": "优化HCC全病程管理路径",
+        "topic": "T6",
+        "category": "临床规范",
+        "priority": "中",
+        "target_population": "HCC患者",
+        "responsible_party": "国家级中心+区域中心",
+        "collaborators": [
+          "外科",
+          "介入科",
+          "肿瘤科"
+        ],
+        "timeline": "2026-2028",
+        "kpi": "HCC早期诊断率",
+        "baseline": "约30%",
+        "target_2030": "≥50%",
+        "evidence_basis": [
+          "INS-005"
+        ],
+        "dependencies": [
+          "HCC监测体系"
+        ],
+        "risks": [
+          "多学科协作难度大",
+          "地区差异大"
+        ]
+      },
+      {
+        "action_id": "ACT-006",
+        "title": "建设患者数字化管理平台",
+        "topic": "T7",
+        "category": "数字化工具",
+        "priority": "中",
+        "target_population": "慢性HBV感染患者",
+        "responsible_party": "国家级中心+科技公司",
+        "collaborators": [
+          "互联网医院",
+          "患者组织"
+        ],
+        "timeline": "2025-2027",
+        "kpi": "患者依从率",
+        "baseline": "约50%",
+        "target_2030": "≥80%",
+        "evidence_basis": [
+          "INS-006"
+        ],
+        "dependencies": [
+          "患者注册系统"
+        ],
+        "risks": [
+          "数据安全",
+          "老年患者使用障碍"
+        ]
+      },
+      {
+        "action_id": "ACT-007",
+        "title": "推动指南更新与落地培训",
+        "topic": "T1",
+        "category": "能力建设",
+        "priority": "高",
+        "target_population": "临床医生",
+        "responsible_party": "国家级中心+医学会",
+        "collaborators": [
+          "卫健委",
+          "药企"
+        ],
+        "timeline": "2025-2026",
+        "kpi": "指南培训覆盖率",
+        "baseline": "约40%",
+        "target_2030": "≥90%",
+        "evidence_basis": [
+          "INS-007"
+        ],
+        "dependencies": [],
+        "risks": [
+          "培训资源不均",
+          "基层参与度低"
+        ]
+      },
+      {
+        "action_id": "ACT-008",
+        "title": "建立真实世界研究数据库",
+        "topic": "T7",
+        "category": "科研协作",
+        "priority": "中",
+        "target_population": "联盟中心就诊患者",
+        "responsible_party": "国家级中心",
+        "collaborators": [
+          "各联盟中心",
+          "统计机构"
+        ],
+        "timeline": "2026-2029",
+        "kpi": "注册患者数",
+        "baseline": "无统一数据库",
+        "target_2030": "≥10万例",
+        "evidence_basis": [
+          "INS-008"
+        ],
+        "dependencies": [
+          "数字化平台"
+        ],
+        "risks": [
+          "数据质量",
+          "隐私保护"
+        ]
+      }
+    ]
+  },
+  "roadmap": {
+    "vision": "到2030年，通过联盟协作，显著降低中国HBV相关疾病负担，实现WHO消除病毒性肝炎公共卫生威胁的目标，为全球乙肝防控贡献中国方案。",
+    "phases": [
+      {
+        "phase": 1,
+        "name": "标准建设期",
+        "period": "2025-2026",
+        "theme": "建标准、搭平台、培能力，夯实防控基础",
+        "strategic_goals": [
+          "建立HBV规范化诊疗标准体系",
+          "建成联盟协作网络和数据平台",
+          "完成核心医务人员能力培训"
+        ],
+        "key_actions": [
+          "制定并发布联盟HBV诊疗规范",
+          "建设联盟患者注册登记系统",
+          "开展基层医生HBV诊疗培训",
+          "建立HCC筛查与监测标准路径",
+          "启动功能性治愈临床研究准备"
+        ],
+        "milestones": [
+          "联盟诊疗规范发布",
+          "首批50家联盟中心接入",
+          "注册患者达2万例",
+          "完成1000名医生培训"
+        ],
+        "kpi_targets": {
+          "diagnosis_rate": "30%→40%",
+          "treatment_rate": "30%→45%",
+          "functional_cure_access": "临床试验阶段",
+          "hcc_surveillance_rate": "25%→35%"
+        },
+        "success_criteria": "标准体系建立，联盟网络初具规模，核心能力初步形成"
+      },
+      {
+        "phase": 2,
+        "name": "规模推广期",
+        "period": "2027-2028",
+        "theme": "扩覆盖、提质量、深整合，推动全面提升",
+        "strategic_goals": [
+          "扩大HBV筛查和治疗覆盖率",
+          "推动功能性治愈临床应用",
+          "完善HCC全病程管理体系"
+        ],
+        "key_actions": [
+          "推广HBV社区筛查模式",
+          "扩大规范化治疗覆盖范围",
+          "推进功能性治愈多中心临床研究",
+          "建立HCC多学科诊疗模式",
+          "深化患者数字化管理"
+        ],
+        "milestones": [
+          "筛查覆盖率达50%",
+          "治疗覆盖率达65%",
+          "功能性治愈研究首批结果发布",
+          "注册患者达6万例"
+        ],
+        "kpi_targets": {
+          "diagnosis_rate": "40%→60%",
+          "treatment_rate": "45%→65%",
+          "functional_cure_access": "有限临床应用",
+          "hcc_surveillance_rate": "35%→55%"
+        },
+        "success_criteria": "筛查治疗覆盖率显著提升，功能性治愈取得突破，HCC管理体系完善"
+      },
+      {
+        "phase": 3,
+        "name": "深化攻坚期",
+        "period": "2029-2030",
+        "theme": "攻难点、补短板、达目标，实现2030消除",
+        "strategic_goals": [
+          "攻克治疗难点，提升功能性治愈率",
+          "补齐基层和欠发达地区短板",
+          "实现WHO 2030消除目标核心指标"
+        ],
+        "key_actions": [
+          "推广功能性治愈临床应用",
+          "强化基层和偏远地区能力建设",
+          "完善HCC早诊早治体系",
+          "开展消除认证准备工作",
+          "总结中国经验并推广"
+        ],
+        "milestones": [
+          "治疗覆盖率达80%",
+          "功能性治愈率达30%（适合人群）",
+          "HCC监测率达70%",
+          "注册患者达10万例"
+        ],
+        "kpi_targets": {
+          "diagnosis_rate": "60%→90%",
+          "treatment_rate": "65%→80%",
+          "functional_cure_access": "广泛临床应用",
+          "hcc_surveillance_rate": "55%→70%"
+        },
+        "success_criteria": "核心指标接近或达到WHO 2030目标，形成中国特色乙肝防控模式"
+      }
+    ]
+  },
+  "update_meta": {
+    "last_sync": "2026-08-28T18:05:50.609953+08:00",
+    "records_count": 51,
+    "new_this_sync": 51,
+    "sync_duration_seconds": 0.01,
+    "data_source": "local_fallback"
+  },
+  "generated_at": "2026-08-28T18:15:53.078882",
+  "version": "1.0.0"
+};

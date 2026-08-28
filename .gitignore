@@ -1,0 +1,42 @@
+# Environment
+.env
+*.env
+
+# Private data
+data/private/
+*.log
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Build outputs
+*.egg-info/
+dist/
+build/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary
+.tmp/
+temp/
+*.tmp
+
+# Trae internal
+.trae/
+.trae-html-share-packages/

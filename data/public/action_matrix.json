@@ -1,0 +1,219 @@
+{
+  "actions": [
+    {
+      "action_id": "ACT-001",
+      "title": "建立全国HBV筛查与早诊体系",
+      "topic": "T2",
+      "category": "政策倡导",
+      "priority": "高",
+      "target_population": "高危人群（HBsAg阳性家属、输血史、静脉药瘾等）",
+      "responsible_party": "国家级中心+省级中心",
+      "collaborators": [
+        "卫健委",
+        "疾控中心",
+        "基层医疗机构"
+      ],
+      "timeline": "2025-2026",
+      "kpi": "筛查覆盖率",
+      "baseline": "约20%",
+      "target_2030": "≥60%",
+      "evidence_basis": [
+        "INS-001"
+      ],
+      "dependencies": [],
+      "risks": [
+        "资金不足",
+        "基层能力有限"
+      ]
+    },
+    {
+      "action_id": "ACT-002",
+      "title": "推广HBV规范化治疗路径",
+      "topic": "T3",
+      "category": "临床规范",
+      "priority": "高",
+      "target_population": "慢性HBV感染患者",
+      "responsible_party": "省级中心+市级中心",
+      "collaborators": [
+        "医学会肝病学分会",
+        "药企"
+      ],
+      "timeline": "2025-2026",
+      "kpi": "治疗启动率",
+      "baseline": "约30%",
+      "target_2030": "≥80%",
+      "evidence_basis": [
+        "INS-002"
+      ],
+      "dependencies": [
+        "筛查体系"
+      ],
+      "risks": [
+        "患者依从性差",
+        "药物可及性不均"
+      ]
+    },
+    {
+      "action_id": "ACT-003",
+      "title": "构建HBV功能性治愈临床研究网络",
+      "topic": "T4",
+      "category": "科研协作",
+      "priority": "高",
+      "target_population": "适合治愈治疗的HBV患者",
+      "responsible_party": "国家级中心",
+      "collaborators": [
+        "药企",
+        "科研机构",
+        "CRO"
+      ],
+      "timeline": "2025-2028",
+      "kpi": "功能性治愈率",
+      "baseline": "<5%",
+      "target_2030": "≥30%（适合人群）",
+      "evidence_basis": [
+        "INS-003"
+      ],
+      "dependencies": [
+        "规范化治疗基础"
+      ],
+      "risks": [
+        "药物研发进展不确定",
+        "治疗费用高"
+      ]
+    },
+    {
+      "action_id": "ACT-004",
+      "title": "建立HCC风险分层监测体系",
+      "topic": "T5",
+      "category": "患者管理",
+      "priority": "高",
+      "target_population": "慢性HBV感染患者（HCC高危人群）",
+      "responsible_party": "省级中心+市级中心",
+      "collaborators": [
+        "影像科",
+        "检验科"
+      ],
+      "timeline": "2026-2027",
+      "kpi": "HCC监测率",
+      "baseline": "约25%",
+      "target_2030": "≥70%",
+      "evidence_basis": [
+        "INS-004"
+      ],
+      "dependencies": [
+        "患者管理系统"
+      ],
+      "risks": [
+        "患者随访依从性低",
+        "影像资源不足"
+      ]
+    },
+    {
+      "action_id": "ACT-005",
+      "title": "优化HCC全病程管理路径",
+      "topic": "T6",
+      "category": "临床规范",
+      "priority": "中",
+      "target_population": "HCC患者",
+      "responsible_party": "国家级中心+区域中心",
+      "collaborators": [
+        "外科",
+        "介入科",
+        "肿瘤科"
+      ],
+      "timeline": "2026-2028",
+      "kpi": "HCC早期诊断率",
+      "baseline": "约30%",
+      "target_2030": "≥50%",
+      "evidence_basis": [
+        "INS-005"
+      ],
+      "dependencies": [
+        "HCC监测体系"
+      ],
+      "risks": [
+        "多学科协作难度大",
+        "地区差异大"
+      ]
+    },
+    {
+      "action_id": "ACT-006",
+      "title": "建设患者数字化管理平台",
+      "topic": "T7",
+      "category": "数字化工具",
+      "priority": "中",
+      "target_population": "慢性HBV感染患者",
+      "responsible_party": "国家级中心+科技公司",
+      "collaborators": [
+        "互联网医院",
+        "患者组织"
+      ],
+      "timeline": "2025-2027",
+      "kpi": "患者依从率",
+      "baseline": "约50%",
+      "target_2030": "≥80%",
+      "evidence_basis": [
+        "INS-006"
+      ],
+      "dependencies": [
+        "患者注册系统"
+      ],
+      "risks": [
+        "数据安全",
+        "老年患者使用障碍"
+      ]
+    },
+    {
+      "action_id": "ACT-007",
+      "title": "推动指南更新与落地培训",
+      "topic": "T1",
+      "category": "能力建设",
+      "priority": "高",
+      "target_population": "临床医生",
+      "responsible_party": "国家级中心+医学会",
+      "collaborators": [
+        "卫健委",
+        "药企"
+      ],
+      "timeline": "2025-2026",
+      "kpi": "指南培训覆盖率",
+      "baseline": "约40%",
+      "target_2030": "≥90%",
+      "evidence_basis": [
+        "INS-007"
+      ],
+      "dependencies": [],
+      "risks": [
+        "培训资源不均",
+        "基层参与度低"
+      ]
+    },
+    {
+      "action_id": "ACT-008",
+      "title": "建立真实世界研究数据库",
+      "topic": "T7",
+      "category": "科研协作",
+      "priority": "中",
+      "target_population": "联盟中心就诊患者",
+      "responsible_party": "国家级中心",
+      "collaborators": [
+        "各联盟中心",
+        "统计机构"
+      ],
+      "timeline": "2026-2029",
+      "kpi": "注册患者数",
+      "baseline": "无统一数据库",
+      "target_2030": "≥10万例",
+      "evidence_basis": [
+        "INS-008"
+      ],
+      "dependencies": [
+        "数字化平台"
+      ],
+      "risks": [
+        "数据质量",
+        "隐私保护"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "total_literature": 51,
+  "china_evidence_count": 35,
+  "china_evidence_pct": 68.6,
+  "ab_evidence_count": 49,
+  "ab_evidence_pct": 96.1,
+  "high_2030_relevance": 35,
+  "topics": {
+    "T1": 32,
+    "T2": 9,
+    "T3": 6,
+    "T4": 3,
+    "T5": 1
+  },
+  "by_year": {
+    "2025": 8,
+    "2026": 41
+  },
+  "by_evidence_level": {
+    "A": 2,
+    "B": 47,
+    "C": 2
+  },
+  "journey_stages": {
+    "筛查": 17,
+    "诊断": 13,
+    "治疗": 47,
+    "管理": 8,
+    "HCC": 11
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "build_time": "2026-08-28T18:18:29.121613+08:00",
+  "status": "success",
+  "checks": [
+    {
+      "name": "HBV文献数据",
+      "type": "input",
+      "status": "passed",
+      "message": "格式正确 (49 条记录)",
+      "record_count": 49
+    },
+    {
+      "name": "行业洞察数据",
+      "type": "input",
+      "status": "passed",
+      "message": "格式正确 (2 条记录)",
+      "record_count": 2
+    },
+    {
+      "name": "洞察数据",
+      "type": "output",
+      "status": "passed",
+      "message": "格式正确"
+    },
+    {
+      "name": "战略报告",
+      "type": "output",
+      "status": "passed",
+      "message": "格式正确"
+    },
+    {
+      "name": "行动矩阵",
+      "type": "output",
+      "status": "passed",
+      "message": "格式正确"
+    },
+    {
+      "name": "路线图",
+      "type": "output",
+      "status": "passed",
+      "message": "格式正确"
+    },
+    {
+      "name": "data/public目录",
+      "type": "directory",
+      "status": "passed",
+      "message": "包含 7 个JSON文件"
+    }
+  ],
+  "statistics": {
+    "input": {
+      "HBV文献数据": 49,
+      "行业洞察数据": 2
+    },
+    "structure": {
+      "insights": {
+        "top_insights_count": 10,
+        "topics_with_insights": 5,
+        "topic_insights_total": 13
+      },
+      "report": {
+        "key_findings_count": 5,
+        "key_gaps_count": 5,
+        "priority_actions_count": 4,
+        "topics_count": 7,
+        "controversies_count": 3,
+        "evidence_gaps_count": 5
+      },
+      "action_matrix": {
+        "total_actions": 8,
+        "priority_breakdown": {
+          "高": 5,
+          "中": 3,
+          "低": 0
+        },
+        "category_breakdown": {
+          "政策倡导": 1,
+          "临床规范": 2,
+          "科研协作": 2,
+          "患者管理": 1,
+          "数字化工具": 1,
+          "能力建设": 1
+        },
+        "topic_breakdown": {
+          "T2": 1,
+          "T3": 1,
+          "T4": 1,
+          "T5": 1,
+          "T6": 1,
+          "T7": 2,
+          "T1": 1
+        }
+      },
+      "roadmap": {
+        "phases_count": 3
+      }
+    }
+  },
+  "errors": [],
+  "warnings": []
+}

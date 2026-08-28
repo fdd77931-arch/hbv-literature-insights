@@ -1,0 +1,683 @@
+{
+  "version": "1.0",
+  "generated_at": "2026-08-28T18:07:27.627376+08:00",
+  "generation_mode": "heuristic",
+  "top_insights": [
+    {
+      "insight_id": "INS-001",
+      "rank": 1,
+      "title": "HBV功能性治愈领域研究进展显著",
+      "one_sentence": "本专题纳入32篇文献，涵盖新型治愈药物、免疫治疗、基因治疗、HBsAg清除，为临床实践提供新证据。",
+      "topic": "T4",
+      "journey_stage": "治疗",
+      "gap_2030": "2030目标在HBV功能性治愈领域仍有显著差距",
+      "what_changed": "从传统认知到基于最新证据的HBV功能性治愈优化策略",
+      "why_now": "近两年HBV功能性治愈领域研究进展迅速，是行动窗口期",
+      "key_evidence": [
+        "新型HBV功能性治愈药物的临床研究进展: 部分药物可实现HBsAg的持续清除",
+        "新型HBVcccDNA抑制剂的体外活性研究: 该化合物的体外抑制活性优于现有同类药物"
+      ],
+      "evidence_strength": "中",
+      "confidence": "中",
+      "uncertainty": "部分结论来自小样本研究，需更多验证",
+      "china_context": "中国乙肝负担重，HBV功能性治愈优化对中国意义重大",
+      "clinical_implication": "临床应关注HBV功能性治愈的最新进展并及时更新诊疗策略",
+      "patient_management_implication": "患者可能从HBV功能性治愈优化中获益",
+      "alliance_action": "联盟应推动HBV功能性治愈的规范化和证据积累",
+      "responsible_party": [
+        "国家级中心",
+        "省级中心",
+        "市级中心",
+        "药企"
+      ],
+      "kpi": [
+        "功能性治愈率",
+        "HBsAg清除率"
+      ],
+      "source_ids": [
+        "recB3ol2hVGaS4",
+        "reccmhzwk0Qwxd",
+        "recvs9yQpvReIQ"
+      ],
+      "supporting_topic_insights": [
+        "T4-INS-001"
+      ]
+    },
+    {
+      "insight_id": "INS-002",
+      "rank": 2,
+      "title": "中国HBV功能性治愈证据仍显不足",
+      "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+      "topic": "T4",
+      "journey_stage": "治疗",
+      "gap_2030": "2030目标在HBV功能性治愈领域仍有显著差距",
+      "what_changed": "从依赖国际证据到重视中国本土证据生成",
+      "why_now": "近两年HBV功能性治愈领域研究进展迅速，是行动窗口期",
+      "key_evidence": [
+        "新型HBV功能性治愈药物的临床研究进展: 部分药物可实现HBsAg的持续清除",
+        "新型HBVcccDNA抑制剂的体外活性研究: 该化合物的体外抑制活性优于现有同类药物"
+      ],
+      "evidence_strength": "中",
+      "confidence": "中",
+      "uncertainty": "部分结论来自小样本研究，需更多验证",
+      "china_context": "中国乙肝负担重，HBV功能性治愈优化对中国意义重大",
+      "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+      "patient_management_implication": "中国患者可能存在治疗反应差异",
+      "alliance_action": "联盟应推动HBV功能性治愈的规范化和证据积累",
+      "responsible_party": [
+        "国家级中心",
+        "省级中心",
+        "市级中心",
+        "药企"
+      ],
+      "kpi": [
+        "功能性治愈率",
+        "HBsAg清除率"
+      ],
+      "source_ids": [
+        "recB3ol2hVGaS4",
+        "reccmhzwk0Qwxd",
+        "recvs9yQpvReIQ"
+      ],
+      "supporting_topic_insights": [
+        "T4-INS-002"
+      ]
+    },
+    {
+      "insight_id": "INS-003",
+      "rank": 3,
+      "title": "HBV功能性治愈临床实践模式正在转变",
+      "one_sentence": "需重点关注该类药物的安全性和长期疗效",
+      "topic": "T4",
+      "journey_stage": "治疗",
+      "gap_2030": "2030目标在HBV功能性治愈领域仍有显著差距",
+      "what_changed": "从经验医学向循证医学转变",
+      "why_now": "近两年HBV功能性治愈领域研究进展迅速，是行动窗口期",
+      "key_evidence": [
+        "新型HBV功能性治愈药物的临床研究进展: 部分药物可实现HBsAg的持续清除",
+        "新型HBVcccDNA抑制剂的体外活性研究: 该化合物的体外抑制活性优于现有同类药物"
+      ],
+      "evidence_strength": "中",
+      "confidence": "中",
+      "uncertainty": "部分结论来自小样本研究，需更多验证",
+      "china_context": "中国乙肝负担重，HBV功能性治愈优化对中国意义重大",
+      "clinical_implication": "需重点关注该类药物的安全性和长期疗效",
+      "patient_management_implication": "患者管理策略需优化",
+      "alliance_action": "联盟应推动HBV功能性治愈的规范化和证据积累",
+      "responsible_party": [
+        "国家级中心",
+        "省级中心",
+        "市级中心",
+        "药企"
+      ],
+      "kpi": [
+        "功能性治愈率",
+        "HBsAg清除率"
+      ],
+      "source_ids": [
+        "recB3ol2hVGaS4",
+        "reccmhzwk0Qwxd",
+        "recvs9yQpvReIQ"
+      ],
+      "supporting_topic_insights": [
+        "T4-INS-003"
+      ]
+    },
+    {
+      "insight_id": "INS-004",
+      "rank": 4,
+      "title": "HBV现有治疗优化领域研究进展显著",
+      "one_sentence": "本专题纳入9篇文献，涵盖NA治疗、干扰素治疗、联合治疗、治疗监测，为临床实践提供新证据。",
+      "topic": "T3",
+      "journey_stage": "治疗",
+      "gap_2030": "2030目标在HBV现有治疗优化领域仍有显著差距",
+      "what_changed": "从传统认知到基于最新证据的HBV现有治疗优化优化策略",
+      "why_now": "近两年HBV现有治疗优化领域研究进展迅速，是行动窗口期",
+      "key_evidence": [
+        "核苷类似物联合干扰素治疗慢性HBV的疗效分析: 联合治疗组的HBV DNA转阴率显著高于单药组",
+        "HBV母婴传播阻断方案的效果评估: 联合阻断方案可有效降低HBV母婴传播率"
+      ],
+      "evidence_strength": "中",
+      "confidence": "中",
+      "uncertainty": "部分结论来自小样本研究，需更多验证",
+      "china_context": "中国乙肝负担重，HBV现有治疗优化优化对中国意义重大",
+      "clinical_implication": "临床应关注HBV现有治疗优化的最新进展并及时更新诊疗策略",
+      "patient_management_implication": "患者可能从HBV现有治疗优化优化中获益",
+      "alliance_action": "联盟应推动HBV现有治疗优化的规范化和证据积累",
+      "responsible_party": [
+        "国家级中心",
+        "省级中心",
+        "市级中心",
+        "药企"
+      ],
+      "kpi": [
+        "治疗启动率",
+        "病毒学应答率"
+      ],
+      "source_ids": [
+        "recvjAnzcLD8Yc",
+        "recMnw9260dRR5",
+        "recXYbSUGG4Mjy"
+      ],
+      "supporting_topic_insights": [
+        "T3-INS-001"
+      ]
+    },
+    {
+      "insight_id": "INS-005",
+      "rank": 5,
+      "title": "中国HBV现有治疗优化证据仍显不足",
+      "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+      "topic": "T3",
+      "journey_stage": "治疗",
+      "gap_2030": "2030目标在HBV现有治疗优化领域仍有显著差距",
+      "what_changed": "从依赖国际证据到重视中国本土证据生成",
+      "why_now": "近两年HBV现有治疗优化领域研究进展迅速，是行动窗口期",
+      "key_evidence": [
+        "核苷类似物联合干扰素治疗慢性HBV的疗效分析: 联合治疗组的HBV DNA转阴率显著高于单药组",
+        "HBV母婴传播阻断方案的效果评估: 联合阻断方案可有效降低HBV母婴传播率"
+      ],
+      "evidence_strength": "中",
+      "confidence": "中",
+      "uncertainty": "部分结论来自小样本研究，需更多验证",
+      "china_context": "中国乙肝负担重，HBV现有治疗优化优化对中国意义重大",
+      "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+      "patient_management_implication": "中国患者可能存在治疗反应差异",
+      "alliance_action": "联盟应推动HBV现有治疗优化的规范化和证据积累",
+      "responsible_party": [
+        "国家级中心",
+        "省级中心",
+        "市级中心",
+        "药企"
+      ],
+      "kpi": [
+        "治疗启动率",
+        "病毒学应答率"
+      ],
+      "source_ids": [
+        "recvjAnzcLD8Yc",
+        "recMnw9260dRR5",
+        "recXYbSUGG4Mjy"
+      ],
+      "supporting_topic_insights": [
+        "T3-INS-002"
+      ]
+    },
+    {
+      "insight_id": "INS-006",
+      "rank": 6,
+      "title": "HBV现有治疗优化临床实践模式正在转变",
+      "one_sentence": "可尝试在临床中推广该联合治疗方案",
+      "topic": "T3",
+      "journey_stage": "治疗",
+      "gap_2030": "2030目标在HBV现有治疗优化领域仍有显著差距",
+      "what_changed": "从经验医学向循证医学转变",
+      "why_now": "近两年HBV现有治疗优化领域研究进展迅速，是行动窗口期",
+      "key_evidence": [
+        "核苷类似物联合干扰素治疗慢性HBV的疗效分析: 联合治疗组的HBV DNA转阴率显著高于单药组",
+        "HBV母婴传播阻断方案的效果评估: 联合阻断方案可有效降低HBV母婴传播率"
+      ],
+      "evidence_strength": "中",
+      "confidence": "中",
+      "uncertainty": "部分结论来自小样本研究，需更多验证",
+      "china_context": "中国乙肝负担重，HBV现有治疗优化优化对中国意义重大",
+      "clinical_implication": "可尝试在临床中推广该联合治疗方案",
+      "patient_management_implication": "患者管理策略需优化",
+      "alliance_action": "联盟应推动HBV现有治疗优化的规范化和证据积累",
+      "responsible_party": [
+        "国家级中心",
+        "省级中心",
+        "市级中心",
+        "药企"
+      ],
+      "kpi": [
+        "治疗启动率",
+        "病毒学应答率"
+      ],
+      "source_ids": [
+        "recvjAnzcLD8Yc",
+        "recMnw9260dRR5",
+        "recXYbSUGG4Mjy"
+      ],
+      "supporting_topic_insights": [
+        "T3-INS-003"
+      ]
+    },
+    {
+      "insight_id": "INS-007",
+      "rank": 7,
+      "title": "HBV→HCC进展与防控领域研究进展显著",
+      "one_sentence": "本专题纳入4篇文献，涵盖致癌机制、HCC风险预测、化学预防，为临床实践提供新证据。",
+      "topic": "T5",
+      "journey_stage": "随访",
+      "gap_2030": "2030目标在HBV→HCC进展与防控领域仍有显著差距",
+      "what_changed": "从传统认知到基于最新证据的HBV→HCC进展与防控优化策略",
+      "why_now": "近两年HBV→HCC进展与防控领域研究进展迅速，是行动窗口期",
+      "key_evidence": [
+        "HBV感染与肝细胞癌发生发展的分子机制研究: HBV整合位点与肝细胞癌的突变谱高度相关",
+        "HBV相关肝细胞癌患者的免疫治疗疗效分析: PD-1抑制剂对HBV相关HCC具有一定的疗效"
+      ],
+      "evidence_strength": "低",
+      "confidence": "低",
+      "uncertainty": "部分结论来自小样本研究，需更多验证",
+      "china_context": "中国乙肝负担重，HBV→HCC进展与防控优化对中国意义重大",
+      "clinical_implication": "临床应关注HBV→HCC进展与防控的最新进展并及时更新诊疗策略",
+      "patient_management_implication": "患者可能从HBV→HCC进展与防控优化中获益",
+      "alliance_action": "联盟应推动HBV→HCC进展与防控的规范化和证据积累",
+      "responsible_party": [
+        "国家级中心",
+        "省级中心"
+      ],
+      "kpi": [
+        "HCC监测率",
+        "风险分层准确率"
+      ],
+      "source_ids": [
+        "receNwY04nmz6m",
+        "recHdKmOooG1oo",
+        "recvsHb1Achspw"
+      ],
+      "supporting_topic_insights": [
+        "T5-INS-001"
+      ]
+    },
+    {
+      "insight_id": "INS-008",
+      "rank": 8,
+      "title": "中国HBV→HCC进展与防控证据仍显不足",
+      "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+      "topic": "T5",
+      "journey_stage": "随访",
+      "gap_2030": "2030目标在HBV→HCC进展与防控领域仍有显著差距",
+      "what_changed": "从依赖国际证据到重视中国本土证据生成",
+      "why_now": "近两年HBV→HCC进展与防控领域研究进展迅速，是行动窗口期",
+      "key_evidence": [
+        "HBV感染与肝细胞癌发生发展的分子机制研究: HBV整合位点与肝细胞癌的突变谱高度相关",
+        "HBV相关肝细胞癌患者的免疫治疗疗效分析: PD-1抑制剂对HBV相关HCC具有一定的疗效"
+      ],
+      "evidence_strength": "低",
+      "confidence": "低",
+      "uncertainty": "部分结论来自小样本研究，需更多验证",
+      "china_context": "中国乙肝负担重，HBV→HCC进展与防控优化对中国意义重大",
+      "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+      "patient_management_implication": "中国患者可能存在治疗反应差异",
+      "alliance_action": "联盟应推动HBV→HCC进展与防控的规范化和证据积累",
+      "responsible_party": [
+        "国家级中心",
+        "省级中心"
+      ],
+      "kpi": [
+        "HCC监测率",
+        "风险分层准确率"
+      ],
+      "source_ids": [
+        "receNwY04nmz6m",
+        "recHdKmOooG1oo",
+        "recvsHb1Achspw"
+      ],
+      "supporting_topic_insights": [
+        "T5-INS-002"
+      ]
+    },
+    {
+      "insight_id": "INS-009",
+      "rank": 9,
+      "title": "HBV→HCC进展与防控临床实践模式正在转变",
+      "one_sentence": "可开发针对HBV整合位点的早期诊断方法",
+      "topic": "T5",
+      "journey_stage": "随访",
+      "gap_2030": "2030目标在HBV→HCC进展与防控领域仍有显著差距",
+      "what_changed": "从经验医学向循证医学转变",
+      "why_now": "近两年HBV→HCC进展与防控领域研究进展迅速，是行动窗口期",
+      "key_evidence": [
+        "HBV感染与肝细胞癌发生发展的分子机制研究: HBV整合位点与肝细胞癌的突变谱高度相关",
+        "HBV相关肝细胞癌患者的免疫治疗疗效分析: PD-1抑制剂对HBV相关HCC具有一定的疗效"
+      ],
+      "evidence_strength": "低",
+      "confidence": "低",
+      "uncertainty": "部分结论来自小样本研究，需更多验证",
+      "china_context": "中国乙肝负担重，HBV→HCC进展与防控优化对中国意义重大",
+      "clinical_implication": "可开发针对HBV整合位点的早期诊断方法",
+      "patient_management_implication": "患者管理策略需优化",
+      "alliance_action": "联盟应推动HBV→HCC进展与防控的规范化和证据积累",
+      "responsible_party": [
+        "国家级中心",
+        "省级中心"
+      ],
+      "kpi": [
+        "HCC监测率",
+        "风险分层准确率"
+      ],
+      "source_ids": [
+        "receNwY04nmz6m",
+        "recHdKmOooG1oo",
+        "recvsHb1Achspw"
+      ],
+      "supporting_topic_insights": [
+        "T5-INS-003"
+      ]
+    },
+    {
+      "insight_id": "INS-010",
+      "rank": 10,
+      "title": "2030行动与政策环境领域研究进展显著",
+      "one_sentence": "本专题纳入1篇文献，涵盖指南、共识、卫生政策、筛查策略、消除目标，为临床实践提供新证据。",
+      "topic": "T1",
+      "journey_stage": "筛查",
+      "gap_2030": "2030目标在2030行动与政策环境领域仍有显著差距",
+      "what_changed": "从传统认知到基于最新证据的2030行动与政策环境优化策略",
+      "why_now": "近两年2030行动与政策环境领域研究进展迅速，是行动窗口期",
+      "key_evidence": [
+        "2025年HBV感染诊治指南的解读与应用: 指南推荐扩大HBV筛查的覆盖人群"
+      ],
+      "evidence_strength": "高",
+      "confidence": "低",
+      "uncertainty": "部分结论来自小样本研究，需更多验证",
+      "china_context": "中国乙肝负担重，2030行动与政策环境优化对中国意义重大",
+      "clinical_implication": "临床应关注2030行动与政策环境的最新进展并及时更新诊疗策略",
+      "patient_management_implication": "患者可能从2030行动与政策环境优化中获益",
+      "alliance_action": "联盟应推动2030行动与政策环境的规范化和证据积累",
+      "responsible_party": [
+        "国家级中心",
+        "省级中心",
+        "基层医疗机构",
+        "监管机构"
+      ],
+      "kpi": [
+        "筛查覆盖率",
+        "指南依从率"
+      ],
+      "source_ids": [
+        "recqKtS6wWDMnw"
+      ],
+      "supporting_topic_insights": [
+        "T1-INS-001"
+      ]
+    }
+  ],
+  "topic_insights": {
+    "T1": [
+      {
+        "insight_id": "T1-INS-001",
+        "title": "2030行动与政策环境领域研究进展显著",
+        "one_sentence": "本专题纳入1篇文献，涵盖指南、共识、卫生政策、筛查策略、消除目标，为临床实践提供新证据。",
+        "what_changed": "从传统认知到基于最新证据的2030行动与政策环境优化策略",
+        "why_it_matters": "指南、共识、卫生政策、筛查策略、消除目标，对实现2030目标至关重要",
+        "evidence_summary": "1篇高证据等级研究，0篇中等证据研究",
+        "evidence_strength": "高",
+        "confidence": "低",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "supporting_sources": [
+          "recqKtS6wWDMnw"
+        ],
+        "clinical_implication": "临床应关注2030行动与政策环境的最新进展并及时更新诊疗策略",
+        "patient_impact": "患者可能从2030行动与政策环境优化中获益",
+        "relevance_2030": "支持2030消除乙肝目标中筛查环节的优化",
+        "_topic": "T1"
+      }
+    ],
+    "T3": [
+      {
+        "insight_id": "T3-INS-001",
+        "title": "HBV现有治疗优化领域研究进展显著",
+        "one_sentence": "本专题纳入9篇文献，涵盖NA治疗、干扰素治疗、联合治疗、治疗监测，为临床实践提供新证据。",
+        "what_changed": "从传统认知到基于最新证据的HBV现有治疗优化优化策略",
+        "why_it_matters": "NA治疗、干扰素治疗、联合治疗、治疗监测，对实现2030目标至关重要",
+        "evidence_summary": "0篇高证据等级研究，9篇中等证据研究",
+        "evidence_strength": "中",
+        "confidence": "中",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "supporting_sources": [
+          "recvjAnzcLD8Yc",
+          "recMnw9260dRR5",
+          "recXYbSUGG4Mjy",
+          "recvs9GPD0eDGH",
+          "recvs9GUHMYT7O"
+        ],
+        "clinical_implication": "临床应关注HBV现有治疗优化的最新进展并及时更新诊疗策略",
+        "patient_impact": "患者可能从HBV现有治疗优化优化中获益",
+        "relevance_2030": "支持2030消除乙肝目标中治疗环节的优化",
+        "_topic": "T3"
+      },
+      {
+        "insight_id": "T3-INS-002",
+        "title": "中国HBV现有治疗优化证据仍显不足",
+        "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+        "what_changed": "从依赖国际证据到重视中国本土证据生成",
+        "why_it_matters": "NA治疗、干扰素治疗、联合治疗、治疗监测，对实现2030目标至关重要",
+        "evidence_summary": "中国市场相关性高的研究1篇，中等4篇",
+        "evidence_strength": "中",
+        "confidence": "中",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "supporting_sources": [
+          "recvjAnzcLD8Yc",
+          "recMnw9260dRR5",
+          "recXYbSUGG4Mjy",
+          "recvs9GPD0eDGH",
+          "recvs9GUHMYT7O"
+        ],
+        "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+        "patient_impact": "中国患者可能存在治疗反应差异",
+        "relevance_2030": "中国本土证据是实现2030目标的关键支撑",
+        "_topic": "T3"
+      },
+      {
+        "insight_id": "T3-INS-003",
+        "title": "HBV现有治疗优化临床实践模式正在转变",
+        "one_sentence": "可尝试在临床中推广该联合治疗方案",
+        "what_changed": "从经验医学向循证医学转变",
+        "why_it_matters": "NA治疗、干扰素治疗、联合治疗、治疗监测，对实现2030目标至关重要",
+        "evidence_summary": "基于9篇研究证据的综合分析",
+        "evidence_strength": "中",
+        "confidence": "中",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "supporting_sources": [
+          "recvjAnzcLD8Yc",
+          "recMnw9260dRR5",
+          "recXYbSUGG4Mjy",
+          "recvs9GPD0eDGH",
+          "recvs9GUHMYT7O"
+        ],
+        "clinical_implication": "可尝试在临床中推广该联合治疗方案",
+        "patient_impact": "患者管理策略需优化",
+        "relevance_2030": "规范化诊疗是实现2030目标的基础",
+        "_topic": "T3"
+      }
+    ],
+    "T4": [
+      {
+        "insight_id": "T4-INS-001",
+        "title": "HBV功能性治愈领域研究进展显著",
+        "one_sentence": "本专题纳入32篇文献，涵盖新型治愈药物、免疫治疗、基因治疗、HBsAg清除，为临床实践提供新证据。",
+        "what_changed": "从传统认知到基于最新证据的HBV功能性治愈优化策略",
+        "why_it_matters": "新型治愈药物、免疫治疗、基因治疗、HBsAg清除，对实现2030目标至关重要",
+        "evidence_summary": "3篇高证据等级研究，23篇中等证据研究",
+        "evidence_strength": "中",
+        "confidence": "中",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "supporting_sources": [
+          "recB3ol2hVGaS4",
+          "reccmhzwk0Qwxd",
+          "recvs9yQpvReIQ",
+          "recvs9GDUkNmpa",
+          "recvs9GGji9bit"
+        ],
+        "clinical_implication": "临床应关注HBV功能性治愈的最新进展并及时更新诊疗策略",
+        "patient_impact": "患者可能从HBV功能性治愈优化中获益",
+        "relevance_2030": "支持2030消除乙肝目标中治疗环节的优化",
+        "_topic": "T4"
+      },
+      {
+        "insight_id": "T4-INS-002",
+        "title": "中国HBV功能性治愈证据仍显不足",
+        "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+        "what_changed": "从依赖国际证据到重视中国本土证据生成",
+        "why_it_matters": "新型治愈药物、免疫治疗、基因治疗、HBsAg清除，对实现2030目标至关重要",
+        "evidence_summary": "中国市场相关性高的研究9篇，中等18篇",
+        "evidence_strength": "中",
+        "confidence": "中",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "supporting_sources": [
+          "recB3ol2hVGaS4",
+          "reccmhzwk0Qwxd",
+          "recvs9yQpvReIQ",
+          "recvs9GDUkNmpa",
+          "recvs9GGji9bit"
+        ],
+        "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+        "patient_impact": "中国患者可能存在治疗反应差异",
+        "relevance_2030": "中国本土证据是实现2030目标的关键支撑",
+        "_topic": "T4"
+      },
+      {
+        "insight_id": "T4-INS-003",
+        "title": "HBV功能性治愈临床实践模式正在转变",
+        "one_sentence": "需重点关注该类药物的安全性和长期疗效",
+        "what_changed": "从经验医学向循证医学转变",
+        "why_it_matters": "新型治愈药物、免疫治疗、基因治疗、HBsAg清除，对实现2030目标至关重要",
+        "evidence_summary": "基于32篇研究证据的综合分析",
+        "evidence_strength": "中",
+        "confidence": "中",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "supporting_sources": [
+          "recB3ol2hVGaS4",
+          "reccmhzwk0Qwxd",
+          "recvs9yQpvReIQ",
+          "recvs9GDUkNmpa",
+          "recvs9GGji9bit"
+        ],
+        "clinical_implication": "需重点关注该类药物的安全性和长期疗效",
+        "patient_impact": "患者管理策略需优化",
+        "relevance_2030": "规范化诊疗是实现2030目标的基础",
+        "_topic": "T4"
+      }
+    ],
+    "T5": [
+      {
+        "insight_id": "T5-INS-001",
+        "title": "HBV→HCC进展与防控领域研究进展显著",
+        "one_sentence": "本专题纳入4篇文献，涵盖致癌机制、HCC风险预测、化学预防，为临床实践提供新证据。",
+        "what_changed": "从传统认知到基于最新证据的HBV→HCC进展与防控优化策略",
+        "why_it_matters": "致癌机制、HCC风险预测、化学预防，对实现2030目标至关重要",
+        "evidence_summary": "0篇高证据等级研究，1篇中等证据研究",
+        "evidence_strength": "低",
+        "confidence": "低",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "supporting_sources": [
+          "receNwY04nmz6m",
+          "recHdKmOooG1oo",
+          "recvsHb1Achspw",
+          "recvtt1PpAHID8"
+        ],
+        "clinical_implication": "临床应关注HBV→HCC进展与防控的最新进展并及时更新诊疗策略",
+        "patient_impact": "患者可能从HBV→HCC进展与防控优化中获益",
+        "relevance_2030": "支持2030消除乙肝目标中随访环节的优化",
+        "_topic": "T5"
+      },
+      {
+        "insight_id": "T5-INS-002",
+        "title": "中国HBV→HCC进展与防控证据仍显不足",
+        "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+        "what_changed": "从依赖国际证据到重视中国本土证据生成",
+        "why_it_matters": "致癌机制、HCC风险预测、化学预防，对实现2030目标至关重要",
+        "evidence_summary": "中国市场相关性高的研究1篇，中等1篇",
+        "evidence_strength": "低",
+        "confidence": "低",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "supporting_sources": [
+          "receNwY04nmz6m",
+          "recHdKmOooG1oo",
+          "recvsHb1Achspw",
+          "recvtt1PpAHID8"
+        ],
+        "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+        "patient_impact": "中国患者可能存在治疗反应差异",
+        "relevance_2030": "中国本土证据是实现2030目标的关键支撑",
+        "_topic": "T5"
+      },
+      {
+        "insight_id": "T5-INS-003",
+        "title": "HBV→HCC进展与防控临床实践模式正在转变",
+        "one_sentence": "可开发针对HBV整合位点的早期诊断方法",
+        "what_changed": "从经验医学向循证医学转变",
+        "why_it_matters": "致癌机制、HCC风险预测、化学预防，对实现2030目标至关重要",
+        "evidence_summary": "基于4篇研究证据的综合分析",
+        "evidence_strength": "低",
+        "confidence": "低",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "supporting_sources": [
+          "receNwY04nmz6m",
+          "recHdKmOooG1oo",
+          "recvsHb1Achspw",
+          "recvtt1PpAHID8"
+        ],
+        "clinical_implication": "可开发针对HBV整合位点的早期诊断方法",
+        "patient_impact": "患者管理策略需优化",
+        "relevance_2030": "规范化诊疗是实现2030目标的基础",
+        "_topic": "T5"
+      }
+    ],
+    "T6": [
+      {
+        "insight_id": "T6-INS-001",
+        "title": "HCC全病程管理领域研究进展显著",
+        "one_sentence": "本专题纳入3篇文献，涵盖HCC筛查、诊断、治疗、随访全流程，为临床实践提供新证据。",
+        "what_changed": "从传统认知到基于最新证据的HCC全病程管理优化策略",
+        "why_it_matters": "HCC筛查、诊断、治疗、随访全流程，对实现2030目标至关重要",
+        "evidence_summary": "1篇高证据等级研究，0篇中等证据研究",
+        "evidence_strength": "低",
+        "confidence": "低",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "supporting_sources": [
+          "rec7yItpBGZjVk",
+          "recbstnD5qAmbZ",
+          "recvsYJ6RGi4IL"
+        ],
+        "clinical_implication": "临床应关注HCC全病程管理的最新进展并及时更新诊疗策略",
+        "patient_impact": "患者可能从HCC全病程管理优化中获益",
+        "relevance_2030": "支持2030消除乙肝目标中治疗环节的优化",
+        "_topic": "T6"
+      },
+      {
+        "insight_id": "T6-INS-002",
+        "title": "中国HCC全病程管理证据仍显不足",
+        "one_sentence": "中国相关研究占比有限，需加强本土证据积累。",
+        "what_changed": "从依赖国际证据到重视中国本土证据生成",
+        "why_it_matters": "HCC筛查、诊断、治疗、随访全流程，对实现2030目标至关重要",
+        "evidence_summary": "中国市场相关性高的研究1篇，中等0篇",
+        "evidence_strength": "低",
+        "confidence": "低",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "supporting_sources": [
+          "rec7yItpBGZjVk",
+          "recbstnD5qAmbZ",
+          "recvsYJ6RGi4IL"
+        ],
+        "clinical_implication": "国际证据应用于中国人群需谨慎外推",
+        "patient_impact": "中国患者可能存在治疗反应差异",
+        "relevance_2030": "中国本土证据是实现2030目标的关键支撑",
+        "_topic": "T6"
+      },
+      {
+        "insight_id": "T6-INS-003",
+        "title": "HCC全病程管理临床实践模式正在转变",
+        "one_sentence": "需在临床中严格遵循该指南进行HCC管理",
+        "what_changed": "从经验医学向循证医学转变",
+        "why_it_matters": "HCC筛查、诊断、治疗、随访全流程，对实现2030目标至关重要",
+        "evidence_summary": "基于3篇研究证据的综合分析",
+        "evidence_strength": "低",
+        "confidence": "低",
+        "uncertainty": "部分结论来自小样本研究，需更多验证",
+        "supporting_sources": [
+          "rec7yItpBGZjVk",
+          "recbstnD5qAmbZ",
+          "recvsYJ6RGi4IL"
+        ],
+        "clinical_implication": "需在临床中严格遵循该指南进行HCC管理",
+        "patient_impact": "患者管理策略需优化",
+        "relevance_2030": "规范化诊疗是实现2030目标的基础",
+        "_topic": "T6"
+      }
+    ]
+  }
+}
