@@ -1,309 +1,490 @@
 /* ============================================================
-   2030肝病联盟战略洞察平台 - 数据适配器
-   将后端JSON格式转换为前端应用期望的格式
+   慢乙肝—HBV相关HCC文献洞察整合报告 - 数据适配器
+   将 window.SITE_DATA 原始格式转换为前端应用使用的 APP_DATA
    ============================================================ */
 
 (function() {
   'use strict';
 
-  if (!window.SITE_DATA) return;
+  if (!window.SITE_DATA) {
+    console.error('[Data Adapter] SITE_DATA not found');
+    return;
+  }
 
   const sd = window.SITE_DATA;
-  const stats = sd.statistics || {};
-  const lit = sd.literature || {};
-  const ins = sd.insights || {};
-  const rpt = sd.report || {};
-  const am = sd.action_matrix || {};
-  const rm = sd.roadmap || {};
-  const meta = sd.update_meta || {};
 
-  // 专题映射
+  // ---------- 专题映射 ----------
   const TOPIC_MAP = {
-    'T1': '2030政策',
-    'T2': '筛查',
-    'T3': '诊断',
-    'T4': '治疗',
-    'T5': '管理/康复',
-    'T6': 'HBV→HCC',
-    'T7': '全国联盟'
+    'T1': { name: '指南与共识', nav: 'screening' },
+    'T3': { name: 'HBV功能性治愈', nav: 'diagnosis' },
+    'T4': { name: '治疗', nav: 'treatment' },
+    'T6': { name: 'HCC全病程', nav: 'hbvhcc' },
+    'T7': { name: 'HBV→HCC', nav: 'hbvhcc' }
   };
 
-  const TOPIC_KEY_MAP = {
-    'T1': 'policy',
-    'T2': 'screening',
-    'T3': 'diagnosis',
-    'T4': 'treatment',
-    'T5': 'management',
-    'T6': 'hbvhcc',
-    'T7': 'alliance'
+  // 簇到导航页面的映射
+  const CLUSTER_NAV_MAP = {
+    'C01_hbsag_decline_functional_cure': 'treatment',
+    'C02_pegifn_switch': 'treatment',
+    'C03_hcc_residual_risk': 'hbvhcc',
+    'C04_nuc_treatment': 'treatment',
+    'C05_hbsag_quantification': 'diagnosis',
+    'C06_hbv_dna_suppression': 'treatment',
+    'C07_hcc_screening': 'hbvhcc',
+    'C08_hcc_treatment': 'hbvhcc',
+    'C09_new_drugs': 'treatment',
+    'C10_patient_management': 'management',
+    'C11_guidelines': 'screening',
+    'C12_screening_cascade': 'screening'
   };
 
-  // 格式化日期
+  // ---------- 工具函数 ----------
   function formatDate(dateStr) {
     if (!dateStr) return '';
     const d = new Date(dateStr);
+    if (isNaN(d.getTime())) return dateStr;
     return d.getFullYear() + '年' + (d.getMonth() + 1) + '月' + d.getDate() + '日';
   }
 
-  // 提取关键数字（从文本中找第一个数字）
-  function extractKeyNumber(text) {
-    if (!text) return { num: '', unit: '' };
-    const match = text.match(/(\d+\.?\d*)\s*(%|例|例\/年|mg|IU\/mL|log|周|月|年|%\/年)?/);
-    if (match) {
-      return { num: match[1], unit: match[2] || '' };
-    }
-    return { num: '', unit: '' };
+  function safeNum(v, defaultVal) {
+    const n = parseInt(v);
+    return isNaN(n) ? (defaultVal || 0) : n;
   }
 
-  // 构建统计数据
+  // ---------- 构建统计数据 ----------
   function buildStatistics() {
-    const topics = stats.topics || {};
+    const stats = sd.statistics || {};
     const byYear = stats.by_year || {};
     const byLevel = stats.by_evidence_level || {};
-    const journey = stats.journey_stages || {};
+    const byTopic = stats.by_topic_primary || {};
+    const byDesign = stats.by_study_design || {};
+    const clusterSummary = stats.clusters || {};
 
     const yearTrend = Object.entries(byYear)
-      .map(([year, count]) => ({ year: parseInt(year), count }))
+      .map(([year, count]) => ({ year: parseInt(year), count: count }))
       .sort((a, b) => a.year - b.year);
 
     const years = yearTrend.map(d => d.year);
-    const yearRange = years.length >= 2 
-      ? (years[0] + '-' + years[years.length - 1])
-      : '2025-2026';
+    const yearRange = years.length >= 2
+      ? years[0] + '–' + years[years.length - 1]
+      : '2018–2026';
+
+    const topicDist = Object.entries(byTopic).map(([code, count]) => ({
+      code: code,
+      name: (TOPIC_MAP[code] && TOPIC_MAP[code].name) || code,
+      count: count
+    })).sort((a, b) => b.count - a.count);
+
+    const designDist = Object.entries(byDesign).map(([design, count]) => ({
+      design: design,
+      count: count
+    })).sort((a, b) => b.count - a.count);
 
     return {
       totalLiterature: stats.total_literature || 0,
       chinaEvidence: stats.china_evidence_count || 0,
-      abEvidence: stats.ab_evidence_count || 0,
-      goal2030Relevant: stats.high_2030_relevance || 0,
-      topicsCount: Object.keys(topics).length || 0,
-      coreInsights: (ins.top_insights || []).length,
+      chinaEvidencePct: stats.china_evidence_pct || 0,
+      internationalEvidence: (stats.total_literature || 0) - (stats.china_evidence_count || 0),
+      abEvidence: (byLevel.A || 0) + (byLevel.B || 0),
+      abEvidencePct: stats.total_literature
+        ? (((byLevel.A || 0) + (byLevel.B || 0)) / stats.total_literature * 100).toFixed(1)
+        : 0,
+      topicsCount: Object.keys(byTopic).length,
+      clustersCount: stats.total_clusters || Object.keys(clusterSummary).length,
+      validatedTopicsCount: (sd.topic_validation && sd.topic_validation.topics)
+        ? sd.topic_validation.topics.length : 0,
       yearRange: yearRange,
-      lastUpdate: formatDate(meta.last_sync || meta.updated_at || new Date()),
-      fieldDistribution: {
-        screening: topics.T2 || journey.筛查 || 0,
-        diagnosis: topics.T3 || journey.诊断 || 0,
-        treatment: topics.T4 || journey.治疗 || 0,
-        management: topics.T5 || journey.管理 || 0,
-        hbvhcc: topics.T6 || journey.HCC || 0
-      },
+      lastUpdate: formatDate((sd.update_meta || {}).last_sync),
       levelDistribution: {
         A: byLevel.A || 0,
         B: byLevel.B || 0,
-        C: byLevel.C || 0
+        C: byLevel.C || 0,
+        D: byLevel.D || 0
       },
       yearTrend: yearTrend,
+      topicDistribution: topicDist,
+      designDistribution: designDist,
       chinaVsIntl: {
         china: stats.china_evidence_count || 0,
         international: (stats.total_literature || 0) - (stats.china_evidence_count || 0)
-      }
+      },
+      clusterSummary: clusterSummary
     };
   }
 
-  // 构建十大洞察
-  function buildTopInsights() {
-    const insights = ins.top_insights || [];
-    return insights.map((item, idx) => {
-      const kn = extractKeyNumber(item.key_evidence ? item.key_evidence[0] : item.one_sentence);
+  // ---------- 构建文献簇数据 ----------
+  function buildClusters() {
+    const ec = sd.evidence_clusters || {};
+    const clusters = ec.clusters || [];
+
+    return clusters.map(c => {
+      const studyDesigns = c.study_designs || {};
+      const evidenceLevels = c.evidence_levels || {};
+      const yr = c.year_range || {};
+
+      // 取前3个研究设计
+      const topDesigns = Object.entries(studyDesigns)
+        .map(([design, count]) => ({ design, count }))
+        .sort((a, b) => b.count - a.count)
+        .slice(0, 4);
+
       return {
-        id: idx + 1,
-        insight_id: item.insight_id,
-        category: TOPIC_MAP[item.topic] || item.topic || '综合',
-        title: item.title,
-        conclusion: item.one_sentence,
-        keyNumber: kn.num || (item.rank ? item.rank : ''),
-        keyUnit: kn.unit || '',
-        evidenceLevel: item.evidence_strength || 'B',
-        goal2030meaning: item.gap_2030 || '',
-        allianceAction: item.alliance_action || '',
-        evidenceCount: (item.source_ids || []).length,
-        detail: (item.key_evidence || []).join('；'),
-        gap_2030: item.gap_2030,
-        what_changed: item.what_changed,
-        china_context: item.china_context,
-        clinical_implication: item.clinical_implication,
-        patient_management_implication: item.patient_management_implication,
-        responsible_party: item.responsible_party || [],
-        kpi: item.kpi || [],
-        confidence: item.confidence,
-        uncertainty: item.uncertainty,
-        source_ids: item.source_ids || []
+        clusterId: c.cluster_id,
+        name: c.name,
+        totalRecords: c.total_records,
+        chinaCount: c.china_count,
+        chinaPct: c.total_records ? (c.china_count / c.total_records * 100).toFixed(1) : 0,
+        studyDesigns: studyDesigns,
+        topDesigns: topDesigns,
+        yearRange: (yr.min && yr.max) ? yr.min + '–' + yr.max : '2018–2026',
+        evidenceLevels: evidenceLevels,
+        representativeRecords: c.representative_records || [],
+        recordIds: c.record_ids || [],
+        navTarget: CLUSTER_NAV_MAP[c.cluster_id] || 'overview'
+      };
+  });
+  }
+
+  // ---------- 构建专题验证数据 ----------
+  function buildTopics() {
+    const tv = sd.topic_validation || {};
+    const topics = tv.topics || [];
+
+    return topics.map(t => {
+      const overview = t['文献概况'] || {};
+      const comparisonTable = t['代表性研究比较表'] || [];
+      const consistency = t['一致性与差异'] || {};
+      const clinicalImplications = t['临床启示'] || {};
+      const patientManagement = t['患者管理启示'] || {};
+      const allianceActions = t['联盟行动'] || {};
+      const controversies = t['争议和证据缺口'] || {};
+      const linkedLit = t['关联文献'] || [];
+
+      // 研究设计分布
+      const designDist = overview['研究设计分布'] || {};
+      const yearDist = overview['年份分布'] || {};
+      const evidenceDist = overview['证据等级分布'] || {};
+
+      const yearTrend = Object.entries(yearDist)
+        .map(([year, count]) => ({ year: parseInt(year), count: count }))
+        .sort((a, b) => a.year - b.year);
+
+      const years = yearTrend.map(d => d.year);
+      const yearRange = years.length >= 2
+        ? years[0] + '–' + years[years.length - 1]
+        : '2018–2026';
+
+      // 确定导航目标
+      let navTarget = 'treatment';
+      if (t.topic_id.includes('hcc')) navTarget = 'hbvhcc';
+      else if (t.topic_id.includes('pegifn')) navTarget = 'treatment';
+      else if (t.topic_id.includes('hbsag')) navTarget = 'treatment';
+
+      return {
+        topicId: t.topic_id,
+        title: t.topic_title,
+        keywords: t['筛选关键词'] || [],
+        navTarget: navTarget,
+        overview: {
+          totalRecords: overview['文献总数'] || 0,
+          chinaCount: overview['中国研究数量'] || 0,
+          intlCount: overview['国际研究数量'] || 0,
+          designDist: designDist,
+          yearDist: yearDist,
+          yearTrend: yearTrend,
+          yearRange: yearRange,
+          evidenceDist: evidenceDist
+        },
+        comparisonTable: comparisonTable,
+        synthesisText: t['文献综合正文'] || '',
+        consistency: {
+          consistent: consistency['一致结论'] || '',
+          differences: consistency['存在差异'] || '',
+          source: consistency['差异来源'] || ''
+        },
+        clinicalImplications: {
+          initial: clinicalImplications['初治患者'] || '',
+          experienced: clinicalImplications['经治患者'] || '',
+          advantage: clinicalImplications['优势人群筛选'] || '',
+          monitoring: clinicalImplications['疗效监测'] || ''
+        },
+        patientManagement: {
+          dropoutStage: patientManagement['最易脱落阶段'] || '',
+          adherence: patientManagement['依从性改善'] || '',
+          followupPoints: patientManagement['强化随访节点'] || ''
+        },
+        significance2030: t['2030意义'] || '',
+        allianceActions: {
+          standards: allianceActions['建立标准'] || '',
+          referral: allianceActions['转诊患者'] || '',
+          kpi: allianceActions['监测KPI'] || ''
+        },
+        controversies: {
+          evidenceGap: controversies['证据不足'] || '',
+          designLimit: controversies['研究设计局限'] || '',
+          chinaDataGap: controversies['中国数据不足'] || ''
+        },
+        linkedLiterature: linkedLit
       };
     });
   }
 
-  // 构建患者漏斗
-  function buildFunnelStages() {
-    const defaultStages = [
-      { name: '筛查', pct: 100, problem: '筛查覆盖率低', dropRisk: '高', action: '扩大机会性筛查', kpi: '筛查阳性率' },
-      { name: '阳性告知', pct: 85, problem: '告知不规范', dropRisk: '中', action: '标准化告知流程', kpi: '告知率' },
-      { name: '确诊评估', pct: 65, problem: '转诊不畅', dropRisk: '高', action: '建立绿色通道', kpi: '完整评估率' },
-      { name: '治疗启动', pct: 45, problem: '治疗启动率低', dropRisk: '高', action: '检测即治疗', kpi: '治疗启动率' },
-      { name: '治疗留存', pct: 35, problem: '早期脱落多', dropRisk: '中', action: '强化前3月管理', kpi: '6个月留存率' },
-      { name: '病毒抑制', pct: 28, problem: '依从性不足', dropRisk: '中', action: '数字化管理', kpi: '病毒抑制率' },
-      { name: '功能性治愈', pct: 8, problem: '优势人群识别难', dropRisk: '低', action: '精准筛选优势人群', kpi: 'HBsAg清除率' },
-      { name: 'HCC长期监测', pct: 15, problem: '监测不规范', dropRisk: '高', action: '风险分层监测', kpi: '规范监测率' }
-    ];
-
-    // 如果report中有漏斗数据则使用，否则用默认
-    return defaultStages;
-  }
-
-  // 构建专题数据
-  function buildThemesData() {
-    const topics = stats.topics || {};
-    const topicIns = ins.topic_insights || {};
-
-    const themes = ['screening', 'diagnosis', 'treatment', 'management', 'hbvhcc'];
-    const topicKeys = ['T2', 'T3', 'T4', 'T5', 'T6'];
-    const names = ['筛查', '诊断', '治疗', '管理/康复', 'HBV→HCC'];
-    const icons = ['🔍', '📊', '💊', '🏥', '🧬'];
-
-    const result = {};
-    themes.forEach((theme, idx) => {
-      const tKey = topicKeys[idx];
-      const insightsArr = topicIns[tKey] || [];
-      result[theme] = {
-        name: names[idx],
-        icon: icons[idx],
-        count: topics[tKey] || 0,
-        chinaCount: Math.floor((topics[tKey] || 0) * 0.35),
-        topInsights: insightsArr.slice(0, 5).map((item, i) => ({
-          id: i + 1,
-          title: item.title || item.one_sentence || '洞察' + (i + 1),
-          summary: item.one_sentence || item.key_evidence?.[0] || '',
-          evidence: item.evidence_strength || 'B',
-          detail: (item.key_evidence || []).join('；')
-        }))
-      };
-    });
-    return result;
-  }
-
-  // 构建专题洞察详情
-  function buildThemeInsights() {
-    const topicIns = ins.topic_insights || {};
-    const result = {};
-    const themes = ['screening', 'diagnosis', 'treatment', 'management', 'hbvhcc'];
-    const topicKeys = ['T2', 'T3', 'T4', 'T5', 'T6'];
-
-    themes.forEach((theme, idx) => {
-      const tKey = topicKeys[idx];
-      const items = topicIns[tKey] || [];
-      result[theme] = items.map((item, i) => ({
-        id: i + 1,
-        title: item.title || '洞察' + (i + 1),
-        one_sentence: item.one_sentence || '',
-        evidence_strength: item.evidence_strength || 'B',
-        key_evidence: item.key_evidence || [],
-        china_context: item.china_context || '',
-        clinical_implication: item.clinical_implication || '',
-        alliance_action: item.alliance_action || '',
-        source_ids: item.source_ids || []
-      }));
-    });
-    return result;
-  }
-
-  // 构建联盟架构
-  function buildAllianceLayers() {
-    const defaultLayers = [
-      { level: '国家级中心', role: '牵头制定标准、质量控制、多中心研究', count: 5, color: '#005691' },
-      { level: '省级中心', role: '区域转诊、技术指导、医生培训', count: 31, color: '#0077b6' },
-      { level: '地市级医院', role: '核心诊疗、患者管理、数据上报', count: 300, color: '#00A896' },
-      { level: '县级医院', role: '初筛初治、双向转诊、基层管理', count: 2000, color: '#48cae4' },
-      { level: '基层机构', role: '社区筛查、健康宣教、随访管理', count: 10000, color: '#90e0ef' },
-      { level: '患者管理平台', role: '数字化随访、依从性管理、数据整合', count: 1, color: '#E8742C' }
-    ];
-    return defaultLayers;
-  }
-
-  // 构建路线图
-  function buildRoadmapPhases() {
-    const phases = rm.phases || [];
-    if (phases.length === 0) {
-      return [
-        { phase: 1, name: '标准建设期', period: '2025', goals: ['建立联盟标准体系', '完成顶层设计'], actions: ['制定统一筛查标准', '制定统一诊疗路径'], milestones: ['联盟成立', '首批标准发布'], kpi_targets: { 筛查率: 25, 诊断率: 30, 治疗率: 15 } },
-        { phase: 2, name: '区域试点期', period: '2026-2027', goals: ['3-5个省份试点', '验证模式可行性'], actions: ['建立省级示范中心', '开展质量评价'], milestones: ['首批省级中心挂牌', '真实世界研究启动'], kpi_targets: { 筛查率: 40, 诊断率: 50, 治疗率: 30 } },
-        { phase: 3, name: '联盟扩展期', period: '2028-2029', goals: ['覆盖全国31省份', '建立质量评价体系'], actions: ['全国推广联盟模式', '完善数据平台'], milestones: ['覆盖31省份', '年筛查量超1000万'], kpi_targets: { 筛查率: 65, 诊断率: 70, 治疗率: 55 } },
-        { phase: 4, name: '深化攻坚期', period: '2030', goals: ['实现2030目标', '建立长效机制'], actions: ['攻坚难点地区', '优化管理模式'], milestones: ['达到WHO 2030目标', '形成中国经验'], kpi_targets: { 筛查率: 90, 诊断率: 90, 治疗率: 80 } }
-      ];
-    }
-    return phases.map((p, i) => ({
-      phase: p.phase || i + 1,
-      name: p.name || '阶段' + (i + 1),
-      period: p.period || '',
-      goals: p.goals || [],
-      actions: p.key_actions || p.actions || [],
-      milestones: p.milestones || [],
-      kpi_targets: p.kpi_targets || {}
-    }));
-  }
-
-  // 构建文献列表
-  function buildLiteratureList() {
+  // ---------- 构建文献列表 ----------
+  function buildLiterature() {
+    const lit = sd.literature || {};
     const records = lit.records || [];
-    return records.map((r, idx) => ({
-      id: r.id || 'lit-' + idx,
-      title: r.title_cn || r.title_en || '无标题',
-      title_en: r.title_en || '',
-      year: r.year || 2025,
-      journal: r.journal || '',
-      first_author: r.first_author || '',
-      evidence_level: r.evidence_level || 'B',
-      topic: TOPIC_MAP[r.topic_primary] || r.topic_primary_name || '',
-      topic_key: r.topic_primary || '',
-      china: r.china_evidence || false,
-      tags: r.tags || [],
-      abstract: r.key_result || r.clinical_implication || '',
-      key_result: r.key_result || '',
-      clinical_implication: r.clinical_implication || '',
-      china_implication: r.china_implication || '',
-      strategy_2030: r.strategy_2030 || '',
-      patient_stage: r.patient_stage || [],
-      journey_stage: r.journey_stage || [],
-      pmid: r.pmid || '',
-      doi: r.doi || '',
-      source_url: r.source_url || '',
-      priority: r.priority || '中'
-    }));
+
+    return records.map((r, idx) => {
+      const topicName = r.topic_primary_name || (TOPIC_MAP[r.topic_primary] && TOPIC_MAP[r.topic_primary].name) || '';
+      return {
+        id: r.id || 'rec-' + idx,
+        title: r.title_cn || r.title_en || '无标题',
+        titleEn: r.title_en || '',
+        year: r.year || 2025,
+        journal: r.journal || '',
+        firstAuthor: r.first_author || '',
+        pmid: r.pmid || '',
+        doi: r.doi || '',
+        sourceUrl: r.source_url || '',
+        evidenceLevel: r.evidence_level || 'C',
+        chinaEvidence: r.china_evidence || false,
+        topicPrimary: r.topic_primary || '',
+        topicPrimaryName: topicName,
+        topicCodes: r.topic_codes || [],
+        topicSecondary: r.topic_secondary || [],
+        clinicalImplication: r.clinical_implication || '',
+        sourceType: (r.source_type || []).join(', '),
+        chinaRelevance: (r.china_relevance || []).join(', '),
+        publishDate: r.publish_date || '',
+        clusters: r.clusters || []
+      };
+    });
   }
 
-  // 构建行动矩阵
-  function buildActionItems() {
-    const actions = am.actions || [];
-    return actions.map((a, idx) => ({
-      id: a.action_id || 'act-' + idx,
-      title: a.title || '',
-      topic: a.topic || '',
-      priority: a.priority || '中',
-      target: a.target_population || '',
-      responsible: a.responsible_party || '',
-      timeline: a.timeline || '',
-      kpi: a.kpi || '',
-      evidence: a.evidence_basis || []
-    }));
+  // ---------- 构建数据质量审计 ----------
+  function buildAudit() {
+    const audit = sd.data_quality_audit || {};
+    return {
+      auditTime: formatDate(audit.audit_time),
+      totalInput: audit.total_input || 0,
+      statusDistribution: audit.status_distribution || {},
+      duplicateCount: audit.duplicate_count || 0,
+      cleanRecordsCount: audit.clean_records_count || 0,
+      excludedCount: audit.excluded_count || 0,
+      excludedDetail: audit.excluded_detail || [],
+      duplicates: audit.duplicates || []
+    };
   }
 
-  // 组装完整应用数据
+  // ---------- 构建元数据 ----------
+  function buildMeta() {
+    const meta = sd.update_meta || {};
+    return {
+      lastSync: formatDate(meta.last_sync),
+      recordsCount: meta.records_count || 0,
+      dataSource: meta.data_source || '',
+      feishuRev: meta.feishu_rev || 0,
+      generatedAt: sd.generated_at || '',
+      version: sd.version || ''
+    };
+  }
+
+  // ---------- 文献筛选辅助函数 ----------
+  function filterLiterature(allLit, filters) {
+    if (!filters) return allLit;
+    return allLit.filter(rec => {
+      if (filters.search) {
+        const q = filters.search.toLowerCase();
+        const haystack = (rec.title + ' ' + rec.titleEn + ' ' + rec.journal +
+          ' ' + rec.firstAuthor + ' ' + rec.pmid + ' ' + rec.doi +
+          ' ' + rec.clinicalImplication).toLowerCase();
+        if (!haystack.includes(q)) return false;
+      }
+      if (filters.topic && rec.topicPrimary !== filters.topic) return false;
+      if (filters.year && rec.year !== parseInt(filters.year)) return false;
+      if (filters.evidenceLevel && rec.evidenceLevel !== filters.evidenceLevel) return false;
+      if (filters.region) {
+        if (filters.region === 'china' && !rec.chinaEvidence) return false;
+        if (filters.region === 'intl' && rec.chinaEvidence) return false;
+      }
+      if (filters.cluster && (!rec.clusters || !rec.clusters.includes(filters.cluster))) return false;
+      return true;
+    });
+  }
+
+  // 按簇筛选文献
+  function getLiteratureByCluster(allLit, clusterId) {
+    return allLit.filter(rec => rec.clusters && rec.clusters.includes(clusterId));
+  }
+
+  // 按专题筛选文献
+  function getLiteratureByTopic(allLit, topicCode) {
+    return allLit.filter(rec => rec.topicPrimary === topicCode);
+  }
+
+  // ---------- 构建2030策略数据 ----------
+  function buildStrategy2030() {
+    const s = sd.strategy_2030 || {};
+    const strategies = s.strategies || [];
+    return {
+      total: s.total_strategies || strategies.length,
+      targetYear: s.target_year || 2030,
+      summary: s.summary || '',
+      strategies: strategies.map(st => ({
+        id: st.strategy_id,
+        title: st.title,
+        targetMetric: st.target_metric || '',
+        currentEvidence: st.current_evidence || '',
+        keyActions: st.key_actions || [],
+        evidenceBasis: st.evidence_basis || [],
+        targetYear: st.target_year || 2030,
+        responsible: st.responsible || ''
+      }))
+    };
+  }
+
+  // ---------- 构建联盟行动数据 ----------
+  function buildAllianceActions() {
+    const a = sd.alliance_actions || {};
+    return {
+      total: a.total_actions || 0,
+      summary: a.summary || '',
+      actions: (a.actions || []).map(act => ({
+        id: act.action_id,
+        title: act.title || '',
+        targetMetric: act.target_metric || '',
+        actions: act.actions || [],
+        responsible: act.responsible || '',
+        targetYear: act.target_year || 2030,
+        evidenceBasis: act.evidence_basis || []
+      })),
+      architecture: a.architecture || [],
+      kpis: a.kpis || [],
+      roadmap: a.roadmap || []
+    };
+  }
+
+  // ---------- 构建专题综述数据 ----------
+  function buildTopicReviews() {
+    const tr = sd.topic_reviews || {};
+    return {
+      totalChapters: tr.total_chapters || 0,
+      totalLiterature: tr.total_literature || 0,
+      chapters: (tr.chapters || []).map(ch => ({
+        chapter: ch.chapter,
+        title: ch.title,
+        evidenceScope: ch.evidence_scope || '',
+        clusterCount: ch.cluster_count || 0,
+        totalRecords: ch.total_records || 0,
+        chinaCount: ch.china_count || 0,
+        yearRange: ch.year_range || '',
+        evidenceSynthesis: ch.evidence_synthesis || '',
+        keyFindings: ch.key_findings || [],
+        evidenceGaps: ch.evidence_gaps || [],
+        clusterSummaries: ch.cluster_summaries || [],
+        validatedTopics: ch.validated_topics || []
+      }))
+    };
+  }
+
+  // ---------- 构建跨文献洞察数据 ----------
+  function buildLiteratureInsights() {
+    const li = sd.literature_insights || {};
+    return {
+      total: li.total_insights || 0,
+      insights: (li.insights || []).map(ins => ({
+        id: ins.insight_id,
+        clusterId: ins.cluster_id,
+        clusterName: ins.cluster_name,
+        title: ins.title,
+        oneLineConclusion: ins.one_line_conclusion || '',
+        evidenceSynthesis: ins.evidence_synthesis || '',
+        literatureCount: ins.literature_count || 0,
+        studyDesigns: ins.study_designs || {},
+        chinaCount: ins.china_count || 0,
+        comparisonTable: ins.comparison_table || [],
+        consistency: ins.consistency || {},
+        clinicalImplications: ins.clinical_implications || {},
+        patientManagement: ins.patient_management || {},
+        significance2030: ins.significance_2030 || '',
+        allianceActions: ins.alliance_actions || {},
+        controversies: ins.controversies || {},
+        linkedLiteratureCount: ins.linked_literature_count || 0,
+        linkedLiterature: ins.linked_literature || [],
+        source: ins.source || ''
+      }))
+    };
+  }
+
+  // ---------- 构建证据缺口数据 ----------
+  function buildEvidenceGaps() {
+    const eg = sd.evidence_gaps || {};
+    return {
+      total: eg.total_gaps || 0,
+      highSeverity: eg.high_severity || 0,
+      gaps: (eg.gaps || []).map(g => ({
+        id: g.gap_id,
+        topic: g.topic || '',
+        gapType: g.gap_type || '',
+        description: g.description || '',
+        severity: g.severity || 'medium',
+        source: g.source || ''
+      }))
+    };
+  }
+
+  // ---------- 构建关键研究比较表数据 ----------
+  function buildKeyStudyTables() {
+    const kst = sd.key_study_tables || {};
+    return {
+      total: kst.total_tables || 0,
+      tables: (kst.tables || []).map(t => ({
+        id: t.table_id,
+        topic: t.topic || '',
+        source: t.source || '',
+        rowCount: t.row_count || 0,
+        columns: t.columns || [],
+        rows: t.rows || []
+      }))
+    };
+  }
+
+  // ---------- 组装完整应用数据 ----------
+  const allLiterature = buildLiterature();
+
   window.APP_DATA = {
     statistics: buildStatistics(),
-    topInsights: buildTopInsights(),
-    funnelStages: buildFunnelStages(),
-    themesData: buildThemesData(),
-    themeInsights: buildThemeInsights(),
-    allianceLayers: buildAllianceLayers(),
-    roadmapPhases: buildRoadmapPhases(),
-    literatureList: buildLiteratureList(),
-    actionItems: buildActionItems(),
-    report: rpt,
+    clusters: buildClusters(),
+    topics: buildTopics(),
+    literature: allLiterature,
+    audit: buildAudit(),
+    meta: buildMeta(),
+    strategy2030: buildStrategy2030(),
+    allianceActions: buildAllianceActions(),
+    topicReviews: buildTopicReviews(),
+    literatureInsights: buildLiteratureInsights(),
+    evidenceGaps: buildEvidenceGaps(),
+    keyStudyTables: buildKeyStudyTables(),
+    // 辅助函数
+    filterLiterature: filterLiterature,
+    getLiteratureByCluster: getLiteratureByCluster,
+    getLiteratureByTopic: getLiteratureByTopic,
+    // 簇到导航映射
+    clusterNavMap: CLUSTER_NAV_MAP,
+    // 专题映射
+    topicMap: TOPIC_MAP,
     hasRealData: true
   };
 
-  console.log('[Data Adapter] 真实数据加载完成', {
-    literature: window.APP_DATA.statistics.totalLiterature,
-    insights: window.APP_DATA.topInsights.length,
-    topics: Object.keys(window.APP_DATA.themesData).length
+  console.log('[Data Adapter] 文献洞察报告数据加载完成', {
+    文献总数: window.APP_DATA.statistics.totalLiterature,
+    文献簇数: window.APP_DATA.clusters.length,
+    验证专题数: window.APP_DATA.topics.length,
+    跨文献洞察: window.APP_DATA.literatureInsights.total,
+    策略数: window.APP_DATA.strategy2030.total,
+    联盟行动: window.APP_DATA.allianceActions.total,
+    证据缺口: window.APP_DATA.evidenceGaps.total,
+    数据版本: window.APP_DATA.meta.version
   });
 
 })();

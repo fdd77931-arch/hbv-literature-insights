@@ -1,31 +1,114 @@
 {
-  "total_literature": 51,
-  "china_evidence_count": 35,
-  "china_evidence_pct": 68.6,
-  "ab_evidence_count": 49,
-  "ab_evidence_pct": 96.1,
-  "high_2030_relevance": 35,
-  "topics": {
-    "T1": 32,
-    "T2": 9,
-    "T3": 6,
-    "T4": 3,
-    "T5": 1
-  },
+  "total_literature": 1001,
+  "china_evidence_count": 983,
+  "china_evidence_pct": 98.2,
   "by_year": {
-    "2025": 8,
-    "2026": 41
+    "2018": 19,
+    "2019": 136,
+    "2020": 137,
+    "2021": 145,
+    "2022": 128,
+    "2023": 116,
+    "2024": 96,
+    "2025": 117,
+    "2026": 103
   },
   "by_evidence_level": {
-    "A": 2,
-    "B": 47,
-    "C": 2
+    "A": 336,
+    "B": 223,
+    "C": 438,
+    "D": 4
   },
-  "journey_stages": {
-    "筛查": 17,
-    "诊断": 13,
-    "治疗": 47,
-    "管理": 8,
-    "HCC": 11
-  }
+  "by_topic_primary": {
+    "T1": 9,
+    "T3": 224,
+    "T4": 191,
+    "T6": 412,
+    "T7": 165
+  },
+  "by_study_design": {
+    "未分类": 201,
+    "Meta分析": 151,
+    "队列研究": 134,
+    "基础研究": 121,
+    "综述": 118,
+    "RCT": 93,
+    "指南/共识": 83,
+    "回顾性队列": 33,
+    "前瞻性队列": 21,
+    "II期临床": 17,
+    "真实世界研究": 11,
+    "III期临床": 9,
+    "病例对照": 4,
+    "横断面研究": 3,
+    "探索性研究": 2
+  },
+  "by_source_type": {
+    "国际研究": 72
+  },
+  "clusters": {
+    "C01_hbsag_decline_functional_cure": {
+      "name": "HBsAg早期下降与功能性治愈",
+      "total_records": 464,
+      "china_count": 453
+    },
+    "C02_pegifn_switch": {
+      "name": "经治患者转换或联合PegIFN",
+      "total_records": 571,
+      "china_count": 563
+    },
+    "C03_hcc_residual_risk": {
+      "name": "HBV抑制或HBsAg清除后HCC残余风险",
+      "total_records": 646,
+      "china_count": 639
+    },
+    "C04_nuc_treatment": {
+      "name": "核苷类似物长期治疗",
+      "total_records": 459,
+      "china_count": 451
+    },
+    "C05_hbsag_quantification": {
+      "name": "HBsAg定量与疗效预测",
+      "total_records": 575,
+      "china_count": 567
+    },
+    "C06_hbv_dna_suppression": {
+      "name": "HBV DNA抑制与病毒学应答",
+      "total_records": 321,
+      "china_count": 314
+    },
+    "C07_hcc_screening": {
+      "name": "HCC筛查与监测",
+      "total_records": 564,
+      "china_count": 557
+    },
+    "C08_hcc_treatment": {
+      "name": "HCC治疗（手术/介入/免疫）",
+      "total_records": 589,
+      "china_count": 583
+    },
+    "C09_new_drugs": {
+      "name": "新药管线（siRNA/ASO/衣壳等）",
+      "total_records": 427,
+      "china_count": 421
+    },
+    "C10_patient_management": {
+      "name": "患者管理与依从性",
+      "total_records": 201,
+      "china_count": 200
+    },
+    "C11_guidelines": {
+      "name": "指南与共识",
+      "total_records": 248,
+      "china_count": 246
+    },
+    "C12_screening_cascade": {
+      "name": "筛查到确诊的闭环",
+      "total_records": 295,
+      "china_count": 291
+    }
+  },
+  "total_clusters": 12,
+  "last_sync": "2026-08-29T00:12:21.309541+08:00",
+  "data_source": "literature_cleaned.ndjson"
 }

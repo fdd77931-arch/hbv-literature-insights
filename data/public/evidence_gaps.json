@@ -1,0 +1,176 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-29T00:46:40.294238",
+  "total_gaps": 21,
+  "high_severity": 11,
+  "gaps": [
+    {
+      "gap_id": "GAP_topic1_hbsag_functional_cure_证据不足",
+      "topic": "HBsAg下降与功能性治愈",
+      "gap_type": "证据不足",
+      "description": "缺乏以中国人群为主的大型前瞻性RCT，多数证据来自回顾性队列与真实世界数据。；HBsAg清除后HCC残余风险的长期（>5年）随访数据不足，风险预测模型尚未在中国人群充分验证。；PegIFN转换/联合的最佳时机、疗程与停药标准在不同HBeAg状态人群中尚无统一共识。",
+      "severity": "high",
+      "source": "topic_validation"
+    },
+    {
+      "gap_id": "GAP_topic1_hbsag_functional_cure_研究设计局限",
+      "topic": "HBsAg下降与功能性治愈",
+      "gap_type": "研究设计局限",
+      "description": "以回顾性单中心队列和综述为主，随机对照试验与大型Meta分析偏少；随访时长不一，HCC等硬终点事件数有限，影响效应估计的精确性。",
+      "severity": "high",
+      "source": "topic_validation"
+    },
+    {
+      "gap_id": "GAP_topic1_hbsag_functional_cure_中国数据不足",
+      "topic": "HBsAg下降与功能性治愈",
+      "gap_type": "中国数据不足",
+      "description": "中国研究216篇，但多数为回顾性真实世界数据，缺乏多中心前瞻性队列与本土RCT，尤其缺少HBsAg清除后长期HCC监测的中国数据。",
+      "severity": "high",
+      "source": "topic_validation"
+    },
+    {
+      "gap_id": "GAP_topic2_pegifn_switch_addon_证据不足",
+      "topic": "经治患者转换或联合PegIFN",
+      "gap_type": "证据不足",
+      "description": "缺乏以中国人群为主的大型前瞻性RCT，多数证据来自回顾性队列与真实世界数据。；HBsAg清除后HCC残余风险的长期（>5年）随访数据不足，风险预测模型尚未在中国人群充分验证。；PegIFN转换/联合的最佳时机、疗程与停药标准在不同HBeAg状态人群中尚无统一共识。",
+      "severity": "high",
+      "source": "topic_validation"
+    },
+    {
+      "gap_id": "GAP_topic2_pegifn_switch_addon_研究设计局限",
+      "topic": "经治患者转换或联合PegIFN",
+      "gap_type": "研究设计局限",
+      "description": "以回顾性单中心队列和综述为主，随机对照试验与大型Meta分析偏少；随访时长不一，HCC等硬终点事件数有限，影响效应估计的精确性。",
+      "severity": "high",
+      "source": "topic_validation"
+    },
+    {
+      "gap_id": "GAP_topic2_pegifn_switch_addon_中国数据不足",
+      "topic": "经治患者转换或联合PegIFN",
+      "gap_type": "中国数据不足",
+      "description": "中国研究234篇，但多数为回顾性真实世界数据，缺乏多中心前瞻性队列与本土RCT，尤其缺少HBsAg清除后长期HCC监测的中国数据。",
+      "severity": "high",
+      "source": "topic_validation"
+    },
+    {
+      "gap_id": "GAP_topic3_hcc_residual_risk_证据不足",
+      "topic": "HBV抑制或HBsAg清除后HCC残余风险",
+      "gap_type": "证据不足",
+      "description": "缺乏以中国人群为主的大型前瞻性RCT，多数证据来自回顾性队列与真实世界数据。；HBsAg清除后HCC残余风险的长期（>5年）随访数据不足，风险预测模型尚未在中国人群充分验证。；PegIFN转换/联合的最佳时机、疗程与停药标准在不同HBeAg状态人群中尚无统一共识。",
+      "severity": "high",
+      "source": "topic_validation"
+    },
+    {
+      "gap_id": "GAP_topic3_hcc_residual_risk_研究设计局限",
+      "topic": "HBV抑制或HBsAg清除后HCC残余风险",
+      "gap_type": "研究设计局限",
+      "description": "以回顾性单中心队列和综述为主，随机对照试验与大型Meta分析偏少；随访时长不一，HCC等硬终点事件数有限，影响效应估计的精确性。",
+      "severity": "high",
+      "source": "topic_validation"
+    },
+    {
+      "gap_id": "GAP_topic3_hcc_residual_risk_中国数据不足",
+      "topic": "HBV抑制或HBsAg清除后HCC残余风险",
+      "gap_type": "中国数据不足",
+      "description": "中国研究472篇，但多数为回顾性真实世界数据，缺乏多中心前瞻性队列与本土RCT，尤其缺少HBsAg清除后长期HCC监测的中国数据。",
+      "severity": "high",
+      "source": "topic_validation"
+    },
+    {
+      "gap_id": "GAP_C01_hbsag_decline_functional_cure_rct",
+      "topic": "HBsAg早期下降与功能性治愈",
+      "gap_type": "RCT证据不足",
+      "description": "HBsAg早期下降与功能性治愈文献簇RCT占比仅10%（49/464篇），高质量干预性证据有限",
+      "severity": "medium",
+      "source": "cluster_analysis"
+    },
+    {
+      "gap_id": "GAP_C03_hcc_residual_risk_rct",
+      "topic": "HBV抑制或HBsAg清除后HCC残余风险",
+      "gap_type": "RCT证据不足",
+      "description": "HBV抑制或HBsAg清除后HCC残余风险文献簇RCT占比仅12%（79/646篇），高质量干预性证据有限",
+      "severity": "medium",
+      "source": "cluster_analysis"
+    },
+    {
+      "gap_id": "GAP_C04_nuc_treatment_rct",
+      "topic": "核苷类似物长期治疗",
+      "gap_type": "RCT证据不足",
+      "description": "核苷类似物长期治疗文献簇RCT占比仅12%（59/459篇），高质量干预性证据有限",
+      "severity": "medium",
+      "source": "cluster_analysis"
+    },
+    {
+      "gap_id": "GAP_C05_hbsag_quantification_rct",
+      "topic": "HBsAg定量与疗效预测",
+      "gap_type": "RCT证据不足",
+      "description": "HBsAg定量与疗效预测文献簇RCT占比仅7%（42/575篇），高质量干预性证据有限",
+      "severity": "medium",
+      "source": "cluster_analysis"
+    },
+    {
+      "gap_id": "GAP_C06_hbv_dna_suppression_rct",
+      "topic": "HBV DNA抑制与病毒学应答",
+      "gap_type": "RCT证据不足",
+      "description": "HBV DNA抑制与病毒学应答文献簇RCT占比仅9%（32/321篇），高质量干预性证据有限",
+      "severity": "medium",
+      "source": "cluster_analysis"
+    },
+    {
+      "gap_id": "GAP_C07_hcc_screening_rct",
+      "topic": "HCC筛查与监测",
+      "gap_type": "RCT证据不足",
+      "description": "HCC筛查与监测文献簇RCT占比仅14%（79/564篇），高质量干预性证据有限",
+      "severity": "medium",
+      "source": "cluster_analysis"
+    },
+    {
+      "gap_id": "GAP_C08_hcc_treatment_rct",
+      "topic": "HCC治疗（手术/介入/免疫）",
+      "gap_type": "RCT证据不足",
+      "description": "HCC治疗（手术/介入/免疫）文献簇RCT占比仅13%（79/589篇），高质量干预性证据有限",
+      "severity": "medium",
+      "source": "cluster_analysis"
+    },
+    {
+      "gap_id": "GAP_C10_patient_management_rct",
+      "topic": "患者管理与依从性",
+      "gap_type": "RCT证据不足",
+      "description": "患者管理与依从性文献簇RCT占比仅14%（29/201篇），高质量干预性证据有限",
+      "severity": "medium",
+      "source": "cluster_analysis"
+    },
+    {
+      "gap_id": "GAP_C11_guidelines_rct",
+      "topic": "指南与共识",
+      "gap_type": "RCT证据不足",
+      "description": "指南与共识文献簇RCT占比仅10%（25/248篇），高质量干预性证据有限",
+      "severity": "medium",
+      "source": "cluster_analysis"
+    },
+    {
+      "gap_id": "GAP_C12_screening_cascade_rct",
+      "topic": "筛查到确诊的闭环",
+      "gap_type": "RCT证据不足",
+      "description": "筛查到确诊的闭环文献簇RCT占比仅7%（22/295篇），高质量干预性证据有限",
+      "severity": "medium",
+      "source": "cluster_analysis"
+    },
+    {
+      "gap_id": "GAP_global_patient_mgmt",
+      "topic": "患者管理与依从性",
+      "gap_type": "文献总量不足",
+      "description": "患者管理文献仅201篇，占总文献20%，与治疗和HCC文献相比明显薄弱",
+      "severity": "high",
+      "source": "global_analysis"
+    },
+    {
+      "gap_id": "GAP_global_screening",
+      "topic": "筛查转诊闭环",
+      "gap_type": "文献总量不足",
+      "description": "筛查转诊文献仅295篇，占总文献29%，筛查到确诊的闭环证据不足",
+      "severity": "high",
+      "source": "global_analysis"
+    }
+  ]
+}

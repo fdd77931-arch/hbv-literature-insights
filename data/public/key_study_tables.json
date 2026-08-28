@@ -1,0 +1,1027 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-29T00:46:40.292718",
+  "total_tables": 15,
+  "tables": [
+    {
+      "table_id": "TBL_topic1_hbsag_functional_cure",
+      "topic": "HBsAg下降与功能性治愈",
+      "source": "topic_validation",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "Rong Fan/Gut/2024",
+          "design": "前瞻性队列",
+          "population": "慢性乙型肝炎；CHB；主题标签：核苷（酸）类似物/HBsAg清除/生物标志物",
+          "sample_size": 6792,
+          "intervention": "核苷（酸）类似物；NUC；抗病毒",
+          "followup": "65.6月",
+          "key_result": "本研究基于中国50个中心的前瞻性队列，纳入6792例接受核苷（酸）类似物治疗的慢性乙型肝炎（CHB）患者，中位随访65.6个月，5年HBsAg清除累积发生率为2.4%",
+          "limitation": "原文未明确报告局限"
+        },
+        {
+          "study": "Man-Fung Yuen/The New England journal of medicine/2022",
+          "design": "RCT",
+          "population": "主题标签：siRNA/ASO/HBsAg清除/联合治疗",
+          "sample_size": 457,
+          "intervention": "NUC；抗病毒",
+          "followup": "24周",
+          "key_result": "这是一项2b期、随机、研究者不设盲的试验，纳入457例慢性HBV感染者（227例接受NA治疗，230例未接受NA治疗），按3:3:3:1比例分为4组，接受不同剂量和疗程的bepirovirsen或安慰剂治疗",
+          "limitation": "原文未明确报告局限"
+        },
+        {
+          "study": "Wenqian Qi/Journal of viral hepatitis/2019",
+          "design": "RCT",
+          "population": "HCC；肝细胞癌；主题标签：联合治疗/聚乙二醇干扰素/核苷（酸）类似物",
+          "sample_size": 447,
+          "intervention": "聚乙二醇干扰素；干扰素；核苷（酸）类似物",
+          "followup": "48周",
+          "key_result": "本研究为前瞻性、随机、对照、多中心试验，纳入447例HBV DNA阳性原发性肝细胞癌（HCC）患者，在肝切除/消融术后分为早期联合组（恩替卡韦+聚乙二醇干扰素α-2a，第一年联合）、晚期联合组（恩替卡韦治疗1年后加用聚乙二醇干扰素α-2a 48周）、核苷（酸）类似物（NA）单药组和非抗病毒治疗组",
+          "limitation": "原文未明确报告局限"
+        },
+        {
+          "study": "Jun-Hao Chu/Journal of viral hepatitis/2022",
+          "design": "真实世界研究",
+          "population": "HBeAg阴性；慢性乙型肝炎；CHB；主题标签：聚乙二醇干扰素/核苷（酸）类似物/联合治疗",
+          "sample_size": 2579,
+          "intervention": "聚乙二醇干扰素；干扰素；核苷（酸）类似物",
+          "followup": "48周",
+          "key_result": "本研究为真实世界队列研究，纳入2579例HBeAg阴性、接受核苷（酸）类似物（NAs）治疗且基线HBsAg≤1500 IU/ml、HBV DNA低于检测下限或<100 IU/ml的慢性乙型肝炎（CHB）患者，加用聚乙二醇干扰素（PEG-IFN）治疗48周",
+          "limitation": "原文未明确报告局限"
+        },
+        {
+          "study": "Xianhua Mao/Hepatology (Baltimore, Md.)/2023",
+          "design": "Meta分析/系统综述",
+          "population": "肝硬化；慢性乙型肝炎；CHB；主题标签：肝癌风险预测/HBsAg清除/生物标志物",
+          "sample_size": 268,
+          "intervention": "核苷（酸）类似物；NUC",
+          "followup": "5年",
+          "key_result": "本系统综述和荟萃分析纳入34项观察性研究，共68,268例慢性乙型肝炎（CHB）患者，评估肝脂肪变性对肝细胞癌（HCC）、肝硬化、晚期纤维化及HBsAg血清清除的影响",
+          "limitation": "二次研究，依赖原始研究质量"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_topic2_pegifn_switch_addon",
+      "topic": "经治患者转换或联合PegIFN",
+      "source": "topic_validation",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "Jingyi Li/Frontiers in immunology/2024",
+          "design": "Meta分析/系统综述",
+          "population": "HCC；肝细胞癌；主题标签：TACE/HAIC/SIRT/靶向治疗/免疫治疗",
+          "sample_size": 10322,
+          "intervention": "免疫检查点；TACE；HAIC",
+          "followup": "原文未报告",
+          "key_result": "本网络荟萃分析纳入17项III期随机对照试验，共10322例晚期肝细胞癌患者，其中12项为全球多中心研究，4项在中国启动，1项在韩国启动",
+          "limitation": "二次研究，依赖原始研究质量"
+        },
+        {
+          "study": "Bruno Sangro/Lancet (London, England)/2025",
+          "design": "RCT",
+          "population": "肝细胞癌；主题标签：TACE/HAIC/SIRT/免疫治疗/联合治疗",
+          "sample_size": 887,
+          "intervention": "TACE",
+          "followup": "27.9月",
+          "key_result": "EMERALD-1是一项多区域、随机、双盲、安慰剂对照的3期研究，纳入616例不可切除且适合栓塞的肝细胞癌患者，随机分配至TACE联合度伐利尤单抗+贝伐珠单抗（n=204）、度伐利尤单抗+安慰剂（n=207）或安慰剂单药（n=205）",
+          "limitation": "原文未明确报告局限"
+        },
+        {
+          "study": "Masatoshi Kudo/Lancet (London, England)/2025",
+          "design": "RCT",
+          "population": "肝细胞癌；主题标签：TACE/HAIC/SIRT/靶向治疗/免疫治疗",
+          "sample_size": 847,
+          "intervention": "联合治疗；TACE；仑伐替尼",
+          "followup": "25.6月",
+          "key_result": "本研究为多中心、随机、双盲、3期试验（LEAP-012），纳入480例不可切除、非转移性肝细胞癌患者，随机分配至TACE联合仑伐替尼和帕博利珠单抗组（n=237）或TACE联合双安慰剂组（n=243）",
+          "limitation": "原文未明确报告局限"
+        },
+        {
+          "study": "Jun-Hao Chu/Journal of viral hepatitis/2022",
+          "design": "真实世界研究",
+          "population": "HBeAg阴性；慢性乙型肝炎；CHB；主题标签：聚乙二醇干扰素/核苷（酸）类似物/联合治疗",
+          "sample_size": 2579,
+          "intervention": "聚乙二醇干扰素；干扰素；核苷（酸）类似物",
+          "followup": "48周",
+          "key_result": "本研究为真实世界队列研究，纳入2579例HBeAg阴性、接受核苷（酸）类似物（NAs）治疗且基线HBsAg≤1500 IU/ml、HBV DNA低于检测下限或<100 IU/ml的慢性乙型肝炎（CHB）患者，加用聚乙二醇干扰素（PEG-IFN）治疗48周",
+          "limitation": "原文未明确报告局限"
+        },
+        {
+          "study": "Sun Yuan-Dong/Medicine/2019",
+          "design": "Meta分析/系统综述",
+          "population": "HCC；肝细胞癌；主题标签：TACE/HAIC/SIRT/联合治疗/手术/移植/消融",
+          "sample_size": 1427,
+          "intervention": "联合治疗；TACE",
+          "followup": "原文未报告",
+          "key_result": "本研究系统检索了PubMed、EMBASE、中国知网和Google Scholar，纳入2000年1月至2017年7月发表的19项试验，共1427例肝细胞癌患者",
+          "limitation": "二次研究，依赖原始研究质量"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_topic3_hcc_residual_risk",
+      "topic": "HBV抑制或HBsAg清除后HCC残余风险",
+      "source": "topic_validation",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "Jie Zhang/Journal of investigative surgery : the official journal of the Academy of Surgical Research/2019",
+          "design": "Meta分析/系统综述",
+          "population": "HCC；肝细胞癌；主题标签：生物标志物/肝癌风险预测",
+          "sample_size": 3547,
+          "intervention": "生物标志物；肝癌风险预测",
+          "followup": "原文未报告",
+          "key_result": "本Meta分析纳入17篇文章，共3547例肝细胞癌（HCC）患者，评估肿瘤相关巨噬细胞（TAMs）与预后的关联",
+          "limitation": "二次研究，依赖原始研究质量"
+        },
+        {
+          "study": "Duqiang Li/Clinical and experimental medicine/2022",
+          "design": "Meta分析/系统综述",
+          "population": "HCC；肝细胞癌；主题标签：TACE/HAIC/SIRT/生物标志物/肝癌风险预测",
+          "sample_size": 3557,
+          "intervention": "TACE",
+          "followup": "原文未报告",
+          "key_result": "本荟萃分析纳入9项队列研究，共3557例肝细胞癌（HCC）患者，评估治疗前全身免疫炎症指数（SII）与TACE术后生存的关系",
+          "limitation": "二次研究，依赖原始研究质量"
+        },
+        {
+          "study": "Xiujuan Chang/Hepatology (Baltimore, Md.)/2023",
+          "design": "RCT",
+          "population": "肝硬化；慢性乙型肝炎；HCC；主题标签：核苷（酸）类似物/生物标志物/肝癌风险预测",
+          "sample_size": 1000,
+          "intervention": "恩替卡韦",
+          "followup": "72周",
+          "key_result": "本研究为一项随机对照试验的扩展研究，纳入1000例经活检证实有显著纤维化的慢性乙型肝炎患者，接受恩替卡韦为基础的治疗超过7年；其中727例在治疗72周时接受第二次活检，646例有足够肝组织用于组织学评估",
+          "limitation": "原文未明确报告局限"
+        },
+        {
+          "study": "Bruno Sangro/Lancet (London, England)/2025",
+          "design": "RCT",
+          "population": "肝细胞癌；主题标签：TACE/HAIC/SIRT/免疫治疗/联合治疗",
+          "sample_size": 887,
+          "intervention": "TACE",
+          "followup": "27.9月",
+          "key_result": "EMERALD-1是一项多区域、随机、双盲、安慰剂对照的3期研究，纳入616例不可切除且适合栓塞的肝细胞癌患者，随机分配至TACE联合度伐利尤单抗+贝伐珠单抗（n=204）、度伐利尤单抗+安慰剂（n=207）或安慰剂单药（n=205）",
+          "limitation": "原文未明确报告局限"
+        },
+        {
+          "study": "Vicki Wing-Ki Hui/Hepatology (Baltimore, Md.)/2026",
+          "design": "回顾性队列",
+          "population": "肝硬化；慢性乙型肝炎；HCC；主题标签：HBsAg清除/核苷（酸）类似物/真实世界研究",
+          "sample_size": 5149,
+          "intervention": "NUC；替诺福韦；恩替卡韦",
+          "followup": "4.1年",
+          "key_result": "本研究为回顾性队列研究，纳入2005年1月至2020年9月接受恩替卡韦或替诺福韦治疗的慢性乙型肝炎肝硬化患者，经1年标志性分析，共5149例患者（平均年龄60.1±12.6岁，66.3%男性）",
+          "limitation": "回顾性设计，存在选择偏倚"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_C01_hbsag_decline_functional_cure",
+      "topic": "HBsAg早期下降与功能性治愈",
+      "source": "evidence_cluster",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "GST-HG141（新型HBV衣壳组装调节剂）治疗低病毒血症慢性乙型肝炎患者的安全性与疗效：一项随机、双盲、安慰剂对照、多中心II期研究",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为随机、双盲、安慰剂对照、多中心II期试验，在中国10个研究中心筛选144例患者，最终纳入90例低病毒血症（LLV）慢性乙型肝炎（CHB）患者，随机分配至低剂量GST-HG141（50 mg BID）、高剂量GST-HG141（100 mg BID）或安慰剂组，治疗24周。\n2. 在符合",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "反义寡核苷酸bepirovirsen治疗慢性乙型肝炎的安全性、耐受性及抗病毒活性：一项2期随机对照试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为一项2期双盲、随机、安慰剂对照试验，纳入31例慢性乙型肝炎患者（24例未经治疗，7例接受稳定核苷（酸）类似物治疗），评估反义寡核苷酸bepirovirsen的安全性和抗病毒活性。\n2. 治疗相关不良事件多为轻中度，最常见为注射部位反应；未经治疗组中，bepirovirsen组61.1%",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "siRNA JNJ-73763989与衣壳组装调节剂JNJ-56136379（bersacapavir）联合核苷（酸）类似物治疗慢性乙型肝炎的疗效与安全性（REEF-1）：一项多中心、双盲、活性对照、随机2b期试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. REEF-1为多中心、双盲、活性对照、随机2b期试验，在19个国家108个中心进行，纳入470例慢性乙型肝炎患者，随机分配至对照组（45例）、JNJ-6379双药组（48例）、JNJ-3989双药40 mg组（93例）、100 mg组（93例）、200 mg组（96例）及三联组（95例）。\n2",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "HBsAg亚型预测慢性乙型肝炎患者停用长期核苷（酸）类似物后的HBsAg血清清除及有限治疗",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为前瞻性队列研究，纳入51例HBeAg阴性非肝硬化慢性乙型肝炎（CHB）患者，均接受≥3年一线核苷（酸）类似物（NUC）治疗后停药，中位随访91周。\n2. 6例（11.7%）患者实现HBsAg血清清除（<0.05 IU/mL），发生时间在停药后20至96周。\n3. 基线小HBsAg（SH",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "替诺福韦联合或不联合聚乙二醇干扰素治疗后按方案停药治疗慢性乙型肝炎的随机试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为随机（1:1）试验，纳入201例慢性乙型肝炎患者（52% HBeAg阳性，12%/6%基因型A/A2，7%肝硬化），比较替诺福韦（TDF）单药治疗192周与TDF联合聚乙二醇干扰素（PegIFN）α-2a治疗前24周，随后在第192周停药并随访至第240周。\n2. 主要终点为第240周",
+          "limitation": "原文未报告"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_C02_pegifn_switch",
+      "topic": "经治患者转换或联合PegIFN",
+      "source": "evidence_cluster",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "GST-HG141（新型HBV衣壳组装调节剂）治疗低病毒血症慢性乙型肝炎患者的安全性与疗效：一项随机、双盲、安慰剂对照、多中心II期研究",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为随机、双盲、安慰剂对照、多中心II期试验，在中国10个研究中心筛选144例患者，最终纳入90例低病毒血症（LLV）慢性乙型肝炎（CHB）患者，随机分配至低剂量GST-HG141（50 mg BID）、高剂量GST-HG141（100 mg BID）或安慰剂组，治疗24周。\n2. 在符合",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "反义寡核苷酸bepirovirsen治疗慢性乙型肝炎的安全性、耐受性及抗病毒活性：一项2期随机对照试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为一项2期双盲、随机、安慰剂对照试验，纳入31例慢性乙型肝炎患者（24例未经治疗，7例接受稳定核苷（酸）类似物治疗），评估反义寡核苷酸bepirovirsen的安全性和抗病毒活性。\n2. 治疗相关不良事件多为轻中度，最常见为注射部位反应；未经治疗组中，bepirovirsen组61.1%",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "siRNA JNJ-73763989与衣壳组装调节剂JNJ-56136379（bersacapavir）联合核苷（酸）类似物治疗慢性乙型肝炎的疗效与安全性（REEF-1）：一项多中心、双盲、活性对照、随机2b期试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. REEF-1为多中心、双盲、活性对照、随机2b期试验，在19个国家108个中心进行，纳入470例慢性乙型肝炎患者，随机分配至对照组（45例）、JNJ-6379双药组（48例）、JNJ-3989双药40 mg组（93例）、100 mg组（93例）、200 mg组（96例）及三联组（95例）。\n2",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "纳武利尤单抗联合伊匹木单抗用于潜在可切除肝细胞癌：长期疗效与生物标志物探索",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为单臂II期临床试验，纳入43例潜在可切除HCC患者（男/女：37/6；病毒性/非病毒性：41/2；BCLC分期A/B/C：4/13/26；中位肿瘤大小8.7 cm），接受纳武利尤单抗（3 mg/kg）联合伊匹木单抗（1 mg/kg）每3周一次治疗。\n2. 24例患者接受手术，8例达到主",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "HBsAg亚型预测慢性乙型肝炎患者停用长期核苷（酸）类似物后的HBsAg血清清除及有限治疗",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为前瞻性队列研究，纳入51例HBeAg阴性非肝硬化慢性乙型肝炎（CHB）患者，均接受≥3年一线核苷（酸）类似物（NUC）治疗后停药，中位随访91周。\n2. 6例（11.7%）患者实现HBsAg血清清除（<0.05 IU/mL），发生时间在停药后20至96周。\n3. 基线小HBsAg（SH",
+          "limitation": "原文未报告"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_C03_hcc_residual_risk",
+      "topic": "HBV抑制或HBsAg清除后HCC残余风险",
+      "source": "evidence_cluster",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "纳武利尤单抗联合伊匹木单抗用于潜在可切除肝细胞癌：长期疗效与生物标志物探索",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为单臂II期临床试验，纳入43例潜在可切除HCC患者（男/女：37/6；病毒性/非病毒性：41/2；BCLC分期A/B/C：4/13/26；中位肿瘤大小8.7 cm），接受纳武利尤单抗（3 mg/kg）联合伊匹木单抗（1 mg/kg）每3周一次治疗。\n2. 24例患者接受手术，8例达到主",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "序贯经动脉化疗栓塞和立体定向体部放疗后免疫治疗作为局部晚期不可切除肝细胞癌转化治疗的START-FIT II期单臂试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. START-FIT是一项单臂、II期试验，纳入33例局部晚期不可切除肝细胞癌患者（97%男性），中位最大病灶直径总和为15.1 cm，64%患者存在大血管侵犯。\n2. 治疗方案为TACE（第1天）后第28天行SBRT（27.5-40.0 Gy/5次），SBRT后14天开始avelumab（10",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "经动脉化疗栓塞联合仑伐替尼和帕博利珠单抗治疗不可切除非转移性肝细胞癌（LEAP-012）：一项多中心、随机、双盲、3期研究",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为多中心、随机、双盲、3期试验（LEAP-012），纳入480例不可切除、非转移性肝细胞癌患者，随机分配至TACE联合仑伐替尼和帕博利珠单抗组（n=237）或TACE联合双安慰剂组（n=243）。\n2. 中位随访25.6个月，联合治疗组中位无进展生存期为14.6个月，安慰剂组为10.0个",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "信迪利单抗联合贝伐珠单抗生物类似物（IBI305）对比索拉非尼治疗不可切除肝细胞癌（ORIENT-32）：一项随机、开放标签、2-3期研究",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. ORIENT-32研究在中国50个中心进行，共纳入595例患者，其中571例随机分配至信迪利单抗联合IBI305组（n=380）或索拉非尼组（n=191）。\n2. 在2期部分，24例患者接受治疗，客观缓解率为25.0%（95% CI 9.8-46.7），3级及以上治疗相关不良事件发生率为29%",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "纳武利尤单抗联合伊匹木单抗对比仑伐替尼或索拉非尼一线治疗不可切除肝细胞癌（CheckMate 9DW）：一项开放标签、随机、3期试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. CheckMate 9DW是一项开放标签、随机、3期试验，纳入668例既往未接受系统治疗的不可切除肝细胞癌患者，随机分配至纳武利尤单抗联合伊匹木单抗组（n=335）或仑伐替尼/索拉非尼组（n=333）。\n2. 中位随访35.2个月，纳武利尤单抗联合伊匹木单抗组的中位总生存期显著优于对照组（23",
+          "limitation": "原文未报告"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_C04_nuc_treatment",
+      "topic": "核苷类似物长期治疗",
+      "source": "evidence_cluster",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "GST-HG141（新型HBV衣壳组装调节剂）治疗低病毒血症慢性乙型肝炎患者的安全性与疗效：一项随机、双盲、安慰剂对照、多中心II期研究",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为随机、双盲、安慰剂对照、多中心II期试验，在中国10个研究中心筛选144例患者，最终纳入90例低病毒血症（LLV）慢性乙型肝炎（CHB）患者，随机分配至低剂量GST-HG141（50 mg BID）、高剂量GST-HG141（100 mg BID）或安慰剂组，治疗24周。\n2. 在符合",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "反义寡核苷酸bepirovirsen治疗慢性乙型肝炎的安全性、耐受性及抗病毒活性：一项2期随机对照试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为一项2期双盲、随机、安慰剂对照试验，纳入31例慢性乙型肝炎患者（24例未经治疗，7例接受稳定核苷（酸）类似物治疗），评估反义寡核苷酸bepirovirsen的安全性和抗病毒活性。\n2. 治疗相关不良事件多为轻中度，最常见为注射部位反应；未经治疗组中，bepirovirsen组61.1%",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "siRNA JNJ-73763989与衣壳组装调节剂JNJ-56136379（bersacapavir）联合核苷（酸）类似物治疗慢性乙型肝炎的疗效与安全性（REEF-1）：一项多中心、双盲、活性对照、随机2b期试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. REEF-1为多中心、双盲、活性对照、随机2b期试验，在19个国家108个中心进行，纳入470例慢性乙型肝炎患者，随机分配至对照组（45例）、JNJ-6379双药组（48例）、JNJ-3989双药40 mg组（93例）、100 mg组（93例）、200 mg组（96例）及三联组（95例）。\n2",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "纳武利尤单抗联合伊匹木单抗用于潜在可切除肝细胞癌：长期疗效与生物标志物探索",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为单臂II期临床试验，纳入43例潜在可切除HCC患者（男/女：37/6；病毒性/非病毒性：41/2；BCLC分期A/B/C：4/13/26；中位肿瘤大小8.7 cm），接受纳武利尤单抗（3 mg/kg）联合伊匹木单抗（1 mg/kg）每3周一次治疗。\n2. 24例患者接受手术，8例达到主",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "HBsAg亚型预测慢性乙型肝炎患者停用长期核苷（酸）类似物后的HBsAg血清清除及有限治疗",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为前瞻性队列研究，纳入51例HBeAg阴性非肝硬化慢性乙型肝炎（CHB）患者，均接受≥3年一线核苷（酸）类似物（NUC）治疗后停药，中位随访91周。\n2. 6例（11.7%）患者实现HBsAg血清清除（<0.05 IU/mL），发生时间在停药后20至96周。\n3. 基线小HBsAg（SH",
+          "limitation": "原文未报告"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_C05_hbsag_quantification",
+      "topic": "HBsAg定量与疗效预测",
+      "source": "evidence_cluster",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "反义寡核苷酸bepirovirsen治疗慢性乙型肝炎的安全性、耐受性及抗病毒活性：一项2期随机对照试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为一项2期双盲、随机、安慰剂对照试验，纳入31例慢性乙型肝炎患者（24例未经治疗，7例接受稳定核苷（酸）类似物治疗），评估反义寡核苷酸bepirovirsen的安全性和抗病毒活性。\n2. 治疗相关不良事件多为轻中度，最常见为注射部位反应；未经治疗组中，bepirovirsen组61.1%",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "siRNA JNJ-73763989与衣壳组装调节剂JNJ-56136379（bersacapavir）联合核苷（酸）类似物治疗慢性乙型肝炎的疗效与安全性（REEF-1）：一项多中心、双盲、活性对照、随机2b期试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. REEF-1为多中心、双盲、活性对照、随机2b期试验，在19个国家108个中心进行，纳入470例慢性乙型肝炎患者，随机分配至对照组（45例）、JNJ-6379双药组（48例）、JNJ-3989双药40 mg组（93例）、100 mg组（93例）、200 mg组（96例）及三联组（95例）。\n2",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "纳武利尤单抗联合伊匹木单抗用于潜在可切除肝细胞癌：长期疗效与生物标志物探索",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为单臂II期临床试验，纳入43例潜在可切除HCC患者（男/女：37/6；病毒性/非病毒性：41/2；BCLC分期A/B/C：4/13/26；中位肿瘤大小8.7 cm），接受纳武利尤单抗（3 mg/kg）联合伊匹木单抗（1 mg/kg）每3周一次治疗。\n2. 24例患者接受手术，8例达到主",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "HBsAg亚型预测慢性乙型肝炎患者停用长期核苷（酸）类似物后的HBsAg血清清除及有限治疗",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为前瞻性队列研究，纳入51例HBeAg阴性非肝硬化慢性乙型肝炎（CHB）患者，均接受≥3年一线核苷（酸）类似物（NUC）治疗后停药，中位随访91周。\n2. 6例（11.7%）患者实现HBsAg血清清除（<0.05 IU/mL），发生时间在停药后20至96周。\n3. 基线小HBsAg（SH",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "替诺福韦联合或不联合聚乙二醇干扰素治疗后按方案停药治疗慢性乙型肝炎的随机试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为随机（1:1）试验，纳入201例慢性乙型肝炎患者（52% HBeAg阳性，12%/6%基因型A/A2，7%肝硬化），比较替诺福韦（TDF）单药治疗192周与TDF联合聚乙二醇干扰素（PegIFN）α-2a治疗前24周，随后在第192周停药并随访至第240周。\n2. 主要终点为第240周",
+          "limitation": "原文未报告"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_C06_hbv_dna_suppression",
+      "topic": "HBV DNA抑制与病毒学应答",
+      "source": "evidence_cluster",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "GST-HG141（新型HBV衣壳组装调节剂）治疗低病毒血症慢性乙型肝炎患者的安全性与疗效：一项随机、双盲、安慰剂对照、多中心II期研究",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为随机、双盲、安慰剂对照、多中心II期试验，在中国10个研究中心筛选144例患者，最终纳入90例低病毒血症（LLV）慢性乙型肝炎（CHB）患者，随机分配至低剂量GST-HG141（50 mg BID）、高剂量GST-HG141（100 mg BID）或安慰剂组，治疗24周。\n2. 在符合",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "反义寡核苷酸bepirovirsen治疗慢性乙型肝炎的安全性、耐受性及抗病毒活性：一项2期随机对照试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为一项2期双盲、随机、安慰剂对照试验，纳入31例慢性乙型肝炎患者（24例未经治疗，7例接受稳定核苷（酸）类似物治疗），评估反义寡核苷酸bepirovirsen的安全性和抗病毒活性。\n2. 治疗相关不良事件多为轻中度，最常见为注射部位反应；未经治疗组中，bepirovirsen组61.1%",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "siRNA JNJ-73763989与衣壳组装调节剂JNJ-56136379（bersacapavir）联合核苷（酸）类似物治疗慢性乙型肝炎的疗效与安全性（REEF-1）：一项多中心、双盲、活性对照、随机2b期试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. REEF-1为多中心、双盲、活性对照、随机2b期试验，在19个国家108个中心进行，纳入470例慢性乙型肝炎患者，随机分配至对照组（45例）、JNJ-6379双药组（48例）、JNJ-3989双药40 mg组（93例）、100 mg组（93例）、200 mg组（96例）及三联组（95例）。\n2",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "HBsAg亚型预测慢性乙型肝炎患者停用长期核苷（酸）类似物后的HBsAg血清清除及有限治疗",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为前瞻性队列研究，纳入51例HBeAg阴性非肝硬化慢性乙型肝炎（CHB）患者，均接受≥3年一线核苷（酸）类似物（NUC）治疗后停药，中位随访91周。\n2. 6例（11.7%）患者实现HBsAg血清清除（<0.05 IU/mL），发生时间在停药后20至96周。\n3. 基线小HBsAg（SH",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "Elebsiran联合聚乙二醇干扰素α治疗慢性乙型肝炎：一项部分随机、开放标签的2期试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为部分随机、开放标签的2期试验，评估小干扰RNA药物Elebsiran联合聚乙二醇干扰素α（PEG-IFNα）对比PEG-IFNα单药治疗慢性乙型肝炎的疗效和安全性。\n2. 在Part I（队列1-3）中，病毒抑制且未接受过BRII-179治疗的参与者按1:1:1随机分配，接受PEG-I",
+          "limitation": "原文未报告"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_C07_hcc_screening",
+      "topic": "HCC筛查与监测",
+      "source": "evidence_cluster",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "siRNA JNJ-73763989与衣壳组装调节剂JNJ-56136379（bersacapavir）联合核苷（酸）类似物治疗慢性乙型肝炎的疗效与安全性（REEF-1）：一项多中心、双盲、活性对照、随机2b期试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. REEF-1为多中心、双盲、活性对照、随机2b期试验，在19个国家108个中心进行，纳入470例慢性乙型肝炎患者，随机分配至对照组（45例）、JNJ-6379双药组（48例）、JNJ-3989双药40 mg组（93例）、100 mg组（93例）、200 mg组（96例）及三联组（95例）。\n2",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "纳武利尤单抗联合伊匹木单抗用于潜在可切除肝细胞癌：长期疗效与生物标志物探索",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为单臂II期临床试验，纳入43例潜在可切除HCC患者（男/女：37/6；病毒性/非病毒性：41/2；BCLC分期A/B/C：4/13/26；中位肿瘤大小8.7 cm），接受纳武利尤单抗（3 mg/kg）联合伊匹木单抗（1 mg/kg）每3周一次治疗。\n2. 24例患者接受手术，8例达到主",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "Xalnesiran联合或不联合免疫调节剂治疗慢性乙型肝炎",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为一项2期、多中心、随机、对照、适应性、开放标签平台试验，纳入159例接受核苷（酸）类似物（NA）治疗获得病毒学抑制的慢性HBV感染者，分别接受xalnesiran 100 mg、xalnesiran 200 mg、xalnesiran 200 mg联合ruzotolimod 150 m",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "序贯经动脉化疗栓塞和立体定向体部放疗后免疫治疗作为局部晚期不可切除肝细胞癌转化治疗的START-FIT II期单臂试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. START-FIT是一项单臂、II期试验，纳入33例局部晚期不可切除肝细胞癌患者（97%男性），中位最大病灶直径总和为15.1 cm，64%患者存在大血管侵犯。\n2. 治疗方案为TACE（第1天）后第28天行SBRT（27.5-40.0 Gy/5次），SBRT后14天开始avelumab（10",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "经动脉化疗栓塞联合仑伐替尼和帕博利珠单抗治疗不可切除非转移性肝细胞癌（LEAP-012）：一项多中心、随机、双盲、3期研究",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为多中心、随机、双盲、3期试验（LEAP-012），纳入480例不可切除、非转移性肝细胞癌患者，随机分配至TACE联合仑伐替尼和帕博利珠单抗组（n=237）或TACE联合双安慰剂组（n=243）。\n2. 中位随访25.6个月，联合治疗组中位无进展生存期为14.6个月，安慰剂组为10.0个",
+          "limitation": "原文未报告"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_C08_hcc_treatment",
+      "topic": "HCC治疗（手术/介入/免疫）",
+      "source": "evidence_cluster",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "纳武利尤单抗联合伊匹木单抗用于潜在可切除肝细胞癌：长期疗效与生物标志物探索",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为单臂II期临床试验，纳入43例潜在可切除HCC患者（男/女：37/6；病毒性/非病毒性：41/2；BCLC分期A/B/C：4/13/26；中位肿瘤大小8.7 cm），接受纳武利尤单抗（3 mg/kg）联合伊匹木单抗（1 mg/kg）每3周一次治疗。\n2. 24例患者接受手术，8例达到主",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "序贯经动脉化疗栓塞和立体定向体部放疗后免疫治疗作为局部晚期不可切除肝细胞癌转化治疗的START-FIT II期单臂试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. START-FIT是一项单臂、II期试验，纳入33例局部晚期不可切除肝细胞癌患者（97%男性），中位最大病灶直径总和为15.1 cm，64%患者存在大血管侵犯。\n2. 治疗方案为TACE（第1天）后第28天行SBRT（27.5-40.0 Gy/5次），SBRT后14天开始avelumab（10",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "经动脉化疗栓塞联合仑伐替尼和帕博利珠单抗治疗不可切除非转移性肝细胞癌（LEAP-012）：一项多中心、随机、双盲、3期研究",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为多中心、随机、双盲、3期试验（LEAP-012），纳入480例不可切除、非转移性肝细胞癌患者，随机分配至TACE联合仑伐替尼和帕博利珠单抗组（n=237）或TACE联合双安慰剂组（n=243）。\n2. 中位随访25.6个月，联合治疗组中位无进展生存期为14.6个月，安慰剂组为10.0个",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "PD-1抑制剂联合聚乙二醇干扰素α治疗促进慢性乙型肝炎患者功能性治愈",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为非随机对照试验，纳入对聚乙二醇干扰素α（Peg-IFNα）治疗失败（48周后未实现HBsAg清除）的慢性乙型肝炎（CHB）患者，分为PD-1抑制剂联合Peg-IFNα组（信迪利单抗1 mg/kg/12周+ Peg-IFNα 180 μg/周，n=33）和Peg-IFNα组（继续Peg-",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "信迪利单抗联合贝伐珠单抗生物类似物（IBI305）对比索拉非尼治疗不可切除肝细胞癌（ORIENT-32）：一项随机、开放标签、2-3期研究",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. ORIENT-32研究在中国50个中心进行，共纳入595例患者，其中571例随机分配至信迪利单抗联合IBI305组（n=380）或索拉非尼组（n=191）。\n2. 在2期部分，24例患者接受治疗，客观缓解率为25.0%（95% CI 9.8-46.7），3级及以上治疗相关不良事件发生率为29%",
+          "limitation": "原文未报告"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_C09_new_drugs",
+      "topic": "新药管线（siRNA/ASO/衣壳等）",
+      "source": "evidence_cluster",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "GST-HG141（新型HBV衣壳组装调节剂）治疗低病毒血症慢性乙型肝炎患者的安全性与疗效：一项随机、双盲、安慰剂对照、多中心II期研究",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为随机、双盲、安慰剂对照、多中心II期试验，在中国10个研究中心筛选144例患者，最终纳入90例低病毒血症（LLV）慢性乙型肝炎（CHB）患者，随机分配至低剂量GST-HG141（50 mg BID）、高剂量GST-HG141（100 mg BID）或安慰剂组，治疗24周。\n2. 在符合",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "反义寡核苷酸bepirovirsen治疗慢性乙型肝炎的安全性、耐受性及抗病毒活性：一项2期随机对照试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为一项2期双盲、随机、安慰剂对照试验，纳入31例慢性乙型肝炎患者（24例未经治疗，7例接受稳定核苷（酸）类似物治疗），评估反义寡核苷酸bepirovirsen的安全性和抗病毒活性。\n2. 治疗相关不良事件多为轻中度，最常见为注射部位反应；未经治疗组中，bepirovirsen组61.1%",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "siRNA JNJ-73763989与衣壳组装调节剂JNJ-56136379（bersacapavir）联合核苷（酸）类似物治疗慢性乙型肝炎的疗效与安全性（REEF-1）：一项多中心、双盲、活性对照、随机2b期试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. REEF-1为多中心、双盲、活性对照、随机2b期试验，在19个国家108个中心进行，纳入470例慢性乙型肝炎患者，随机分配至对照组（45例）、JNJ-6379双药组（48例）、JNJ-3989双药40 mg组（93例）、100 mg组（93例）、200 mg组（96例）及三联组（95例）。\n2",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "纳武利尤单抗联合伊匹木单抗用于潜在可切除肝细胞癌：长期疗效与生物标志物探索",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为单臂II期临床试验，纳入43例潜在可切除HCC患者（男/女：37/6；病毒性/非病毒性：41/2；BCLC分期A/B/C：4/13/26；中位肿瘤大小8.7 cm），接受纳武利尤单抗（3 mg/kg）联合伊匹木单抗（1 mg/kg）每3周一次治疗。\n2. 24例患者接受手术，8例达到主",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "Xalnesiran联合或不联合免疫调节剂治疗慢性乙型肝炎",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为一项2期、多中心、随机、对照、适应性、开放标签平台试验，纳入159例接受核苷（酸）类似物（NA）治疗获得病毒学抑制的慢性HBV感染者，分别接受xalnesiran 100 mg、xalnesiran 200 mg、xalnesiran 200 mg联合ruzotolimod 150 m",
+          "limitation": "原文未报告"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_C10_patient_management",
+      "topic": "患者管理与依从性",
+      "source": "evidence_cluster",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "反义寡核苷酸bepirovirsen治疗慢性乙型肝炎的安全性、耐受性及抗病毒活性：一项2期随机对照试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为一项2期双盲、随机、安慰剂对照试验，纳入31例慢性乙型肝炎患者（24例未经治疗，7例接受稳定核苷（酸）类似物治疗），评估反义寡核苷酸bepirovirsen的安全性和抗病毒活性。\n2. 治疗相关不良事件多为轻中度，最常见为注射部位反应；未经治疗组中，bepirovirsen组61.1%",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "替诺福韦联合或不联合聚乙二醇干扰素治疗后按方案停药治疗慢性乙型肝炎的随机试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为随机（1:1）试验，纳入201例慢性乙型肝炎患者（52% HBeAg阳性，12%/6%基因型A/A2，7%肝硬化），比较替诺福韦（TDF）单药治疗192周与TDF联合聚乙二醇干扰素（PegIFN）α-2a治疗前24周，随后在第192周停药并随访至第240周。\n2. 主要终点为第240周",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "Elebsiran联合聚乙二醇干扰素α治疗慢性乙型肝炎：一项部分随机、开放标签的2期试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为部分随机、开放标签的2期试验，评估小干扰RNA药物Elebsiran联合聚乙二醇干扰素α（PEG-IFNα）对比PEG-IFNα单药治疗慢性乙型肝炎的疗效和安全性。\n2. 在Part I（队列1-3）中，病毒抑制且未接受过BRII-179治疗的参与者按1:1:1随机分配，接受PEG-I",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "2024年中国乙型肝炎病毒流行病学最新报告：现状、变化轨迹与挑战",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 中国占全球慢性HBV感染病例的三分之一，过去三十年在控制HBV感染方面取得显著进展。\n2. 目前中国三剂乙肝疫苗的接种率已升至99.6%，及时出生剂次覆盖率已达95.6%，显著超过全球平均水平。\n3. 最新版慢性乙型肝炎防治指南进一步扩大了治疗人群，使94%的CHB患者符合治疗标准。\n4. 通",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "索拉非尼联合经动脉化疗栓塞作为肝细胞癌伴门静脉癌栓术后辅助治疗的随机临床试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 该研究为在中国5家医院进行的3期多中心随机临床试验，共纳入158例肝细胞癌伴门静脉癌栓（Cheng分级I-III级）患者，中位随访28.4个月。\n2. 索拉非尼联合TACE组的中位无复发生存期显著长于索拉非尼单药组（16.8个月 vs 12.6个月；HR=0.57；95%CI 0.39-0.8",
+          "limitation": "原文未报告"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_C11_guidelines",
+      "topic": "指南与共识",
+      "source": "evidence_cluster",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "siRNA JNJ-73763989与衣壳组装调节剂JNJ-56136379（bersacapavir）联合核苷（酸）类似物治疗慢性乙型肝炎的疗效与安全性（REEF-1）：一项多中心、双盲、活性对照、随机2b期试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. REEF-1为多中心、双盲、活性对照、随机2b期试验，在19个国家108个中心进行，纳入470例慢性乙型肝炎患者，随机分配至对照组（45例）、JNJ-6379双药组（48例）、JNJ-3989双药40 mg组（93例）、100 mg组（93例）、200 mg组（96例）及三联组（95例）。\n2",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "纳武利尤单抗联合伊匹木单抗用于潜在可切除肝细胞癌：长期疗效与生物标志物探索",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为单臂II期临床试验，纳入43例潜在可切除HCC患者（男/女：37/6；病毒性/非病毒性：41/2；BCLC分期A/B/C：4/13/26；中位肿瘤大小8.7 cm），接受纳武利尤单抗（3 mg/kg）联合伊匹木单抗（1 mg/kg）每3周一次治疗。\n2. 24例患者接受手术，8例达到主",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "HBsAg亚型预测慢性乙型肝炎患者停用长期核苷（酸）类似物后的HBsAg血清清除及有限治疗",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为前瞻性队列研究，纳入51例HBeAg阴性非肝硬化慢性乙型肝炎（CHB）患者，均接受≥3年一线核苷（酸）类似物（NUC）治疗后停药，中位随访91周。\n2. 6例（11.7%）患者实现HBsAg血清清除（<0.05 IU/mL），发生时间在停药后20至96周。\n3. 基线小HBsAg（SH",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "替诺福韦联合或不联合聚乙二醇干扰素治疗后按方案停药治疗慢性乙型肝炎的随机试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为随机（1:1）试验，纳入201例慢性乙型肝炎患者（52% HBeAg阳性，12%/6%基因型A/A2，7%肝硬化），比较替诺福韦（TDF）单药治疗192周与TDF联合聚乙二醇干扰素（PegIFN）α-2a治疗前24周，随后在第192周停药并随访至第240周。\n2. 主要终点为第240周",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "孕期抗病毒预防以阻断乙型肝炎病毒母婴传播的有效性与安全性：系统综述与荟萃分析",
+          "design": "Meta分析",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本系统综述和荟萃分析纳入129项研究（157篇文献），评估孕期抗病毒预防对HBV母婴传播（MTCT）的疗效和安全性。\n2. 随机对照试验中，替诺福韦（TDF）300mg（19项研究，1092名母亲和1072名婴儿）的汇总比值比（OR）为0.10（95% CI 0.03-0.35），拉米夫定（L",
+          "limitation": "原文未报告"
+        }
+      ]
+    },
+    {
+      "table_id": "TBL_C12_screening_cascade",
+      "topic": "筛查到确诊的闭环",
+      "source": "evidence_cluster",
+      "row_count": 5,
+      "columns": [
+        "研究",
+        "设计",
+        "人群",
+        "样本量",
+        "干预",
+        "随访",
+        "关键结果",
+        "局限"
+      ],
+      "rows": [
+        {
+          "study": "siRNA JNJ-73763989与衣壳组装调节剂JNJ-56136379（bersacapavir）联合核苷（酸）类似物治疗慢性乙型肝炎的疗效与安全性（REEF-1）：一项多中心、双盲、活性对照、随机2b期试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. REEF-1为多中心、双盲、活性对照、随机2b期试验，在19个国家108个中心进行，纳入470例慢性乙型肝炎患者，随机分配至对照组（45例）、JNJ-6379双药组（48例）、JNJ-3989双药40 mg组（93例）、100 mg组（93例）、200 mg组（96例）及三联组（95例）。\n2",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "Xalnesiran联合或不联合免疫调节剂治疗慢性乙型肝炎",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为一项2期、多中心、随机、对照、适应性、开放标签平台试验，纳入159例接受核苷（酸）类似物（NA）治疗获得病毒学抑制的慢性HBV感染者，分别接受xalnesiran 100 mg、xalnesiran 200 mg、xalnesiran 200 mg联合ruzotolimod 150 m",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "孕期抗病毒预防以阻断乙型肝炎病毒母婴传播的有效性与安全性：系统综述与荟萃分析",
+          "design": "Meta分析",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本系统综述和荟萃分析纳入129项研究（157篇文献），评估孕期抗病毒预防对HBV母婴传播（MTCT）的疗效和安全性。\n2. 随机对照试验中，替诺福韦（TDF）300mg（19项研究，1092名母亲和1072名婴儿）的汇总比值比（OR）为0.10（95% CI 0.03-0.35），拉米夫定（L",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "2024年中国乙型肝炎病毒流行病学最新报告：现状、变化轨迹与挑战",
+          "design": "指南/共识",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 中国占全球慢性HBV感染病例的三分之一，过去三十年在控制HBV感染方面取得显著进展。\n2. 目前中国三剂乙肝疫苗的接种率已升至99.6%，及时出生剂次覆盖率已达95.6%，显著超过全球平均水平。\n3. 最新版慢性乙型肝炎防治指南进一步扩大了治疗人群，使94%的CHB患者符合治疗标准。\n4. 通",
+          "limitation": "原文未报告"
+        },
+        {
+          "study": "特瑞普利单抗联合贝伐珠单抗对比索拉非尼一线治疗晚期肝细胞癌（HEPATORCH）：一项随机、开放标签、III期试验",
+          "design": "RCT",
+          "population": "原文未报告",
+          "sample_size": "原文未报告",
+          "intervention": "原文未报告",
+          "followup": "原文未报告",
+          "key_result": "1. 本研究为一项在中国大陆、台湾和新加坡57家医院开展的随机、开放标签、III期试验，共纳入326例既往未接受治疗的不可切除或转移性肝细胞癌患者，随机分配至特瑞普利单抗联合贝伐珠单抗组（162例）或索拉非尼组（164例）。\n2. 在无进展生存期（PFS）主要分析中（数据截止2022年8月10日，中",
+          "limitation": "原文未报告"
+        }
+      ]
+    }
+  ]
+}

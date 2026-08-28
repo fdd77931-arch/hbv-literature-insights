@@ -1,0 +1,408 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-29T00:46:40.295006",
+  "total_actions": 16,
+  "actions": [
+    {
+      "action_id": "ACT_S01",
+      "strategy_id": "S01",
+      "title": "提升HBV确诊后治疗启动率",
+      "target_metric": "治疗率",
+      "actions": [
+        "建立HBsAg定量检测指导治疗决策的标准化路径",
+        "对HBsAg<1500 IU/mL的NUC经治患者优先评估PegIFN转换/联合 suitability",
+        "将治疗启动评估嵌入确诊后首次门诊流程",
+        "建立确诊后3个月内未启动治疗患者的自动召回机制"
+      ],
+      "responsible": "省级中心+地市级医院",
+      "target_year": 2027,
+      "evidence_basis": [
+        "topic1_hbsag_functional_cure: HBsAg下降动力学指导优势人群筛选",
+        "topic2_pegifn_switch_addon: NUC经治患者PegIFN转换获益明确"
+      ]
+    },
+    {
+      "action_id": "ACT_S02",
+      "strategy_id": "S02",
+      "title": "提高HBsAg功能性治愈率",
+      "target_metric": "功能性治愈率",
+      "actions": [
+        "制定功能性治愈优势人群筛选标准（基线HBsAg<1500 IU/mL、HBeAg阴性、HBV DNA<2000 IU/mL）",
+        "在省级中心建立PegIFN转换/联合治疗标准化方案",
+        "建立HBsAg定量监测时间节点（基线、12周、24周、48周）",
+        "对HBsAg清除患者建立终身HCC监测档案"
+      ],
+      "responsible": "国家级中心+省级中心",
+      "target_year": 2028,
+      "evidence_basis": [
+        "topic1_hbsag_functional_cure: HBsAg早期下降预测功能性治愈",
+        "topic2_pegifn_switch_addon: PegIFN转换策略获益人群特征",
+        "C01_hbsag_decline_functional_cure: 464篇文献证据基础",
+        "C02_pegifn_switch: 571篇文献证据基础"
+      ]
+    },
+    {
+      "action_id": "ACT_S03",
+      "strategy_id": "S03",
+      "title": "保障HBV抑制后HCC监测覆盖率",
+      "target_metric": "HCC早诊率",
+      "actions": [
+        "建立HBsAg清除后患者终身HCC监测标准（每6个月超声+AFP）",
+        "对高危人群（男性、>40岁、肝硬化家族史）缩短监测间隔至3-4个月",
+        "将HCC监测嵌入患者管理系统，自动生成监测提醒",
+        "建立HCC早诊率区域KPI考核体系"
+      ],
+      "responsible": "省级中心+地市级医院+县级医院",
+      "target_year": 2027,
+      "evidence_basis": [
+        "topic3_hcc_residual_risk: HBV抑制后HCC残余风险证据",
+        "C03_hcc_residual_risk: 646篇文献",
+        "C07_hcc_screening: 564篇文献"
+      ]
+    },
+    {
+      "action_id": "ACT_S04",
+      "strategy_id": "S04",
+      "title": "加强患者全周期管理与治疗依从性",
+      "target_metric": "患者留存率/治疗依从性",
+      "actions": [
+        "建立患者全周期管理档案（从确诊到长期随访）",
+        "在治疗启动、3个月、6个月、12个月设置强化随访节点",
+        "推广HBsAg定量可视化反馈工具",
+        "建立干扰素副作用管理预案和患者教育体系",
+        "开发数字化随访平台，支持自动提醒和数据上报"
+      ],
+      "responsible": "地市级医院+县级医院+基层机构",
+      "target_year": 2028,
+      "evidence_basis": [
+        "C10_patient_management: 201篇文献",
+        "topic1_hbsag_functional_cure: 患者管理启示"
+      ]
+    },
+    {
+      "action_id": "ACT_S05",
+      "strategy_id": "S05",
+      "title": "完善筛查阳性到确诊治疗的转诊闭环",
+      "target_metric": "筛查后确诊率/转诊完成率",
+      "actions": [
+        "建立筛查阳性患者转诊标准流程和时限要求（7天内转诊）",
+        "在基层机构配备HBsAg快速检测和阳性告知能力",
+        "建立转诊完成率KPI监测体系",
+        "开展区域试点：社区筛查→定点医院确诊→专科治疗→基层随访",
+        "建立家庭成员筛查制度（HBsAg阳性者直系亲属免费筛查）"
+      ],
+      "responsible": "省级中心+县级医院+基层机构",
+      "target_year": 2029,
+      "evidence_basis": [
+        "C12_screening_cascade: 295篇文献",
+        "C11_guidelines: 248篇文献"
+      ]
+    },
+    {
+      "action_id": "ACT_S06",
+      "strategy_id": "S06",
+      "title": "推动HBV新药管线和功能性治愈创新",
+      "target_metric": "新药可及性/临床试验参与率",
+      "actions": [
+        "建立国家级HBV新药临床试验协调网络",
+        "优先支持联合策略（siRNA+免疫调节）的临床研究",
+        "建立中国人群功能性治愈终点标准",
+        "推动国产siRNA/ASO药物研发和审批"
+      ],
+      "responsible": "国家级中心",
+      "target_year": 2030,
+      "evidence_basis": [
+        "C09_new_drugs: 427篇文献"
+      ]
+    },
+    {
+      "action_id": "ACT_S07",
+      "strategy_id": "S07",
+      "title": "完善中国HBV防治证据生态",
+      "target_metric": "中国高质量研究数量",
+      "actions": [
+        "发起全国多中心前瞻性队列研究（目标入组>10000例）",
+        "建立中国HBV患者登记系统（标准化字段）",
+        "支持基层筛查转诊闭环卫生经济学评价研究",
+        "建立数字化随访干预效果评估体系"
+      ],
+      "responsible": "国家级中心",
+      "target_year": 2030,
+      "evidence_basis": [
+        "全局统计: 1001篇文献证据图谱",
+        "evidence_gaps: 证据缺口汇总"
+      ]
+    },
+    {
+      "action_id": "ACT_topic1_hbsag_functional_cure_建立标准",
+      "title": "HBsAg下降与功能性治愈 - 建立标准",
+      "target_metric": "原文未报告",
+      "actions": [
+        "1) 制定HBsAg定量监测与功能性治愈评估的标准化流程；2) 建立PegIFN转换/联合的优势人群入组与安全性管理标准；3) 制定HBsAg清除后HCC风险分层与个体化监测标准。"
+      ],
+      "responsible": "原文未报告",
+      "target_year": 2030,
+      "evidence_basis": [
+        "topic1_hbsag_functional_cure"
+      ],
+      "source": "topic_validation"
+    },
+    {
+      "action_id": "ACT_topic1_hbsag_functional_cure_转诊患者",
+      "title": "HBsAg下降与功能性治愈 - 转诊患者",
+      "target_metric": "原文未报告",
+      "actions": [
+        "1) HBsAg低水平（<1000 IU/mL）且HBeAg阴性的NUC经治患者转诊评估PegIFN转换；2) 治疗12周无HBsAg应答者转诊多学科讨论调整方案；3) HBsAg清除后合并肝硬化等高危特征者转诊HCC监测门诊。"
+      ],
+      "responsible": "原文未报告",
+      "target_year": 2030,
+      "evidence_basis": [
+        "topic1_hbsag_functional_cure"
+      ],
+      "source": "topic_validation"
+    },
+    {
+      "action_id": "ACT_topic1_hbsag_functional_cure_监测KPI",
+      "title": "HBsAg下降与功能性治愈 - 监测KPI",
+      "target_metric": "原文未报告",
+      "actions": [
+        "1) 功能性治愈率（HBsAg清除率）；2) PegIFN转换/联合治疗率与完成率；3) 12周HBsAg应答率；4) HBsAg清除人群HCC监测覆盖率；5) 治疗中断/脱落率。"
+      ],
+      "responsible": "原文未报告",
+      "target_year": 2030,
+      "evidence_basis": [
+        "topic1_hbsag_functional_cure"
+      ],
+      "source": "topic_validation"
+    },
+    {
+      "action_id": "ACT_topic2_pegifn_switch_addon_建立标准",
+      "title": "经治患者转换或联合PegIFN - 建立标准",
+      "target_metric": "原文未报告",
+      "actions": [
+        "1) 制定HBsAg定量监测与功能性治愈评估的标准化流程；2) 建立PegIFN转换/联合的优势人群入组与安全性管理标准；3) 制定HBsAg清除后HCC风险分层与个体化监测标准。"
+      ],
+      "responsible": "原文未报告",
+      "target_year": 2030,
+      "evidence_basis": [
+        "topic2_pegifn_switch_addon"
+      ],
+      "source": "topic_validation"
+    },
+    {
+      "action_id": "ACT_topic2_pegifn_switch_addon_转诊患者",
+      "title": "经治患者转换或联合PegIFN - 转诊患者",
+      "target_metric": "原文未报告",
+      "actions": [
+        "1) HBsAg低水平（<1000 IU/mL）且HBeAg阴性的NUC经治患者转诊评估PegIFN转换；2) 治疗12周无HBsAg应答者转诊多学科讨论调整方案；3) HBsAg清除后合并肝硬化等高危特征者转诊HCC监测门诊。"
+      ],
+      "responsible": "原文未报告",
+      "target_year": 2030,
+      "evidence_basis": [
+        "topic2_pegifn_switch_addon"
+      ],
+      "source": "topic_validation"
+    },
+    {
+      "action_id": "ACT_topic2_pegifn_switch_addon_监测KPI",
+      "title": "经治患者转换或联合PegIFN - 监测KPI",
+      "target_metric": "原文未报告",
+      "actions": [
+        "1) 功能性治愈率（HBsAg清除率）；2) PegIFN转换/联合治疗率与完成率；3) 12周HBsAg应答率；4) HBsAg清除人群HCC监测覆盖率；5) 治疗中断/脱落率。"
+      ],
+      "responsible": "原文未报告",
+      "target_year": 2030,
+      "evidence_basis": [
+        "topic2_pegifn_switch_addon"
+      ],
+      "source": "topic_validation"
+    },
+    {
+      "action_id": "ACT_topic3_hcc_residual_risk_建立标准",
+      "title": "HBV抑制或HBsAg清除后HCC残余风险 - 建立标准",
+      "target_metric": "原文未报告",
+      "actions": [
+        "1) 制定HBsAg定量监测与功能性治愈评估的标准化流程；2) 建立PegIFN转换/联合的优势人群入组与安全性管理标准；3) 制定HBsAg清除后HCC风险分层与个体化监测标准。"
+      ],
+      "responsible": "原文未报告",
+      "target_year": 2030,
+      "evidence_basis": [
+        "topic3_hcc_residual_risk"
+      ],
+      "source": "topic_validation"
+    },
+    {
+      "action_id": "ACT_topic3_hcc_residual_risk_转诊患者",
+      "title": "HBV抑制或HBsAg清除后HCC残余风险 - 转诊患者",
+      "target_metric": "原文未报告",
+      "actions": [
+        "1) HBsAg低水平（<1000 IU/mL）且HBeAg阴性的NUC经治患者转诊评估PegIFN转换；2) 治疗12周无HBsAg应答者转诊多学科讨论调整方案；3) HBsAg清除后合并肝硬化等高危特征者转诊HCC监测门诊。"
+      ],
+      "responsible": "原文未报告",
+      "target_year": 2030,
+      "evidence_basis": [
+        "topic3_hcc_residual_risk"
+      ],
+      "source": "topic_validation"
+    },
+    {
+      "action_id": "ACT_topic3_hcc_residual_risk_监测KPI",
+      "title": "HBV抑制或HBsAg清除后HCC残余风险 - 监测KPI",
+      "target_metric": "原文未报告",
+      "actions": [
+        "1) 功能性治愈率（HBsAg清除率）；2) PegIFN转换/联合治疗率与完成率；3) 12周HBsAg应答率；4) HBsAg清除人群HCC监测覆盖率；5) 治疗中断/脱落率。"
+      ],
+      "responsible": "原文未报告",
+      "target_year": 2030,
+      "evidence_basis": [
+        "topic3_hcc_residual_risk"
+      ],
+      "source": "topic_validation"
+    }
+  ],
+  "architecture": [
+    {
+      "layer": "国家级中心",
+      "role": "牵头制定标准、质量控制、多中心研究",
+      "target_count": "5",
+      "color": "#005691"
+    },
+    {
+      "layer": "省级中心",
+      "role": "区域转诊、技术指导、医生培训",
+      "target_count": "31",
+      "color": "#0077b6"
+    },
+    {
+      "layer": "地市级医院",
+      "role": "核心诊疗、患者管理、数据上报",
+      "target_count": "300",
+      "color": "#00A896"
+    },
+    {
+      "layer": "县级医院",
+      "role": "初筛初治、双向转诊、基层管理",
+      "target_count": "2000",
+      "color": "#48cae4"
+    },
+    {
+      "layer": "基层机构",
+      "role": "社区筛查、健康宣教、随访管理",
+      "target_count": "10000",
+      "color": "#90e0ef"
+    },
+    {
+      "layer": "患者管理平台",
+      "role": "数字化随访、依从性管理、数据整合",
+      "target_count": "1",
+      "color": "#E8742C"
+    }
+  ],
+  "kpis": [
+    {
+      "name": "筛查阳性后7天内转诊率",
+      "target": "≥90%",
+      "source": "S05",
+      "data_source": "转诊系统"
+    },
+    {
+      "name": "确诊后3个月内治疗启动率",
+      "target": "≥80%",
+      "source": "S01",
+      "data_source": "门诊记录"
+    },
+    {
+      "name": "PegIFN转换/联合治疗评估率（符合指征人群）",
+      "target": "≥70%",
+      "source": "S02",
+      "data_source": "处方系统"
+    },
+    {
+      "name": "HBsAg清除后患者HCC监测覆盖率",
+      "target": "≥95%",
+      "source": "S03",
+      "data_source": "随访系统"
+    },
+    {
+      "name": "治疗12个月患者留存率",
+      "target": "≥85%",
+      "source": "S04",
+      "data_source": "患者管理平台"
+    },
+    {
+      "name": "干扰素副作用主动管理覆盖率",
+      "target": "≥90%",
+      "source": "S04",
+      "data_source": "患者管理平台"
+    },
+    {
+      "name": "基层机构HBsAg快速检测配备率",
+      "target": "≥80%",
+      "source": "S05",
+      "data_source": "设备登记"
+    },
+    {
+      "name": "多中心前瞻性研究入组数",
+      "target": "≥10000例",
+      "source": "S07",
+      "data_source": "研究登记系统"
+    }
+  ],
+  "roadmap": [
+    {
+      "year": 2025,
+      "phase": "标准建设",
+      "milestones": [
+        "发布HBsAg定量指导功能性治愈优势人群筛选标准",
+        "建立PegIFN转换/联合治疗标准化方案",
+        "建立患者全周期管理档案模板"
+      ]
+    },
+    {
+      "year": 2026,
+      "phase": "区域试点",
+      "milestones": [
+        "在3-5个省份开展筛查转诊闭环试点",
+        "推广HBsAg定量可视化反馈工具",
+        "建立HCC监测自动提醒系统"
+      ]
+    },
+    {
+      "year": 2027,
+      "phase": "全国推广",
+      "milestones": [
+        "全国推广筛查转诊闭环标准流程",
+        "建立HCC早诊率区域KPI考核体系",
+        "启动全国多中心前瞻性队列研究"
+      ]
+    },
+    {
+      "year": 2028,
+      "phase": "质量提升",
+      "milestones": [
+        "建立治疗启动率和功能性治愈率全国报告体系",
+        "推广数字化随访平台",
+        "完善新药临床试验协调网络"
+      ]
+    },
+    {
+      "year": 2029,
+      "phase": "持续优化",
+      "milestones": [
+        "评估2030目标中期进展",
+        "优化基层筛查和家庭筛查制度",
+        "推动国产新药审批和可及"
+      ]
+    },
+    {
+      "year": 2030,
+      "phase": "目标达成",
+      "milestones": [
+        "实现WHO 2030消除病毒性肝炎核心指标",
+        "完成全国HBV患者登记系统建设",
+        "发布中国HBV防治经验白皮书"
+      ]
+    }
+  ],
+  "summary": "基于1001篇文献证据和7项2030策略，提出全国肝病联盟行动框架，涵盖标准化诊疗路径、转诊标准、患者登记系统、KPI监测和2025-2030路线图。每项行动均从文献证据逐层推导，确保可执行、可考核。"
+}

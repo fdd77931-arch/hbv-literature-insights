@@ -1,0 +1,139 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-29T00:46:40.294659",
+  "total_strategies": 7,
+  "target_year": 2030,
+  "strategies": [
+    {
+      "strategy_id": "S01",
+      "title": "提升HBV确诊后治疗启动率",
+      "target_metric": "治疗率",
+      "current_evidence": "基于1001篇文献分析，HBsAg动力学和PegIFN转换策略的证据已较为充分，但确诊到治疗启动的转化路径仍缺乏系统性干预研究。治疗专题文献（T4）共224篇，功能性治愈专题（T3）共191篇，为治疗决策提供了丰富证据基础。",
+      "key_actions": [
+        "建立HBsAg定量检测指导治疗决策的标准化路径",
+        "对HBsAg<1500 IU/mL的NUC经治患者优先评估PegIFN转换/联合 suitability",
+        "将治疗启动评估嵌入确诊后首次门诊流程",
+        "建立确诊后3个月内未启动治疗患者的自动召回机制"
+      ],
+      "evidence_basis": [
+        "topic1_hbsag_functional_cure: HBsAg下降动力学指导优势人群筛选",
+        "topic2_pegifn_switch_addon: NUC经治患者PegIFN转换获益明确"
+      ],
+      "target_year": 2027,
+      "responsible": "省级中心+地市级医院"
+    },
+    {
+      "strategy_id": "S02",
+      "title": "提高HBsAg功能性治愈率",
+      "target_metric": "功能性治愈率",
+      "current_evidence": "HBsAg下降与功能性治愈文献簇（C01）共464篇，经治患者PegIFN转换文献簇（C02）共571篇。三专题验证显示，PegIFN转换/联合策略在NUC经治、HBsAg低水平人群中可显著提升HBsAg清除率。基线HBsAg<1500 IU/mL、治疗12周HBsAg下降>1 log的人群获益最明显。",
+      "key_actions": [
+        "制定功能性治愈优势人群筛选标准（基线HBsAg<1500 IU/mL、HBeAg阴性、HBV DNA<2000 IU/mL）",
+        "在省级中心建立PegIFN转换/联合治疗标准化方案",
+        "建立HBsAg定量监测时间节点（基线、12周、24周、48周）",
+        "对HBsAg清除患者建立终身HCC监测档案"
+      ],
+      "evidence_basis": [
+        "topic1_hbsag_functional_cure: HBsAg早期下降预测功能性治愈",
+        "topic2_pegifn_switch_addon: PegIFN转换策略获益人群特征",
+        "C01_hbsag_decline_functional_cure: 464篇文献证据基础",
+        "C02_pegifn_switch: 571篇文献证据基础"
+      ],
+      "target_year": 2028,
+      "responsible": "国家级中心+省级中心"
+    },
+    {
+      "strategy_id": "S03",
+      "title": "保障HBV抑制后HCC监测覆盖率",
+      "target_metric": "HCC早诊率",
+      "current_evidence": "HBV抑制或HBsAg清除后HCC残余风险文献簇（C03）共646篇，专题验证显示HBsAg清除后HCC残余风险持续存在（年发病率0.5-1.0%），需终身按风险分层监测。HCC筛查文献簇（C07）564篇，HCC治疗文献簇（C08）589篇。",
+      "key_actions": [
+        "建立HBsAg清除后患者终身HCC监测标准（每6个月超声+AFP）",
+        "对高危人群（男性、>40岁、肝硬化家族史）缩短监测间隔至3-4个月",
+        "将HCC监测嵌入患者管理系统，自动生成监测提醒",
+        "建立HCC早诊率区域KPI考核体系"
+      ],
+      "evidence_basis": [
+        "topic3_hcc_residual_risk: HBV抑制后HCC残余风险证据",
+        "C03_hcc_residual_risk: 646篇文献",
+        "C07_hcc_screening: 564篇文献"
+      ],
+      "target_year": 2027,
+      "responsible": "省级中心+地市级医院+县级医院"
+    },
+    {
+      "strategy_id": "S04",
+      "title": "加强患者全周期管理与治疗依从性",
+      "target_metric": "患者留存率/治疗依从性",
+      "current_evidence": "患者管理文献簇（C10）共201篇，占总文献20%。现有证据表明，干扰素治疗前3个月是脱落高发期，数字化随访和HBsAg定量可视化反馈可改善依从性。但高质量RCT证据仍不足，中国多中心数据有限。",
+      "key_actions": [
+        "建立患者全周期管理档案（从确诊到长期随访）",
+        "在治疗启动、3个月、6个月、12个月设置强化随访节点",
+        "推广HBsAg定量可视化反馈工具",
+        "建立干扰素副作用管理预案和患者教育体系",
+        "开发数字化随访平台，支持自动提醒和数据上报"
+      ],
+      "evidence_basis": [
+        "C10_patient_management: 201篇文献",
+        "topic1_hbsag_functional_cure: 患者管理启示"
+      ],
+      "target_year": 2028,
+      "responsible": "地市级医院+县级医院+基层机构"
+    },
+    {
+      "strategy_id": "S05",
+      "title": "完善筛查阳性到确诊治疗的转诊闭环",
+      "target_metric": "筛查后确诊率/转诊完成率",
+      "current_evidence": "筛查转诊闭环文献簇（C12）共295篇，指南与共识文献簇（C11）共248篇。现有证据的关键问题不是缺少检测工具，而是筛查阳性后没有形成确诊、评估、治疗和随访闭环。社区筛查到专科转诊的脱落率较高，缺乏有效的闭环管理干预研究。",
+      "key_actions": [
+        "建立筛查阳性患者转诊标准流程和时限要求（7天内转诊）",
+        "在基层机构配备HBsAg快速检测和阳性告知能力",
+        "建立转诊完成率KPI监测体系",
+        "开展区域试点：社区筛查→定点医院确诊→专科治疗→基层随访",
+        "建立家庭成员筛查制度（HBsAg阳性者直系亲属免费筛查）"
+      ],
+      "evidence_basis": [
+        "C12_screening_cascade: 295篇文献",
+        "C11_guidelines: 248篇文献"
+      ],
+      "target_year": 2029,
+      "responsible": "省级中心+县级医院+基层机构"
+    },
+    {
+      "strategy_id": "S06",
+      "title": "推动HBV新药管线和功能性治愈创新",
+      "target_metric": "新药可及性/临床试验参与率",
+      "current_evidence": "新药管线文献簇（C09）共427篇，涵盖siRNA、ASO、衣壳抑制剂等新机制药物。现有证据显示单药HBsAg清除率有限，联合策略可能是未来方向。中国参与国际多中心临床试验的比例有待提升。",
+      "key_actions": [
+        "建立国家级HBV新药临床试验协调网络",
+        "优先支持联合策略（siRNA+免疫调节）的临床研究",
+        "建立中国人群功能性治愈终点标准",
+        "推动国产siRNA/ASO药物研发和审批"
+      ],
+      "evidence_basis": [
+        "C09_new_drugs: 427篇文献"
+      ],
+      "target_year": 2030,
+      "responsible": "国家级中心"
+    },
+    {
+      "strategy_id": "S07",
+      "title": "完善中国HBV防治证据生态",
+      "target_metric": "中国高质量研究数量",
+      "current_evidence": "在1001篇文献中，中国研究983篇（98.2%），但以观察性研究和回顾性分析为主。缺乏以中国人群为主的大型前瞻性RCT和多中心队列研究。基层筛查转诊闭环和患者依从性管理的卫生经济学评价不足。",
+      "key_actions": [
+        "发起全国多中心前瞻性队列研究（目标入组>10000例）",
+        "建立中国HBV患者登记系统（标准化字段）",
+        "支持基层筛查转诊闭环卫生经济学评价研究",
+        "建立数字化随访干预效果评估体系"
+      ],
+      "evidence_basis": [
+        "全局统计: 1001篇文献证据图谱",
+        "evidence_gaps: 证据缺口汇总"
+      ],
+      "target_year": 2030,
+      "responsible": "国家级中心"
+    }
+  ],
+  "summary": "基于1001篇循证医学文献和12个文献簇的系统分析，提炼出7项面向2030消除病毒性肝炎目标的策略。每条策略均从文献证据中逐层推导，涵盖治疗率、功能性治愈率、HCC早诊率、患者留存率和证据生态建设等关键维度。"
+}

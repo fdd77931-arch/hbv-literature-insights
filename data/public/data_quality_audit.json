@@ -1,0 +1,40 @@
+{
+  "audit_time": "2026-08-29T00:05:38.211415+08:00",
+  "total_input": 1004,
+  "status_distribution": {
+    "疑似字段错配": 2,
+    "正常": 997,
+    "信息不足": 4,
+    "主题不相关": 1
+  },
+  "duplicate_count": 0,
+  "clean_records_count": 1001,
+  "excluded_count": 3,
+  "excluded_detail": [
+    {
+      "record_id": "recvjAnzcLD8Yc",
+      "title": "核苷类似物联合干扰素治疗慢性HBV的疗效分析",
+      "status": "疑似字段错配",
+      "issues": [
+        "中国相关依据含无关内容: 儿童听力, 听力筛查"
+      ]
+    },
+    {
+      "record_id": "receNwY04nmz6m",
+      "title": "HBV感染与肝细胞癌发生发展的分子机制研究",
+      "status": "疑似字段错配",
+      "issues": [
+        "中国相关依据含无关内容: 水污染监测"
+      ]
+    },
+    {
+      "record_id": "recvtzFeHSOu32",
+      "title": "布加综合征：亚太肝脏研究学会（APASL）共识指南",
+      "status": "主题不相关",
+      "issues": [
+        "未检测到HBV/HCC关键词"
+      ]
+    }
+  ],
+  "duplicates": []
+}
