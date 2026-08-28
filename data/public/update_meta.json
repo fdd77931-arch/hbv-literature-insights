@@ -1,7 +1,8 @@
 {
-  "last_sync": "2026-08-28T18:05:50.609953+08:00",
-  "records_count": 51,
-  "new_this_sync": 51,
-  "sync_duration_seconds": 0.01,
-  "data_source": "local_fallback"
+  "last_sync": "2026-08-29T01:03:42.581092",
+  "records_count": 1001,
+  "feishu_rev": 1136,
+  "data_source": "feishu_hbv_full.ndjson",
+  "page_count": 3,
+  "has_more": false
 }
