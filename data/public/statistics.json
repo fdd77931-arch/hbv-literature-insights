@@ -117,6 +117,6 @@
   "total_clusters": 12,
   "cluster_associated_total": 5360,
   "cluster_unique_total": 1001,
-  "last_sync": "2026-08-29T13:39:13.003009+08:00",
+  "last_sync": "2026-08-29T15:26:36.974372+08:00",
   "data_source": "literature_cleaned.ndjson"
 }
