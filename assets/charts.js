@@ -7,6 +7,19 @@
 (function() {
   'use strict';
 
+  // 安全检查：如果echarts未加载，直接返回空对象
+  if (typeof window !== 'undefined' && !window.echarts) {
+    console.warn('[Charts] ECharts 库未加载，图表功能将不可用');
+    window.ChartFns = {};
+    var fnNames = ['initYearTrendChart','initLevelPieChart','initTopicDistChart','initChinaIntlChart',
+      'initTopicYearChart','initTopicLevelChart','initTopicDesignChart','init2030GapChart',
+      'initScreeningFunnelChart','initBiomarkerBubbleChart','initTreatmentOutcomesChart',
+      'initPipelineBubbleChart','initPatientRetentionChart','initHCCRiskChart',
+      'initAllianceMatrixChart','initMarketStrategyChart','initEvidenceQualityChart'];
+    fnNames.forEach(function(name) { window.ChartFns[name] = function() {}; });
+    return;
+  }
+
   // 颜色常量 — 报告式设计系统
   const COLORS = {
     primary: '#00688f',

@@ -69,22 +69,42 @@ var App = (function() {
 
   // ==================== 初始化 ====================
   function init() {
-    D = window.APP_DATA;
-    if (!D || !D.hasRealData) {
-      document.getElementById('loadingOverlay').innerHTML =
-        '<div class="loading-text" style="color:var(--accent2);">数据加载失败，请确保data.js已正确加载</div>';
-      return;
+    try {
+      D = window.APP_DATA;
+      if (!D || !D.hasRealData) {
+        document.getElementById('loadingOverlay').innerHTML =
+          '<div class="loading-text" style="color:var(--accent2);">数据加载失败，请确保data.js已正确加载</div>';
+        return;
+      }
+
+      document.getElementById('loadingOverlay').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'block';
+
+      renderOverview();
+      initEvidenceFilters();
+
+      var searchInput = document.getElementById('evSearchInput');
+      if (searchInput) {
+        searchInput.addEventListener('keydown', function(e) {
+          if (e.key === 'Enter') evidenceSearch();
+        });
+      }
+
+      console.log('[App] 初始化完成');
+    } catch (e) {
+      console.error('[App] 初始化失败:', e);
+      var overlay = document.getElementById('loadingOverlay');
+      if (overlay) {
+        overlay.innerHTML =
+          '<div class="loading-text" style="color:var(--accent2);">' +
+          '页面加载出现问题，请刷新重试<br>' +
+          '<small style="font-weight:normal;opacity:0.7;">错误: ' + esc(e.message) + '</small>' +
+          '</div>';
+      }
+      // 即使出错也尝试显示主内容
+      var main = document.getElementById('mainContent');
+      if (main) main.style.display = 'block';
     }
-
-    document.getElementById('loadingOverlay').style.display = 'none';
-    document.getElementById('mainContent').style.display = 'block';
-
-    renderOverview();
-    initEvidenceFilters();
-
-    document.getElementById('evSearchInput').addEventListener('keydown', function(e) {
-      if (e.key === 'Enter') evidenceSearch();
-    });
   }
 
   // ==================== 导航 ====================
@@ -164,18 +184,24 @@ var App = (function() {
 
     // 6. 初始化所有策略图表
     setTimeout(function() {
-      if (window.ChartFns) {
-        ChartFns.init2030GapChart(document.getElementById('chart2030Gap'));
-        ChartFns.initScreeningFunnelChart(document.getElementById('chartScreeningFunnel'));
-        ChartFns.initBiomarkerBubbleChart(document.getElementById('chartBiomarkerBubble'));
-        ChartFns.initTreatmentOutcomesChart(document.getElementById('chartTreatmentOutcomes'));
-        ChartFns.initPipelineBubbleChart(document.getElementById('chartPipelineBubble'));
-        ChartFns.initPatientRetentionChart(document.getElementById('chartPatientRetention'));
-        ChartFns.initHCCRiskChart(document.getElementById('chartHCCRisk'));
-        ChartFns.initAllianceMatrixChart(document.getElementById('chartAllianceMatrix'));
-        ChartFns.initMarketStrategyChart(document.getElementById('chartMarketStrategy'));
-        ChartFns.initEvidenceQualityChart(document.getElementById('chartEvidenceQuality'));
-        ChartFns.initYearTrendChart(document.getElementById('chartYearTrend'));
+      if (window.ChartFns && window.echarts) {
+        try {
+          var c = document.getElementById('chart2030Gap'); if (c) ChartFns.init2030GapChart(c);
+          c = document.getElementById('chartScreeningFunnel'); if (c) ChartFns.initScreeningFunnelChart(c);
+          c = document.getElementById('chartBiomarkerBubble'); if (c) ChartFns.initBiomarkerBubbleChart(c);
+          c = document.getElementById('chartTreatmentOutcomes'); if (c) ChartFns.initTreatmentOutcomesChart(c);
+          c = document.getElementById('chartPipelineBubble'); if (c) ChartFns.initPipelineBubbleChart(c);
+          c = document.getElementById('chartPatientRetention'); if (c) ChartFns.initPatientRetentionChart(c);
+          c = document.getElementById('chartHCCRisk'); if (c) ChartFns.initHCCRiskChart(c);
+          c = document.getElementById('chartAllianceMatrix'); if (c) ChartFns.initAllianceMatrixChart(c);
+          c = document.getElementById('chartMarketStrategy'); if (c) ChartFns.initMarketStrategyChart(c);
+          c = document.getElementById('chartEvidenceQuality'); if (c) ChartFns.initEvidenceQualityChart(c);
+          c = document.getElementById('chartYearTrend'); if (c) ChartFns.initYearTrendChart(c);
+        } catch (e) {
+          console.error('[Charts] 图表初始化失败:', e);
+        }
+      } else {
+        console.warn('[Charts] 图表库未加载，跳过图表渲染');
       }
     }, 150);
 
