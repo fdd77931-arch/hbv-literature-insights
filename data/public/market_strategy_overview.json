@@ -1,0 +1,87 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-29T13:43:28.093710+08:00",
+  "summary": "基于近1000篇循证医学文献，为乙肝市场部提供从筛查到HCC全程管理的循证策略支持。所有策略基于文献，医学合规，不超说明书，不夸大疗效。",
+  "strategy_table": [
+    {
+      "stage": "筛",
+      "core_insight": "筛查阳性后患者流失是核心断裂点",
+      "barrier": "筛查后转诊路径不标准，阳性患者未完成确诊",
+      "target_audience": "社区医生、体检中心、高危人群",
+      "evidence_communication": "家庭成员筛查和母婴阻断证据充分；成人机会性筛查需标准化转诊",
+      "project": "区域筛查-转诊闭环试点",
+      "kpi": "筛查阳性→确诊转化率≥80%",
+      "source_count": 590
+    },
+    {
+      "stage": "诊",
+      "core_insight": "HBsAg定量是功能性治愈优势人群的核心预测指标",
+      "barrier": "ALT正常患者被低估，优势人群未被系统识别",
+      "target_audience": "肝病科医生、感染科医生、检验科",
+      "evidence_communication": "HBsAg<1500 IU/mL且早期下降明显者获益更大；HBeAg阴性患者需长期监测",
+      "project": "优势人群识别工具+医生分层教育",
+      "kpi": "优势人群识别率≥60%",
+      "source_count": 714
+    },
+    {
+      "stage": "治",
+      "core_insight": "经治转换PegIFN的获益集中在优势人群",
+      "barrier": "初治和经治混在一起评价，优势人群标准不统一",
+      "target_audience": "肝病科、感染科、消化科",
+      "evidence_communication": "基线HBsAg低+12周下降明显者HBsAg清除率显著更高；新药仍在II-III期",
+      "project": "治疗路径管理工具+疗效节点管理",
+      "kpi": "功能性治愈率提升至5-8%",
+      "source_count": 756
+    },
+    {
+      "stage": "管/康",
+      "core_insight": "患者脱落集中在前6个月",
+      "barrier": "缺乏主动随访系统，失访后无召回机制",
+      "target_audience": "肝病科护士、社区医生、患者",
+      "evidence_communication": "数字化提醒和护士随访可改善依从性；干扰素患者需不良反应管理",
+      "project": "数字化随访平台+患者教育+失访预警",
+      "kpi": "12个月治疗留存率≥85%",
+      "source_count": 201
+    },
+    {
+      "stage": "HBV→HCC",
+      "core_insight": "病毒抑制后仍有残余风险",
+      "barrier": "HBsAg清除后监测不足，高风险分层未个体化",
+      "target_audience": "肝病科、肿瘤科、介入科",
+      "evidence_communication": "抗病毒治疗是HCC一级预防；肝硬化/年龄/家族史是高风险因素",
+      "project": "HCC风险分层监测+多学科协作",
+      "kpi": "HCC早诊率≥50%（高危人群）",
+      "source_count": 758
+    },
+    {
+      "stage": "联盟",
+      "core_insight": "统一路径+患者登记+KPI评价",
+      "barrier": "各省诊疗标准不统一，缺乏全国质量评价",
+      "target_audience": "国家卫健委、省级肝病学会、区域中心",
+      "evidence_communication": "基于1001篇文献的循证路径可标准化；区域试点可积累可复制模式",
+      "project": "全国肝病联盟+真实世界研究+年度证据更新",
+      "kpi": "联盟成员单位≥500家",
+      "source_count": 1001
+    }
+  ],
+  "strategy_types": [
+    "医生教育",
+    "患者教育",
+    "优势患者识别",
+    "治疗路径工具",
+    "随访管理工具",
+    "区域项目",
+    "联盟建设",
+    "真实世界研究",
+    "证据传播",
+    "患者留存"
+  ],
+  "compliance": [
+    "基于文献证据",
+    "医学合规",
+    "不超说明书",
+    "不夸大疗效",
+    "不使用未经证实的竞品比较",
+    "以患者获益为中心"
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-29T13:43:28.093710+08:00",
+  "last_sync": "2026-08-29T13:39:13.003009+08:00",
+  "total_records": 1001,
+  "by_year": {
+    "2018": 19,
+    "2019": 136,
+    "2020": 137,
+    "2021": 145,
+    "2022": 128,
+    "2023": 116,
+    "2024": 96,
+    "2025": 117,
+    "2026": 103
+  },
+  "recent_publications": [
+    {
+      "title": "新型HBV功能性治愈药物的临床研究进展",
+      "journal": "Journal of Hepatology",
+      "year": 2026,
+      "evidence_level": "A",
+      "topic": "HBV功能性治愈",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "40123456",
+      "doi": "10.1016/j.jhep.2026.03.008"
+    },
+    {
+      "title": "肝细胞癌全病程管理的临床实践指南更新",
+      "journal": "中华肿瘤杂志",
+      "year": 2026,
+      "evidence_level": "A",
+      "topic": "HCC全病程",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "40056789",
+      "doi": "10.3760/cma.j.cn112152-20250915-00678"
+    },
+    {
+      "title": "HBV相关肝细胞癌患者的免疫治疗疗效分析",
+      "journal": "Journal of Clinical Oncology",
+      "year": 2026,
+      "evidence_level": "C",
+      "topic": "HBV→HCC",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "40167890",
+      "doi": "10.1200/JCO.2025.02345"
+    },
+    {
+      "title": "聚乙二醇干扰素联合核苷（酸）类似物治疗乙肝相关性肝硬化患者：第12周乙肝表面抗原下降幅度与乙肝表面抗原清除的相关性——一项回顾性队列研究",
+      "journal": "International journal of general medicine",
+      "year": 2026,
+      "evidence_level": "B",
+      "topic": "HBV功能性治愈",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "42583160",
+      "doi": "10.2147/IJGM.S614832"
+    },
+    {
+      "title": "HBsAg亚型预测慢性乙型肝炎患者停用长期核苷（酸）类似物后的HBsAg血清清除及有限治疗",
+      "journal": "JHEP reports : innovation in hepatology",
+      "year": 2026,
+      "evidence_level": "A",
+      "topic": "HBV功能性治愈",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "42562264",
+      "doi": "10.1016/j.jhepr.2026.101989"
+    },
+    {
+      "title": "解码HBV特异性适应性免疫：从自然清除到治愈",
+      "journal": "Gut",
+      "year": 2026,
+      "evidence_level": "C",
+      "topic": "HBV功能性治愈",
+      "china_evidence": false,
+      "china_evidence_type": "地区无法判断",
+      "pmid": "41314788",
+      "doi": "10.1136/gutjnl-2025-337129"
+    },
+    {
+      "title": "Bepirovirsen独立于HBV诱导先天免疫蛋白",
+      "journal": "Hepatology international",
+      "year": 2026,
+      "evidence_level": "C",
+      "topic": "HBV功能性治愈",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "42550463",
+      "doi": "10.1007/s12072-026-11134-z"
+    },
+    {
+      "title": "核苷（酸）类似物停药联合聚乙二醇干扰素辅助治疗对HBeAg阴性慢性乙型肝炎病毒感染的影响（NUC-B试验）",
+      "journal": "Hepatology (Baltimore, Md.)",
+      "year": 2026,
+      "evidence_level": "A",
+      "topic": "HBV功能性治愈",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "42549812",
+      "doi": "10.1097/HEP.0000000000001821"
+    },
+    {
+      "title": "勘误：Zeng等人关于慢性乙型肝炎功能性治愈中肝脏、血液学和免疫学标志物及其时间动态预测价值的研究",
+      "journal": "Microbiology spectrum",
+      "year": 2026,
+      "evidence_level": "C",
+      "topic": "HBV功能性治愈",
+      "china_evidence": false,
+      "china_evidence_type": "地区无法判断",
+      "pmid": "42430552",
+      "doi": "10.1128/spectrum.03374-25"
+    },
+    {
+      "title": "非酒精性脂肪性肝病对慢性乙型肝炎患者聚乙二醇干扰素-α治疗应答的影响",
+      "journal": "Microbiology spectrum",
+      "year": 2026,
+      "evidence_level": "B",
+      "topic": "HBV现有治疗",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "42405762",
+      "doi": "10.1128/spectrum.03424-25"
+    },
+    {
+      "title": "石蒜碱与甘草酸超分子自组装纳米药物用于安全持续的抗乙肝病毒治疗",
+      "journal": "ACS applied bio materials",
+      "year": 2026,
+      "evidence_level": "C",
+      "topic": "HBV功能性治愈",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "42470636",
+      "doi": "10.1021/acsabm.6c00916"
+    },
+    {
+      "title": "西班牙临床微生物学实验室定量HBsAg检测的实施情况：GEHEP-SEIMC全国性调查结果",
+      "journal": "Enfermedades infecciosas y microbiologia clinica (English ed.)",
+      "year": 2026,
+      "evidence_level": "C",
+      "topic": "HBV现有治疗",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "42542350",
+      "doi": "10.1016/j.eimce.2026.503215"
+    },
+    {
+      "title": "西班牙慢性乙型肝炎患者表面抗原（HBsAg）清除的相关因素及其对长期预后的影响",
+      "journal": "Journal of medical virology",
+      "year": 2026,
+      "evidence_level": "B",
+      "topic": "HBV功能性治愈",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "42485500",
+      "doi": "10.1002/jmv.71068"
+    },
+    {
+      "title": "HIV感染者转换为非乙肝病毒活性抗逆转录病毒治疗后的隐匿性乙肝及再激活风险",
+      "journal": "AIDS (London, England)",
+      "year": 2026,
+      "evidence_level": "A",
+      "topic": "HBV现有治疗",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "42332911",
+      "doi": "10.1097/QAD.0000000000004511"
+    },
+    {
+      "title": "基于细胞的乙型肝炎病毒抗病毒筛选平台：优势、局限与未来展望",
+      "journal": "Antiviral research",
+      "year": 2026,
+      "evidence_level": "C",
+      "topic": "HBV功能性治愈",
+      "china_evidence": false,
+      "china_evidence_type": "地区无法判断",
+      "pmid": "42252000",
+      "doi": "10.1016/j.antiviral.2026.106450"
+    },
+    {
+      "title": "慢性乙型肝炎治疗性疫苗：为何多数疫苗失败及可能有效的策略",
+      "journal": "Antiviral research",
+      "year": 2026,
+      "evidence_level": "C",
+      "topic": "HBV功能性治愈",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "42214471",
+      "doi": "10.1016/j.antiviral.2026.106441"
+    },
+    {
+      "title": "聚乙二醇干扰素作为慢性乙型肝炎患者经反义寡核苷酸或小干扰RNA治疗未达功能性治愈后的挽救治疗的疗效与安全性：一项前瞻性、多中心、开放标签随机对照试验（SPHERE）方案",
+      "journal": "Advances in therapy",
+      "year": 2026,
+      "evidence_level": "A",
+      "topic": "HBV功能性治愈",
+      "china_evidence": true,
+      "china_evidence_type": "中国机构参与的国际研究",
+      "pmid": "42176181",
+      "doi": "10.1007/s12325-026-03633-0"
+    },
+    {
+      "title": "编者按：替诺福韦艾拉酚胺与恩替卡韦对乙型肝炎表面抗原下降的影响——迈向功能性治愈的一步还是边际差异？作者回复",
+      "journal": "Alimentary pharmacology & therapeutics",
+      "year": 2026,
+      "evidence_level": "D",
+      "topic": "HBV现有治疗",
+      "china_evidence": false,
+      "china_evidence_type": "地区无法判断",
+      "pmid": "42174232",
+      "doi": "10.1111/apt.70754"
+    },
+    {
+      "title": "COVID-19疫苗接种与慢性乙型肝炎HBsAg消失的时间关联：一项中断时间序列分析",
+      "journal": "Alimentary pharmacology & therapeutics",
+      "year": 2026,
+      "evidence_level": "C",
+      "topic": "HBV功能性治愈",
+      "china_evidence": true,
+      "china_evidence_type": "中国直接证据",
+      "pmid": "42168131",
+      "doi": "10.1111/apt.70733"
+    },
+    {
+      "title": "述评：丙酚替诺福韦与恩替卡韦对乙型肝炎表面抗原下降的影响——迈向功能性治愈的一步还是微小差距？",
+      "journal": "Alimentary pharmacology & therapeutics",
+      "year": 2026,
+      "evidence_level": "D",
+      "topic": "HBV功能性治愈",
+      "china_evidence": false,
+      "china_evidence_type": "地区无法判断",
+      "pmid": "42138483",
+      "doi": "10.1111/apt.70734"
+    }
+  ],
+  "recent_count_24h": 0,
+  "recent_count_7d": 220
+}

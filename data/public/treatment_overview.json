@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-29T13:43:28.093710+08:00",
+  "page_key": "treatment",
+  "cluster_ids": [
+    "C01_hbsag_decline_functional_cure",
+    "C02_pegifn_switch",
+    "C04_nuc_treatment",
+    "C09_new_drugs"
+  ],
+  "evidence_summary": {
+    "unique_records": 756,
+    "associated_records": 1921,
+    "china_count": 598,
+    "china_pct": 79.1,
+    "ab_count": 390,
+    "ab_pct": 51.6,
+    "year_range": {
+      "min": 2018,
+      "max": 2026
+    },
+    "study_designs": {
+      "未分类": 166,
+      "基础研究": 105,
+      "综述": 94,
+      "Meta分析": 91,
+      "RCT": 89,
+      "队列研究": 78,
+      "指南/共识": 54,
+      "回顾性队列": 22
+    },
+    "evidence_levels": {
+      "A": 243,
+      "B": 147,
+      "C": 362,
+      "D": 4
+    },
+    "china_evidence_breakdown": {
+      "中国直接证据": 582,
+      "地区无法判断": 151,
+      "中国机构参与的国际研究": 16,
+      "国际证据": 7
+    }
+  },
+  "key_findings": [
+    {
+      "title": "HBsAg亚型预测慢性乙型肝炎患者停用长期核苷（酸）类似物后的HBsAg血清清除及有限治疗",
+      "result": "1. 本研究为前瞻性队列研究，纳入51例HBeAg阴性非肝硬化慢性乙型肝炎（CHB）患者，均接受≥3年一线核苷（酸）类似物（NUC）治疗后停药，中位随访91周。\n2. 6例（11.7%）患者实现HBsAg血清清除（<0.05 IU/mL），发生时间在停药后20至96周。\n3. 基线小HBsAg（SHBs）水平可预测HBsAg血清清除（HR 0.205, 95% CI 0.082-0.514），且当",
+      "level": "A",
+      "year": 2026,
+      "journal": "JHEP reports : innovation in hepatology"
+    },
+    {
+      "title": "核苷（酸）类似物停药联合聚乙二醇干扰素辅助治疗对HBeAg阴性慢性乙型肝炎病毒感染的影响（NUC-B试验）",
+      "result": "1. NUC-B试验是一项随机、多中心研究，纳入156例接受核苷（酸）类似物（NA）治疗的HBeAg阴性非肝硬化慢性乙型肝炎（CHB）患者，其中82例分配至NA停药组（对照组），74例分配至NA停药后4周开始接受16周聚乙二醇干扰素（PEG-IFNa）180μg每周治疗组（PEG-IFNa组）。\n2. 主要终点为3年HBsAg丢失率：对照组为3%，PEG-IFNa组为14%（比值比5.39；95%",
+      "level": "A",
+      "year": 2026,
+      "journal": "Hepatology (Baltimore, Md.)"
+    },
+    {
+      "title": "B/F/TAF在HIV-1与乙肝共感染人群中的应用：ALLIANCE开放标签扩展期结果",
+      "result": "1. ALLIANCE研究为随机、双盲、活性对照的3期试验，纳入初治HIV-1 RNA≥500 copies/mL且HBV DNA≥2000 IU/mL的成人，连续接受B/F/TAF治疗144周（含≥96周盲法治疗及48周开放标签扩展期），或接受DTG+F/TDF≥96周后转换至B/F/TAF治疗48周。\n2. 连续B/F/TAF组121人，转换组89人；中位B/F/TAF暴露时间分别为186.4",
+      "level": "A",
+      "year": 2026,
+      "journal": "AIDS research and therapy"
+    },
+    {
+      "title": "晚期肝细胞癌一线系统治疗疗效与安全性整合：网络荟萃分析",
+      "result": "1. 共纳入17项III期随机对照试验，涉及12,727例晚期HCC患者，比较一线系统治疗与索拉非尼或仑伐替尼的疗效和安全性。\n2. 与索拉非尼相比，Nivolumab-Ipilimumab（HR 0.61, 95%CI 0.44-0.84）、Atezolizumab-Bevacizumab（HR 0.66, 95%CI 0.48-0.90）、Durvalumab-Tremelimumab（HR ",
+      "level": "A",
+      "year": 2026,
+      "journal": "JNCI cancer spectrum"
+    },
+    {
+      "title": "聚乙二醇干扰素-α治疗在不同慢性乙型肝炎病毒感染人群中的HBsAg清除率：系统评价与荟萃分析",
+      "result": "1. 本研究为系统评价与荟萃分析，共纳入115项研究，评估PegIFNα为基础的治疗在不同慢性HBV感染人群中的HBsAg清除率。\n2. 总体HBsAg清除率为16%（95% CI: 13-20%）。\n3. 治疗结束时（EOT）HBsAg清除率：初治CHB患者为5%（95% CI: 4-7%），NAs经治CHB患者为21%（95% CI: 16-26%），非活动性HBsAg携带者为57%（95% ",
+      "level": "A",
+      "year": 2026,
+      "journal": "Chinese medical journal"
+    }
+  ],
+  "topic_validated": "topic1_hbsag_functional_cure",
+  "title": "治疗与功能性治愈",
+  "subtitle": "初治/经治/转换/联合治疗、PegIFN、核苷类似物、功能性治愈与新药管线"
+}

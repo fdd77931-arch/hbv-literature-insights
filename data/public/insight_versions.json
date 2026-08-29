@@ -1,0 +1,71 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-29T13:43:28+08:00",
+  "last_full_rebuild": "2026-08-29T13:43:28+08:00",
+  "insight_version": 1,
+  "insights": [
+    {
+      "insight_id": "CORE_OVERALL",
+      "version": 1,
+      "updated_at": "2026-08-29T13:43:28+08:00",
+      "change_type": "新出现",
+      "change_reason": "首次生成总体核心洞察",
+      "new_source_ids": [],
+      "removed_source_ids": []
+    },
+    {
+      "insight_id": "HOME_01_screening",
+      "version": 1,
+      "updated_at": "2026-08-29T13:43:28+08:00",
+      "change_type": "新出现",
+      "change_reason": "首次生成筛查一级洞察",
+      "new_source_ids": [],
+      "removed_source_ids": []
+    },
+    {
+      "insight_id": "HOME_02_diagnosis",
+      "version": 1,
+      "updated_at": "2026-08-29T13:43:28+08:00",
+      "change_type": "新出现",
+      "change_reason": "首次生成诊断一级洞察",
+      "new_source_ids": [],
+      "removed_source_ids": []
+    },
+    {
+      "insight_id": "HOME_03_treatment",
+      "version": 1,
+      "updated_at": "2026-08-29T13:43:28+08:00",
+      "change_type": "新出现",
+      "change_reason": "首次生成治疗一级洞察",
+      "new_source_ids": [],
+      "removed_source_ids": []
+    },
+    {
+      "insight_id": "HOME_04_management",
+      "version": 1,
+      "updated_at": "2026-08-29T13:43:28+08:00",
+      "change_type": "新出现",
+      "change_reason": "首次生成患者管理一级洞察",
+      "new_source_ids": [],
+      "removed_source_ids": []
+    },
+    {
+      "insight_id": "HOME_05_hcc",
+      "version": 1,
+      "updated_at": "2026-08-29T13:43:28+08:00",
+      "change_type": "新出现",
+      "change_reason": "首次生成HCC一级洞察",
+      "new_source_ids": [],
+      "removed_source_ids": []
+    },
+    {
+      "insight_id": "HOME_06_alliance",
+      "version": 1,
+      "updated_at": "2026-08-29T13:43:28+08:00",
+      "change_type": "新出现",
+      "change_reason": "首次生成联盟一级洞察",
+      "new_source_ids": [],
+      "removed_source_ids": []
+    }
+  ]
+}

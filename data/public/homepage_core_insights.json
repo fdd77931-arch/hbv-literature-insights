@@ -1,0 +1,103 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-29T13:43:28.093710+08:00",
+  "total_insights": 6,
+  "insights": [
+    {
+      "insight_id": "HOME_01_screening",
+      "category": "screening",
+      "nav_target": "screening",
+      "title": "筛查阳性后患者流失是当前闭环的核心断裂点",
+      "one_line": "基于590篇筛查文献，现有证据表明筛查工具本身不是瓶颈，关键损失发生在筛查阳性后未完成确诊、评估和治疗启动环节。",
+      "description": "社区筛查和体检筛查阳性后，大量患者未完成专科转诊、未接受确诊评估或未启动治疗。家庭成员筛查和母婴阻断证据较充分，但成人机会性筛查的转诊路径缺乏标准化。",
+      "evidence_count": 590,
+      "associated_count": 859,
+      "ab_count": 386,
+      "confidence": "中",
+      "key_numbers": [
+        "独立文献590篇（专题关联859次）",
+        "中国证据473篇（80.2%）"
+      ]
+    },
+    {
+      "insight_id": "HOME_02_diagnosis",
+      "category": "diagnosis",
+      "nav_target": "diagnosis",
+      "title": "HBsAg定量和下降速度是功能性治愈优势人群的核心预测指标",
+      "one_line": "714篇诊断文献显示，基线HBsAg水平和治疗早期HBsAg下降速度是预测功能性治愈和干扰素应答的关键指标。",
+      "description": "HBsAg定量、HBV DNA水平、HBeAg状态和肝纤维化程度共同决定患者分层。ALT正常的HBeAg阴性患者不应被简单归类为\"非活动性携带者\"，需要长期监测。",
+      "evidence_count": 714,
+      "associated_count": 896,
+      "ab_count": 362,
+      "confidence": "中高",
+      "key_numbers": [
+        "独立文献714篇",
+        "中国证据578篇（81.0%）"
+      ]
+    },
+    {
+      "insight_id": "HOME_03_treatment",
+      "category": "treatment",
+      "nav_target": "treatment",
+      "title": "经治患者转换或联合PegIFN的HBsAg清除获益集中在基线HBsAg较低且早期下降明显的人群",
+      "one_line": "756篇治疗文献表明，经治核苷类药物患者转换或联合PegIFN可提高HBsAg清除率，但获益主要集中在基线HBsAg<1500 IU/mL且治疗12周HBsAg下降明显的优势人群。",
+      "description": "初治和经治患者必须分开评价疗效。功能性治愈率在不同人群中差异显著，需严格筛选优势人群。新药管线（siRNA/ASO）仍处于II-III期，尚未改变临床实践。",
+      "evidence_count": 756,
+      "associated_count": 1921,
+      "ab_count": 390,
+      "confidence": "高",
+      "key_numbers": [
+        "独立文献756篇",
+        "中国证据598篇（79.1%）"
+      ]
+    },
+    {
+      "insight_id": "HOME_04_management",
+      "category": "management",
+      "nav_target": "management",
+      "title": "患者脱落集中在治疗前6个月，数字化随访和护士个案管理可改善留存",
+      "one_line": "201篇患者管理文献显示，治疗前3-6个月是脱落高峰，数字化提醒、护士电话随访和个案管理可显著改善依从性和病毒学应答。",
+      "description": "干扰素患者因不良反应未完成疗程、长期服药患者因无症状中断用药、失访患者缺乏主动召回机制。患者教育、医患共同决策和阶段目标管理是可干预因素。",
+      "evidence_count": 201,
+      "associated_count": 201,
+      "ab_count": 128,
+      "confidence": "中",
+      "key_numbers": [
+        "独立文献201篇",
+        "中国证据148篇（73.6%）"
+      ]
+    },
+    {
+      "insight_id": "HOME_05_hcc",
+      "category": "hcc",
+      "nav_target": "hbvhcc",
+      "title": "抗病毒治疗降低HCC风险但不能消除残余风险，HBsAg清除后仍需持续监测",
+      "one_line": "758篇HCC文献表明，长期病毒抑制可显著降低HCC风险，但HBsAg清除后仍有残余风险，需基于风险模型个体化监测。",
+      "description": "抗病毒治疗是HCC一级预防的核心。男性、年龄>40岁、肝硬化、HCC家族史是高风险因素。HBsAg清除后残余风险虽降低但不可忽略，需根据基线特征分层监测。",
+      "evidence_count": 758,
+      "associated_count": 1799,
+      "ab_count": 437,
+      "confidence": "中高",
+      "key_numbers": [
+        "独立文献758篇",
+        "中国证据608篇（80.2%）"
+      ]
+    },
+    {
+      "insight_id": "HOME_06_alliance",
+      "category": "alliance",
+      "nav_target": "strategy",
+      "title": "全国联盟应统一诊疗路径、建立患者登记系统和质量评价KPI",
+      "one_line": "2030目标的实现需要国家、省、市、县和基层五级联动，重点统一筛查转诊标准、治疗启动标准、随访节点和HCC监测方案，并通过区域试点积累可复制模式。",
+      "description": "联盟不应止于组织架构，核心价值在于标准化诊疗路径、患者全程登记、多中心真实世界研究和年度证据更新。区域试点应选择不同流行率和医疗资源条件的地区。",
+      "evidence_count": 1001,
+      "associated_count": 5360,
+      "ab_count": 559,
+      "confidence": "中",
+      "key_numbers": [
+        "总文献1001篇",
+        "中国直接证据782篇"
+      ]
+    }
+  ]
+}

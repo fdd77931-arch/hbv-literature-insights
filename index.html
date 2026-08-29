@@ -77,86 +77,114 @@
     <div class="container">
       <div class="report-badge">
         <span class="badge-dot"></span>
-        <span>基于1001篇循证医学文献</span>
+        <span id="ovBadgeText">基于1001篇循证医学文献</span>
       </div>
-      <h1 class="report-title">慢乙肝—HBV相关HCC<br>文献洞察整合报告</h1>
-      <p class="report-subtitle">基于1001篇循证医学文献的战略洞察</p>
+      <h1 class="report-title">慢乙肝—HBV相关HCC<br>文献洞察与2030市场策略报告</h1>
+      <p class="report-subtitle">基于近1000篇循证医学文献，贯通筛查、诊断、治疗、患者管理和HCC全病程</p>
       <div class="report-meta-row">
         <div class="report-meta-item">
-          <span class="meta-label">更新时间</span>
+          <span class="meta-label">飞书同步时间</span>
           <span class="meta-value" id="ovUpdateDate">--</span>
         </div>
         <div class="report-meta-divider"></div>
         <div class="report-meta-item">
-          <span class="meta-label">文献总数</span>
+          <span class="meta-label">有效文献</span>
           <span class="meta-value highlight-teal" id="ovTotalLit">--</span>
           <span class="meta-unit">篇</span>
         </div>
         <div class="report-meta-divider"></div>
         <div class="report-meta-item">
-          <span class="meta-label">数据来源</span>
-          <span class="meta-value" id="ovDataSource">飞书多维表格</span>
+          <span class="meta-label">洞察版本</span>
+          <span class="meta-value" id="ovInsightVersion">v3.0</span>
+        </div>
+        <div class="report-meta-divider"></div>
+        <div class="report-meta-item">
+          <span class="meta-label">构建时间</span>
+          <span class="meta-value" id="ovBuildTime">--</span>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- 核心数字卡片 -->
+  <!-- 1. 总体核心洞察 -->
+  <div class="container section-pad" id="ovCoreInsightSection">
+    <div id="ovCoreInsight"></div>
+  </div>
+
+  <!-- 2. 六条一级核心洞察 -->
+  <div class="container section-pad">
+    <h2 class="section-title"><span class="title-bar"></span>筛诊治管康/HCC/联盟 六条一级核心洞察</h2>
+    <p class="section-desc">每条洞察基于跨文献综合，包含关键数字、2030意义和市场部策略启示</p>
+    <div class="homepage-insights-grid" id="ovHomepageInsights"></div>
+  </div>
+
+  <!-- 3. 市场部策略总览 -->
+  <div class="container section-pad">
+    <h2 class="section-title"><span class="title-bar"></span>基于文献洞察的市场部策略总览</h2>
+    <p class="section-desc">所有策略基于真实文献证据，医学合规，不超说明书，不夸大疗效</p>
+    <div id="ovMarketStrategy"></div>
+  </div>
+
+  <!-- 4. 核心数字卡片 -->
   <div class="container">
     <div class="stat-cards-row" id="ovStatCards"></div>
   </div>
 
-  <!-- 文献证据图谱 -->
+  <!-- 5. 最新证据动态 -->
+  <div class="container section-pad">
+    <h2 class="section-title"><span class="title-bar"></span>最新证据动态</h2>
+    <div id="ovLatestUpdates"></div>
+  </div>
+
+  <!-- 6. 文献证据图谱（图表后移） -->
   <div class="container section-pad">
     <h2 class="section-title"><span class="title-bar"></span>文献证据图谱</h2>
-    <div class="charts-grid-4">
+    <div class="charts-grid-2">
       <div class="chart-card">
         <h3 class="chart-card-title">文献年度趋势</h3>
         <div id="chartYearTrend" class="chart-dom"></div>
       </div>
       <div class="chart-card">
-        <h3 class="chart-card-title">证据等级分布</h3>
-        <div id="chartLevelPie" class="chart-dom"></div>
-      </div>
-      <div class="chart-card">
-        <h3 class="chart-card-title">专题分布</h3>
+        <h3 class="chart-card-title">专题分布（去重）</h3>
         <div id="chartTopicDist" class="chart-dom"></div>
-      </div>
-      <div class="chart-card">
-        <h3 class="chart-card-title">中国vs国际</h3>
-        <div id="chartChinaIntl" class="chart-dom"></div>
       </div>
     </div>
   </div>
 
-  <!-- 文献簇概览 -->
+  <!-- 7. 证据等级表格（替代环形图） -->
+  <div class="container section-pad">
+    <h2 class="section-title"><span class="title-bar"></span>证据等级分布</h2>
+    <div id="ovLevelTable"></div>
+  </div>
+
+  <!-- 8. 中国证据分类 -->
+  <div class="container section-pad">
+    <h2 class="section-title"><span class="title-bar"></span>中国证据分类</h2>
+    <p class="section-desc">基于中国患者/中心/机构/指南判断，不使用市场标签</p>
+    <div id="ovChinaEvidence"></div>
+  </div>
+
+  <!-- 9. 文献簇概览 -->
   <div class="container section-pad">
     <h2 class="section-title"><span class="title-bar"></span>文献簇概览</h2>
-    <p class="section-desc">基于文献聚类算法，1001篇文献被归纳为12个证据簇</p>
+    <p class="section-desc" id="ovClusterDesc">基于文献聚类算法，12个证据簇覆盖筛诊治管康全链路</p>
     <div class="cluster-grid" id="ovClusterGrid"></div>
   </div>
 
-  <!-- 三专题验证摘要 -->
-  <div class="container section-pad">
-    <h2 class="section-title"><span class="title-bar"></span>三专题验证摘要</h2>
-    <p class="section-desc">已完成3个专题的跨文献综合验证，每个专题包含完整的综合正文、比较表和临床启示</p>
-    <div class="topic-summary-grid" id="ovTopicSummary"></div>
-  </div>
-
-  <!-- 数据质量审计 -->
+  <!-- 10. 数据质量审计 -->
   <div class="container section-pad">
     <h2 class="section-title"><span class="title-bar"></span>数据质量审计</h2>
     <div class="audit-grid" id="ovAuditSection"></div>
   </div>
 
-  <!-- 证据缺口 -->
+  <!-- 11. 证据缺口 -->
   <div class="container section-pad">
     <h2 class="section-title"><span class="title-bar"></span>关键证据缺口</h2>
-    <p class="section-desc">基于文献簇和专题验证识别的证据缺口，高风险缺口需优先填补</p>
+    <p class="section-desc">按研究问题匹配理想证据类型评价，而非统一用RCT占比</p>
     <div class="evidence-gaps-grid" id="ovEvidenceGaps"></div>
   </div>
 
-  <!-- 报告章节 -->
+  <!-- 12. 报告章节 -->
   <div class="container section-pad">
     <h2 class="section-title"><span class="title-bar"></span>报告章节导航</h2>
     <p class="section-desc">完整报告共7章，从文献证据图谱到全国联盟策略逐层推导</p>

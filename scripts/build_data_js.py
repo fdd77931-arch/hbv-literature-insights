@@ -45,6 +45,20 @@ def build_data_js():
     strategy_2030 = load_json('strategy_2030.json')
     alliance_actions = load_json('alliance_actions.json')
 
+    # 加载新增洞察数据
+    overall_core_insight = load_json('overall_core_insight.json')
+    homepage_core_insights = load_json('homepage_core_insights.json')
+    market_strategy_overview = load_json('market_strategy_overview.json')
+    latest_updates = load_json('latest_updates.json')
+    screening_overview = load_json('screening_overview.json')
+    diagnosis_overview = load_json('diagnosis_overview.json')
+    treatment_overview = load_json('treatment_overview.json')
+    management_overview = load_json('management_overview.json')
+    hcc_overview = load_json('hcc_overview.json')
+    alliance_overview = load_json('alliance_overview.json')
+    insight_versions = load_json('insight_versions.json')
+    change_report = load_json('change_report.json')
+
     # 加载旧数据（兼容）
     insights = load_json('insights.json')
     report = load_json('report.json')
@@ -63,10 +77,22 @@ def build_data_js():
         'evidence_gaps': evidence_gaps,
         'strategy_2030': strategy_2030,
         'alliance_actions': alliance_actions,
+        'overall_core_insight': overall_core_insight,
+        'homepage_core_insights': homepage_core_insights,
+        'market_strategy_overview': market_strategy_overview,
+        'latest_updates': latest_updates,
+        'screening_overview': screening_overview,
+        'diagnosis_overview': diagnosis_overview,
+        'treatment_overview': treatment_overview,
+        'management_overview': management_overview,
+        'hcc_overview': hcc_overview,
+        'alliance_overview': alliance_overview,
+        'insight_versions': insight_versions,
+        'change_report': change_report,
         'insights': insights,
         'report': report,
         'generated_at': datetime.now().isoformat(),
-        'version': '2.0.0'
+        'version': '3.0.0'
     }
 
     # 生成JavaScript

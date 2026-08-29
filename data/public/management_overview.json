@@ -1,0 +1,81 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-29T13:43:28.093710+08:00",
+  "page_key": "management",
+  "cluster_ids": [
+    "C10_patient_management"
+  ],
+  "evidence_summary": {
+    "unique_records": 201,
+    "associated_records": 201,
+    "china_count": 148,
+    "china_pct": 73.6,
+    "ab_count": 128,
+    "ab_pct": 63.7,
+    "year_range": {
+      "min": 2018,
+      "max": 2026
+    },
+    "study_designs": {
+      "未分类": 45,
+      "Meta分析": 34,
+      "指南/共识": 26,
+      "RCT": 23,
+      "综述": 21,
+      "队列研究": 19,
+      "回顾性队列": 12,
+      "基础研究": 6
+    },
+    "evidence_levels": {
+      "A": 86,
+      "B": 42,
+      "C": 73
+    },
+    "china_evidence_breakdown": {
+      "中国直接证据": 141,
+      "中国机构参与的国际研究": 7,
+      "地区无法判断": 51,
+      "国际证据": 2
+    }
+  },
+  "key_findings": [
+    {
+      "title": "术前预后营养指数对肝细胞癌根治性肝切除术后预后的预测价值：回顾性队列研究与荟萃分析",
+      "result": "1. 本研究回顾性分析了187例接受根治性肝切除术的HCC患者，发现术前低PNI（<45）与较差的无复发生存期（RFS）显著相关（HR 1.762, 95% CI 1.066-2.911, p=0.027）。\n2. 高PNI（≥45）组与低PNI组的5年总生存率（OS）分别为76.7% vs 50.1%（p=0.001），5年RFS率分别为47.0% vs 28.9%（p=0.001）。\n3. 在",
+      "level": "A",
+      "year": 2019,
+      "journal": "Journal of investigative surgery : the official journal of the Academy of Surgical Research"
+    },
+    {
+      "title": "富马酸替诺福韦二吡呋酯在预防乙型肝炎病毒母婴传播中的作用：系统评价和荟萃分析",
+      "result": "1. 本系统评价和荟萃分析纳入两项随机对照试验（一项开放标签，一项双盲），共527例妊娠，评估TDF在预防高HBV DNA滴度孕妇母婴传播中的疗效和安全性。\n2. 意向性分析显示，TDF预防母婴传播的效果不显著（OR 0.53；95% CI 0.13-2.17；p=0.38；I²=81%）。\n3. 符合方案分析显示，TDF显著降低母婴传播风险（OR 0.10；95% CI 0.01-0.77；p=",
+      "level": "A",
+      "year": 2019,
+      "journal": "The Korean journal of internal medicine"
+    },
+    {
+      "title": "替诺福韦联合或不联合聚乙二醇干扰素治疗后按方案停药治疗慢性乙型肝炎的随机试验",
+      "result": "1. 本研究为随机（1:1）试验，纳入201例慢性乙型肝炎患者（52% HBeAg阳性，12%/6%基因型A/A2，7%肝硬化），比较替诺福韦（TDF）单药治疗192周与TDF联合聚乙二醇干扰素（PegIFN）α-2a治疗前24周，随后在第192周停药并随访至第240周。\n2. 主要终点为第240周HBsAg清除率：联合治疗组为5.3%，单药组为4.1%（P=0.73），差异无统计学意义。\n3. ",
+      "level": "A",
+      "year": 2022,
+      "journal": "The American journal of gastroenterology"
+    },
+    {
+      "title": "老年肝细胞癌患者手术切除后的特征与结局：系统综述与荟萃分析",
+      "result": "1. 本研究为系统综述与荟萃分析，检索了PubMed、Embase和Cochrane数据库，共纳入42项研究，包含7,778例老年（年龄≥65岁）肝细胞癌（HCC）患者。\n2. 老年患者平均年龄74.45岁（95% CI: 72.89-76.02），男性占75.54%（95% CI: 72.53-78.32），肝硬化比例66.73%（95% CI: 43.93-83.96），平均肿瘤大小5.50 ",
+      "level": "A",
+      "year": 2023,
+      "journal": "Digestive diseases (Basel, Switzerland)"
+    },
+    {
+      "title": "增强MRI在肝细胞癌经动脉化疗栓塞术后残留或复发诊断中的效能：系统评价与Meta分析",
+      "result": "1. 本研究为系统评价与Meta分析，共纳入13项研究、721个结节，评估增强MRI（CEMRI）在TACE术后诊断残留或复发HCC的效能。\n2. 汇总结果显示，CEMRI的合并敏感度为91%（95%CI: 87%-96%），特异度为93%（95%CI: 85%-97%），阳性似然比为12.22，阴性似然比为0.09，诊断优势比为126.99，汇总受试者工作特征曲线下面积（AUC）为0.97（95",
+      "level": "A",
+      "year": 2019,
+      "journal": "Journal of magnetic resonance imaging : JMRI"
+    }
+  ],
+  "topic_validated": null,
+  "title": "患者管理、脱落和依从性",
+  "subtitle": "患者旅程、脱落节点、数字化随访与长期留存"
+}

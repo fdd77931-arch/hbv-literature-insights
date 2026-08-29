@@ -1,0 +1,178 @@
+name: Sync and Deploy
+
+on:
+  schedule:
+    - cron: '30 1 * * *'      # 每日北京时间09:30
+    - cron: '30 2 * * 1'      # 每周一北京时间10:30 完整重建
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: '运行模式'
+        required: false
+        default: 'sync-only'
+        type: choice
+        options:
+          - sync-only
+          - incremental-insights
+          - full-rebuild
+          - deploy-only
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "sync-deploy"
+  cancel-in-progress: false
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Determine mode
+        id: mode
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            SCHEDULE="${{ github.event.schedule }}"
+            if [ "$SCHEDULE" = "30 2 * * 1" ]; then
+              MODE="full-rebuild"
+            else
+              MODE="sync-only"
+            fi
+          else
+            MODE="${{ github.event.inputs.mode || 'sync-only' }}"
+          fi
+          echo "mode=$MODE" >> $GITHUB_OUTPUT
+          echo "运行模式: $MODE"
+
+      - name: Check Feishu credentials
+        id: secrets
+        run: |
+          if [ -n "${{ secrets.FEISHU_APP_ID }}" ] && [ -n "${{ secrets.FEISHU_APP_SECRET }}" ]; then
+            echo "has_secrets=true" >> $GITHUB_OUTPUT
+            echo "飞书凭证可用"
+          else
+            echo "has_secrets=false" >> $GITHUB_OUTPUT
+            echo "飞书凭证不可用，使用现有数据"
+          fi
+
+      # ==================== sync-only ====================
+      - name: Sync Feishu data
+        if: steps.mode.outputs.mode != 'deploy-only' && steps.secrets.outputs.has_secrets == 'true'
+        env:
+          FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
+          FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
+          FEISHU_APP_TOKEN: ${{ secrets.FEISHU_APP_TOKEN }}
+          FEISHU_TABLE_ID: ${{ secrets.FEISHU_TABLE_ID }}
+        run: |
+          python scripts/fetch_feishu.py
+          python scripts/normalize_records.py
+
+      - name: Detect changes
+        if: steps.mode.outputs.mode != 'deploy-only'
+        id: changes
+        run: |
+          python scripts/detect_changes.py
+          HAS_CHANGES=$(python -c "import json; r=json.load(open('data/public/change_report.json')); print('true' if r.get('has_changes') else 'false')")
+          echo "has_changes=$HAS_CHANGES" >> $GITHUB_OUTPUT
+
+      - name: Sync-only: Update statistics and latest
+        if: steps.mode.outputs.mode == 'sync-only' && steps.secrets.outputs.has_secrets == 'true'
+        run: |
+          python scripts/audit_data_quality.py
+          python scripts/build_evidence_clusters.py
+          python scripts/generate_full_insights.py
+
+      # ==================== incremental-insights ====================
+      - name: Incremental: Update affected topics
+        if: steps.mode.outputs.mode == 'incremental-insights' && steps.changes.outputs.has_changes == 'true'
+        run: |
+          python scripts/audit_data_quality.py
+          python scripts/update_affected_topics.py
+
+      # ==================== full-rebuild ====================
+      - name: Full rebuild: Regenerate all insights
+        if: steps.mode.outputs.mode == 'full-rebuild'
+        run: |
+          python scripts/audit_data_quality.py
+          python scripts/build_evidence_clusters.py
+          python scripts/generate_full_insights.py
+          python scripts/validate_three_topics.py
+
+      - name: Skip if no changes (sync-only)
+        if: steps.mode.outputs.mode == 'sync-only' && steps.changes.outputs.has_changes != 'true'
+        run: |
+          echo "飞书数据无变化，跳过AI调用和部署"
+
+      # ==================== Build data.js ====================
+      - name: Build data.js
+        if: steps.mode.outputs.mode != 'deploy-only' && (steps.mode.outputs.mode != 'sync-only' || steps.changes.outputs.has_changes == 'true' || steps.secrets.outputs.has_secrets != 'true')
+        run: |
+          python scripts/build_data_js.py
+
+      - name: Validate output
+        if: steps.mode.outputs.mode != 'deploy-only' && (steps.mode.outputs.mode != 'sync-only' || steps.changes.outputs.has_changes == 'true' || steps.secrets.outputs.has_secrets != 'true')
+        run: |
+          python scripts/validate_output.py
+
+      - name: Check for sensitive data
+        if: steps.mode.outputs.mode != 'deploy-only'
+        run: |
+          echo "检查公开目录是否包含敏感信息..."
+          if grep -rn "app_id\|app_secret\|api_key\|FEISHU_APP\|DEEPSEEK\|token.*=" data/public/ --include="*.json" -i 2>/dev/null | grep -v "china_evidence\|token.*type\|token.*level" | head -5; then
+            echo "⚠️ 发现潜在敏感关键词，请人工确认"
+          else
+            echo "✅ 未发现敏感信息"
+          fi
+
+      - name: Check for changes to commit
+        if: steps.mode.outputs.mode != 'deploy-only'
+        id: commit_check
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/public/ data/state/ assets/data.js 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "has_commit=false" >> $GITHUB_OUTPUT
+            echo "无数据变化需要提交"
+          else
+            echo "has_commit=true" >> $GITHUB_OUTPUT
+            echo "发现数据变化，准备提交"
+          fi
+
+      - name: Commit changes
+        if: steps.commit_check.outputs.has_commit == 'true'
+        run: |
+          git commit -m "data: auto-sync and update insights [skip ci]"
+          git push
+
+      # ==================== Deploy ====================
+      - name: Setup Pages
+        if: steps.mode.outputs.mode == 'deploy-only' || steps.commit_check.outputs.has_commit == 'true' || steps.mode.outputs.mode == 'sync-only'
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        if: steps.mode.outputs.mode == 'deploy-only' || steps.commit_check.outputs.has_commit == 'true' || steps.mode.outputs.mode == 'sync-only'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        if: steps.mode.outputs.mode == 'deploy-only' || steps.commit_check.outputs.has_commit == 'true' || steps.mode.outputs.mode == 'sync-only'
+        uses: actions/deploy-pages@v4

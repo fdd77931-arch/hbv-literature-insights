@@ -1082,3 +1082,94 @@ input, select, textarea { font-family: inherit; font-size: inherit; }
   .brand-title { font-size: 14px; }
   .brand-subtitle { font-size: 10px; }
 }
+
+/* ---------- v3.0 新增样式 ---------- */
+
+/* 核心洞察卡片 */
+.core-insight-card { background: linear-gradient(135deg, #f0f7ff 0%, #e8f4f8 100%); border-radius: 12px; padding: 32px; border-left: 4px solid var(--primary); }
+.core-insight-badge { display: inline-block; background: var(--primary); color: #fff; padding: 4px 12px; border-radius: 4px; font-size: 13px; font-weight: 600; margin-bottom: 16px; }
+.core-insight-title { font-size: 22px; font-weight: 700; color: var(--ink-800); line-height: 1.4; margin-bottom: 12px; }
+.core-insight-conclusion { font-size: 15px; line-height: 1.8; color: var(--ink-700); margin-bottom: 20px; }
+.core-insight-findings ul { margin: 0 0 20px 0; padding-left: 20px; }
+.core-insight-findings li { font-size: 14px; line-height: 1.8; color: var(--ink-600); margin-bottom: 6px; }
+.core-insight-meta { display: grid; gap: 12px; }
+.insight-meta-item { display: flex; align-items: flex-start; gap: 8px; font-size: 14px; line-height: 1.6; }
+.meta-tag { display: inline-block; background: var(--teal); color: #fff; padding: 2px 8px; border-radius: 3px; font-size: 12px; white-space: nowrap; flex-shrink: 0; }
+
+/* 首页洞察卡片网格 */
+.homepage-insights-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.homepage-insight-card { background: #fff; border-radius: 10px; padding: 24px; border: 1px solid #e0e0e0; cursor: pointer; transition: all 0.2s; }
+.homepage-insight-card:hover { border-color: var(--primary); box-shadow: 0 4px 12px rgba(0,86,145,0.1); transform: translateY(-2px); }
+.insight-category { display: inline-block; background: var(--light-teal); color: var(--teal); padding: 2px 10px; border-radius: 3px; font-size: 12px; font-weight: 600; margin-bottom: 12px; }
+.insight-title { font-size: 17px; font-weight: 700; color: var(--ink-800); line-height: 1.4; margin-bottom: 10px; }
+.insight-one-line { font-size: 14px; color: var(--primary); line-height: 1.6; margin-bottom: 10px; font-weight: 500; }
+.insight-desc { font-size: 13px; color: var(--ink-500); line-height: 1.6; margin-bottom: 14px; }
+.insight-numbers { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.insight-number-tag { background: #f5f5f5; padding: 3px 10px; border-radius: 3px; font-size: 12px; color: var(--ink-600); }
+.insight-footer { display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: var(--ink-400); border-top: 1px solid #f0f0f0; padding-top: 12px; }
+.insight-link { color: var(--primary); font-weight: 600; margin-left: auto; }
+
+/* 市场策略表格 */
+.market-strategy-table-wrapper { overflow-x: auto; }
+.market-strategy-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.market-strategy-table th { background: var(--primary); color: #fff; padding: 10px 8px; text-align: left; font-weight: 600; white-space: nowrap; }
+.market-strategy-table td { padding: 10px 8px; border-bottom: 1px solid #eee; vertical-align: top; line-height: 1.5; }
+.market-strategy-table tr:nth-child(even) { background: #f9fbfd; }
+.ms-stage { font-weight: 700; color: var(--primary); white-space: nowrap; }
+.ms-kpi { color: var(--accent); font-weight: 600; white-space: nowrap; }
+.compliance-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.compliance-tag { background: #e8f5e9; color: #2e7d32; padding: 4px 10px; border-radius: 3px; font-size: 12px; }
+
+/* 证据等级表格 */
+.level-table { width: 100%; max-width: 700px; border-collapse: collapse; }
+.level-table th { background: var(--primary); color: #fff; padding: 10px 12px; text-align: left; }
+.level-table th.num { text-align: right; }
+.level-table td { padding: 10px 12px; border-bottom: 1px solid #eee; }
+.level-table td.num { text-align: right; }
+.level-label { font-weight: 700; font-size: 16px; }
+.level-A { color: #2e7d32; }
+.level-B { color: #1565c0; }
+.level-C { color: #f57c00; }
+.level-D { color: #c62828; }
+.bar-cell { display: flex; align-items: center; gap: 8px; justify-content: flex-end; }
+.bar-fill { height: 20px; border-radius: 3px; min-width: 2px; }
+.bar-fill.level-A { background: #4caf50; }
+.bar-fill.level-B { background: #2196f3; }
+.bar-fill.level-C { background: #ff9800; }
+.bar-fill.level-D { background: #f44336; }
+.total-row { font-weight: 700; background: #f5f5f5; }
+
+/* 中国证据分类 */
+.china-evidence-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.china-evidence-card { background: #fff; border-radius: 8px; padding: 20px; text-align: center; border: 1px solid #e0e0e0; }
+.ce-label { font-size: 14px; font-weight: 600; color: var(--ink-700); margin-bottom: 8px; }
+.ce-count { font-size: 28px; font-weight: 700; color: var(--primary); }
+.ce-pct { font-size: 14px; color: var(--ink-400); }
+.ce-desc { font-size: 12px; color: var(--ink-400); margin-top: 8px; }
+
+/* 最新证据动态 */
+.latest-updates-list { display: flex; flex-direction: column; gap: 8px; }
+.update-item { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: #f9fbfd; border-radius: 6px; border-left: 3px solid var(--teal); }
+.update-level { display: inline-block; width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 4px; font-weight: 700; font-size: 12px; color: #fff; }
+.update-level.level-A { background: #4caf50; }
+.update-level.level-B { background: #2196f3; }
+.update-level.level-C { background: #ff9800; }
+.update-level.level-D { background: #f44336; }
+.update-year { font-size: 13px; color: var(--ink-400); white-space: nowrap; }
+.update-title { flex: 1; font-size: 13px; color: var(--ink-700); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.update-journal { font-size: 12px; color: var(--ink-400); white-space: nowrap; }
+.update-china { background: var(--light-teal); color: var(--teal); padding: 2px 6px; border-radius: 3px; font-size: 11px; }
+
+/* 簇注 */
+.cluster-note { font-size: 11px; color: var(--ink-400); margin-bottom: 8px; }
+
+/* 2列图表网格 */
+.charts-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+
+@media (max-width: 768px) {
+  .homepage-insights-grid { grid-template-columns: 1fr; }
+  .china-evidence-grid { grid-template-columns: repeat(2, 1fr); }
+  .charts-grid-2 { grid-template-columns: 1fr; }
+  .market-strategy-table { font-size: 12px; }
+}
+}

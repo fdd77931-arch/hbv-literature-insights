@@ -138,15 +138,30 @@ var App = (function() {
     // 报告头
     document.getElementById('ovUpdateDate').textContent = stats.lastUpdate || '2026年8月';
     document.getElementById('ovTotalLit').textContent = stats.totalLiterature;
+    document.getElementById('ovBadgeText').textContent = '基于' + stats.totalLiterature + '篇循证医学文献';
+    if (D.meta) {
+      document.getElementById('ovInsightVersion').textContent = 'v' + (D.meta.version || '3.0');
+      document.getElementById('ovBuildTime').textContent = D.meta.generatedAt || D.meta.lastSync || '--';
+    }
+
+    // 1. 总体核心洞察
+    renderCoreInsight();
+
+    // 2. 六条一级洞察
+    renderHomepageInsights();
+
+    // 3. 市场部策略总览
+    renderMarketStrategy();
 
     // 核心数字卡片
+    var chinaBreakdown = stats.chinaEvidenceBreakdown || {};
     var cards = [
-      { val: stats.totalLiterature, unit: '篇', label: '文献总量', cls: '' },
-      { val: stats.chinaEvidence, unit: '(' + stats.chinaEvidencePct + '%)', label: '中国证据', cls: 'teal' },
+      { val: stats.totalLiterature, unit: '篇', label: '有效文献总量', cls: '' },
+      { val: stats.chinaEvidence, unit: '(' + stats.chinaEvidencePct + '%)', label: '中国证据(含直接+合作)', cls: 'teal' },
+      { val: (chinaBreakdown.chinaDirect || 0), unit: '(' + ((chinaBreakdown.chinaDirect || 0) / stats.totalLiterature * 100).toFixed(1) + '%)', label: '中国直接证据', cls: 'teal' },
       { val: stats.abEvidence, unit: '(' + stats.abEvidencePct + '%)', label: 'AB级证据', cls: 'orange' },
-      { val: stats.topicsCount, unit: '个', label: '覆盖专题', cls: 'purple' },
-      { val: stats.clustersCount, unit: '个', label: '文献簇', cls: '' },
-      { val: stats.validatedTopicsCount, unit: '个', label: '验证专题', cls: 'teal' }
+      { val: stats.clustersCount, unit: '个', label: '文献簇', cls: 'purple' },
+      { val: stats.validatedTopicsCount, unit: '个', label: '验证专题', cls: '' }
     ];
     document.getElementById('ovStatCards').innerHTML = cards.map(function(c) {
       return '<div class="stat-card ' + c.cls + '">' +
@@ -155,21 +170,29 @@ var App = (function() {
         '</div>';
     }).join('');
 
-    // 初始化图表
+    // 5. 最新证据动态
+    renderLatestUpdates();
+
+    // 初始化图表 (仅年度趋势和专题分布)
     setTimeout(function() {
       if (window.ChartFns) {
         ChartFns.initYearTrendChart(document.getElementById('chartYearTrend'));
-        ChartFns.initLevelPieChart(document.getElementById('chartLevelPie'));
         ChartFns.initTopicDistChart(document.getElementById('chartTopicDist'));
-        ChartFns.initChinaIntlChart(document.getElementById('chartChinaIntl'));
       }
     }, 100);
 
-    // 文献簇概览
-    renderClusterGrid();
+    // 7. 证据等级表格
+    renderLevelTable();
 
-    // 三专题验证摘要
-    renderTopicSummary();
+    // 8. 中国证据分类
+    renderChinaEvidence();
+
+    // 文献簇概览
+    var assocTotal = D.statistics.clusterAssociatedTotal || 0;
+    var uniqueTotal = D.statistics.clusterUniqueTotal || D.statistics.totalLiterature || 0;
+    var clDesc = document.getElementById('ovClusterDesc');
+    if (clDesc) clDesc.textContent = '12个证据簇共关联 ' + assocTotal + ' 次（独立文献 ' + uniqueTotal + ' 篇，同一文献可归入多个簇）';
+    renderClusterGrid();
 
     // 数据质量审计
     renderAudit();
@@ -179,6 +202,147 @@ var App = (function() {
 
     // 报告章节导航
     renderChapterNav();
+  }
+
+  function renderCoreInsight() {
+    var ci = D.overallCoreInsight || {};
+    if (!ci.title) { document.getElementById('ovCoreInsight').innerHTML = ''; return; }
+    var html = '<div class="core-insight-card">' +
+      '<div class="core-insight-badge">总体核心洞察</div>' +
+      '<h2 class="core-insight-title">' + ci.title + '</h2>' +
+      '<p class="core-insight-conclusion">' + ci.oneLineConclusion + '</p>';
+    if (ci.coreFindings && ci.coreFindings.length) {
+      html += '<div class="core-insight-findings"><ul>';
+      ci.coreFindings.forEach(function(f) {
+        html += '<li>' + f + '</li>';
+      });
+      html += '</ul></div>';
+    }
+    html += '<div class="core-insight-meta">' +
+      '<div class="insight-meta-item"><span class="meta-tag">2030核心差距</span><span>' + (ci.coreGap2030 || '') + '</span></div>' +
+      '<div class="insight-meta-item"><span class="meta-tag">市场部意义</span><span>' + (ci.marketImplication || '') + '</span></div>' +
+      '<div class="insight-meta-item"><span class="meta-tag">联盟价值</span><span>' + (ci.allianceValue || '') + '</span></div>' +
+      '<div class="insight-meta-item"><span class="meta-tag">证据强度</span><span>' + (ci.evidenceStrength || '') + ' (来源:' + (ci.sourceCount || 0) + '篇)</span></div>' +
+      '</div></div>';
+    document.getElementById('ovCoreInsight').innerHTML = html;
+  }
+
+  function renderHomepageInsights() {
+    var hi = D.homepageInsights || {};
+    var insights = hi.insights || [];
+    if (!insights.length) { document.getElementById('ovHomepageInsights').innerHTML = ''; return; }
+    var html = insights.map(function(ins) {
+      var nums = (ins.keyNumbers || []).map(function(n) {
+        return '<span class="insight-number-tag">' + n + '</span>';
+      }).join('');
+      return '<div class="homepage-insight-card" onclick="App.navigate(\'' + ins.navTarget + '\')">' +
+        '<div class="insight-category">' + ins.category + '</div>' +
+        '<h3 class="insight-title">' + ins.title + '</h3>' +
+        '<p class="insight-one-line">' + ins.oneLine + '</p>' +
+        '<p class="insight-desc">' + ins.description + '</p>' +
+        '<div class="insight-numbers">' + nums + '</div>' +
+        '<div class="insight-footer">' +
+          '<span class="insight-count">独立文献 ' + ins.evidenceCount + ' 篇</span>' +
+          '<span class="insight-ab">AB级 ' + ins.abCount + ' 篇</span>' +
+          '<span class="insight-confidence">置信度: ' + ins.confidence + '</span>' +
+          '<span class="insight-link">查看完整报告 →</span>' +
+        '</div>' +
+      '</div>';
+    }).join('');
+    document.getElementById('ovHomepageInsights').innerHTML = html;
+  }
+
+  function renderMarketStrategy() {
+    var ms = D.marketStrategy || {};
+    var table = ms.strategyTable || [];
+    if (!table.length) { document.getElementById('ovMarketStrategy').innerHTML = ''; return; }
+    var html = '<div class="market-strategy-table-wrapper"><table class="market-strategy-table">' +
+      '<thead><tr><th>环节</th><th>核心文献洞察</th><th>当前障碍</th><th>目标受众</th><th>证据沟通</th><th>建议项目</th><th>KPI</th></tr></thead><tbody>';
+    table.forEach(function(s) {
+      html += '<tr>' +
+        '<td class="ms-stage">' + s.stage + '</td>' +
+        '<td>' + s.coreInsight + '</td>' +
+        '<td>' + s.barrier + '</td>' +
+        '<td>' + s.targetAudience + '</td>' +
+        '<td>' + s.evidenceCommunication + '</td>' +
+        '<td>' + s.project + '</td>' +
+        '<td class="ms-kpi">' + s.kpi + '</td>' +
+      '</tr>';
+    });
+    html += '</tbody></table></div>';
+    if (ms.compliance && ms.compliance.length) {
+      html += '<div class="compliance-tags">' + ms.compliance.map(function(c) {
+        return '<span class="compliance-tag">' + c + '</span>';
+      }).join('') + '</div>';
+    }
+    document.getElementById('ovMarketStrategy').innerHTML = html;
+  }
+
+  function renderLevelTable() {
+    var dist = D.statistics.levelDistribution || {};
+    var total = D.statistics.totalLiterature || 1;
+    var levels = [
+      { label: 'A级', key: 'A', desc: '指南/Meta分析/RCT' },
+      { label: 'B级', key: 'B', desc: '队列/病例对照/真实世界' },
+      { label: 'C级', key: 'C', desc: '横断面/综述/回顾' },
+      { label: 'D级', key: 'D', desc: '病例报告/述评' }
+    ];
+    var html = '<table class="level-table"><thead><tr><th>等级</th><th>说明</th><th class="num">文献数量</th><th class="num">占比</th></tr></thead><tbody>';
+    levels.forEach(function(l) {
+      var count = dist[l.key] || 0;
+      var pct = (count / total * 100).toFixed(1);
+      var barWidth = Math.min(pct, 100);
+      html += '<tr>' +
+        '<td class="level-label level-' + l.key + '">' + l.label + '</td>' +
+        '<td>' + l.desc + '</td>' +
+        '<td class="num">' + count + '</td>' +
+        '<td class="num"><div class="bar-cell"><div class="bar-fill level-' + l.key + '" style="width:' + barWidth + '%"></div><span>' + pct + '%</span></div></td>' +
+      '</tr>';
+    });
+    html += '<tr class="total-row"><td colspan="2">合计</td><td class="num">' + total + '</td><td class="num">100%</td></tr>';
+    html += '</tbody></table>';
+    document.getElementById('ovLevelTable').innerHTML = html;
+  }
+
+  function renderChinaEvidence() {
+    var bd = D.statistics.chinaEvidenceBreakdown || {};
+    var total = D.statistics.totalLiterature || 1;
+    var cats = [
+      { label: '中国直接证据', key: 'chinaDirect', count: bd.chinaDirect || 0, desc: '中国患者/中心/机构/指南' },
+      { label: '中国机构参与的国际研究', key: 'chinaCollab', count: bd.chinaCollab || 0, desc: '国际合作研究含中国中心' },
+      { label: '国际证据', key: 'international', count: bd.international || 0, desc: '明确未涉及中国人群/机构' },
+      { label: '地区无法判断', key: 'unknown', count: bd.unknown || 0, desc: '信息不足，无法确认' }
+    ];
+    var html = '<div class="china-evidence-grid">';
+    cats.forEach(function(c) {
+      var pct = (c.count / total * 100).toFixed(1);
+      html += '<div class="china-evidence-card">' +
+        '<div class="ce-label">' + c.label + '</div>' +
+        '<div class="ce-count">' + c.count + ' <span class="ce-pct">(' + pct + '%)</span></div>' +
+        '<div class="ce-desc">' + c.desc + '</div>' +
+      '</div>';
+    });
+    html += '</div>';
+    document.getElementById('ovChinaEvidence').innerHTML = html;
+  }
+
+  function renderLatestUpdates() {
+    var lu = D.latestUpdates || {};
+    var pubs = lu.recentPublications || [];
+    if (!pubs.length) { document.getElementById('ovLatestUpdates').innerHTML = '<p class="section-desc">暂无最新文献</p>'; return; }
+    var html = '<div class="latest-updates-list">';
+    pubs.slice(0, 10).forEach(function(p) {
+      html += '<div class="update-item">' +
+        '<span class="update-level level-' + (p.evidenceLevel || 'C') + '">' + (p.evidenceLevel || '?') + '</span>' +
+        '<span class="update-year">' + (p.year || '') + '</span>' +
+        '<span class="update-title">' + (p.title || '') + '</span>' +
+        '<span class="update-journal">' + (p.journal || '') + '</span>' +
+        (p.chinaEvidence ? '<span class="update-china">中国证据</span>' : '') +
+      '</div>';
+    });
+    html += '</div>';
+    html += '<p class="section-desc">共 ' + (lu.totalRecords || 0) + ' 篇文献，最近同步: ' + (lu.lastSync || '--') + '</p>';
+    document.getElementById('ovLatestUpdates').innerHTML = html;
   }
 
   function renderClusterGrid() {
@@ -194,10 +358,11 @@ var App = (function() {
         '</div>' +
         '<div class="cluster-name">' + c.name + '</div>' +
         '<div class="cluster-stats">' +
-          '<div class="cluster-stat"><span class="cluster-stat-value">' + c.totalRecords + '</span><span class="cluster-stat-label">总文献</span></div>' +
-          '<div class="cluster-stat"><span class="cluster-stat-value teal">' + c.chinaCount + '</span><span class="cluster-stat-label">中国研究</span></div>' +
-          '<div class="cluster-stat"><span class="cluster-stat-value">' + c.chinaPct + '%</span><span class="cluster-stat-label">占比</span></div>' +
+          '<div class="cluster-stat"><span class="cluster-stat-value">' + c.totalRecords + '</span><span class="cluster-stat-label">关联次数</span></div>' +
+          '<div class="cluster-stat"><span class="cluster-stat-value teal">' + c.chinaCount + '</span><span class="cluster-stat-label">中国证据</span></div>' +
+          '<div class="cluster-stat"><span class="cluster-stat-value">' + c.chinaPct + '%</span><span class="cluster-stat-label">中国占比</span></div>' +
         '</div>' +
+        '<div class="cluster-note">专题关联次数，同一文献可重复归类</div>' +
         '<div class="cluster-designs">' + designTags + '</div>' +
       '</div>';
     }).join('');

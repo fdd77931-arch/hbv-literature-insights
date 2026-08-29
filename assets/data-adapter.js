@@ -108,6 +108,14 @@
         china: stats.china_evidence_count || 0,
         international: (stats.total_literature || 0) - (stats.china_evidence_count || 0)
       },
+      chinaEvidenceBreakdown: {
+        chinaDirect: (stats.china_evidence_breakdown || {}).china_direct || 0,
+        chinaCollab: (stats.china_evidence_breakdown || {}).china_collab || 0,
+        international: (stats.china_evidence_breakdown || {}).international || 0,
+        unknown: (stats.china_evidence_breakdown || {}).unknown || 0
+      },
+      clusterAssociatedTotal: stats.cluster_associated_total || 0,
+      clusterUniqueTotal: stats.cluster_unique_total || 0,
       clusterSummary: clusterSummary
     };
   }
@@ -449,6 +457,109 @@
     };
   }
 
+  // ---------- 新增: 总体核心洞察 ----------
+  function buildOverallCoreInsight() {
+    const d = sd.overall_core_insight || {};
+    return {
+      title: d.title || '',
+      oneLineConclusion: d.one_line_conclusion || '',
+      evidenceScope: d.evidence_scope || {},
+      coreFindings: d.core_findings || [],
+      coreGap2030: d.core_gap_2030 || '',
+      marketImplication: d.market_implication || '',
+      allianceValue: d.alliance_value || '',
+      evidenceStrength: d.evidence_strength || '',
+      sourceCount: d.source_count || 0,
+    };
+  }
+
+  // ---------- 新增: 首页六条一级洞察 ----------
+  function buildHomepageInsights() {
+    const d = sd.homepage_core_insights || {};
+    return {
+      total: d.total_insights || 0,
+      insights: (d.insights || []).map(i => ({
+        id: i.insight_id || '',
+        category: i.category || '',
+        navTarget: i.nav_target || '',
+        title: i.title || '',
+        oneLine: i.one_line || '',
+        description: i.description || '',
+        evidenceCount: i.evidence_count || 0,
+        associatedCount: i.associated_count || 0,
+        abCount: i.ab_count || 0,
+        confidence: i.confidence || '',
+        keyNumbers: i.key_numbers || [],
+      }))
+    };
+  }
+
+  // ---------- 新增: 市场部策略总览 ----------
+  function buildMarketStrategy() {
+    const d = sd.market_strategy_overview || {};
+    return {
+      summary: d.summary || '',
+      strategyTable: (d.strategy_table || []).map(s => ({
+        stage: s.stage || '',
+        coreInsight: s.core_insight || '',
+        barrier: s.barrier || '',
+        targetAudience: s.target_audience || '',
+        evidenceCommunication: s.evidence_communication || '',
+        project: s.project || '',
+        kpi: s.kpi || '',
+        sourceCount: s.source_count || 0,
+      })),
+      strategyTypes: d.strategy_types || [],
+      compliance: d.compliance || [],
+    };
+  }
+
+  // ---------- 新增: 最新证据动态 ----------
+  function buildLatestUpdates() {
+    const d = sd.latest_updates || {};
+    return {
+      lastSync: d.last_sync || '',
+      totalRecords: d.total_records || 0,
+      byYear: d.by_year || {},
+      recentPublications: (d.recent_publications || []).map(r => ({
+        title: r.title || '',
+        journal: r.journal || '',
+        year: r.year,
+        evidenceLevel: r.evidence_level || '',
+        topic: r.topic || '',
+        chinaEvidence: r.china_evidence || false,
+        chinaEvidenceType: r.china_evidence_type || '',
+        pmid: r.pmid || '',
+        doi: r.doi || '',
+      })),
+    };
+  }
+
+  // ---------- 新增: 专题概览 ----------
+  function buildTopicOverview(key) {
+    const d = sd[key + '_overview'] || {};
+    const es = d.evidence_summary || {};
+    return {
+      title: d.title || '',
+      subtitle: d.subtitle || '',
+      pageKey: d.page_key || key,
+      evidenceSummary: {
+        uniqueRecords: es.unique_records || 0,
+        associatedRecords: es.associated_records || 0,
+        chinaCount: es.china_count || 0,
+        chinaPct: es.china_pct || 0,
+        abCount: es.ab_count || 0,
+        abPct: es.ab_pct || 0,
+        yearRange: es.year_range || {},
+        studyDesigns: es.study_designs || {},
+        evidenceLevels: es.evidence_levels || {},
+        chinaEvidenceBreakdown: es.china_evidence_breakdown || {},
+      },
+      keyFindings: d.key_findings || [],
+      topicValidated: d.topic_validated || null,
+    };
+  }
+
   // ---------- 组装完整应用数据 ----------
   const allLiterature = buildLiterature();
 
@@ -465,6 +576,19 @@
     literatureInsights: buildLiteratureInsights(),
     evidenceGaps: buildEvidenceGaps(),
     keyStudyTables: buildKeyStudyTables(),
+    // 新增数据
+    overallCoreInsight: buildOverallCoreInsight(),
+    homepageInsights: buildHomepageInsights(),
+    marketStrategy: buildMarketStrategy(),
+    latestUpdates: buildLatestUpdates(),
+    screeningOverview: buildTopicOverview('screening'),
+    diagnosisOverview: buildTopicOverview('diagnosis'),
+    treatmentOverview: buildTopicOverview('treatment'),
+    managementOverview: buildTopicOverview('management'),
+    hccOverview: buildTopicOverview('hcc'),
+    allianceOverview: buildTopicOverview('alliance'),
+    insightVersions: sd.insight_versions || {},
+    changeReport: sd.change_report || {},
     // 辅助函数
     filterLiterature: filterLiterature,
     getLiteratureByCluster: getLiteratureByCluster,
@@ -476,14 +600,12 @@
     hasRealData: true
   };
 
-  console.log('[Data Adapter] 文献洞察报告数据加载完成', {
+  console.log('[Data Adapter] 文献洞察报告数据加载完成 v3.0', {
     文献总数: window.APP_DATA.statistics.totalLiterature,
+    中国直接证据: (window.APP_DATA.statistics.chinaEvidenceBreakdown || {}).chinaDirect || 0,
     文献簇数: window.APP_DATA.clusters.length,
-    验证专题数: window.APP_DATA.topics.length,
-    跨文献洞察: window.APP_DATA.literatureInsights.total,
-    策略数: window.APP_DATA.strategy2030.total,
-    联盟行动: window.APP_DATA.allianceActions.total,
-    证据缺口: window.APP_DATA.evidenceGaps.total,
+    首页洞察: window.APP_DATA.homepageInsights.total,
+    市场策略: window.APP_DATA.marketStrategy.strategyTable.length,
     数据版本: window.APP_DATA.meta.version
   });
 

@@ -505,8 +505,66 @@ def build_evidence_card(record):
     source_types = safe_list(record.get("来源类型"))
     china_rels = safe_list(record.get("中国市场相关性"))
 
-    # 中国证据判定: 中国市场相关性为 高/中 视为有中国证据
-    china_evidence = any(r in ("高", "中") for r in china_rels)
+    # 中国证据判定: 基于真实信息判断，不依赖市场标签
+    # 只检查"中国相关依据"字段，不检查摘要（摘要中提到"中国"不代表有中国证据）
+    china_rationale = safe_str(record.get("中国相关依据"))
+    china_implication = safe_str(record.get("对我们的启示"))
+    rationale_lower = china_rationale.lower()
+    implication_lower = china_implication.lower()
+
+    # 否定模式：明确说"未涉及中国"说明不是中国证据
+    negative_patterns = [
+        "未涉及中国", "不涉及中国", "无中国机构", "无中国患者",
+        "未涉及中国人群", "未包含中国", "无中国数据",
+        "不适用中国", "与中国无关", "无直接关联",
+        "未明确中国", "未报告中国", "缺乏中国",
+        "该研究来自国际", "该研究为国际", "来自国际团队",
+        "来自埃及", "来自智利", "来自韩国", "来自日本",
+        "来自美国", "来自欧洲", "来自印度",
+    ]
+
+    # 肯定模式：明确提及中国患者/中心/机构/指南
+    positive_direct = [
+        "中国患者", "中国队列", "中国人群", "中国数据",
+        "中国多中心", "中国医院", "中国机构", "中国研究中心",
+        "中国真实世界", "中国注册研究", "中国全国调查",
+        "中国指南", "中国共识", "中国官方", "中国卫健委",
+        "中国肝癌患者", "中国肝病患者", "中国乙肝患者",
+        "Chinese cohort", "Chinese patients", "China cohort",
+        "multicenter study in China", "Chinese population",
+        "in Chinese patients", "from China",
+    ]
+
+    positive_collab = [
+        "包括中国", "含中国中心", "中国参与", "中国机构参与",
+        "亚太研究", "Asia-Pacific study", "国际多中心含中国",
+    ]
+
+    is_negative = any(p in rationale_lower for p in negative_patterns)
+    has_direct = any(p in rationale_lower for p in positive_direct)
+    has_collab = any(p in rationale_lower for p in positive_collab)
+    has_china_source = any(s in ("中国研究", "中国指南", "中国共识") for s in source_types)
+
+    if has_direct or has_china_source:
+        china_evidence = True
+        china_evidence_type = "中国直接证据"
+        china_evidence_basis = "中国患者/中心/机构/指南"
+        china_evidence_confidence = "高"
+    elif has_collab:
+        china_evidence = True
+        china_evidence_type = "中国机构参与的国际研究"
+        china_evidence_basis = "国际合作研究含中国中心"
+        china_evidence_confidence = "中"
+    elif is_negative:
+        china_evidence = False
+        china_evidence_type = "国际证据"
+        china_evidence_basis = "明确未涉及中国人群/机构"
+        china_evidence_confidence = "高"
+    else:
+        china_evidence = False
+        china_evidence_type = "地区无法判断"
+        china_evidence_basis = "信息不足，无法确认中国证据"
+        china_evidence_confidence = "低"
 
     # 合并文本用于标签和专题
     combined_text = f"{title_cn} {title_en} {abstract} {findings} " + \
@@ -544,6 +602,9 @@ def build_evidence_card(record):
         "source_url": safe_str(record.get("原文链接")) or safe_str(record.get("PubMed")),
         "evidence_level": evidence_level,
         "china_evidence": china_evidence,
+        "china_evidence_type": china_evidence_type,
+        "china_evidence_basis": china_evidence_basis,
+        "china_evidence_confidence": china_evidence_confidence,
         "topic_primary": primary_topic,
         "topic_primary_name": TOPIC_NAMES.get(primary_topic, "其他"),
         "topic_codes": topic_codes,
@@ -735,6 +796,7 @@ def save_statistics(cards, cluster_summaries):
     by_topic_primary = Counter()
     by_study_design = Counter()
     by_source_type = Counter()
+    by_china_type = Counter()
     for c in cards:
         if c.get("year"):
             by_year[str(c["year"])] += 1
@@ -743,6 +805,7 @@ def save_statistics(cards, cluster_summaries):
         by_study_design[c.get("study_design") or "未分类"] += 1
         for st in c.get("source_type", []):
             by_source_type[st] += 1
+        by_china_type[c.get("china_evidence_type", "地区无法判断")] += 1
 
     cluster_stats = {
         s["cluster_id"]: {
@@ -757,6 +820,12 @@ def save_statistics(cards, cluster_summaries):
         "total_literature": total,
         "china_evidence_count": china_count,
         "china_evidence_pct": round(china_count / total * 100, 1) if total else 0,
+        "china_evidence_breakdown": {
+            "china_direct": by_china_type.get("中国直接证据", 0),
+            "china_collab": by_china_type.get("中国机构参与的国际研究", 0),
+            "international": by_china_type.get("国际证据", 0),
+            "unknown": by_china_type.get("地区无法判断", 0),
+        },
         "by_year": dict(sorted(by_year.items())),
         "by_evidence_level": dict(sorted(by_evidence_level.items())),
         "by_topic_primary": dict(sorted(by_topic_primary.items())),
@@ -764,6 +833,8 @@ def save_statistics(cards, cluster_summaries):
         "by_source_type": dict(by_source_type.most_common()),
         "clusters": cluster_stats,
         "total_clusters": len(cluster_summaries),
+        "cluster_associated_total": sum(s["total_records"] for s in cluster_summaries),
+        "cluster_unique_total": total,
         "last_sync": now,
         "data_source": "literature_cleaned.ndjson",
     }

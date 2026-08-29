@@ -1,0 +1,84 @@
+{
+  "version": "1.0",
+  "updated_at": "2026-08-29T13:43:28.093710+08:00",
+  "page_key": "hcc",
+  "cluster_ids": [
+    "C03_hcc_residual_risk",
+    "C07_hcc_screening",
+    "C08_hcc_treatment"
+  ],
+  "evidence_summary": {
+    "unique_records": 758,
+    "associated_records": 1799,
+    "china_count": 608,
+    "china_pct": 80.2,
+    "ab_count": 437,
+    "ab_pct": 57.7,
+    "year_range": {
+      "min": 2018,
+      "max": 2026
+    },
+    "study_designs": {
+      "未分类": 143,
+      "Meta分析": 122,
+      "队列研究": 102,
+      "综述": 91,
+      "基础研究": 86,
+      "指南/共识": 68,
+      "RCT": 67,
+      "回顾性队列": 26
+    },
+    "evidence_levels": {
+      "A": 263,
+      "B": 174,
+      "C": 319,
+      "D": 2
+    },
+    "china_evidence_breakdown": {
+      "中国直接证据": 592,
+      "地区无法判断": 144,
+      "中国机构参与的国际研究": 16,
+      "国际证据": 6
+    }
+  },
+  "key_findings": [
+    {
+      "title": "晚期肝细胞癌一线系统治疗疗效与安全性整合：网络荟萃分析",
+      "result": "1. 共纳入17项III期随机对照试验，涉及12,727例晚期HCC患者，比较一线系统治疗与索拉非尼或仑伐替尼的疗效和安全性。\n2. 与索拉非尼相比，Nivolumab-Ipilimumab（HR 0.61, 95%CI 0.44-0.84）、Atezolizumab-Bevacizumab（HR 0.66, 95%CI 0.48-0.90）、Durvalumab-Tremelimumab（HR ",
+      "level": "A",
+      "year": 2026,
+      "journal": "JNCI cancer spectrum"
+    },
+    {
+      "title": "术前预后营养指数对肝细胞癌根治性肝切除术后预后的预测价值：回顾性队列研究与荟萃分析",
+      "result": "1. 本研究回顾性分析了187例接受根治性肝切除术的HCC患者，发现术前低PNI（<45）与较差的无复发生存期（RFS）显著相关（HR 1.762, 95% CI 1.066-2.911, p=0.027）。\n2. 高PNI（≥45）组与低PNI组的5年总生存率（OS）分别为76.7% vs 50.1%（p=0.001），5年RFS率分别为47.0% vs 28.9%（p=0.001）。\n3. 在",
+      "level": "A",
+      "year": 2019,
+      "journal": "Journal of investigative surgery : the official journal of the Academy of Surgical Research"
+    },
+    {
+      "title": "肿瘤相关巨噬细胞在肝细胞癌中的预后及临床价值的Meta分析",
+      "result": "1. 本Meta分析纳入17篇文章，共3547例肝细胞癌（HCC）患者，评估肿瘤相关巨噬细胞（TAMs）与预后的关联。\n2. 肿瘤内（IT）高密度M2型TAMs与总生存期（OS）显著相关（HR=1.58，95%CI=1.15-2.00），其中CD206+M2型TAMs的关联更显著（HR=1.74，95%CI=1.26-2.21）。\n3. 肿瘤内或瘤周（PT）高表达CD68+M1型TAMs与OS无显",
+      "level": "A",
+      "year": 2019,
+      "journal": "Journal of investigative surgery : the official journal of the Academy of Surgical Research"
+    },
+    {
+      "title": "肝细胞癌免疫检查点抑制剂不良事件的系统评价与荟萃分析",
+      "result": "1. 共纳入47项研究，涉及6472例接受免疫检查点抑制剂（ICIs）治疗的肝细胞癌（HCC）患者。\n2. 所有级别治疗相关不良事件（trAEs）的合并发生率为83.4%（95% CI 77.0-89.1%），≥3级trAEs发生率为33.0%（95% CI 26.9-39.5%）。\n3. 所有级别免疫相关不良事件（irAEs）的合并发生率为34%（95% CI 22-47%），≥3级irAEs发",
+      "level": "A",
+      "year": 2022,
+      "journal": "Clinical and experimental medicine"
+    },
+    {
+      "title": "2018 LI-RADS与改良LI-RADS（mLI-RADS）的比较性能：个体参与者数据荟萃分析",
+      "result": "1. 本研究为基于个体参与者数据（IPD）的系统评价和荟萃分析，纳入12项回顾性研究，共1817例HCC高风险患者的2223个肝脏观察病灶。\n2. 与LI-RADS v2018相比，mLI-RADS的LR-5类别（明确HCC）显示出更高的敏感性（61.3% vs. 46.5%，P<0.001），而阳性预测值（85.3% vs. 86.3%，P=0.89）和特异性（85.8% vs. 90.8%，P",
+      "level": "A",
+      "year": 2023,
+      "journal": "Journal of magnetic resonance imaging : JMRI"
+    }
+  ],
+  "topic_validated": "topic3_hcc_residual_risk",
+  "title": "HBV到HCC全病程证据",
+  "subtitle": "抗病毒治疗与HCC一级预防、残余风险、风险预测、HCC治疗与多学科协作"
+}

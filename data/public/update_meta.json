@@ -4,5 +4,8 @@
   "feishu_rev": 1136,
   "data_source": "feishu_hbv_full.ndjson",
   "page_count": 3,
-  "has_more": false
+  "has_more": false,
+  "updated_at": "2026-08-29T13:43:28.093710+08:00",
+  "insight_version": "3.0",
+  "last_full_rebuild": "2026-08-29T13:43:28.093710+08:00"
 }
