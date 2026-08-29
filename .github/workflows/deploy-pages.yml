@@ -31,7 +31,19 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Check Feishu credentials
+        id: check_secrets
+        run: |
+          if [ -n "${{ secrets.FEISHU_APP_ID }}" ] && [ -n "${{ secrets.FEISHU_APP_SECRET }}" ]; then
+            echo "has_secrets=true" >> $GITHUB_OUTPUT
+            echo "Feishu credentials available, will sync data"
+          else
+            echo "has_secrets=false" >> $GITHUB_OUTPUT
+            echo "Feishu credentials not available, using existing data"
+          fi
+
       - name: Sync Feishu data
+        if: steps.check_secrets.outputs.has_secrets == 'true'
         env:
           FEISHU_APP_ID: ${{ secrets.FEISHU_APP_ID }}
           FEISHU_APP_SECRET: ${{ secrets.FEISHU_APP_SECRET }}
@@ -42,17 +54,21 @@ jobs:
           python scripts/normalize_records.py
 
       - name: Data quality audit
+        if: steps.check_secrets.outputs.has_secrets == 'true'
         run: python scripts/audit_data_quality.py
 
       - name: Build evidence cards and clusters
+        if: steps.check_secrets.outputs.has_secrets == 'true'
         run: |
           python scripts/build_evidence_cards.py
           python scripts/build_evidence_clusters.py
 
       - name: Validate three topics
+        if: steps.check_secrets.outputs.has_secrets == 'true'
         run: python scripts/validate_three_topics.py
 
       - name: Generate insight files
+        if: steps.check_secrets.outputs.has_secrets == 'true'
         run: python scripts/generate_insight_files.py
 
       - name: Build data.js
