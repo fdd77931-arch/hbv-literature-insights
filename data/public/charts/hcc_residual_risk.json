@@ -1,0 +1,165 @@
+{
+  "chart_id": "hcc_residual_risk",
+  "chart_title": "HBV相关HCC残余风险分层矩阵",
+  "chart_subtitle": "抗病毒治疗后仍存在的HCC风险因素及分层监测策略",
+  "generated_at": "2026-08-29T23:07:45.901947",
+  "risk_factors": [
+    {
+      "factor": "年龄(>50岁)",
+      "evidence_strength": "strong",
+      "risk_contribution": "high",
+      "related_studies": 2,
+      "china_evidence": 2,
+      "source_ids": [
+        "recvtujWgv4FdV",
+        "recvtA02ZVYAq2"
+      ]
+    },
+    {
+      "factor": "男性",
+      "evidence_strength": "strong",
+      "risk_contribution": "medium",
+      "related_studies": 2,
+      "china_evidence": 2,
+      "source_ids": [
+        "recvtzUeLMTAKO",
+        "recvtAehAYlLHK"
+      ]
+    },
+    {
+      "factor": "肝硬化",
+      "evidence_strength": "strong",
+      "risk_contribution": "high",
+      "related_studies": 13,
+      "china_evidence": 10,
+      "source_ids": [
+        "recvtzE7vBeGa2",
+        "recvtzJwmedK9o",
+        "recvtzJSCbqvUe",
+        "recvtzPLq7Eclr",
+        "recvtzPVi7p5NN"
+      ]
+    },
+    {
+      "factor": "HBV DNA高水平",
+      "evidence_strength": "strong",
+      "risk_contribution": "high",
+      "related_studies": 3,
+      "china_evidence": 1,
+      "source_ids": [
+        "recvtuisNfhPFr",
+        "recvtA93It2TmO",
+        "recvtAcB9uDjUJ"
+      ]
+    },
+    {
+      "factor": "HBsAg高水平",
+      "evidence_strength": "moderate",
+      "risk_contribution": "medium",
+      "related_studies": 6,
+      "china_evidence": 6,
+      "source_ids": [
+        "recvtzE7vBeGa2",
+        "recvtzJKexj6Ev",
+        "recvtzRenvxZHY",
+        "recvtA4fxnWLHV",
+        "recvtA6my7zBMF"
+      ]
+    },
+    {
+      "factor": "HBeAg阳性",
+      "evidence_strength": "moderate",
+      "risk_contribution": "medium",
+      "related_studies": 0,
+      "china_evidence": 0,
+      "source_ids": []
+    },
+    {
+      "factor": "ALT持续异常",
+      "evidence_strength": "moderate",
+      "risk_contribution": "medium",
+      "related_studies": 0,
+      "china_evidence": 0,
+      "source_ids": []
+    },
+    {
+      "factor": "糖尿病/代谢综合征",
+      "evidence_strength": "moderate",
+      "risk_contribution": "medium",
+      "related_studies": 20,
+      "china_evidence": 19,
+      "source_ids": [
+        "recvtze3ZYkFBz",
+        "recvtzAuzTseFn",
+        "recvtzGf8QmoQz",
+        "recvtzHaoApev4",
+        "recvtzHfpWQNWh"
+      ]
+    },
+    {
+      "factor": "饮酒",
+      "evidence_strength": "moderate",
+      "risk_contribution": "medium",
+      "related_studies": 5,
+      "china_evidence": 5,
+      "source_ids": [
+        "recvtzkUK8pEC9",
+        "recvtzl5oRrqne",
+        "recvtzlyH9pzmW",
+        "recvtzId0JHERv",
+        "recvtzS7DGFZwV"
+      ]
+    },
+    {
+      "factor": "HBV基因型C",
+      "evidence_strength": "weak",
+      "risk_contribution": "low",
+      "related_studies": 1,
+      "china_evidence": 1,
+      "source_ids": [
+        "recvtzqxTw7iXd"
+      ]
+    },
+    {
+      "factor": "家族史",
+      "evidence_strength": "moderate",
+      "risk_contribution": "medium",
+      "related_studies": 2,
+      "china_evidence": 2,
+      "source_ids": [
+        "recvtzGYD4bQhP",
+        "recvtzVdFFf9zB"
+      ]
+    }
+  ],
+  "risk_strata": [
+    {
+      "level": "低风险",
+      "criteria": "年轻、无肝硬化、HBV DNA低水平、HBeAg阴性",
+      "monitoring": "每年1次常规检查",
+      "evidence_count": 1,
+      "color": "#2d8659"
+    },
+    {
+      "level": "中风险",
+      "criteria": "中年、有纤维化、HBV DNA中等水平",
+      "monitoring": "每6个月超声+AFP",
+      "evidence_count": 7,
+      "color": "#00688f"
+    },
+    {
+      "level": "高风险",
+      "criteria": "肝硬化、年龄>50岁、家族史、HBV DNA高水平",
+      "monitoring": "每3-6个月增强监测",
+      "evidence_count": 3,
+      "color": "#c75d2c"
+    }
+  ],
+  "methodology": "风险因素的证据强度基于相关研究数量和研究设计综合评估。风险分层为临床指南常见分层逻辑的总结，具体风险评估需结合患者个体情况。",
+  "key_insight": "即使获得病毒学抑制，肝硬化和高龄患者仍存在HCC残余风险，需要长期规范监测。",
+  "market_opportunity": "HCC分层监测服务和高危人群管理项目是重要的市场机会。",
+  "recommended_kpi": [
+    "高危人群HCC监测率",
+    "早期HCC发现率"
+  ]
+}

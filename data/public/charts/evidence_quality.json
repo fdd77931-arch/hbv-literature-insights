@@ -1,0 +1,38 @@
+{
+  "chart_id": "evidence_quality_distribution",
+  "chart_title": "证据等级分布",
+  "chart_subtitle": "A级=指南/Meta/RCT | B级=队列/真实世界 | C级=横断面/综述 | D级=病例报告/述评",
+  "generated_at": "2026-08-29T23:07:45.901947",
+  "total_literature": 1001,
+  "levels": [
+    {
+      "key": "A",
+      "name": "A级（指南/Meta/RCT）",
+      "count": 336,
+      "color": "#00688f",
+      "percentage": 33.6
+    },
+    {
+      "key": "B",
+      "name": "B级（队列/真实世界）",
+      "count": 223,
+      "color": "#2a80a3",
+      "percentage": 22.3
+    },
+    {
+      "key": "C",
+      "name": "C级（横断面/综述）",
+      "count": 438,
+      "color": "#c75d2c",
+      "percentage": 43.8
+    },
+    {
+      "key": "D",
+      "name": "D级（病例报告/述评）",
+      "count": 4,
+      "color": "#d4dde5",
+      "percentage": 0.4
+    }
+  ],
+  "methodology": "证据等级基于研究设计类型进行分级。同一文献可能归入多个专题，但等级仅计算一次。"
+}

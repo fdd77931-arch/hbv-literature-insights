@@ -1,0 +1,218 @@
+{
+  "chart_id": "market_strategy_map",
+  "chart_title": "市场行动优先级矩阵",
+  "chart_subtitle": "X轴：市场价值 | Y轴：实施难度(从下到上递增) | 颜色：优先级",
+  "generated_at": "2026-08-29T23:07:45.901947",
+  "strategies": [
+    {
+      "name": "PegIFNα优势人群推广",
+      "category": "治疗",
+      "priority": "high",
+      "market_value": 85,
+      "implementation_difficulty": 35,
+      "evidence_basis": "多项研究显示经治转换PegIFNα可提高HBsAg清除率",
+      "target_population": "NA经治患者、非活动性携带者、优势人群",
+      "core_action": "建立优势人群识别路径和转换治疗方案",
+      "kpis": [
+        "优势人群识别率",
+        "转换治疗率",
+        "HBsAg清除率"
+      ],
+      "compliance_note": "不得超说明书推广，需严格遵循指南适应证",
+      "evidence_count": 46,
+      "source_ids": [
+        "recvs9yQpvReIQ",
+        "recvs9GLl4SLOQ",
+        "recvs9GPD0eDGH",
+        "recvs9H7ea8bgg",
+        "recvs9Ho7mkp96",
+        "recvs9HqLQWct7",
+        "recvsHaUhqczeb",
+        "recvtgghwsHx9v"
+      ],
+      "bubble_size": 50
+    },
+    {
+      "name": "qHBsAg检测生态建设",
+      "category": "诊断",
+      "priority": "high",
+      "market_value": 80,
+      "implementation_difficulty": 55,
+      "evidence_basis": "qHBsAg在治疗监测、停药决策和优势人群筛选中有重要价值",
+      "target_population": "接受抗病毒治疗的CHB患者、基层医院",
+      "core_action": "推动qHBsAg检测标准化和基层可及性",
+      "kpis": [
+        "qHBsAg检测率",
+        "基层检测覆盖率"
+      ],
+      "compliance_note": "检测项目推广需符合相关法规",
+      "evidence_count": 18,
+      "source_ids": [
+        "recvs9GUHMYT7O",
+        "recvsjN8YhXifT",
+        "recvtujF0Sgd3r",
+        "recvtzDT2kJHud",
+        "recvtzEa1Y4ANI",
+        "recvtzEB6KKREr",
+        "recvtzFOkd8RPa",
+        "recvtzGrfQtNO2"
+      ],
+      "bubble_size": 43
+    },
+    {
+      "name": "患者长期管理项目",
+      "category": "管理",
+      "priority": "high",
+      "market_value": 78,
+      "implementation_difficulty": 50,
+      "evidence_basis": "治疗依从性和长期留存是实现2030目标的关键瓶颈",
+      "target_population": "所有接受抗病毒治疗的患者",
+      "core_action": "数字化随访系统+患者教育+基层管理网络",
+      "kpis": [
+        "12个月留存率",
+        "依从性改善率"
+      ],
+      "compliance_note": "患者管理项目需符合医学伦理和合规要求",
+      "evidence_count": 3,
+      "source_ids": [
+        "recvtzqRUWiDyT",
+        "recvtzTLExbS7N",
+        "recvtAfjgCE0T2"
+      ],
+      "bubble_size": 28
+    },
+    {
+      "name": "HCC分层监测升级",
+      "category": "HCC",
+      "priority": "high",
+      "market_value": 75,
+      "implementation_difficulty": 55,
+      "evidence_basis": "抗病毒后仍存在HCC残余风险，高危人群需强化监测",
+      "target_population": "肝硬化患者、长期抗病毒治疗患者",
+      "core_action": "建立风险分层工具和规范化监测路径",
+      "kpis": [
+        "高危人群监测率",
+        "早期HCC发现率"
+      ],
+      "compliance_note": "监测方案需基于指南推荐",
+      "evidence_count": 4,
+      "source_ids": [
+        "recvtt1PpAHID8",
+        "recvtzVit5q2ji",
+        "recvtAcTk3ZjhF",
+        "recvtAdAvtOcGa"
+      ],
+      "bubble_size": 29
+    },
+    {
+      "name": "基层筛查转诊网络",
+      "category": "筛查",
+      "priority": "high",
+      "market_value": 82,
+      "implementation_difficulty": 60,
+      "evidence_basis": "筛查后确诊和转诊是连续管理的第一个断点",
+      "target_population": "高危人群、基层医疗机构",
+      "core_action": "医院-基层-体检联动筛查转诊体系",
+      "kpis": [
+        "筛查覆盖率",
+        "阳性转诊率",
+        "确诊率"
+      ],
+      "compliance_note": "筛查项目需符合公共卫生政策",
+      "evidence_count": 6,
+      "source_ids": [
+        "recvtzCZPr988Q",
+        "recvtzJtlld0iw",
+        "recvtzJz2zfJZn",
+        "recvtzR78cWEBc",
+        "recvtzVnsqnmo9",
+        "recvtA8nJAtwh5"
+      ],
+      "bubble_size": 31
+    },
+    {
+      "name": "功能性治愈中心建设",
+      "category": "治疗",
+      "priority": "medium",
+      "market_value": 70,
+      "implementation_difficulty": 65,
+      "evidence_basis": "功能性治愈需要多学科协作和规范化管理",
+      "target_population": "优势人群、中心医院",
+      "core_action": "区域功能性治愈示范中心建设",
+      "kpis": [
+        "中心数量",
+        "治愈病例数"
+      ],
+      "compliance_note": "功能性治愈定义需符合学术共识",
+      "evidence_count": 84,
+      "source_ids": [
+        "recB3ol2hVGaS4",
+        "recvs9GGji9bit",
+        "recvs9GN4pVfcp",
+        "recvs9H7ea8bgg",
+        "recvs9H9kuUGN3",
+        "recvs9HekkBSKb",
+        "recvs9HgTNixg1",
+        "recvs9Hju1qRqw"
+      ],
+      "bubble_size": 50
+    },
+    {
+      "name": "新药管线竞争监测",
+      "category": "战略",
+      "priority": "medium",
+      "market_value": 65,
+      "implementation_difficulty": 40,
+      "evidence_basis": "siRNA/ASO等新疗法进展迅速，可能改变治疗格局",
+      "target_population": "医学部、市场部战略决策",
+      "core_action": "持续管线监测和竞争情报分析",
+      "kpis": [
+        "监测覆盖率",
+        "预警响应时间"
+      ],
+      "compliance_note": "情报来源需合法合规",
+      "evidence_count": 27,
+      "source_ids": [
+        "recvtzaNjLo9dF",
+        "recvtzdCFXlZ4g",
+        "recvtzlDZwlgzh",
+        "recvtzqRUWiDyT",
+        "recvtzqUpzIfYN",
+        "recvtzA2ODTKLj",
+        "recvtzCUGDmYo0",
+        "recvtzErQWJcyo"
+      ],
+      "bubble_size": 50
+    },
+    {
+      "name": "医生教育与能力建设",
+      "category": "联盟",
+      "priority": "medium",
+      "market_value": 60,
+      "implementation_difficulty": 30,
+      "evidence_basis": "基层医生诊疗规范化水平有待提升",
+      "target_population": "基层医生、中青年医生",
+      "core_action": "指南培训、病例研讨、学术交流",
+      "kpis": [
+        "培训人次",
+        "指南依从性"
+      ],
+      "compliance_note": "医学教育项目需符合相关规定",
+      "evidence_count": 13,
+      "source_ids": [
+        "rec7yItpBGZjVk",
+        "recqKtS6wWDMnw",
+        "recvtzeaVx4ag9",
+        "recvtzletx62Zk",
+        "recvtzDJDZOMzY",
+        "recvtzFyT0PyMK",
+        "recvtzFJumdquy",
+        "recvtzTAWbKbq0"
+      ],
+      "bubble_size": 38
+    }
+  ],
+  "methodology": "市场价值基于患者规模、临床需求和竞争格局综合评估。实施难度基于技术成熟度、政策环境和资源需求综合评估。所有策略必须在合规框架内实施。",
+  "key_insight": "PegIFNα优势人群推广、qHBsAg检测生态和患者长期管理是当前最具性价比的三大市场行动方向。",
+  "compliance_note": "所有市场行动必须严格遵守相关法律法规，不得超适应证推广，不得夸大疗效，不得以学术活动名义进行不当营销。"
+}

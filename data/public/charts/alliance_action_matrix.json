@@ -1,0 +1,195 @@
+{
+  "chart_id": "alliance_action_matrix",
+  "chart_title": "全国肝病联盟能力建设优先级矩阵",
+  "chart_subtitle": "X轴：实施可行性 | Y轴：对2030目标影响力 | 气泡大小：支持文献量",
+  "generated_at": "2026-08-29T23:07:45.901947",
+  "domains": [
+    {
+      "domain": "筛查网络",
+      "priority": "high",
+      "feasibility": 70,
+      "impact": 90,
+      "description": "建立医院-基层-体检联动的筛查转诊网络",
+      "related_topics": [
+        "T1",
+        "T7"
+      ],
+      "kpis": [
+        "筛查覆盖率",
+        "阳性转诊率",
+        "确诊率"
+      ],
+      "evidence_count": 174,
+      "china_evidence": 138,
+      "bubble_size": 50
+    },
+    {
+      "domain": "诊断标准化",
+      "priority": "high",
+      "feasibility": 80,
+      "impact": 75,
+      "description": "推广标准化HBV诊断和评估流程",
+      "related_topics": [
+        "T3",
+        "T5"
+      ],
+      "kpis": [
+        "qHBsAg检测率",
+        "纤维化评估率"
+      ],
+      "evidence_count": 384,
+      "china_evidence": 300,
+      "bubble_size": 50
+    },
+    {
+      "domain": "分层治疗",
+      "priority": "high",
+      "feasibility": 65,
+      "impact": 85,
+      "description": "建立基于患者分层的个体化治疗路径",
+      "related_topics": [
+        "T3",
+        "T4"
+      ],
+      "kpis": [
+        "规范治疗率",
+        "优势人群识别率"
+      ],
+      "evidence_count": 415,
+      "china_evidence": 330,
+      "bubble_size": 50
+    },
+    {
+      "domain": "功能性治愈中心",
+      "priority": "medium",
+      "feasibility": 45,
+      "impact": 80,
+      "description": "建设区域功能性治愈示范中心",
+      "related_topics": [
+        "T3",
+        "T4"
+      ],
+      "kpis": [
+        "中心数量",
+        "治愈病例数"
+      ],
+      "evidence_count": 415,
+      "china_evidence": 330,
+      "bubble_size": 50
+    },
+    {
+      "domain": "患者长期管理",
+      "priority": "high",
+      "feasibility": 55,
+      "impact": 85,
+      "description": "建立数字化患者管理和随访体系",
+      "related_topics": [
+        "T10"
+      ],
+      "kpis": [
+        "12个月留存率",
+        "依从性改善率"
+      ],
+      "evidence_count": 0,
+      "china_evidence": 0,
+      "bubble_size": 20.0
+    },
+    {
+      "domain": "HCC风险监测",
+      "priority": "high",
+      "feasibility": 50,
+      "impact": 90,
+      "description": "高危人群HCC分层监测网络",
+      "related_topics": [
+        "T6",
+        "T7"
+      ],
+      "kpis": [
+        "监测覆盖率",
+        "早期发现率"
+      ],
+      "evidence_count": 577,
+      "china_evidence": 470,
+      "bubble_size": 50
+    },
+    {
+      "domain": "数据登记与RWS",
+      "priority": "medium",
+      "feasibility": 35,
+      "impact": 75,
+      "description": "全国性HBV患者登记和真实世界研究",
+      "related_topics": [
+        "T1",
+        "T6"
+      ],
+      "kpis": [
+        "登记人数",
+        "研究产出"
+      ],
+      "evidence_count": 421,
+      "china_evidence": 338,
+      "bubble_size": 50
+    },
+    {
+      "domain": "医生教育",
+      "priority": "medium",
+      "feasibility": 85,
+      "impact": 65,
+      "description": "基层和中心医生规范化培训",
+      "related_topics": [
+        "T1",
+        "T4"
+      ],
+      "kpis": [
+        "培训人次",
+        "指南依从性"
+      ],
+      "evidence_count": 200,
+      "china_evidence": 149,
+      "bubble_size": 50
+    },
+    {
+      "domain": "患者教育",
+      "priority": "medium",
+      "feasibility": 75,
+      "impact": 60,
+      "description": "患者疾病认知和自我管理教育",
+      "related_topics": [
+        "T10"
+      ],
+      "kpis": [
+        "疾病认知率",
+        "治疗依从率"
+      ],
+      "evidence_count": 0,
+      "china_evidence": 0,
+      "bubble_size": 20.0
+    },
+    {
+      "domain": "区域转诊协作",
+      "priority": "high",
+      "feasibility": 40,
+      "impact": 80,
+      "description": "基层-中心-区域中心三级转诊体系",
+      "related_topics": [
+        "T1",
+        "T6"
+      ],
+      "kpis": [
+        "转诊通畅率",
+        "上下转率"
+      ],
+      "evidence_count": 421,
+      "china_evidence": 338,
+      "bubble_size": 50
+    }
+  ],
+  "methodology": "可行性和影响力基于现有证据强度、实施复杂度和潜在患者获益综合评估。优先级=影响力×0.6 + 可行性×0.4。",
+  "key_insight": "筛查网络、患者长期管理和HCC风险监测是高影响力且有一定可行性的优先建设领域。",
+  "market_opportunity": "联盟建设为企业提供了学术平台建设、患者管理项目和真实世界研究的多重机会。",
+  "recommended_kpi": [
+    "联盟成员数",
+    "筛查转诊量",
+    "管理患者数"
+  ]
+}

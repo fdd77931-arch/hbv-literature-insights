@@ -59,6 +59,30 @@ def build_data_js():
     insight_versions = load_json('insight_versions.json')
     change_report = load_json('change_report.json')
 
+    # 加载图表数据
+    charts_dir = os.path.join(DATA_PUBLIC, 'charts')
+    chart_files = [
+        '2030_gap.json',
+        'screening_funnel.json',
+        'diagnosis_biomarker_landscape.json',
+        'treatment_population_outcomes.json',
+        'functional_cure_pipeline.json',
+        'patient_retention_funnel.json',
+        'hcc_residual_risk.json',
+        'alliance_action_matrix.json',
+        'market_strategy_map.json',
+        'evidence_quality.json',
+    ]
+    chart_data = {}
+    for cf in chart_files:
+        chart_path = os.path.join(charts_dir, cf)
+        if os.path.exists(chart_path):
+            with open(chart_path, 'r', encoding='utf-8') as f:
+                chart_key = cf.replace('.json', '')
+                chart_data[chart_key] = json.load(f)
+        else:
+            print(f"[WARN] 缺少图表数据: {cf}")
+
     # 加载旧数据（兼容）
     insights = load_json('insights.json')
     report = load_json('report.json')
@@ -91,8 +115,9 @@ def build_data_js():
         'change_report': change_report,
         'insights': insights,
         'report': report,
+        'charts': chart_data,
         'generated_at': datetime.now().isoformat(),
-        'version': '3.0.0'
+        'version': '4.0.0'
     }
 
     # 生成JavaScript
@@ -131,6 +156,7 @@ window.SITE_DATA = {json.dumps(site_data, ensure_ascii=False)};
     print(f"  专题综述: {'已加载' if topic_reviews else '缺失'}")
     print(f"  证据缺口: {'已加载' if evidence_gaps else '缺失'}")
     print(f"  联盟行动: {'已加载' if alliance_actions else '缺失'}")
+    print(f"  策略图表: {len(chart_data)} 个")
 
     return True
 

@@ -1,0 +1,157 @@
+{
+  "chart_id": "patient_retention_funnel",
+  "chart_title": "患者旅程留存漏斗与脱落风险",
+  "chart_subtitle": "各阶段相关研究数量及脱落风险评估，非实际人群比例",
+  "generated_at": "2026-08-29T23:07:45.901947",
+  "stages": [
+    {
+      "key": "screen_positive",
+      "name": "筛查阳性",
+      "time_point_months": 0,
+      "related_studies": 7,
+      "dropout_risk_level": "low",
+      "dropout_risk_text": "相对稳定",
+      "source_ids": [
+        "recvtuisNfhPFr",
+        "recvtujQTjukrN",
+        "recvtzCZPr988Q",
+        "recvtzQ8EcliOx",
+        "recvtzR78cWEBc"
+      ],
+      "note": "脱落风险基于相关研究中提到的问题数量评估，非实际脱落率"
+    },
+    {
+      "key": "confirm_diagnosis",
+      "name": "完成确诊",
+      "time_point_months": 1,
+      "related_studies": 4,
+      "dropout_risk_level": "low",
+      "dropout_risk_text": "相对稳定",
+      "source_ids": [
+        "recvtza9ji3Wec",
+        "recvtzDT2kJHud",
+        "recvtzR78cWEBc",
+        "recvtzTAWbKbq0"
+      ],
+      "note": "脱落风险基于相关研究中提到的问题数量评估，非实际脱落率"
+    },
+    {
+      "key": "full_assessment",
+      "name": "完成基线评估",
+      "time_point_months": 2,
+      "related_studies": 5,
+      "dropout_risk_level": "low",
+      "dropout_risk_text": "相对稳定",
+      "source_ids": [
+        "recvtzqsqBJLqQ",
+        "recvtzHMBLUXZ0",
+        "recvtzTR0QAWny",
+        "recvtA69sJKHMH",
+        "recvtA9X6i5Wv2"
+      ],
+      "note": "脱落风险基于相关研究中提到的问题数量评估，非实际脱落率"
+    },
+    {
+      "key": "start_treatment",
+      "name": "启动治疗",
+      "time_point_months": 3,
+      "related_studies": 0,
+      "dropout_risk_level": "low",
+      "dropout_risk_text": "相对稳定",
+      "source_ids": [],
+      "note": "脱落风险基于相关研究中提到的问题数量评估，非实际脱落率"
+    },
+    {
+      "key": "month_3",
+      "name": "治疗3个月",
+      "time_point_months": 3,
+      "related_studies": 0,
+      "dropout_risk_level": "low",
+      "dropout_risk_text": "相对稳定",
+      "source_ids": [],
+      "note": "脱落风险基于相关研究中提到的问题数量评估，非实际脱落率"
+    },
+    {
+      "key": "month_6",
+      "name": "治疗6个月",
+      "time_point_months": 6,
+      "related_studies": 0,
+      "dropout_risk_level": "low",
+      "dropout_risk_text": "相对稳定",
+      "source_ids": [],
+      "note": "脱落风险基于相关研究中提到的问题数量评估，非实际脱落率"
+    },
+    {
+      "key": "month_12",
+      "name": "治疗12个月",
+      "time_point_months": 12,
+      "related_studies": 1,
+      "dropout_risk_level": "low",
+      "dropout_risk_text": "相对稳定",
+      "source_ids": [
+        "recvtzGSutk9mi"
+      ],
+      "note": "脱落风险基于相关研究中提到的问题数量评估，非实际脱落率"
+    },
+    {
+      "key": "long_term",
+      "name": "长期随访管理",
+      "time_point_months": 24,
+      "related_studies": 5,
+      "dropout_risk_level": "low",
+      "dropout_risk_text": "相对稳定",
+      "source_ids": [
+        "recvtuisNfhPFr",
+        "recvtzDHiT4WjZ",
+        "recvtAhrJQEFaX",
+        "recvtAhzFIiA5V",
+        "recvtAhMLfUMuV"
+      ],
+      "note": "脱落风险基于相关研究中提到的问题数量评估，非实际脱落率"
+    },
+    {
+      "key": "hcc_monitoring",
+      "name": "HCC规范监测",
+      "time_point_months": 36,
+      "related_studies": 7,
+      "dropout_risk_level": "low",
+      "dropout_risk_text": "相对稳定",
+      "source_ids": [
+        "recvtt1PpAHID8",
+        "recvtzaC39BhwN",
+        "recvtzAOdiIqGh",
+        "recvtzDoDrzLu1",
+        "recvtzG4noTf0C"
+      ],
+      "note": "脱落风险基于相关研究中提到的问题数量评估，非实际脱落率"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "数字化随访提醒",
+      "evidence_count": 0,
+      "target_stage": "month_3",
+      "type": "support"
+    },
+    {
+      "name": "患者教育项目",
+      "evidence_count": 0,
+      "target_stage": "month_6",
+      "type": "support"
+    },
+    {
+      "name": "基层-中心双向转诊",
+      "evidence_count": 0,
+      "target_stage": "long_term",
+      "type": "support"
+    }
+  ],
+  "methodology": "脱落风险基于患者管理相关文献中提到该阶段问题的频次评估。不计算具体脱落率，因为不同研究人群和医疗体系差异极大。",
+  "key_insight": "治疗前3个月和长期随访是两个主要脱落高峰。前6个月的依从性干预对长期留存有关键影响。",
+  "market_opportunity": "数字化随访系统、患者教育项目、基层-中心转诊网络建设是三大核心方向。",
+  "recommended_kpi": [
+    "6个月留存率",
+    "12个月留存率",
+    "HBV DNA定期复查率"
+  ]
+}

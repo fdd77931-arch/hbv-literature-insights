@@ -5,6 +5,9 @@
 # Private data
 data/private/
 *.log
+*.manifest.json
+*_literature.ndjson
+*_insights.ndjson
 
 # Dependencies
 node_modules/

@@ -1,0 +1,147 @@
+{
+  "chart_id": "screening_funnel",
+  "chart_title": "筛查—确诊—治疗—长期管理患者旅程",
+  "chart_subtitle": "各环节证据覆盖量，不代表全国实际诊疗率",
+  "generated_at": "2026-08-29T23:07:45.901947",
+  "stages": [
+    {
+      "key": "target",
+      "name": "目标高危人群",
+      "evidence_note": "慢性HBV感染者估计基数",
+      "related_studies": 18,
+      "ab_evidence": 17,
+      "has_china_evidence": true,
+      "sample_ids": [
+        "recvtzkUK8pEC9",
+        "recvtzAOdiIqGh",
+        "recvtzCZPr988Q",
+        "recvtzGSutk9mi",
+        "recvtzJ7NpCz92"
+      ],
+      "retention_pct": null,
+      "data_note": "展示相关研究数量，非实际人群比例"
+    },
+    {
+      "key": "screened",
+      "name": "接受筛查",
+      "evidence_note": "医院/体检/重点人群筛查研究",
+      "related_studies": 7,
+      "ab_evidence": 6,
+      "has_china_evidence": true,
+      "sample_ids": [
+        "recvtzCZPr988Q",
+        "recvtzEB6KKREr",
+        "recvtzJtlld0iw",
+        "recvtzJz2zfJZn",
+        "recvtzR78cWEBc"
+      ],
+      "retention_pct": null,
+      "data_note": "展示相关研究数量，非实际人群比例"
+    },
+    {
+      "key": "diagnosed",
+      "name": "HBsAg阳性确认",
+      "evidence_note": "筛查阳性后确诊研究",
+      "related_studies": 42,
+      "ab_evidence": 30,
+      "has_china_evidence": true,
+      "sample_ids": [
+        "recvtujtfoRA3o",
+        "recvtza9ji3Wec",
+        "recvtzapatGwxr",
+        "recvtzlGy7FqQx",
+        "recvtzDT2kJHud"
+      ],
+      "retention_pct": null,
+      "data_note": "展示相关研究数量，非实际人群比例"
+    },
+    {
+      "key": "assessed",
+      "name": "完成肝病评估",
+      "evidence_note": "HBV DNA+肝纤维化评估研究",
+      "related_studies": 31,
+      "ab_evidence": 16,
+      "has_china_evidence": true,
+      "sample_ids": [
+        "recMnw9260dRR5",
+        "recvs9HqLQWct7",
+        "recvtuisNfhPFr",
+        "recvtzaXLRD2Xt",
+        "recvtzlvCNjTrO"
+      ],
+      "retention_pct": null,
+      "data_note": "展示相关研究数量，非实际人群比例"
+    },
+    {
+      "key": "eligible",
+      "name": "符合治疗指征",
+      "evidence_note": "治疗适应证相关研究",
+      "related_studies": 0,
+      "ab_evidence": 0,
+      "has_china_evidence": false,
+      "sample_ids": [],
+      "retention_pct": null,
+      "data_note": "展示相关研究数量，非实际人群比例"
+    },
+    {
+      "key": "treated",
+      "name": "启动抗病毒治疗",
+      "evidence_note": "治疗启动率相关研究",
+      "related_studies": 0,
+      "ab_evidence": 0,
+      "has_china_evidence": false,
+      "sample_ids": [],
+      "retention_pct": null,
+      "data_note": "展示相关研究数量，非实际人群比例"
+    },
+    {
+      "key": "suppressed",
+      "name": "获得病毒学抑制",
+      "evidence_note": "病毒学应答研究",
+      "related_studies": 1,
+      "ab_evidence": 0,
+      "has_china_evidence": false,
+      "sample_ids": [
+        "recvtA7jRaVl5T"
+      ],
+      "retention_pct": null,
+      "data_note": "展示相关研究数量，非实际人群比例"
+    },
+    {
+      "key": "retained",
+      "name": "长期留存管理",
+      "evidence_note": "随访依从性研究",
+      "related_studies": 3,
+      "ab_evidence": 2,
+      "has_china_evidence": true,
+      "sample_ids": [
+        "recvtzqRUWiDyT",
+        "recvtzTLExbS7N",
+        "recvtAfjgCE0T2"
+      ],
+      "retention_pct": null,
+      "data_note": "展示相关研究数量，非实际人群比例"
+    },
+    {
+      "key": "hcc_monitor",
+      "name": "HCC规范监测",
+      "evidence_note": "肝癌监测研究",
+      "related_studies": 1,
+      "ab_evidence": 0,
+      "has_china_evidence": true,
+      "sample_ids": [
+        "recvtt1PpAHID8"
+      ],
+      "retention_pct": null,
+      "data_note": "展示相关研究数量，非实际人群比例"
+    }
+  ],
+  "methodology": "基于文献标题关键词匹配统计各阶段相关研究数量。由于研究人群、地区和设计差异极大，未强行合并为全国比例，仅展示证据覆盖度。",
+  "key_insight": "筛查后确诊、确诊后评估、治疗后长期留存是证据提示的三个主要断点。",
+  "market_opportunity": "重点支持筛查转诊网络、标准化评估包、患者长期管理项目。",
+  "recommended_kpi": [
+    "阳性患者转诊率",
+    "完整评估率",
+    "12个月留存率"
+  ]
+}

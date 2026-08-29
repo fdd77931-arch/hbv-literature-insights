@@ -1,0 +1,393 @@
+{
+  "chart_id": "diagnosis_biomarker_landscape",
+  "chart_title": "新型生物标志物临床定位图谱",
+  "chart_subtitle": "X轴：临床应用成熟度 | Y轴：创新性/科研价值 | 气泡大小：支持文献数量",
+  "generated_at": "2026-08-29T23:07:45.901947",
+  "biomarkers": [
+    {
+      "name": "qHBsAg定量",
+      "aliases": [
+        "qHBsAg",
+        "HBsAg定量",
+        "HBsAg水平"
+      ],
+      "maturity_base": 80,
+      "innovation_base": 30,
+      "categories": [
+        "治疗监测",
+        "停药决策",
+        "优势人群筛选"
+      ],
+      "evidence_status": "clinical_practice",
+      "evidence_count": 3,
+      "china_evidence_count": 2,
+      "source_ids": [
+        "recvtzGrfQtNO2",
+        "recvtzQFZ5APes",
+        "recvtA2mu9Iyq6"
+      ],
+      "bubble_size": 26,
+      "clinical_maturity": 70
+    },
+    {
+      "name": "APRI/FIB-4",
+      "aliases": [
+        "APRI",
+        "FIB-4",
+        "肝纤维化",
+        "无创评估"
+      ],
+      "maturity_base": 75,
+      "innovation_base": 25,
+      "categories": [
+        "肝纤维化评估",
+        "治疗启动"
+      ],
+      "evidence_status": "clinical_practice",
+      "evidence_count": 11,
+      "china_evidence_count": 10,
+      "source_ids": [
+        "recvs9HqLQWct7",
+        "recvtzHMBLUXZ0",
+        "recvtzI7Km9Lm3",
+        "recvtzPLq7Eclr",
+        "recvtzSEmWnlyn",
+        "recvtzTOeY1TCx",
+        "recvtzVHANTBPC",
+        "recvtzXPCBwIld",
+        "recvtA0hO0K7o8",
+        "recvtA0uyVBvx0"
+      ],
+      "bubble_size": 42,
+      "clinical_maturity": 75
+    },
+    {
+      "name": "HBV RNA",
+      "aliases": [
+        "HBV RNA",
+        "pgRNA"
+      ],
+      "maturity_base": 45,
+      "innovation_base": 65,
+      "categories": [
+        "疗效预测",
+        "停药判断",
+        "cccDNA活性"
+      ],
+      "evidence_status": "clinical_validation",
+      "evidence_count": 11,
+      "china_evidence_count": 11,
+      "source_ids": [
+        "recvtzqpMzZvzR",
+        "recvtzAH4SQeQ6",
+        "recvtzGMWoffVH",
+        "recvtzQ3xnt89M",
+        "recvtzQjFZoljw",
+        "recvtzU7j7kANT",
+        "recvtzWafL61se",
+        "recvtA11Ge29zU",
+        "recvtA1ewh04eQ",
+        "recvtA2QCYyhvf"
+      ],
+      "bubble_size": 42,
+      "clinical_maturity": 45
+    },
+    {
+      "name": "HBcrAg",
+      "aliases": [
+        "HBcrAg",
+        "核心相关抗原"
+      ],
+      "maturity_base": 40,
+      "innovation_base": 60,
+      "categories": [
+        "CHB分期",
+        "疗效预测",
+        "cccDNA替代"
+      ],
+      "evidence_status": "clinical_validation",
+      "evidence_count": 7,
+      "china_evidence_count": 7,
+      "source_ids": [
+        "recvtzD2BMhF3w",
+        "recvtzFOkd8RPa",
+        "recvtzZIzF9Aqe",
+        "recvtA11Ge29zU",
+        "recvtA1ewh04eQ",
+        "recvtA1sADlhI3",
+        "recvtA2QCYyhvf"
+      ],
+      "bubble_size": 34,
+      "clinical_maturity": 40
+    },
+    {
+      "name": "HBsAg亚型",
+      "aliases": [
+        "SHBs",
+        "HBsAg亚型",
+        "大蛋白"
+      ],
+      "maturity_base": 35,
+      "innovation_base": 70,
+      "categories": [
+        "停药后复发预测",
+        "HBsAg清除预测"
+      ],
+      "evidence_status": "clinical_validation",
+      "evidence_count": 1,
+      "china_evidence_count": 1,
+      "source_ids": [
+        "recvs9GDUkNmpa"
+      ],
+      "bubble_size": 22,
+      "clinical_maturity": 25
+    },
+    {
+      "name": "cccDNA相关检测",
+      "aliases": [
+        "cccDNA",
+        "共价闭合环状"
+      ],
+      "maturity_base": 15,
+      "innovation_base": 85,
+      "categories": [
+        "功能性治愈评估",
+        "机制研究"
+      ],
+      "evidence_status": "exploratory",
+      "evidence_count": 16,
+      "china_evidence_count": 13,
+      "source_ids": [
+        "reccmhzwk0Qwxd",
+        "recvsjN8YhXifT",
+        "recvt4zgO1QWC1",
+        "recvtzFU1s2XOI",
+        "recvtzIhAcb77v",
+        "recvtzJaiqojjx",
+        "recvtzQ3xnt89M",
+        "recvtA0rGmKxs8",
+        "recvtA1ewh04eQ",
+        "recvtA1OWGLBmI"
+      ],
+      "bubble_size": 52,
+      "clinical_maturity": 15
+    },
+    {
+      "name": "HBV DNA整合",
+      "aliases": [
+        "DNA整合",
+        "整合"
+      ],
+      "maturity_base": 20,
+      "innovation_base": 80,
+      "categories": [
+        "HCC风险",
+        "HBsAg持续机制"
+      ],
+      "evidence_status": "exploratory",
+      "evidence_count": 25,
+      "china_evidence_count": 22,
+      "source_ids": [
+        "recvs9HuS50tZL",
+        "recvsYJ6RGi4IL",
+        "recvtzdwQX1sZb",
+        "recvtzAuzTseFn",
+        "recvtzGFSNz6pJ",
+        "recvtzHaoApev4",
+        "recvtzHfpWQNWh",
+        "recvtzHn661DDV",
+        "recvtzRD8LeC5S",
+        "recvtzSdbnZIxp"
+      ],
+      "bubble_size": 60,
+      "clinical_maturity": 30
+    },
+    {
+      "name": "HCC风险评分",
+      "aliases": [
+        "风险评分",
+        "HCC风险",
+        "预测模型"
+      ],
+      "maturity_base": 55,
+      "innovation_base": 50,
+      "categories": [
+        "HCC风险预测",
+        "监测分层"
+      ],
+      "evidence_status": "clinical_validation",
+      "evidence_count": 10,
+      "china_evidence_count": 7,
+      "source_ids": [
+        "recvs9Ho7mkp96",
+        "recvsHaUhqczeb",
+        "recvtzE0ijxvmn",
+        "recvtzFH2RDurc",
+        "recvtzGmjHRBKO",
+        "recvtzIBP557SV",
+        "recvtzK0QXUZ5F",
+        "recvtzQFZ5APes",
+        "recvtA9X6i5Wv2",
+        "recvtAbugKw7dM"
+      ],
+      "bubble_size": 40,
+      "clinical_maturity": 55
+    },
+    {
+      "name": "ALT动态",
+      "aliases": [
+        "ALT",
+        "谷丙转氨酶"
+      ],
+      "maturity_base": 90,
+      "innovation_base": 15,
+      "categories": [
+        "治疗启动",
+        "疗效监测"
+      ],
+      "evidence_status": "clinical_practice",
+      "evidence_count": 0,
+      "china_evidence_count": 0,
+      "source_ids": [],
+      "bubble_size": 20,
+      "clinical_maturity": 80
+    },
+    {
+      "name": "HBV基因型",
+      "aliases": [
+        "基因型",
+        "基因分型"
+      ],
+      "maturity_base": 65,
+      "innovation_base": 35,
+      "categories": [
+        "治疗方案选择",
+        "预后判断"
+      ],
+      "evidence_status": "clinical_practice",
+      "evidence_count": 2,
+      "china_evidence_count": 2,
+      "source_ids": [
+        "recvtzqxTw7iXd",
+        "recvtzVZrIfs8g"
+      ],
+      "bubble_size": 24,
+      "clinical_maturity": 55
+    }
+  ],
+  "decision_matrix": {
+    "scenarios": [
+      "诊断确认",
+      "治疗启动",
+      "疗效预测",
+      "停药判断",
+      "复发预测",
+      "HCC风险预测"
+    ],
+    "data": [
+      {
+        "biomarker": "qHBsAg定量",
+        "诊断确认": 0,
+        "治疗启动": 1,
+        "疗效预测": 3,
+        "停药判断": 3,
+        "复发预测": 2,
+        "HCC风险预测": 1
+      },
+      {
+        "biomarker": "APRI/FIB-4",
+        "诊断确认": 0,
+        "治疗启动": 3,
+        "疗效预测": 0,
+        "停药判断": 0,
+        "复发预测": 0,
+        "HCC风险预测": 2
+      },
+      {
+        "biomarker": "HBV RNA",
+        "诊断确认": 0,
+        "治疗启动": 0,
+        "疗效预测": 2,
+        "停药判断": 2,
+        "复发预测": 2,
+        "HCC风险预测": 0
+      },
+      {
+        "biomarker": "HBcrAg",
+        "诊断确认": 0,
+        "治疗启动": 0,
+        "疗效预测": 2,
+        "停药判断": 1,
+        "复发预测": 0,
+        "HCC风险预测": 0
+      },
+      {
+        "biomarker": "HBsAg亚型",
+        "诊断确认": 0,
+        "治疗启动": 0,
+        "疗效预测": 0,
+        "停药判断": 1,
+        "复发预测": 2,
+        "HCC风险预测": 0
+      },
+      {
+        "biomarker": "cccDNA相关检测",
+        "诊断确认": 0,
+        "治疗启动": 0,
+        "疗效预测": 1,
+        "停药判断": 0,
+        "复发预测": 0,
+        "HCC风险预测": 0
+      },
+      {
+        "biomarker": "HBV DNA整合",
+        "诊断确认": 0,
+        "治疗启动": 0,
+        "疗效预测": 0,
+        "停药判断": 0,
+        "复发预测": 0,
+        "HCC风险预测": 0
+      },
+      {
+        "biomarker": "HCC风险评分",
+        "诊断确认": 0,
+        "治疗启动": 0,
+        "疗效预测": 0,
+        "停药判断": 0,
+        "复发预测": 0,
+        "HCC风险预测": 3
+      },
+      {
+        "biomarker": "ALT动态",
+        "诊断确认": 0,
+        "治疗启动": 2,
+        "疗效预测": 1,
+        "停药判断": 0,
+        "复发预测": 0,
+        "HCC风险预测": 0
+      },
+      {
+        "biomarker": "HBV基因型",
+        "诊断确认": 0,
+        "治疗启动": 1,
+        "疗效预测": 1,
+        "停药判断": 0,
+        "复发预测": 0,
+        "HCC风险预测": 0
+      }
+    ],
+    "legend": {
+      "3": "临床常规应用",
+      "2": "有一定证据支持",
+      "1": "探索性研究",
+      "0": "证据不足"
+    }
+  },
+  "methodology": "成熟度和创新性基于文献数量、研究类型和临床指南引用综合评估。3=临床常规应用，2=有一定证据支持，1=探索性研究，0=证据不足。",
+  "key_insight": "qHBsAg和APRI/FIB-4已进入常规临床实践；HBV RNA和HBcrAg正在从科研走向临床；cccDNA相关检测仍处于探索阶段。",
+  "market_opportunity": "qHBsAg检测生态建设和HBV RNA/HBcrAg的临床教育是近期重点。",
+  "recommended_kpi": [
+    "qHBsAg检测率",
+    "高危人群纤维化评估率"
+  ]
+}

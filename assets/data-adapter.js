@@ -604,6 +604,8 @@
     allianceOverview: buildTopicOverview('alliance'),
     insightVersions: sd.insight_versions || {},
     changeReport: sd.change_report || {},
+    // 策略图表数据
+    charts: sd.charts || {},
     // 辅助函数
     filterLiterature: filterLiterature,
     getLiteratureByCluster: getLiteratureByCluster,

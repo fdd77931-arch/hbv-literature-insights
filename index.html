@@ -34,9 +34,10 @@
       <li class="nav-item" data-page="treatment" onclick="App.navigate('treatment')">治</li>
       <li class="nav-item" data-page="management" onclick="App.navigate('management')">管/康</li>
       <li class="nav-item" data-page="hbvhcc" onclick="App.navigate('hbvhcc')">HBV→HCC</li>
-      <li class="nav-item" data-page="strategy" onclick="App.navigate('strategy')">2030策略</li>
+      <li class="nav-item" data-page="strategy" onclick="App.navigate('strategy')">市场行动</li>
       <li class="nav-item" data-page="alliance" onclick="App.navigate('alliance')">全国联盟</li>
-      <li class="nav-item" data-page="evidence" onclick="App.navigate('evidence')">证据库</li>
+      <li class="nav-item" data-page="updates" onclick="App.navigate('updates')">最新变化</li>
+      <li class="nav-item" data-page="evidence" onclick="App.navigate('evidence')">方法与证据</li>
     </ul>
     <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="App.toggleMobileMenu()">
       <span></span><span></span><span></span>
@@ -50,9 +51,10 @@
       <li onclick="App.navigate('treatment'); App.toggleMobileMenu()">治</li>
       <li onclick="App.navigate('management'); App.toggleMobileMenu()">管/康</li>
       <li onclick="App.navigate('hbvhcc'); App.toggleMobileMenu()">HBV→HCC</li>
-      <li onclick="App.navigate('strategy'); App.toggleMobileMenu()">2030策略</li>
+      <li onclick="App.navigate('strategy'); App.toggleMobileMenu()">市场行动</li>
       <li onclick="App.navigate('alliance'); App.toggleMobileMenu()">全国联盟</li>
-      <li onclick="App.navigate('evidence'); App.toggleMobileMenu()">证据库</li>
+      <li onclick="App.navigate('updates'); App.toggleMobileMenu()">最新变化</li>
+      <li onclick="App.navigate('evidence'); App.toggleMobileMenu()">方法与证据</li>
     </ul>
   </div>
 </nav>
@@ -67,69 +69,180 @@
 <main id="mainContent" style="display:none;">
 
 <!-- ============================================================ -->
-<!-- 页面：核心洞察（首页长报告） -->
+<!-- 页面：核心洞察（首页·策略仪表盘） -->
 <!-- ============================================================ -->
 <section class="page active" id="page-overview">
 
-  <!-- Hero -->
+  <!-- Hero + 首屏核心洞察 -->
   <header class="hero">
-    <h1>慢乙肝—HBV相关HCC<br>文献洞察与2030市场策略报告</h1>
-    <p class="subtitle">基于近1000篇循证医学文献，贯通筛查、诊断、治疗、患者管理与HCC全病程</p>
+    <h1>中国HBV—HCC筛诊治康<br>2030策略洞察仪表盘</h1>
+    <p class="subtitle">基于飞书文献库中近1000篇研究、指南、共识和临床证据动态生成</p>
     <div class="tag-row">
+      <span class="tag">2030总览</span>
       <span class="tag">筛查</span>
       <span class="tag">诊断</span>
       <span class="tag">治疗</span>
       <span class="tag">患者管理</span>
       <span class="tag">功能性治愈</span>
       <span class="tag">HBV→HCC</span>
-      <span class="tag">2030行动</span>
-      <span class="tag">全国肝病联盟</span>
+      <span class="tag">全国联盟</span>
     </div>
+    <!-- 首屏5条核心洞察 -->
+    <div class="hero-insights" id="heroCoreInsights"></div>
     <div class="meta">
       <div class="meta-row">
         <span>飞书有效文献数：<strong id="ovTotalLit">--</strong></span>
         <span>数据更新时间：<strong id="ovUpdateDate">--</strong></span>
-        <span>网站构建时间：<strong id="ovBuildTime">--</strong></span>
+        <span>图表数据截至：<strong id="ovChartDate">--</strong></span>
       </div>
       <div class="meta-row">
-        <span>当前洞察版本：<strong id="ovInsightVersion">v4.0</strong></span>
-        <span>本次新增文献数：<strong id="ovNewCount">--</strong></span>
+        <span>洞察版本：<strong id="ovInsightVersion">v5.0</strong></span>
+        <span>本次新增：<strong id="ovNewCount">--</strong></span>
+        <span>策略图表：<strong id="ovChartCount">--</strong>张</span>
       </div>
     </div>
   </header>
 
-  <!-- 第一屏后紧接：总体核心洞察 -->
+  <!-- 第二屏：2030总体差距仪表盘 -->
   <section class="chapter">
     <div class="container">
       <h2>
-        <span class="ch-label">Overall Insight</span>
-        总体核心洞察
+        <span class="ch-label">2030 Dashboard</span>
+        筛诊治康2030总体差距仪表盘
       </h2>
-      <div id="ovCoreInsight"></div>
+      <p class="chapter-intro">基于文献证据成熟度评估各环节相对差距。颜色代表差距等级：<span style="color:var(--accent3)">绿色=差距较小</span> · <span style="color:var(--accent)">蓝色=中等差距</span> · <span style="color:var(--accent2)">橙色=主要断点</span></p>
+      <div class="chart-insight-card">
+        <div class="chart-body">
+          <div id="chart2030Gap" class="chart-dom large"></div>
+        </div>
+        <div class="chart-data-note">注：证据成熟度基于AB级证据占比和文献总量综合计算，不等同于全国实际诊疗率</div>
+        <div class="insight-panel" id="gapInsightPanel"></div>
+      </div>
     </div>
   </section>
 
-  <!-- 六条一级洞察 -->
+  <!-- 第三部分：六大核心策略图表 -->
   <section class="chapter">
     <div class="container">
       <h2>
-        <span class="ch-label">Six Pillars</span>
-        六条一级核心洞察
+        <span class="ch-label">Strategy Charts</span>
+        关键策略洞察图表
       </h2>
-      <p class="chapter-intro">每条洞察基于跨文献综合，覆盖筛诊治管康/HCC/联盟六大环节，包含关键数字、2030意义和市场部策略启示</p>
-      <div class="insight-grid" id="ovHomepageInsights"></div>
+      <p class="chapter-intro">每张图表聚焦一个业务问题，下方附洞察结论和市场行动建议。点击"查看证据"可追溯支持文献。</p>
+
+      <!-- 筛查漏斗 -->
+      <div class="chart-insight-card" id="chartScreeningCard">
+        <div class="chart-header">
+          <span class="chart-badge">第一章 · 筛</span>
+          <h3>筛查—确诊—治疗—长期管理患者旅程</h3>
+          <p class="chart-subtitle">各环节证据覆盖量与断点识别</p>
+        </div>
+        <div class="chart-body">
+          <div id="chartScreeningFunnel" class="chart-dom"></div>
+        </div>
+        <div class="insight-panel" id="screeningInsightPanel"></div>
+      </div>
+
+      <!-- 生物标志物气泡图 -->
+      <div class="chart-insight-card accent2" id="chartBiomarkerCard">
+        <div class="chart-header">
+          <span class="chart-badge">第二章 · 诊</span>
+          <h3>新型生物标志物临床定位图谱</h3>
+          <p class="chart-subtitle">临床应用成熟度 vs 科研价值，气泡大小=支持文献数量</p>
+        </div>
+        <div class="chart-body">
+          <div id="chartBiomarkerBubble" class="chart-dom"></div>
+        </div>
+        <div class="insight-panel" id="biomarkerInsightPanel"></div>
+      </div>
+
+      <!-- 治疗人群对比 -->
+      <div class="chart-insight-card accent3" id="chartTreatmentCard">
+        <div class="chart-header">
+          <span class="chart-badge">第三章 · 治</span>
+          <h3>不同CHB人群HBsAg清除相关研究分布</h3>
+          <p class="chart-subtitle">各人群相关研究数量与证据强度</p>
+        </div>
+        <div class="chart-body">
+          <div id="chartTreatmentOutcomes" class="chart-dom"></div>
+        </div>
+        <div class="insight-panel" id="treatmentInsightPanel"></div>
+      </div>
+
+      <!-- 双列：新药管线 + 患者留存 -->
+      <div class="dashboard-grid-2">
+        <div class="chart-insight-card" id="chartPipelineCard">
+          <div class="chart-header">
+            <span class="chart-badge">治 · 新药管线</span>
+            <h3>功能性治愈新药管线全景</h3>
+            <p class="chart-subtitle">临床阶段 vs 效果相对评分</p>
+          </div>
+          <div class="chart-body">
+            <div id="chartPipelineBubble" class="chart-dom small"></div>
+          </div>
+        </div>
+
+        <div class="chart-insight-card accent3" id="chartRetentionCard">
+          <div class="chart-header">
+            <span class="chart-badge">第四章 · 康</span>
+            <h3>患者旅程留存漏斗与脱落风险</h3>
+            <p class="chart-subtitle">各阶段脱落风险等级评估</p>
+          </div>
+          <div class="chart-body">
+            <div id="chartPatientRetention" class="chart-dom small"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 双列：HCC风险 + 联盟矩阵 -->
+      <div class="dashboard-grid-2">
+        <div class="chart-insight-card accent2" id="chartHCCCard">
+          <div class="chart-header">
+            <span class="chart-badge">第五章 · HCC</span>
+            <h3>HCC残余风险因素证据热力图</h3>
+            <p class="chart-subtitle">各风险因素证据强度与文献量</p>
+          </div>
+          <div class="chart-body">
+            <div id="chartHCCRisk" class="chart-dom small"></div>
+          </div>
+        </div>
+
+        <div class="chart-insight-card" id="chartAllianceCard">
+          <div class="chart-header">
+            <span class="chart-badge">第六章 · 联盟</span>
+            <h3>全国肝病联盟能力建设优先级矩阵</h3>
+            <p class="chart-subtitle">可行性 vs 对2030目标影响力</p>
+          </div>
+          <div class="chart-body">
+            <div id="chartAllianceMatrix" class="chart-dom small"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 市场策略矩阵 -->
+      <div class="chart-insight-card accent3" id="chartMarketCard">
+        <div class="chart-header">
+          <span class="chart-badge">市场行动</span>
+          <h3>市场行动优先级矩阵</h3>
+          <p class="chart-subtitle">市场价值 vs 实施难度，颜色代表优先级</p>
+        </div>
+        <div class="chart-body">
+          <div id="chartMarketStrategy" class="chart-dom"></div>
+        </div>
+        <div class="insight-panel" id="marketInsightPanel"></div>
+      </div>
     </div>
   </section>
 
-  <!-- 市场策略总览 -->
+  <!-- 市场行动卡片 -->
   <section class="chapter">
     <div class="container">
       <h2>
-        <span class="ch-label">Market Strategy</span>
-        基于文献洞察的市场策略总览
+        <span class="ch-label">Market Actions</span>
+        重点市场行动建议
       </h2>
-      <p class="chapter-intro">所有策略基于真实文献证据，医学合规，不超说明书，不夸大疗效</p>
-      <div id="ovMarketStrategy"></div>
+      <p class="chapter-intro">所有建议基于真实文献证据，严格遵守合规边界，不超适应证推广</p>
+      <div id="marketActionCards"></div>
     </div>
   </section>
 
@@ -144,82 +257,27 @@
     </div>
   </section>
 
-  <!-- 文献证据图谱 -->
+  <!-- 方法与证据 -->
   <section class="chapter">
     <div class="container">
       <h2>
-        <span class="ch-label">Evidence Atlas</span>
-        文献证据图谱
+        <span class="ch-label">Methodology</span>
+        方法与证据
       </h2>
-      <p class="chapter-intro">图表数据均来自飞书同步后的统计数据，标明口径，允许重复归类</p>
+      <p class="chapter-intro">了解数据来源、证据分级标准和图表计算方法</p>
+
       <div class="charts-grid-2">
         <div class="chart-card">
-          <h3 class="chart-card-title">文献年度趋势</h3>
-          <div id="chartYearTrend" class="chart-dom"></div>
+          <h3 class="chart-card-title">证据等级分布</h3>
+          <div id="chartEvidenceQuality" class="chart-dom small"></div>
         </div>
         <div class="chart-card">
-          <h3 class="chart-card-title">专题分布（去重）</h3>
-          <div id="chartTopicDist" class="chart-dom"></div>
+          <h3 class="chart-card-title">文献年度趋势</h3>
+          <div id="chartYearTrend" class="chart-dom small"></div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- 证据等级分布 -->
-  <section class="chapter">
-    <div class="container">
-      <h2>
-        <span class="ch-label">Evidence Quality</span>
-        证据等级分布
-      </h2>
-      <p class="chapter-intro">A级=指南/Meta/RCT；B级=队列/真实世界；C级=横断面/综述；D级=病例报告/述评</p>
-      <div id="ovLevelTable"></div>
-    </div>
-  </section>
-
-  <!-- 中国证据分类 -->
-  <section class="chapter">
-    <div class="container">
-      <h2>
-        <span class="ch-label">China Evidence</span>
-        中国证据分类
-      </h2>
-      <p class="chapter-intro">基于中国患者/中心/机构/指南判断，不使用市场标签或AI推断</p>
-      <div id="ovChinaEvidence"></div>
-    </div>
-  </section>
-
-  <!-- 文献簇概览 -->
-  <section class="chapter">
-    <div class="container">
-      <h2>
-        <span class="ch-label">Literature Clusters</span>
-        文献簇概览
-      </h2>
-      <p class="chapter-intro" id="ovClusterDesc">12个证据簇覆盖筛诊治管康全链路，同一文献可归入多个簇</p>
-      <div class="cluster-grid" id="ovClusterGrid"></div>
-    </div>
-  </section>
-
-  <!-- 数据质量审计 -->
-  <section class="chapter">
-    <div class="container">
-      <h2>
-        <span class="ch-label">Data Audit</span>
-        数据质量审计
-      </h2>
       <div id="ovAuditSection"></div>
-    </div>
-  </section>
-
-  <!-- 关键证据缺口 -->
-  <section class="chapter">
-    <div class="container">
-      <h2>
-        <span class="ch-label">Evidence Gaps</span>
-        关键证据缺口
-      </h2>
-      <p class="chapter-intro">按研究问题匹配理想证据类型评价，而非统一用RCT占比</p>
       <div class="evidence-gaps-grid" id="ovEvidenceGaps"></div>
     </div>
   </section>
@@ -228,10 +286,10 @@
   <section class="chapter">
     <div class="container">
       <h2>
-        <span class="ch-label">Report Chapters</span>
-        报告章节导航
+        <span class="ch-label">Full Report</span>
+        完整报告章节
       </h2>
-      <p class="chapter-intro">完整报告共7章，从文献证据图谱到全国联盟策略逐层推导</p>
+      <p class="chapter-intro">深入各专题的详细证据分析、文献综合和完整策略矩阵</p>
       <div class="cluster-grid" id="ovChapterNav"></div>
     </div>
   </section>
@@ -309,13 +367,33 @@
 </section>
 
 <!-- ============================================================ -->
-<!-- 页面：证据库 -->
+<!-- 页面：最新变化 -->
+<!-- ============================================================ -->
+<section class="page" id="page-updates">
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">最新证据变化</h1>
+      <p class="page-subtitle">本次新增文献带来的洞察更新与趋势变化</p>
+    </div>
+    <div id="updatesContent"></div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- 页面：方法与证据 -->
 <!-- ============================================================ -->
 <section class="page" id="page-evidence">
   <div class="container">
     <div class="page-header">
-      <h1 class="page-title">证据库</h1>
-      <p class="page-subtitle">全文检索、多维度筛选、浏览全部 <span id="evTotalCount">--</span> 篇文献</p>
+      <h1 class="page-title">方法与证据库</h1>
+      <p class="page-subtitle">了解数据来源、证据分级标准，浏览全部 <span id="evTotalCount">--</span> 篇文献</p>
+    </div>
+
+    <!-- 方法说明 -->
+    <div class="callout" style="margin-bottom: 1.5rem;">
+      <div class="callout-label">Methodology · 方法说明</div>
+      <p>本网站所有洞察基于飞书文献库中近1000篇HBV相关研究、指南、共识和临床证据动态生成。证据等级分为A（指南/共识/系统综述/Meta分析）、B（RCT/大样本队列）、C（观察性研究/小样本）、D（个案/述评/基础研究）四级。</p>
+      <p>所有图表数据均来自真实文献，不虚构数字，不强行合并异质性研究，每个数据点可追溯到具体文献。</p>
     </div>
 
     <div class="evidence-toolbar">
@@ -357,6 +435,22 @@
 <!-- ========== 文献详情弹窗 ========== -->
 <div class="modal-overlay" id="litModal" onclick="App.closeLitModal(event)">
   <div class="modal-content" id="litModalContent"></div>
+</div>
+
+<!-- ========== 证据抽屉 ========== -->
+<div class="drawer-overlay" id="evidenceDrawerOverlay" onclick="App.closeEvidenceDrawer()"></div>
+<div class="evidence-drawer" id="evidenceDrawer">
+  <div class="drawer-header">
+    <div class="drawer-title" id="drawerTitle">支持证据</div>
+    <button class="drawer-close" onclick="App.closeEvidenceDrawer()">×</button>
+  </div>
+  <div class="drawer-body" id="drawerBody">
+    <div class="drawer-evidence-list" id="drawerEvidenceList"></div>
+  </div>
+  <div class="drawer-footer">
+    <span id="drawerEvidenceCount">0 篇文献</span>
+    <button class="drawer-view-all" onclick="App.navigate('evidence'); App.closeEvidenceDrawer();">查看全部 →</button>
+  </div>
 </div>
 
 <!-- ========== 脚本 ========== -->

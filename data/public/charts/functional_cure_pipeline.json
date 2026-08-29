@@ -1,0 +1,174 @@
+{
+  "chart_id": "functional_cure_pipeline",
+  "chart_title": "HBV功能性治愈新药管线全景",
+  "chart_subtitle": "X轴：HBsAg下降/清除效果相对评分 | Y轴：临床开发阶段 | 颜色：作用机制",
+  "generated_at": "2026-08-29T23:07:45.901947",
+  "stage_labels": [
+    "临床前",
+    "I期",
+    "II期",
+    "III期",
+    "获批"
+  ],
+  "drugs": [
+    {
+      "name": "Bepirovirsen",
+      "category": "siRNA/ASO",
+      "color": "#00688f",
+      "stage": 3,
+      "stage_label": "III期",
+      "efficacy_score": 75,
+      "evidence_count": 6,
+      "china_evidence_count": 4,
+      "is_clinical_human": true,
+      "bubble_size": 27,
+      "source_ids": [
+        "recvs9GIwO2SAk",
+        "recvs9HsQxRp04",
+        "recvtzdXohdDQM",
+        "recvtzlvCNjTrO",
+        "recvtzDEAT8BK4",
+        "recvtzH59ACscK"
+      ]
+    },
+    {
+      "name": "Xalnesiran",
+      "category": "siRNA/ASO",
+      "color": "#00688f",
+      "stage": 2,
+      "stage_label": "II期",
+      "efficacy_score": 65,
+      "evidence_count": 3,
+      "china_evidence_count": 2,
+      "is_clinical_human": true,
+      "bubble_size": 21,
+      "source_ids": [
+        "recvs9HEjYSl6f",
+        "recvtzDmxKth6g",
+        "recvtzFDX72610"
+      ]
+    },
+    {
+      "name": "ABI-H0731",
+      "category": "衣壳抑制剂",
+      "color": "#2d8659",
+      "stage": 2,
+      "stage_label": "II期",
+      "efficacy_score": 35,
+      "evidence_count": 1,
+      "china_evidence_count": 1,
+      "is_clinical_human": true,
+      "bubble_size": 17,
+      "source_ids": [
+        "recvtujJHQnUOA"
+      ]
+    },
+    {
+      "name": "GLP-26",
+      "category": "衣壳抑制剂",
+      "color": "#2d8659",
+      "stage": 0,
+      "stage_label": "临床前",
+      "efficacy_score": 35,
+      "evidence_count": 6,
+      "china_evidence_count": 6,
+      "is_clinical_human": false,
+      "bubble_size": 27,
+      "source_ids": [
+        "recvsHaZvnjuuv",
+        "recvtzGVVWZxKU",
+        "recvtA5LKUWgtw",
+        "recvtA6rku43P2",
+        "recvtA7ybAmQMy",
+        "recvtAdyb6z2ij"
+      ]
+    },
+    {
+      "name": "PegIFNα",
+      "category": "免疫调节/治疗性疫苗",
+      "color": "#c75d2c",
+      "stage": 4,
+      "stage_label": "获批",
+      "efficacy_score": 35,
+      "evidence_count": 46,
+      "china_evidence_count": 42,
+      "is_clinical_human": true,
+      "bubble_size": 40,
+      "source_ids": [
+        "recvs9yQpvReIQ",
+        "recvs9GLl4SLOQ",
+        "recvs9GPD0eDGH",
+        "recvs9H7ea8bgg",
+        "recvs9Ho7mkp96",
+        "recvs9HqLQWct7",
+        "recvsHaUhqczeb",
+        "recvtgghwsHx9v"
+      ]
+    },
+    {
+      "name": "治疗性疫苗",
+      "category": "免疫调节/治疗性疫苗",
+      "color": "#c75d2c",
+      "stage": 1,
+      "stage_label": "I期",
+      "efficacy_score": 20,
+      "evidence_count": 6,
+      "china_evidence_count": 5,
+      "is_clinical_human": true,
+      "bubble_size": 27,
+      "source_ids": [
+        "recvs9H4lYWcGE",
+        "recvsHaX24soZd",
+        "recvsSSvsej7cz",
+        "recvtA1BS2GDiD",
+        "recvtA9d6bN4YJ",
+        "recvtAhHkS3ryR"
+      ]
+    },
+    {
+      "name": "NAPs",
+      "category": "HBsAg抑制剂",
+      "color": "#8b6dc7",
+      "stage": 2,
+      "stage_label": "II期",
+      "efficacy_score": 45,
+      "evidence_count": 1,
+      "china_evidence_count": 1,
+      "is_clinical_human": true,
+      "bubble_size": 17,
+      "source_ids": [
+        "recvtA6rku43P2"
+      ]
+    },
+    {
+      "name": "TAF/ETV",
+      "category": "已获批基础药物",
+      "color": "#e0a040",
+      "stage": 4,
+      "stage_label": "获批",
+      "efficacy_score": 20,
+      "evidence_count": 26,
+      "china_evidence_count": 19,
+      "is_clinical_human": true,
+      "bubble_size": 40,
+      "source_ids": [
+        "recvs9H9kuUGN3",
+        "recvs9HekkBSKb",
+        "recvs9HgTNixg1",
+        "recvs9HzrhDTkH",
+        "recvt4zgO1QWC1",
+        "recvtujHdVFapi",
+        "recvtujMhXQtUC",
+        "recvtujTHOEebL"
+      ]
+    }
+  ],
+  "methodology": "效果评分为基于文献报道的相对比较，不同研究的基线和终点定义存在差异，不可直接横向比较。临床前研究数据不与人体临床数据混合比较。",
+  "key_insight": "siRNA/ASO类药物在HBsAg下降幅度方面表现突出，目前处于II期临床阶段；联合治疗策略是未来功能性治愈的主要方向。",
+  "market_opportunity": "关注siRNA/ASO管线进展，提前布局联合治疗生态和功能性治愈中心建设。",
+  "recommended_kpi": [
+    "功能性治愈中心数量",
+    "联合治疗方案渗透率"
+  ],
+  "important_note": "本图仅展示管线进展的相对位置，效果评分不代表头对头比较结果，具体疗效请查阅各研究原文。"
+}

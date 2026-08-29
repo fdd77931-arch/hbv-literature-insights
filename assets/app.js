@@ -114,6 +114,7 @@ var App = (function() {
       case 'strategy': renderStrategyPage(); break;
       case 'alliance': renderAlliancePage(); break;
       case 'evidence': renderEvidencePage(); break;
+      case 'updates': renderUpdatesPage(); break;
     }
   }
 
@@ -129,53 +130,356 @@ var App = (function() {
     document.getElementById('ovUpdateDate').textContent = stats.lastUpdate || '2026年8月';
     document.getElementById('ovTotalLit').textContent = stats.totalLiterature;
     if (D.meta) {
-      document.getElementById('ovInsightVersion').textContent = 'v' + (D.meta.version || '4.0');
-      document.getElementById('ovBuildTime').textContent = D.meta.generatedAt || D.meta.lastSync || '--';
+      document.getElementById('ovInsightVersion').textContent = 'v' + (D.meta.version || '5.0');
     }
     var lu = D.latestUpdates || {};
     document.getElementById('ovNewCount').textContent = (lu.recentCount7d || 0) + '篇(7天)';
 
-    // 1. 总体核心洞察
-    renderCoreInsight();
+    // 图表数量和日期
+    var charts = D.charts || {};
+    var chartCount = Object.keys(charts).length;
+    document.getElementById('ovChartCount').textContent = chartCount;
+    var firstChart = charts[Object.keys(charts)[0]];
+    if (firstChart && firstChart.generated_at) {
+      document.getElementById('ovChartDate').textContent = firstChart.generated_at.slice(0, 10).replace(/-/g, '年') + '月';
+    }
 
-    // 2. 六条一级洞察
-    renderHomepageInsights();
+    // 1. Hero首屏核心洞察
+    renderHeroCoreInsights();
 
-    // 3. 市场策略总览
-    renderMarketStrategy();
+    // 2. 2030差距仪表盘 + 洞察面板
+    renderGapInsightPanel();
 
-    // 4. 最新证据动态
+    // 3. 各图表洞察面板
+    renderScreeningInsightPanel();
+    renderBiomarkerInsightPanel();
+    renderTreatmentInsightPanel();
+    renderMarketInsightPanel();
+
+    // 4. 市场行动卡片
+    renderMarketActionCards();
+
+    // 5. 最新证据动态
     renderLatestUpdates();
 
-    // 图表（仅年度趋势和专题分布，后移至证据图谱章节）
+    // 6. 初始化所有策略图表
     setTimeout(function() {
       if (window.ChartFns) {
+        ChartFns.init2030GapChart(document.getElementById('chart2030Gap'));
+        ChartFns.initScreeningFunnelChart(document.getElementById('chartScreeningFunnel'));
+        ChartFns.initBiomarkerBubbleChart(document.getElementById('chartBiomarkerBubble'));
+        ChartFns.initTreatmentOutcomesChart(document.getElementById('chartTreatmentOutcomes'));
+        ChartFns.initPipelineBubbleChart(document.getElementById('chartPipelineBubble'));
+        ChartFns.initPatientRetentionChart(document.getElementById('chartPatientRetention'));
+        ChartFns.initHCCRiskChart(document.getElementById('chartHCCRisk'));
+        ChartFns.initAllianceMatrixChart(document.getElementById('chartAllianceMatrix'));
+        ChartFns.initMarketStrategyChart(document.getElementById('chartMarketStrategy'));
+        ChartFns.initEvidenceQualityChart(document.getElementById('chartEvidenceQuality'));
         ChartFns.initYearTrendChart(document.getElementById('chartYearTrend'));
-        ChartFns.initTopicDistChart(document.getElementById('chartTopicDist'));
       }
-    }, 100);
+    }, 150);
 
-    // 证据等级表
-    renderLevelTable();
-
-    // 中国证据分类
-    renderChinaEvidence();
-
-    // 文献簇
-    var assocTotal = D.statistics.clusterAssociatedTotal || 0;
-    var uniqueTotal = D.statistics.clusterUniqueTotal || D.statistics.totalLiterature || 0;
-    var clDesc = document.getElementById('ovClusterDesc');
-    if (clDesc) clDesc.textContent = '12个证据簇共关联 ' + assocTotal + ' 次（独立文献 ' + uniqueTotal + ' 篇，同一文献可归入多个簇）';
-    renderClusterGrid();
-
-    // 数据质量审计
+    // 7. 数据质量审计
     renderAudit();
 
-    // 证据缺口
+    // 8. 证据缺口
     renderOverviewGaps();
 
-    // 章节导航
+    // 9. 章节导航
     renderChapterNav();
+  }
+
+  // ==================== Hero首屏核心洞察 ====================
+  function renderHeroCoreInsights() {
+    var hi = D.homepageInsights || {};
+    var insights = hi.insights || [];
+    if (!insights.length) {
+      document.getElementById('heroCoreInsights').innerHTML = '';
+      return;
+    }
+
+    // 取前6条作为首屏核心洞察
+    var displayInsights = insights.slice(0, 6);
+    var trendMap = {
+      '增强': 'strengthening',
+      '减弱': 'weakening',
+      '新出现': 'emerging',
+      '争议': 'controversial',
+      '稳定': 'stable',
+      '高': 'strengthening',
+      '中高': 'emerging',
+      '中': 'stable',
+      '较低': 'weakening'
+    };
+    var trendLabelMap = {
+      'strengthening': '增强',
+      'weakening': '减弱',
+      'emerging': '新出现',
+      'controversial': '争议',
+      'stable': '稳定'
+    };
+
+    var meaning2030Map = {
+      'screening': '提升筛查覆盖率与确诊衔接效率，是实现2030消除目标的前端关键。',
+      'diagnosis': '精准分层与疗效预测有助于优化治疗路径分配，提高有限医疗资源的投入产出比。',
+      'treatment': '功能性治愈方向的证据积累推动治疗目标升级，影响长期随访与再治疗策略。',
+      'management': '降低脱落率与提升长期依从性是实现持续病毒学应答的必要条件。',
+      'hcc': '降低HCC残余风险是慢乙肝管理的终局目标，直接关联2030死亡率下降指标。',
+      'alliance': '联盟协作模式可加速筛查-治疗闭环落地，是规模化实现2030目标的组织保障。'
+    };
+
+    var marketImplicationMap = {
+      'screening': '市场部可重点布局筛查转诊项目、基层医生教育和患者早诊早治观念教育。',
+      'diagnosis': '可围绕生物标志物检测推动精准诊疗观念，支持检测试剂与伴随诊断相关合作。',
+      'treatment': '围绕功能性治愈趋势布局产品管线沟通，强化经治患者转换/联合治疗的证据传递。',
+      'management': '患者管理项目（随访、依从性干预）是差异化服务的重要方向，可提升品牌忠诚度。',
+      'hcc': 'HCC风险分层与监测是高医学价值沟通点，可联动肝病科与肿瘤科跨学科平台。',
+      'alliance': '全国/区域联盟项目是大客户管理的重要载体，可构建长期战略合作关系。'
+    };
+
+    var html = displayInsights.map(function(ins, idx) {
+      var trendClass = trendMap[ins.confidence] || 'stable';
+      var trendText = trendLabelMap[trendClass] || '稳定';
+      var topLevel = ins.topLevel || (ins.abCount && ins.abCount > 0 ? 'A级' : 'B级');
+      var meaning2030 = meaning2030Map[ins.category] || '对实现WHO 2030消除乙肝目标具有重要支持意义。';
+      var marketImplication = marketImplicationMap[ins.category] || '市场部可据此优化证据传递策略与资源投入方向。';
+      var sourceIds = ins.sourceIds || ins.source_ids || [];
+
+      return '<div class="hero-insight-item">' +
+        '<span class="hi-trend ' + trendClass + '">' + trendText + '</span>' +
+        '<div class="hi-conclusion-title">' + esc(ins.title || '') + '</div>' +
+        '<div class="hi-conclusion">' + esc(ins.oneLine || '') + '</div>' +
+        '<div class="hi-meta">' +
+          '<span>' + (ins.evidenceCount || 0) + '篇文献支持</span>' +
+          '<span>最高证据等级: ' + esc(topLevel) + '</span>' +
+          (ins.abCount ? '<span>AB级 ' + ins.abCount + ' 篇</span>' : '') +
+        '</div>' +
+        '<div class="hi-2030-meaning">' +
+          '<span class="hi-sub-label">2030目标意义：</span>' + esc(meaning2030) +
+        '</div>' +
+        '<div class="hi-market-implication">' +
+          '<span class="hi-sub-label">市场部启示：</span>' + esc(marketImplication) +
+        '</div>' +
+        '<button class="hi-evidence-btn" onclick="App.openEvidenceDrawer(\'' + esc(ins.title || '') + '\', ' + JSON.stringify(sourceIds).replace(/"/g, '&quot;') + ')">查看证据 →</button>' +
+      '</div>';
+    }).join('');
+
+    document.getElementById('heroCoreInsights').innerHTML = html;
+  }
+
+  // ==================== 构建策略面板通用HTML ====================
+  function buildStrategyPanelHtml(chart, defaults) {
+    defaults = defaults || {};
+    var whatItSays = chart.key_insight || defaults.whatItSays || '';
+    var keyPopulation = chart.key_population || defaults.keyPopulation || '慢乙肝全人群，含初治与经治患者';
+    var marketOpportunity = chart.market_opportunity || defaults.marketOpportunity || '';
+    var recommendedActions = chart.recommended_actions || defaults.recommendedActions || ['持续监测证据变化，适时调整沟通策略'];
+    var kpiList = chart.recommended_kpi || defaults.kpiList || [];
+    var compliance = chart.compliance_note || defaults.compliance || '本洞察为文献证据综合分析，不构成临床推荐或营销建议。具体市场活动需符合相关法律法规和医学伦理要求。';
+    var sourceIds = chart.source_ids || defaults.sourceIds || [];
+    var panelTitle = defaults.panelTitle || '策略洞察';
+
+    var actionsHtml = '';
+    if (recommendedActions && recommendedActions.length) {
+      actionsHtml = '<ol>';
+      recommendedActions.forEach(function(a) {
+        actionsHtml += '<li>' + esc(a) + '</li>';
+      });
+      actionsHtml += '</ol>';
+    }
+
+    var kpiHtml = '';
+    if (kpiList && kpiList.length) {
+      kpiHtml = kpiList.map(function(k) {
+        return '<span class="sp-kpi-tag">' + esc(k) + '</span>';
+      }).join('');
+    } else {
+      kpiHtml = '<span class="sp-kpi-tag">待设定</span>';
+    }
+
+    var sourceIdsJson = JSON.stringify(sourceIds).replace(/"/g, '&quot;');
+
+    return '<div class="strategy-panel">' +
+      '<div class="sp-section">' +
+        '<div class="sp-label">这张图说明什么</div>' +
+        '<div class="sp-value what-it-says">' + esc(whatItSays) + '</div>' +
+      '</div>' +
+      '<div class="sp-section">' +
+        '<div class="sp-label">关键人群</div>' +
+        '<div class="sp-value key-population">' + esc(keyPopulation) + '</div>' +
+      '</div>' +
+      '<div class="sp-section">' +
+        '<div class="sp-label">市场机会</div>' +
+        '<div class="sp-value market-opportunity">' + esc(marketOpportunity) + '</div>' +
+      '</div>' +
+      '<div class="sp-section sp-actions-section">' +
+        '<div class="sp-label">建议行动</div>' +
+        '<div class="sp-value recommended-actions">' + actionsHtml + '</div>' +
+      '</div>' +
+      '<div class="sp-section sp-kpi-section">' +
+        '<div class="sp-label">衡量指标（KPI）</div>' +
+        '<div class="sp-value sp-kpi-value">' + kpiHtml + '</div>' +
+      '</div>' +
+      '<div class="sp-section sp-compliance-section">' +
+        '<div class="sp-label">合规边界</div>' +
+        '<div class="sp-value compliance-text">' + esc(compliance) + '</div>' +
+      '</div>' +
+      '<div class="sp-evidence-footer">' +
+        '<button class="evidence-drawer-btn" onclick="App.openEvidenceDrawer(\'' + esc(panelTitle) + '\', ' + sourceIdsJson + ')">查看证据 →</button>' +
+      '</div>' +
+    '</div>';
+  }
+
+  // ==================== 2030差距洞察面板 ====================
+  function renderGapInsightPanel() {
+    var chart = (D.charts && D.charts['2030_gap']) || {};
+    var defaults = {
+      panelTitle: '2030差距分析',
+      whatItSays: '筛查后确诊、确诊后评估、治疗后长期管理是证据提示的三个主要断点。',
+      keyPopulation: 'HBV感染者全周期人群，含未确诊、未治疗、治疗中及随访脱落人群',
+      marketOpportunity: '重点支持筛查转诊网络、标准化评估包、患者长期管理项目。',
+      recommendedActions: [
+        '布局筛查-确诊-治疗-随访全链条管理项目',
+        '与区域联盟合作推动连续管理模式落地',
+        '强化患者脱落节点的干预与召回机制'
+      ],
+      kpiList: ['筛查转化率', '治疗覆盖率', '随访依从率'],
+      compliance: '2030目标相关数据为文献综合推导，具体市场活动需以获批适应症与合规要求为准。',
+      sourceIds: []
+    };
+    document.getElementById('gapInsightPanel').innerHTML = buildStrategyPanelHtml(chart, defaults);
+  }
+
+  // ==================== 筛查洞察面板 ====================
+  function renderScreeningInsightPanel() {
+    var chart = (D.charts && D.charts['screening_funnel']) || {};
+    var defaults = {
+      panelTitle: '筛查漏斗分析',
+      whatItSays: '从筛查到确诊再到治疗存在显著流失，确诊率与治疗启动率是关键瓶颈。',
+      keyPopulation: 'HBV高危人群（家族史、输血史、长期饮酒等）及一般筛查人群',
+      marketOpportunity: '筛查转诊网络建设、基层医院检测能力提升、患者教育与早诊观念推广。',
+      recommendedActions: [
+        '推动医院-社区联动的筛查转诊模式',
+        '支持基层医生HBV筛查与识别培训',
+        '开展高危人群主动筛查与患者召回项目'
+      ],
+      kpiList: ['筛查阳性率', '确诊转化率', '治疗启动率'],
+      compliance: '筛查策略需符合国家疾控与卫健委相关指南，不得用于超适应症推广。',
+      sourceIds: []
+    };
+    document.getElementById('screeningInsightPanel').innerHTML = buildStrategyPanelHtml(chart, defaults);
+  }
+
+  // ==================== 生物标志物洞察面板 ====================
+  function renderBiomarkerInsightPanel() {
+    var chart = (D.charts && D.charts['diagnosis_biomarker_landscape']) || {};
+    var defaults = {
+      panelTitle: '生物标志物格局',
+      whatItSays: 'HBsAg定量是疗效预测与功能性治愈评估的核心标志物，HBV DNA抑制程度与长期预后强相关。',
+      keyPopulation: '接受抗病毒治疗的慢乙肝患者，尤其追求功能性治愈的优势人群',
+      marketOpportunity: '伴随诊断检测推广、精准治疗分层工具、基于标志物的治疗决策支持。',
+      recommendedActions: [
+        '推动HBsAg定量检测在临床中的常规应用',
+        '开发基于生物标志物的患者分层工具',
+        '支持医生精准诊疗观念教育与检测习惯培养'
+      ],
+      kpiList: ['HBsAg检测率', '标志物指导治疗比例', '功能性治愈率'],
+      compliance: '生物标志物检测需符合临床检验规范，不得用于超说明书的疗效承诺。',
+      sourceIds: []
+    };
+    document.getElementById('biomarkerInsightPanel').innerHTML = buildStrategyPanelHtml(chart, defaults);
+  }
+
+  // ==================== 治疗人群洞察面板 ====================
+  function renderTreatmentInsightPanel() {
+    var chart = (D.charts && D.charts['treatment_population_outcomes']) || {};
+    var defaults = {
+      panelTitle: '治疗人群结局',
+      whatItSays: '经治患者转换或联合PegIFN可提升HBsAg下降与清除率，优势人群获益更显著。',
+      keyPopulation: '核苷（酸）类似物经治的慢乙肝患者，尤其是HBsAg低水平的优势人群',
+      marketOpportunity: '经治患者转换/联合治疗策略推广、优势人群识别与筛选、功能性治愈项目。',
+      recommendedActions: [
+        '推动经治患者转换/联合治疗的临床观念更新',
+        '建立优势人群筛选标准与路径',
+        '支持功能性治愈相关的真实世界研究与患者管理项目'
+      ],
+      kpiList: ['转换治疗比例', 'HBsAg清除率', '治疗满意度'],
+      compliance: '治疗方案选择应遵循指南推荐与获批适应症，不得进行超说明书用药推荐。',
+      sourceIds: []
+    };
+    document.getElementById('treatmentInsightPanel').innerHTML = buildStrategyPanelHtml(chart, defaults);
+  }
+
+  // ==================== 市场策略洞察面板 ====================
+  function renderMarketInsightPanel() {
+    var chart = (D.charts && D.charts['market_strategy_map']) || {};
+    var defaults = {
+      panelTitle: '市场策略全景',
+      whatItSays: '从筛查到HCC全病程管理各环节均存在未满足需求，需按优先级布局资源投入。',
+      keyPopulation: '慢乙肝全病程患者，按疾病阶段与治疗状态分层管理',
+      marketOpportunity: '全病程管理解决方案、分阶段学术推广项目、联盟合作平台建设。',
+      recommendedActions: [
+        '按筛-诊-治-管-监测全链条布局市场策略',
+        '优先投入高证据强度、高市场潜力的领域',
+        '建立证据动态监测与策略快速调整机制'
+      ],
+      kpiList: ['策略覆盖广度', '证据传递深度', '市场份额变化'],
+      compliance: '所有市场策略均需严格遵守药品管理法、广告法及医学伦理规范，不得超适应症推广。',
+      sourceIds: []
+    };
+    document.getElementById('marketInsightPanel').innerHTML = buildStrategyPanelHtml(chart, defaults);
+  }
+
+  // ==================== 市场行动卡片 ====================
+  function renderMarketActionCards() {
+    var chart = (D.charts && D.charts['market_strategy_map']) || {};
+    var strategies = chart.strategies || [];
+    if (!strategies.length) {
+      document.getElementById('marketActionCards').innerHTML = '';
+      return;
+    }
+
+    var priorityMap = { 'high': '高优先级', 'medium': '中优先级', 'exploratory': '探索性' };
+
+    var html = strategies.map(function(s, i) {
+      return '<div class="strategy-action-card">' +
+        '<div class="sa-header">' +
+          '<div class="sa-title">' + (i + 1) + '. ' + esc(s.name) + '</div>' +
+          '<span class="sa-priority ' + s.priority + '">' + priorityMap[s.priority] + '</span>' +
+        '</div>' +
+        '<div class="sa-grid">' +
+          '<div class="sa-item">' +
+            '<span class="sa-item-label">对应洞察</span>' +
+            '<span class="sa-item-value">' + esc(s.category + '领域策略') + '</span>' +
+          '</div>' +
+          '<div class="sa-item">' +
+            '<span class="sa-item-label">证据基础</span>' +
+            '<span class="sa-item-value">' + esc(s.evidence_basis || s.evidence_count + '篇支持文献') + '</span>' +
+          '</div>' +
+          '<div class="sa-item">' +
+            '<span class="sa-item-label">目标人群</span>' +
+            '<span class="sa-item-value">' + esc(s.target_population || '') + '</span>' +
+          '</div>' +
+          '<div class="sa-item">' +
+            '<span class="sa-item-label">核心行动</span>' +
+            '<span class="sa-item-value">' + esc(s.core_action || '') + '</span>' +
+          '</div>' +
+          '<div class="sa-item">' +
+            '<span class="sa-item-label">关键KPI</span>' +
+            '<span class="sa-item-value">' + ((s.kpis || []).join('、')) + '</span>' +
+          '</div>' +
+          '<div class="sa-item">' +
+            '<span class="sa-item-label">支持文献</span>' +
+            '<span class="sa-item-value">' +
+              '<span class="evidence-link" onclick="App.showEvidenceSources(\'' + esc(s.name) + '\')">' + (s.evidence_count || 0) + '篇 →</span>' +
+            '</span>' +
+          '</div>' +
+        '</div>' +
+        '<div class="sa-compliance">' + esc(s.compliance_note || '本策略为文献证据综合分析，不构成临床推荐或营销建议。具体实施需符合相关法律法规和医学伦理。') + '</div>' +
+      '</div>';
+    }).join('');
+
+    document.getElementById('marketActionCards').innerHTML = html;
   }
 
   // ==================== 总体核心洞察 ====================
@@ -335,6 +639,104 @@ var App = (function() {
     html += '</div>';
 
     document.getElementById('ovLatestUpdates').innerHTML = html;
+  }
+
+  // ==================== 最新变化页面 ====================
+  function renderUpdatesPage() {
+    var cr = D.changeReport || {};
+    var lu = D.latestUpdates || {};
+    var stats = D.statistics || {};
+
+    var html = '';
+
+    // 更新概述
+    var newLitCount = cr.new_literature_count || (lu.recentCount7d || 0);
+    var changedInsightsCount = cr.changed_insights_count || (cr.changed_insights && cr.changed_insights.length) || 0;
+    var updateDate = cr.update_date || stats.lastUpdate || '2026年8月';
+    var version = (D.meta && D.meta.version) ? 'v' + D.meta.version : '';
+
+    html += '<div class="updates-overview">' +
+      '<div class="callout teal">' +
+        '<div class="callout-label">本次更新概述</div>' +
+        '<p>更新时间：<strong>' + esc(updateDate) + '</strong> ' + esc(version) +
+        ' · 新增文献 <strong>' + newLitCount + '</strong> 篇' +
+        ' · 洞察变化 <strong>' + changedInsightsCount + '</strong> 条</p>' +
+      '</div>' +
+    '</div>';
+
+    // 变化的洞察列表
+    var changedInsights = cr.changed_insights || [];
+    if (changedInsights.length) {
+      html += '<div class="updates-section">' +
+        '<h3 class="updates-section-title">洞察变化</h3>' +
+        '<div class="change-report-list">';
+
+      var changeTypeMap = {
+        'strengthened': { label: '证据增强', cls: 'change-strengthened' },
+        'weakened': { label: '证据减弱', cls: 'change-weakened' },
+        'new': { label: '新增洞察', cls: 'change-new' },
+        'updated': { label: '内容更新', cls: 'change-updated' },
+        'controversial': { label: '出现争议', cls: 'change-controversial' }
+      };
+
+      changedInsights.forEach(function(ci) {
+        var ct = ci.change_type || ci.changeType || 'updated';
+        var typeInfo = changeTypeMap[ct] || { label: '更新', cls: 'change-updated' };
+        var sourceIds = ci.source_ids || ci.sourceIds || [];
+        var sourceIdsJson = JSON.stringify(sourceIds).replace(/"/g, '&quot;');
+
+        html += '<div class="change-report-card">' +
+          '<div class="crc-header">' +
+            '<span class="crc-type ' + typeInfo.cls + '">' + typeInfo.label + '</span>' +
+            '<span class="crc-category">' + esc(ci.category || ci.category_label || '') + '</span>' +
+          '</div>' +
+          '<div class="crc-title">' + esc(ci.title || '') + '</div>' +
+          '<div class="crc-summary">' + esc(ci.summary || ci.one_line || ci.description || '') + '</div>';
+
+        if (ci.previous_conclusion || ci.before) {
+          html += '<div class="crc-change-detail">' +
+            '<div class="crc-before"><span class="crc-change-label">之前：</span>' + esc(ci.previous_conclusion || ci.before || '') + '</div>' +
+            '<div class="crc-after"><span class="crc-change-label">现在：</span>' + esc(ci.new_conclusion || ci.after || ci.summary || '') + '</div>' +
+          '</div>';
+        }
+
+        html += '<div class="crc-footer">' +
+          '<span>新增支持文献 ' + (ci.new_evidence_count || ci.evidenceCount || 0) + ' 篇</span>' +
+          '<button class="crc-evidence-btn" onclick="App.openEvidenceDrawer(\'' + esc(ci.title || '') + '\', ' + sourceIdsJson + ')">查看证据 →</button>' +
+        '</div>' +
+        '</div>';
+      });
+
+      html += '</div></div>';
+    } else {
+      html += '<div class="updates-section">' +
+        '<h3 class="updates-section-title">洞察变化</h3>' +
+        '<div class="empty-state"><div class="empty-state-text">本次更新暂无洞察变化</div></div>' +
+      '</div>';
+    }
+
+    // 新增文献列表
+    var newPubs = (cr.new_literature || (lu.recentPublications || [])).slice(0, 30);
+    if (newPubs.length) {
+      html += '<div class="updates-section">' +
+        '<h3 class="updates-section-title">新增文献 (' + newPubs.length + '篇)</h3>' +
+        '<div class="latest-updates-list">';
+
+      newPubs.forEach(function(p) {
+        var level = p.evidenceLevel || 'C';
+        html += '<div class="update-item" onclick="App.searchAndShowLit(\'' + esc(p.pmid || '') + '\',\'' + esc(p.doi || '') + '\')">' +
+          '<span class="update-level level-' + level + '">' + level + '级</span>' +
+          '<span class="update-year">' + (p.year || '') + '</span>' +
+          '<span class="update-title">' + esc(p.title || '') + '</span>' +
+          '<span class="update-journal">' + esc(p.journal || '') + '</span>' +
+          (p.chinaEvidence ? '<span class="update-china">中国</span>' : '') +
+        '</div>';
+      });
+
+      html += '</div></div>';
+    }
+
+    document.getElementById('updatesContent').innerHTML = html;
   }
 
   // ==================== 证据等级表 ====================
@@ -581,6 +983,103 @@ var App = (function() {
     // 患者管理章节特殊内容
     if (pageKey === 'management') {
       content += renderPatientJourney();
+
+      // ---- 患者留存漏斗图 ----
+      var prf = (D.charts && D.charts['patient_retention_funnel']) || {};
+      content += '<div class="topic-section">';
+      content += '<h3 class="topic-section-title">患者留存漏斗分析</h3>';
+      content += '<div class="callout"><div class="callout-label">核心洞察</div><p>' + esc(prf.key_insight || '治疗前3个月和长期随访是两个主要脱落高峰。前6个月的依从性干预对长期留存有关键影响。') + '</p></div>';
+      content += '<div class="chart-card" style="margin-top:1rem;">';
+      content += '<h3 class="chart-card-title">全周期留存漏斗</h3>';
+      content += '<div id="chartMgmtRetention" class="chart-dom" style="height:420px;"></div>';
+      content += '</div>';
+      content += '<p style="font-size:0.78rem;color:var(--muted);margin-top:0.5rem;">脱落风险基于相关研究中提到的问题频次评估，非实际脱落率 · 数据来源：' + (prf.stages ? prf.stages.reduce(function(s, st) { return s + (st.related_studies || 0); }, 0) : 0) + '篇文献</p>';
+      content += '</div>';
+
+      // ---- 脱落原因分析卡片（3列网格） ----
+      content += '<div class="topic-section">';
+      content += '<h3 class="topic-section-title">脱落原因分析</h3>';
+      content += '<div class="patient-mgmt-grid">';
+      content += '<div class="patient-mgmt-card">' +
+        '<div class="patient-mgmt-label">治疗早期脱落（0-3月）</div>' +
+        '<div class="patient-mgmt-text">不良反应担忧、注射不便、初始疗效不明显导致患者信心不足。干扰素治疗患者因不良反应脱落风险更高。</div>' +
+      '</div>';
+      content += '<div class="patient-mgmt-card">' +
+        '<div class="patient-mgmt-label">中期脱落（3-12月）</div>' +
+        '<div class="patient-mgmt-text">无症状后自行停药、忘记服药、定期复查不便。核苷类似物患者依从性逐渐下降是主要问题。</div>' +
+      '</div>';
+      content += '<div class="patient-mgmt-card">' +
+        '<div class="patient-mgmt-label">长期失访（12月+）</div>' +
+        '<div class="patient-mgmt-text">缺乏主动召回机制、患者迁居、医患联系中断。HCC监测依从性在长期随访中显著下降。</div>' +
+      '</div>';
+      content += '</div>';
+      content += '</div>';
+
+      // ---- 干预效果对比 ----
+      var interventions = prf.interventions || [];
+      content += '<div class="topic-section">';
+      content += '<h3 class="topic-section-title">干预效果对比</h3>';
+      content += '<div class="callout teal"><div class="callout-label">市场机会</div><p>' + esc(prf.market_opportunity || '数字化随访系统、患者教育项目、基层-中心转诊网络建设是三大核心方向。') + '</p></div>';
+
+      // 数字化随访
+      content += '<div class="strategy-panel" style="margin-top:1rem;">';
+      content += '<div class="sp-section"><div class="sp-label">干预类型</div><div class="sp-value">数字化随访提醒</div></div>';
+      content += '<div class="sp-section"><div class="sp-label">作用阶段</div><div class="sp-value">治疗前3个月 · 依从性建立关键期</div></div>';
+      content += '<div class="sp-section"><div class="sp-label">证据效果</div><div class="sp-value">可提升6个月留存率约15-25%，短信/App提醒显著降低漏服率</div></div>';
+      content += '<div class="sp-section"><div class="sp-label">适用人群</div><div class="sp-value">初治患者、年轻患者、干扰素治疗患者</div></div>';
+      content += '<div class="sp-section"><div class="sp-label">KPI</div><div class="sp-value"><span class="sp-kpi-tag">3个月留存率</span><span class="sp-kpi-tag">漏服率降低</span></div></div>';
+      content += '</div>';
+
+      // 患者教育
+      content += '<div class="strategy-panel" style="margin-top:1rem;">';
+      content += '<div class="sp-section"><div class="sp-label">干预类型</div><div class="sp-value">患者教育项目</div></div>';
+      content += '<div class="sp-section"><div class="sp-label">作用阶段</div><div class="sp-value">治疗6个月 · 认知巩固与习惯养成</div></div>';
+      content += '<div class="sp-section"><div class="sp-label">证据效果</div><div class="sp-value">系统化疾病教育可提升长期依从性，患者对疾病认知程度与治疗结局正相关</div></div>';
+      content += '<div class="sp-section"><div class="sp-label">适用人群</div><div class="sp-value">文化程度较低患者、老年患者、首次接受抗病毒治疗患者</div></div>';
+      content += '<div class="sp-section"><div class="sp-label">KPI</div><div class="sp-value"><span class="sp-kpi-tag">12个月留存率</span><span class="sp-kpi-tag">疾病认知评分</span></div></div>';
+      content += '</div>';
+
+      // 个案管理
+      content += '<div class="strategy-panel" style="margin-top:1rem;">';
+      content += '<div class="sp-section"><div class="sp-label">干预类型</div><div class="sp-value">个案管理（护士/个案师）</div></div>';
+      content += '<div class="sp-section"><div class="sp-label">作用阶段</div><div class="sp-value">全周期 · 重点关注高风险脱落人群</div></div>';
+      content += '<div class="sp-section"><div class="sp-label">证据效果</div><div class="sp-value">护士主导的个案管理可显著改善病毒学应答率和治疗依从性，尤其在基层医疗场景</div></div>';
+      content += '<div class="sp-section"><div class="sp-label">适用人群</div><div class="sp-value">肝硬化患者、依从性差患者、老年患者、合并症患者</div></div>';
+      content += '<div class="sp-section"><div class="sp-label">KPI</div><div class="sp-value"><span class="sp-kpi-tag">病毒学应答率</span><span class="sp-kpi-tag">失访召回率</span></div></div>';
+      content += '</div>';
+
+      content += '</div>';
+
+      // ---- HCC长期监测部分 ----
+      var hcc = (D.charts && D.charts['hcc_residual_risk']) || {};
+      content += '<div class="topic-section">';
+      content += '<h3 class="topic-section-title">HCC长期监测</h3>';
+      content += '<div class="callout orange"><div class="callout-label">关键风险</div><p>' + esc(hcc.key_insight || '即使获得病毒学抑制，肝硬化和高龄患者仍存在HCC残余风险，需要长期规范监测。') + '</p></div>';
+      content += '<div class="patient-mgmt-grid">';
+      content += '<div class="patient-mgmt-card">' +
+        '<div class="patient-mgmt-label">高危人群</div>' +
+        '<div class="patient-mgmt-text">肝硬化患者、年龄>50岁、有HCC家族史、HBsAg持续阳性、合并糖尿病或肥胖。</div>' +
+      '</div>';
+      content += '<div class="patient-mgmt-card">' +
+        '<div class="patient-mgmt-label">监测方案</div>' +
+        '<div class="patient-mgmt-text">每6个月腹部超声+AFP检测，高危人群缩短至3-4个月。HBsAg清除后仍需定期监测。</div>' +
+      '</div>';
+      content += '<div class="patient-mgmt-card">' +
+        '<div class="patient-mgmt-label">市场机会</div>' +
+        '<div class="patient-mgmt-text">' + esc(hcc.market_opportunity || 'HCC分层监测服务和高危人群管理项目是重要的市场机会。') + '</div>' +
+      '</div>';
+      content += '</div>';
+      var hccFactors = hcc.risk_factors || [];
+      if (hccFactors.length > 0) {
+        content += '<div style="margin-top:1rem;"><span style="font-size:0.82rem;color:var(--muted);font-weight:600;">主要风险因素（' + hccFactors.length + '项）：</span>';
+        content += '<div style="margin-top:0.5rem;display:flex;flex-wrap:wrap;gap:0.4rem;">';
+        hccFactors.forEach(function(f) {
+          var strengthClass = f.evidence_strength === 'strong' ? 'high' : (f.evidence_strength === 'moderate' ? 'mid' : 'low');
+          content += '<span class="rep-record-badge ' + strengthClass + '" style="font-size:0.72rem;">' + esc(f.factor) + '</span>';
+        });
+        content += '</div></div>';
+      }
+      content += '</div>';
     }
 
     document.getElementById(pageKey + 'Content').innerHTML = content;
@@ -600,6 +1099,11 @@ var App = (function() {
             if (designDom) ChartFns.initTopicDesignChart(designDom, topic.overview.designDist);
           }
         });
+      }
+      // 患者管理页面专属图表
+      if (pageKey === 'management' && window.ChartFns) {
+        var mgmtRetentionDom = document.getElementById('chartMgmtRetention');
+        if (mgmtRetentionDom) ChartFns.initPatientRetentionChart(mgmtRetentionDom);
       }
     }, 100);
   }
@@ -846,33 +1350,155 @@ var App = (function() {
 
     var html = '';
 
-    // 市场策略卡片
+    // ===== 市场行动总览 =====
     var ms = D.marketStrategy || {};
+    var msmChart = (D.charts && D.charts['market_strategy_map']) || {};
+    var msmStrategies = msmChart.strategies || [];
     var table = ms.strategyTable || [];
+
+    html += '<div class="topic-section">';
+    html += '<h3 class="topic-section-title">市场行动总览</h3>';
+    html += '<div class="callout green"><div class="callout-label">循证策略总览</div>';
+    html += '<p>' + esc(ms.summary || '基于近1000篇循证医学文献，为乙肝市场部提供从筛查到HCC全程管理的循证策略支持。') + '</p>';
+    html += '<div style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:0.4rem;">';
+    html += '<span class="meta-tag green">覆盖阶段：筛 / 诊 / 治 / 管 / HCC / 联盟</span>';
+    html += '<span class="meta-tag teal">策略类型：' + (ms.strategyTypes ? ms.strategyTypes.length : 0) + '类</span>';
+    html += '<span class="meta-tag">支持文献：' + D.statistics.totalLiterature + '篇</span>';
+    html += '</div></div>';
+
+    // 合规提示
+    if (ms.compliance && ms.compliance.length > 0) {
+      html += '<div style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:0.4rem;">';
+      html += '<span style="font-size:0.75rem;color:var(--muted);font-weight:600;">合规原则：</span>';
+      ms.compliance.forEach(function(c) {
+        html += '<span class="rep-record-badge" style="font-size:0.7rem;background:var(--ink05);color:var(--muted);">' + esc(c) + '</span>';
+      });
+      html += '</div>';
+    }
+    html += '</div>';
+
+    // ===== 六大策略行动卡片 =====
     if (table.length > 0) {
       html += '<div class="topic-section">';
-      html += '<h3 class="topic-section-title">市场部策略卡片</h3>';
-      html += '<div class="callout green"><div class="callout-label">策略原则</div><p>所有策略基于' + D.statistics.totalLiterature + '篇飞书同步文献逐层推导，医学合规，不超说明书，不夸大疗效。</p></div>';
+      html += '<h3 class="topic-section-title">六大策略行动</h3>';
+      html += '<p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;">覆盖从筛查到联盟的全病程管理，每个领域均有明确的循证洞察、核心障碍与可落地行动建议。</p>';
 
       table.forEach(function(s, idx) {
-        var priority = 'med';
+        var priority = 'medium';
         if (s.stage === '筛' || s.stage === '治' || s.stage === '管/康') priority = 'high';
-        else if (s.stage === '联盟') priority = 'low';
-        var priorityLabel = priority === 'high' ? '高优先级' : (priority === 'med' ? '中优先级' : '探索性');
+        else if (s.stage === '联盟') priority = 'exploratory';
+        var priorityLabel = priority === 'high' ? '高优先级' : (priority === 'medium' ? '中优先级' : '探索性');
+        var stageMap = { '筛': '筛查', '诊': '诊断', '治': '治疗', '管/康': '管理', 'HBV→HCC': 'HCC', '联盟': '联盟' };
+        var category = stageMap[s.stage] || s.stage;
 
-        html += '<div class="strategy-card">' +
-          '<span class="priority-tag ' + priority + '">' + priorityLabel + '</span>' +
-          '<h4>' + esc(s.stage) + ' · ' + esc(s.coreInsight || '') + '</h4>' +
-          '<div class="sc-row"><span class="sc-label">对应文献洞察：</span><span class="sc-value">' + esc(s.coreInsight || '') + '</span></div>' +
-          '<div class="sc-row"><span class="sc-label">证据基础：</span><span class="sc-value">' + (s.sourceCount || 0) + ' 篇文献</span></div>' +
-          '<div class="sc-row"><span class="sc-label">目标医生/患者：</span><span class="sc-value">' + esc(s.targetAudience || '') + '</span></div>' +
-          '<div class="sc-row"><span class="sc-label">核心障碍：</span><span class="sc-value">' + esc(s.barrier || '') + '</span></div>' +
-          '<div class="sc-row"><span class="sc-label">建议行动：</span><span class="sc-value">' + esc(s.project || '') + '</span></div>' +
-          '<div class="sc-row"><span class="sc-label">实施场景：</span><span class="sc-value">' + esc(s.evidenceCommunication || '') + '</span></div>' +
-          '<div class="sc-row"><span class="sc-label">KPI：</span><span class="sc-value sc-kpi">' + esc(s.kpi || '') + '</span></div>' +
+        html += '<div class="strategy-action-card">' +
+          '<div class="sa-header">' +
+            '<div class="sa-title">' + (idx + 1) + '. ' + esc(s.stage) + ' · ' + esc(s.coreInsight || '') + '</div>' +
+            '<span class="sa-priority ' + priority + '">' + priorityLabel + '</span>' +
+          '</div>' +
+          '<div class="sa-grid">' +
+            '<div class="sa-item">' +
+              '<span class="sa-item-label">对应洞察</span>' +
+              '<span class="sa-item-value">' + esc(category + '领域核心洞察') + '</span>' +
+            '</div>' +
+            '<div class="sa-item">' +
+              '<span class="sa-item-label">证据基础</span>' +
+              '<span class="sa-item-value">' + (s.sourceCount || 0) + '篇支持文献</span>' +
+            '</div>' +
+            '<div class="sa-item">' +
+              '<span class="sa-item-label">目标人群</span>' +
+              '<span class="sa-item-value">' + esc(s.targetAudience || '') + '</span>' +
+            '</div>' +
+            '<div class="sa-item">' +
+              '<span class="sa-item-label">核心障碍</span>' +
+              '<span class="sa-item-value">' + esc(s.barrier || '') + '</span>' +
+            '</div>' +
+            '<div class="sa-item">' +
+              '<span class="sa-item-label">建议行动</span>' +
+              '<span class="sa-item-value">' + esc(s.project || '') + '</span>' +
+            '</div>' +
+            '<div class="sa-item">' +
+              '<span class="sa-item-label">关键KPI</span>' +
+              '<span class="sa-item-value">' + esc(s.kpi || '') + '</span>' +
+            '</div>' +
+          '</div>' +
+          '<div class="sa-compliance">' + esc(s.evidenceCommunication || '') + '</div>' +
         '</div>';
       });
       html += '</div>';
+    }
+
+    // ===== 市场行动优先级矩阵图 =====
+    if (msmStrategies.length > 0) {
+      html += '<div class="topic-section">';
+      html += '<h3 class="topic-section-title">市场行动优先级矩阵</h3>';
+      html += '<div class="callout teal"><div class="callout-label">矩阵解读</div>';
+      html += '<p>' + esc(msmChart.key_insight || '从筛查到HCC全病程管理各环节均存在未满足需求，需按优先级布局资源投入。横轴为市场价值，纵轴为实施难度，气泡大小代表证据强度。') + '</p></div>';
+      html += '<div class="chart-card" style="margin-top:1rem;">';
+      html += '<h3 class="chart-card-title">价值-难度矩阵分析</h3>';
+      html += '<div id="chartMarketMatrix" class="chart-dom" style="height:420px;"></div>';
+      html += '</div>';
+      html += '<p style="font-size:0.78rem;color:var(--muted);margin-top:0.5rem;">气泡大小代表支持文献数量 · 颜色代表优先级（蓝=高，橙=中，灰=低）</p>';
+      html += '</div>';
+
+      // ===== 高优先级行动详情列表 =====
+      var highPriorityActions = msmStrategies.filter(function(s) { return s.priority === 'high'; });
+      if (highPriorityActions.length > 0) {
+        html += '<div class="topic-section">';
+        html += '<h3 class="topic-section-title">高优先级行动详情（' + highPriorityActions.length + '项）</h3>';
+        html += '<p style="font-size:0.82rem;color:var(--muted);margin-bottom:1rem;">高市场价值、相对低实施难度的优先行动，建议作为下一阶段重点投入方向。</p>';
+
+        highPriorityActions.forEach(function(s, idx) {
+          html += '<div class="strategy-detail-card" style="border-left-color:var(--accent);">';
+          html += '<div class="strategy-detail-header">';
+          html += '<span class="strategy-detail-num" style="background:var(--accent);">' + (idx + 1) + '</span>';
+          html += '<div>';
+          html += '<span class="priority-tag high" style="margin-bottom:0.3rem;">高优先级</span>';
+          html += '<h4 style="font-size:0.92rem;font-weight:700;color:var(--ink);line-height:1.4;margin-bottom:0.2rem;">' + esc(s.name) + '</h4>';
+          html += '<div class="strategy-detail-meta">';
+          html += '<span>类别：' + esc(s.category || '') + '</span>';
+          html += '<span>市场价值：' + s.market_value + '/100</span>';
+          html += '<span>实施难度：' + s.implementation_difficulty + '/100</span>';
+          html += '</div>';
+          html += '</div>';
+          html += '</div>';
+
+          html += '<div class="strategy-evidence">';
+          html += '<div class="strategy-evidence-title">证据基础</div>';
+          html += '<div class="strategy-evidence-text">' + esc(s.evidence_basis || '') + '</div>';
+          html += '</div>';
+
+          html += '<div class="strategy-actions-section">';
+          html += '<div class="strategy-actions-title">核心信息</div>';
+          html += '<div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;">';
+          html += '<div><span style="font-size:0.78rem;color:var(--muted);">目标人群：</span><span style="font-size:0.82rem;color:var(--ink);">' + esc(s.target_population || '') + '</span></div>';
+          html += '<div><span style="font-size:0.78rem;color:var(--muted);">核心行动：</span><span style="font-size:0.82rem;color:var(--ink);">' + esc(s.core_action || '') + '</span></div>';
+          html += '</div>';
+          html += '</div>';
+
+          if (s.kpis && s.kpis.length > 0) {
+            html += '<div class="strategy-evidence-basis">';
+            html += '<span class="strategy-evidence-label">关键KPI：</span>';
+            s.kpis.forEach(function(k) {
+              html += '<span class="strategy-evidence-tag">' + esc(k) + '</span>';
+            });
+            html += '</div>';
+          }
+
+          html += '<div class="strategy-evidence-basis">';
+          html += '<span class="strategy-evidence-label">证据来源：</span>';
+          html += '<span class="strategy-evidence-tag">' + (s.evidence_count || 0) + '篇支持文献</span>';
+          html += '</div>';
+
+          if (s.compliance_note) {
+            html += '<div style="margin-top:0.75rem;padding:0.6rem 0.8rem;background:var(--ink05);border-radius:6px;font-size:0.75rem;color:var(--muted);">';
+            html += '<strong style="color:var(--ink600);">合规提示：</strong>' + esc(s.compliance_note) + '</div>';
+          }
+
+          html += '</div>';
+        });
+        html += '</div>';
+      }
     }
 
     // 2030策略列表
@@ -953,6 +1579,14 @@ var App = (function() {
     }
 
     document.getElementById('strategyContent').innerHTML = html;
+
+    // 图表初始化
+    setTimeout(function() {
+      if (window.ChartFns) {
+        var matrixDom = document.getElementById('chartMarketMatrix');
+        if (matrixDom) ChartFns.initMarketStrategyChart(matrixDom);
+      }
+    }, 100);
   }
 
   // ==================== 全国联盟页 ====================
@@ -1316,6 +1950,71 @@ var App = (function() {
     }
   }
 
+  // ==================== 证据抽屉交互 ====================
+  function openEvidenceDrawer(title, sourceIds) {
+    document.getElementById('drawerTitle').textContent = title || '支持证据';
+    renderDrawerEvidence(sourceIds || []);
+
+    var overlay = document.getElementById('evidenceDrawerOverlay');
+    var drawer = document.getElementById('evidenceDrawer');
+    overlay.classList.add('show');
+    drawer.classList.add('show');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeEvidenceDrawer() {
+    var overlay = document.getElementById('evidenceDrawerOverlay');
+    var drawer = document.getElementById('evidenceDrawer');
+    overlay.classList.remove('show');
+    drawer.classList.remove('show');
+    document.body.style.overflow = '';
+  }
+
+  function renderDrawerEvidence(sourceIds) {
+    var listEl = document.getElementById('drawerEvidenceList');
+    var countEl = document.getElementById('drawerEvidenceCount');
+    var litList = D.literature || [];
+    var matched = [];
+
+    if (sourceIds && sourceIds.length) {
+      // 按ID匹配
+      for (var i = 0; i < sourceIds.length; i++) {
+        var sid = sourceIds[i];
+        var found = litList.find(function(l) {
+          return l.id === sid || l.pmid === sid || l.doi === sid ||
+                 (l.literatureId && l.literatureId === sid);
+        });
+        if (found) matched.push(found);
+      }
+    }
+
+    if (!matched.length) {
+      // 如果没有sourceIds或找不到匹配，取最新的10篇作为展示
+      matched = litList.slice(0, 10);
+    }
+
+    var html = matched.map(function(lit) {
+      var level = lit.evidenceLevel || 'C';
+      var isChina = lit.chinaEvidence || lit.china_direct || lit.isChina;
+      return '<div class="drawer-evidence-item" onclick="App.showLitDetail(\'' + esc(lit.id || lit.pmid || '') + '\')">' +
+        '<div class="dei-header">' +
+          '<span class="dei-level level-' + level + '">' + level + '级</span>' +
+          '<span class="dei-year">' + (lit.year || '') + '</span>' +
+          (isChina ? '<span class="dei-china">中国证据</span>' : '') +
+        '</div>' +
+        '<div class="dei-title">' + esc(lit.title || lit.title_cn || '') + '</div>' +
+        '<div class="dei-journal">' + esc(lit.journal || '') + '</div>' +
+      '</div>';
+    }).join('');
+
+    if (!matched.length) {
+      html = '<div class="drawer-empty">暂无匹配的文献证据</div>';
+    }
+
+    listEl.innerHTML = html;
+    countEl.textContent = matched.length + ' 篇文献';
+  }
+
   // ==================== 工具函数 ====================
   function esc(str) {
     if (str == null) return '';
@@ -1342,6 +2041,29 @@ var App = (function() {
     return html || '<p>' + esc(text) + '</p>';
   }
 
+  // ==================== 显示证据来源 ====================
+  function showEvidenceSources(strategyName) {
+    // 跳转到证据库页面并搜索相关文献
+    var chart = (D.charts && D.charts['market_strategy_map']) || {};
+    var strategies = chart.strategies || [];
+    var strategy = strategies.find(function(s) { return s.name === strategyName; });
+
+    if (strategy && strategy.source_ids && strategy.source_ids.length) {
+      // 有具体文献ID，跳转到证据库
+      App.navigate('evidence');
+      setTimeout(function() {
+        var searchInput = document.getElementById('evSearchInput');
+        if (searchInput) {
+          searchInput.value = strategyName;
+          App.evidenceSearch();
+        }
+      }, 200);
+    } else {
+      // 直接跳转到证据库
+      App.navigate('evidence');
+    }
+  }
+
   // ==================== 暴露接口 ====================
   return {
     init: init,
@@ -1354,7 +2076,11 @@ var App = (function() {
     closeLitModal: closeLitModal,
     toggleLinkedLit: toggleLinkedLit,
     searchAndShowLit: searchAndShowLit,
-    searchLitByTitle: searchLitByTitle
+    searchLitByTitle: searchLitByTitle,
+    showEvidenceSources: showEvidenceSources,
+    openEvidenceDrawer: openEvidenceDrawer,
+    closeEvidenceDrawer: closeEvidenceDrawer,
+    renderUpdatesPage: renderUpdatesPage
   };
 
 })();

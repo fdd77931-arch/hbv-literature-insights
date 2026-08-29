@@ -1,0 +1,150 @@
+{
+  "chart_id": "treatment_population_outcomes",
+  "chart_title": "不同CHB人群HBsAg清除相关研究分布",
+  "chart_subtitle": "展示各人群相关研究数量和证据强度，不列合并清除率（人群/方案/随访异质性大）",
+  "generated_at": "2026-08-29T23:07:45.901947",
+  "populations": [
+    {
+      "key": "naive",
+      "name": "初治CHB患者",
+      "related_studies": 2,
+      "ab_evidence": 2,
+      "china_evidence": 2,
+      "common_treatments": [
+        "PegIFNα",
+        "NA"
+      ],
+      "source_ids": [
+        "recvtzU2qpAZSH",
+        "recvtA1JTph5Hx"
+      ],
+      "clearance_rate_range": null,
+      "evidence_note": "展示相关研究数量，具体清除率因人群、方案和随访时间差异极大",
+      "confidence": "较低"
+    },
+    {
+      "key": "na_experienced",
+      "name": "NA经治患者",
+      "related_studies": 7,
+      "ab_evidence": 5,
+      "china_evidence": 4,
+      "common_treatments": [
+        "PegIFNα转换",
+        "NA联合PegIFN"
+      ],
+      "source_ids": [
+        "recvsSSvsej7cz",
+        "recvtzaEUFX4Ap",
+        "recvtzKr5gvdSS",
+        "recvtzPIPuXDCn",
+        "recvtA4FvAmlCA",
+        "recvtA8XWuWRQO",
+        "recvtA9GaCARhw"
+      ],
+      "clearance_rate_range": null,
+      "evidence_note": "展示相关研究数量，具体清除率因人群、方案和随访时间差异极大",
+      "confidence": "中等"
+    },
+    {
+      "key": "switch",
+      "name": "经治转换/联合PegIFN",
+      "related_studies": 10,
+      "ab_evidence": 9,
+      "china_evidence": 9,
+      "common_treatments": [
+        "PegIFNα+NA",
+        "PegIFNα序贯"
+      ],
+      "source_ids": [
+        "recvtzFU1s2XOI",
+        "recvtzH59ACscK",
+        "recvtzJfY1Bjig",
+        "recvtzKc9serEI",
+        "recvtzRqHIdUBi",
+        "recvtzUzJuI5zD",
+        "recvtzWSnW3iuB",
+        "recvtzZTjeR35E"
+      ],
+      "clearance_rate_range": null,
+      "evidence_note": "展示相关研究数量，具体清除率因人群、方案和随访时间差异极大",
+      "confidence": "中等"
+    },
+    {
+      "key": "inactive_carrier",
+      "name": "非活动性携带者",
+      "related_studies": 10,
+      "ab_evidence": 4,
+      "china_evidence": 8,
+      "common_treatments": [
+        "PegIFNα"
+      ],
+      "source_ids": [
+        "recvtzHHGUIRe7",
+        "recvtzIkvyUxNM",
+        "recvtzPDnnP0KN",
+        "recvtzWafL61se",
+        "recvtA05tGCD8d",
+        "recvtA6i2kRccE",
+        "recvtAcOKAVUJp",
+        "recvtAdsshoTYB"
+      ],
+      "clearance_rate_range": null,
+      "evidence_note": "展示相关研究数量，具体清除率因人群、方案和随访时间差异极大",
+      "confidence": "中等"
+    },
+    {
+      "key": "children",
+      "name": "儿童CHB",
+      "related_studies": 8,
+      "ab_evidence": 5,
+      "china_evidence": 4,
+      "common_treatments": [
+        "PegIFNα",
+        "NA"
+      ],
+      "source_ids": [
+        "recvtzarJwtThv",
+        "recvtzGhszEENy",
+        "recvtzW25iHXRz",
+        "recvtA0fohodgk",
+        "recvtA4TmsP4Bi",
+        "recvtA55qZvmyA",
+        "recvtA7vW8RFyo",
+        "recvtAcFAePJyD"
+      ],
+      "clearance_rate_range": null,
+      "evidence_note": "展示相关研究数量，具体清除率因人群、方案和随访时间差异极大",
+      "confidence": "中等"
+    },
+    {
+      "key": "hbeag_negative",
+      "name": "HBeAg阴性CHB",
+      "related_studies": 7,
+      "ab_evidence": 3,
+      "china_evidence": 6,
+      "common_treatments": [
+        "PegIFNα",
+        "NA"
+      ],
+      "source_ids": [
+        "recvs9GLl4SLOQ",
+        "recvtzaeBwO47k",
+        "recvtzZG3HeDp1",
+        "recvtA1bV7bMcA",
+        "recvtA3o5qiEMQ",
+        "recvtA9p9xbDR9",
+        "recvtAaOXLH5Ux"
+      ],
+      "clearance_rate_range": null,
+      "evidence_note": "展示相关研究数量，具体清除率因人群、方案和随访时间差异极大",
+      "confidence": "中等"
+    }
+  ],
+  "methodology": "基于标题关键词匹配统计各人群相关研究数量。由于不同研究的治疗方案、基线特征、随访时间和终点定义差异极大，不计算合并清除率。具体研究结果请查看关联文献。",
+  "key_insight": "NA经治患者转换PegIFN和非活动性携带者是当前研究热点，证据量增长最快。",
+  "market_opportunity": "PegIFNα优势人群识别和经治转换方案是核心市场机会。",
+  "recommended_kpi": [
+    "优势人群识别率",
+    "经治患者转换评估率"
+  ]
+}
