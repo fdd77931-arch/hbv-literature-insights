@@ -256,6 +256,7 @@
         sourceUrl: r.source_url || '',
         evidenceLevel: r.evidence_level || 'C',
         chinaEvidence: r.china_evidence || false,
+        studyDesign: r.study_design || '',
         topicPrimary: r.topic_primary || '',
         topicPrimaryName: topicName,
         topicCodes: r.topic_codes || [],
@@ -460,10 +461,22 @@
   // ---------- 新增: 总体核心洞察 ----------
   function buildOverallCoreInsight() {
     const d = sd.overall_core_insight || {};
+    const es = d.evidence_scope || {};
     return {
       title: d.title || '',
       oneLineConclusion: d.one_line_conclusion || '',
-      evidenceScope: d.evidence_scope || {},
+      evidenceScope: {
+        totalLiterature: es.total_literature || 0,
+        chinaDirect: es.china_direct || 0,
+        chinaCollab: es.china_collab || 0,
+        international: es.international || 0,
+        unknown: es.unknown || 0,
+        chinaEvidencePct: es.china_evidence_pct || 0,
+        yearRange: es.year_range || '',
+        abEvidencePct: es.ab_evidence_pct || 0,
+        clusterCount: es.cluster_count || 0,
+        clusterAssociatedTotal: es.cluster_associated_total || 0,
+      },
       coreFindings: d.core_findings || [],
       coreGap2030: d.core_gap_2030 || '',
       marketImplication: d.market_implication || '',
@@ -521,6 +534,8 @@
       lastSync: d.last_sync || '',
       totalRecords: d.total_records || 0,
       byYear: d.by_year || {},
+      recentCount24h: d.recent_count_24h || 0,
+      recentCount7d: d.recent_count_7d || 0,
       recentPublications: (d.recent_publications || []).map(r => ({
         title: r.title || '',
         journal: r.journal || '',

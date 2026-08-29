@@ -7,28 +7,28 @@
 (function() {
   'use strict';
 
-  // 颜色常量
+  // 颜色常量 — 报告式设计系统
   const COLORS = {
-    primary: '#005691',
-    primaryDark: '#003d66',
-    primaryLight: '#1a73b8',
-    secondary: '#00A896',
-    secondaryDark: '#008a7a',
-    secondaryLight: '#33b9aa',
-    accent: '#E8742C',
-    accentLight: '#f2995f',
-    danger: '#DC3545',
-    success: '#28A745',
-    warning: '#FFC107',
+    primary: '#00688f',
+    primaryDark: '#004a68',
+    primaryLight: '#2a80a3',
+    secondary: '#2d8659',
+    secondaryDark: '#1f6b45',
+    secondaryLight: '#3a9a6a',
+    accent: '#c75d2c',
+    accentLight: '#d9764a',
+    danger: '#dc3545',
+    success: '#2d8659',
+    warning: '#e8a030',
     purple: '#6366f1',
-    ink900: '#0f1a26',
+    ink900: '#1a2332',
     ink700: '#2d3748',
     ink600: '#4a5568',
-    ink500: '#718096',
-    ink400: '#a0aec0',
+    ink500: '#5a6c80',
+    ink400: '#7a8a9a',
     ink300: '#cbd5e0',
-    ink200: '#e2e8f0',
-    ink100: '#edf2f7'
+    ink200: '#d4dde5',
+    ink100: '#eef2f5'
   };
 
   // 公共tooltip样式
