@@ -7,6 +7,17 @@
       "note": "总体不良事件包括所有级别的治疗相关不良事件",
       "data_points": [
         {
+          "value": 5.0,
+          "population": "肝硬化、初治、ETV经治",
+          "study_design": "随机对照试验",
+          "sample_size": 666,
+          "evidence_grade": "A",
+          "follow_up": "96周",
+          "title": "核苷酸类似物荟萃分析",
+          "study_entity_id": "study_009",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
           "value": 18.2,
           "population": "初治、TAF经治、HBeAg阳性",
           "study_design": "随机对照试验",
@@ -58,6 +69,17 @@
       "note": "严重不良事件指导致住院、死亡或危及生命的事件",
       "data_points": [
         {
+          "value": 5.0,
+          "population": "肝硬化、初治、ETV经治",
+          "study_design": "随机对照试验",
+          "sample_size": 666,
+          "evidence_grade": "A",
+          "follow_up": "96周",
+          "title": "核苷酸类似物荟萃分析",
+          "study_entity_id": "study_009",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
           "value": 34.8,
           "population": "初治、TAF经治、HBeAg阳性",
           "study_design": "随机对照试验",
@@ -87,6 +109,28 @@
       "note": "eGFR变化反映肾功能影响，正值表示改善，负值表示下降",
       "data_points": [
         {
+          "value": 2.5,
+          "population": "肝硬化、初治、ETV经治",
+          "study_design": "随机对照试验",
+          "sample_size": 666,
+          "evidence_grade": "A",
+          "follow_up": "96周",
+          "title": "核苷酸类似物荟萃分析",
+          "study_entity_id": "study_009",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
+          "value": 0.2,
+          "population": "肝硬化、初治、ETV经治",
+          "study_design": "随机对照试验",
+          "sample_size": 666,
+          "evidence_grade": "A",
+          "follow_up": "96周",
+          "title": "核苷酸类似物荟萃分析",
+          "study_entity_id": "study_009",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
           "value": 1.0,
           "population": "初治、TAF经治、HBeAg阳性",
           "study_design": "随机对照试验",
@@ -94,6 +138,28 @@
           "evidence_grade": "A",
           "follow_up": "144周",
           "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
+          "value": 48.0,
+          "population": "肝硬化、初治、ETV经治",
+          "study_design": "真实世界研究",
+          "sample_size": 187,
+          "evidence_grade": "B",
+          "follow_up": "—",
+          "title": "Effects of tenofovir amibufenamide and entecavir o",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
+          "value": 48.0,
+          "population": "肝硬化、初治、ETV经治",
+          "study_design": "真实世界研究",
+          "sample_size": 187,
+          "evidence_grade": "B",
+          "follow_up": "—",
+          "title": "Effects of tenofovir amibufenamide and entecavir o",
           "study_entity_id": "study_001_NCT03903796",
           "limitations": "单研究数据，需结合更多证据综合判断"
         }
@@ -221,5 +287,5 @@
     }
   ],
   "method_note": "不能把\"无统计学显著差异\"表述为\"绝对没有影响\"。安全性数据需结合研究设计、样本量和随访时间综合解读。",
-  "generated_at": "2026-08-30T12:30:12.049794"
+  "generated_at": "2026-08-30T13:05:58.292570"
 }

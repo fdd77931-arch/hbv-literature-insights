@@ -32,6 +32,18 @@
           "limitations": "单研究数据，不代表类效应"
         },
         {
+          "value": 85.7,
+          "population": "肝硬化、初治、ETV经治",
+          "study_design": "Ⅲ期临床试验",
+          "follow_up": "—",
+          "sample_size": 98,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "Efficacy and Safety of Tenofovir Amibufenamide and",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
           "value": 100.0,
           "population": "初治、TAF经治、HBeAg阳性",
           "study_design": "真实世界研究",
@@ -65,6 +77,30 @@
           "pmid": "",
           "title": "中华肝脏病杂志 2024 年11 月第 32 卷第 11 期　Chin J Hepatol, Nov",
           "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 95.0,
+          "population": "肝硬化、初治、ETV经治",
+          "study_design": "随机对照试验",
+          "follow_up": "96周",
+          "sample_size": 666,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "核苷酸类似物荟萃分析",
+          "study_entity_id": "study_009",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 84.0,
+          "population": "肝硬化、初治、ETV经治",
+          "study_design": "随机对照试验",
+          "follow_up": "96周",
+          "sample_size": 666,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "核苷酸类似物荟萃分析",
+          "study_entity_id": "study_009",
           "limitations": "单研究数据，不代表类效应"
         },
         {
@@ -205,6 +241,18 @@
           "pmid": "",
           "title": "中华肝脏病杂志 2024 年11 月第 32 卷第 11 期　Chin J Hepatol, Nov",
           "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 93.2,
+          "population": "肝硬化、初治、ETV经治",
+          "study_design": "随机对照试验",
+          "follow_up": "96周",
+          "sample_size": 666,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "核苷酸类似物荟萃分析",
+          "study_entity_id": "study_009",
           "limitations": "单研究数据，不代表类效应"
         },
         {
@@ -354,9 +402,22 @@
       "key": "hbsag_clearance_rates",
       "note": "HBsAg清除在核苷类治疗中较为罕见",
       "endpoint_definition": "HBsAg低于检测下限",
-      "data_points": []
+      "data_points": [
+        {
+          "value": 95.0,
+          "population": "肝硬化、初治、ETV经治",
+          "study_design": "随机对照试验",
+          "follow_up": "96周",
+          "sample_size": 666,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "核苷酸类似物荟萃分析",
+          "study_entity_id": "study_009",
+          "limitations": "单研究数据，不代表类效应"
+        }
+      ]
     }
   ],
   "method_note": "不同随访时间、人群和终点定义的研究不直接计算简单平均。所有数据点均标注来源研究和人群。",
-  "generated_at": "2026-08-30T12:30:12.047712"
+  "generated_at": "2026-08-30T13:05:58.291840"
 }

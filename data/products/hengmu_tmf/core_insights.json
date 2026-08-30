@@ -4,13 +4,13 @@
   "insights": [
     {
       "insight_id": "ins_01",
-      "conclusion": "恒沐®（艾米替诺福韦片，TMF）已有18篇公开文献支持，涵盖Ⅲ期临床试验和多项真实世界研究，中国患者证据占比高。",
+      "conclusion": "恒沐®（艾米替诺福韦片，TMF）已有22篇公开文献支持，涵盖Ⅲ期临床试验和多项真实世界研究，中国患者证据占比高。",
       "applicable_population": "慢性乙型肝炎成人患者",
-      "support_literature_count": 18,
-      "independent_study_count": 10,
+      "support_literature_count": 22,
+      "independent_study_count": 12,
       "highest_evidence_level": "A",
       "evidence_consistency": "整体一致，部分安全性指标需更多研究",
-      "china_practice_relevance": "中国研究17篇，占比94.0%，与中国临床实践高度相关",
+      "china_practice_relevance": "中国研究21篇，占比95.0%，与中国临床实践高度相关",
       "meaning_2030": "作为中国原研核苷类药物，有助于提高2030抗病毒治疗覆盖率和可及性",
       "market_implication": "可在循证医学基础上开展医生教育和患者管理项目",
       "main_limitations": "长期（>3年）疗效和安全性数据仍在积累，HCC终点数据不足",
@@ -32,7 +32,11 @@
         "tmf_015",
         "tmf_016",
         "tmf_017",
-        "tmf_018"
+        "tmf_018",
+        "tmf_019",
+        "tmf_021",
+        "tmf_022",
+        "tmf_023"
       ],
       "compliance_note": "所有结论基于已发表文献，不生成超适应证推荐"
     },
@@ -40,8 +44,8 @@
       "insight_id": "ins_02",
       "conclusion": "恒沐®在多项研究中显示强效HBV DNA抑制作用，在初治和经治患者中均观察到良好的病毒学应答。",
       "applicable_population": "初治和经治CHB患者",
-      "support_literature_count": 9,
-      "independent_study_count": 4,
+      "support_literature_count": 11,
+      "independent_study_count": 5,
       "highest_evidence_level": "A",
       "evidence_consistency": "不同研究中观察到一致的病毒学抑制趋势",
       "china_practice_relevance": "中国真实世界研究数据支持其在临床实践中的有效性",
@@ -52,12 +56,14 @@
         "tmf_001",
         "tmf_003",
         "tmf_005",
-        "tmf_007",
-        "tmf_009",
+        "tmf_006",
+        "tmf_008",
         "tmf_010",
         "tmf_011",
-        "tmf_014",
-        "tmf_016"
+        "tmf_012",
+        "tmf_013",
+        "tmf_017",
+        "tmf_019"
       ],
       "compliance_note": "病毒学应答结果需结合具体研究设计和终点定义解读"
     },
@@ -65,8 +71,8 @@
       "insight_id": "ins_03",
       "conclusion": "恒沐®在已发表研究中总体耐受性良好，肾安全性特征受到关注，血脂代谢影响需个体化评估。",
       "applicable_population": "接受长期抗病毒治疗的CHB患者",
-      "support_literature_count": 6,
-      "independent_study_count": 3,
+      "support_literature_count": 8,
+      "independent_study_count": 4,
       "highest_evidence_level": "B",
       "evidence_consistency": "总体安全性良好，但血脂相关结果在不同研究中存在差异",
       "china_practice_relevance": "中国真实世界研究提供了安全性数据",
@@ -75,11 +81,13 @@
       "main_limitations": "部分研究样本量较小，长期安全性数据仍在积累；血脂影响需更多研究",
       "source_ids": [
         "tmf_001",
-        "tmf_005",
-        "tmf_009",
+        "tmf_006",
+        "tmf_010",
         "tmf_011",
         "tmf_013",
-        "tmf_018"
+        "tmf_015",
+        "tmf_016",
+        "tmf_023"
       ],
       "compliance_note": "安全性数据不自动等同于依从性改善；无统计学差异不代表临床完全无影响"
     },
@@ -87,7 +95,7 @@
       "insight_id": "ins_04",
       "conclusion": "恒沐®已有多项中国真实世界研究发表，覆盖不同患者人群，为临床实践提供了真实环境下的疗效和安全性证据。",
       "applicable_population": "真实世界临床实践中的CHB患者",
-      "support_literature_count": 10,
+      "support_literature_count": 11,
       "independent_study_count": 6,
       "highest_evidence_level": "B",
       "evidence_consistency": "多项真实世界研究显示一致的有效性和安全性趋势",
@@ -98,14 +106,15 @@
       "source_ids": [
         "tmf_001",
         "tmf_003",
-        "tmf_005",
         "tmf_006",
-        "tmf_011",
-        "tmf_012",
+        "tmf_007",
+        "tmf_013",
         "tmf_014",
-        "tmf_015",
+        "tmf_016",
         "tmf_017",
-        "tmf_018"
+        "tmf_018",
+        "tmf_021",
+        "tmf_023"
       ],
       "compliance_note": "真实世界证据不能替代随机对照试验，结果需谨慎解读"
     },
@@ -113,8 +122,8 @@
       "insight_id": "ins_05",
       "conclusion": "恒沐®在老年、肝硬化和肾骨风险等特殊人群中有初步疗效和安全性证据，为高危患者的治疗选择提供了参考。",
       "applicable_population": "老年患者、肝硬化患者、肾骨代谢风险患者",
-      "support_literature_count": 17,
-      "independent_study_count": 9,
+      "support_literature_count": 21,
+      "independent_study_count": 11,
       "highest_evidence_level": "B",
       "evidence_consistency": "初步证据显示良好的安全性特征，需更多大样本研究验证",
       "china_practice_relevance": "中国老龄化背景下，老年CHB患者管理需求迫切",
@@ -138,7 +147,11 @@
         "tmf_015",
         "tmf_016",
         "tmf_017",
-        "tmf_018"
+        "tmf_018",
+        "tmf_019",
+        "tmf_021",
+        "tmf_022",
+        "tmf_023"
       ],
       "compliance_note": "特殊人群证据有限，临床应用需个体化评估"
     },
@@ -146,8 +159,8 @@
       "insight_id": "ins_06",
       "conclusion": "ETV/TDF/TAF经治转换为恒沐®的研究显示，转换后病毒学保持抑制，部分研究观察到安全性指标改善。",
       "applicable_population": "ETV/TDF/TAF经治转换患者",
-      "support_literature_count": 16,
-      "independent_study_count": 8,
+      "support_literature_count": 18,
+      "independent_study_count": 9,
       "highest_evidence_level": "B",
       "evidence_consistency": "转换后病毒学应答保持稳定，安全性改善趋势存在但需更多数据",
       "china_practice_relevance": "大量经治患者存在优化治疗需求",
@@ -168,12 +181,14 @@
         "tmf_013",
         "tmf_014",
         "tmf_015",
-        "tmf_016",
         "tmf_017",
-        "tmf_018"
+        "tmf_018",
+        "tmf_019",
+        "tmf_021",
+        "tmf_023"
       ],
       "compliance_note": "转换治疗应基于临床指征，不得主动推动换药；不生成超适应证推荐"
     }
   ],
-  "generated_at": "2026-08-30T12:30:12.053856"
+  "generated_at": "2026-08-30T13:05:58.293610"
 }

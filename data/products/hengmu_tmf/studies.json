@@ -1,18 +1,22 @@
 {
-  "total": 10,
+  "total": 12,
   "studies": [
     {
       "study_id": "study_001_NCT03903796",
       "publications": [
         "015d3dd5-23c8-4cb3-be8f-3e1772412edd_79aacdd5-bb02-49c3-bbf1-58a6ccd8d841_20-胡小雄-艾米替诺福韦和丙酚替诺福韦对机体脂质代谢的影响比较.pdf",
         "08d54f86-6e91-420b-9529-8a3ef41ed0ed_1c80d94b-6a02-40b6-a844-2566abb0de44_22-张旻-WJG 2025-TDF转换TMF的脂质变化和144周安全性.pdf",
+        "170cb9ed-26d0-4c9e-911c-5a8bd653da7a_9ac72ea6-810d-4b24-8488-9b4bbc571d7d_16-潘修成-Efficacy and Safety of Tenofovir Amibufenamide and Tenofovir Alafenamide for First‐Time HBV‐Related Decompensated Cirrhosis.pdf",
         "414dcfe0-3ba2-4fe2-825b-70d95d4a23e0_369048f0-85d5-4130-ad26-234119e92bc0_17-曾庆磊-艾米替诺福韦与富马酸丙酚替诺福韦治疗慢性乙型肝炎患者的疗效比较一项真实世界单中心研究.pdf",
         "59e649f8-f3c2-4ace-8f85-f6be71a2d87e_bb66dbc0-67c2-46f2-a514-d6364886e57e_2-TMF48周文章-Randomised clinical trial 48 weeks of treatment with tenofovir amibufenamide versus tenofovir disoproxil fumarate for.pdf",
         "96b0cef7-83df-4e8d-b3c0-00672df4dfae_e251701d-81ed-40c6-bb65-fec24872d05b_5-延长或转换至艾米替诺福韦治疗慢性乙型肝炎患者的安全性：一项Ⅲ期、多中心、随机对照研究.pdf",
+        "ad1541a9-7ea6-4cb6-bfa5-852ea8230354_49746e3a-2566-42d7-b541-09288b01fec4_24-葛善飞-Effects of tenofovir amibufenamide and entecavir on estimatedglomerular filtration rate in treatment-naïve patients with chronichepatitis B.pdf",
         "aefec210-5d92-43a4-b991-1fcfacf3c89f_3d9344b4-aaa7-4a32-bce4-2a9de222bfbd_18-党双锁-Effectiveness and Safety of Tenofovir Amibufenamide in the Treatment of Chronic Hepatitis B A Real-world, Multicenter.pdf",
         "de1351b9-3423-44c1-9668-e63b9138ce76_c19318bd-9387-4d97-bf5b-ce0dcd210a95_4-延长或转换为艾米替诺福韦治疗在慢性乙型肝炎患者中的疗效评估：一项Ⅲ期随机对照研究.pdf",
+        "08d54f86-6e91-420b-9529-8a3ef41ed0ed_1c80d94b-6a02-40b6-a844-2566abb0de44_22-张旻-WJG 2025-TDF转换TMF的脂质变化和144周安全性.pdf",
         "e241dcd7-cd8e-4d58-ba6c-d4e920f3bdbc_5dab7375-85c0-4b99-a1bd-17c6756941e8_12-傅蕾-Tenofovir amibufenamide vs tenofovir alafenamide for treating chronic hepatitis B A real-world study.pdf",
-        "fba7e6c4-ae87-4e65-bbf7-98dfcd453c35_ec1bbbe1-8456-4dba-a889-0404fb99bc82_3-TMF96周文章-96-Week Treatment of Tenofovir Amibufenamide and Tenofovir Disoproxil Fumarate in Chronic Hepatitis B Patients.pdf"
+        "fba7e6c4-ae87-4e65-bbf7-98dfcd453c35_ec1bbbe1-8456-4dba-a889-0404fb99bc82_3-TMF96周文章-96-Week Treatment of Tenofovir Amibufenamide and Tenofovir Disoproxil Fumarate in Chronic Hepatitis B Patients.pdf",
+        "ad1541a9-7ea6-4cb6-bfa5-852ea8230354_49746e3a-2566-42d7-b541-09288b01fec4_24-葛善飞-Effects of tenofovir amibufenamide and entecavir on estimatedglomerular filtration rate in treatment-naïve patients with chronichepatitis B.pdf"
       ],
       "patient_population": [
         "ETV经治",
@@ -40,6 +44,7 @@
         "Ⅰ期"
       ],
       "study_types": [
+        "Ⅲ期临床试验",
         "真实世界研究",
         "随机对照试验"
       ],
@@ -52,9 +57,10 @@
         2022,
         2023,
         2024,
-        2025
+        2025,
+        2026
       ],
-      "publication_count": 9
+      "publication_count": 13
     },
     {
       "study_id": "study_002_NCT05398393",
@@ -266,6 +272,41 @@
     {
       "study_id": "study_009",
       "publications": [
+        "53361637-beec-426f-b411-a59c7a17836b_dabc8339-2c96-417f-ae1a-dc731b7b3aff_23-余雪平-核苷酸类似物荟萃分析.pdf"
+      ],
+      "patient_population": [
+        "ETV经治",
+        "HBeAg阳性",
+        "HBeAg阴性",
+        "TAF经治",
+        "TDF经治",
+        "初治",
+        "老年",
+        "肝硬化",
+        "肾功能风险",
+        "血脂代谢",
+        "转换治疗",
+        "骨代谢风险",
+        "高病毒载量"
+      ],
+      "study_phases": [
+        "96周随访"
+      ],
+      "study_types": [
+        "随机对照试验"
+      ],
+      "total_sample_size": 666,
+      "max_follow_up_weeks": 96,
+      "highest_evidence_level": "A",
+      "trial_registration": "",
+      "publication_years": [
+        2025
+      ],
+      "publication_count": 1
+    },
+    {
+      "study_id": "study_010",
+      "publications": [
         "8f8a7eda-a0a3-4bc0-a605-6e5e69cba8f7_0d8963b8-9af5-4d0f-ab8b-57ba0e7dccf9_13-吕日英-恩替卡韦治疗后慢性乙型肝炎...艾米替诺福韦治疗的效果研究_向文耀.pdf"
       ],
       "patient_population": [
@@ -296,7 +337,7 @@
       "publication_count": 1
     },
     {
-      "study_id": "study_010",
+      "study_id": "study_011",
       "publications": [
         "ce85f21a-4db8-439d-a29b-b5952e578060_ad43c721-754e-4f00-a14d-fde21081fd51_8-党双锁-艾米替诺福韦治疗慢性乙型肝炎患者的早期疗效_一项真实世界多中心临床研究.pdf"
       ],
@@ -321,7 +362,36 @@
       "trial_registration": "",
       "publication_years": [],
       "publication_count": 1
+    },
+    {
+      "study_id": "study_012",
+      "publications": [
+        "e96644e9-ef6f-48a4-8031-f8a4ff4bd57c_f9fad6d8-edc9-4f05-9ed2-6af231f3a7fe_APT社评-Editorial the three tenors in HBV – TDF, TAF and now TMF.pdf"
+      ],
+      "patient_population": [
+        "ETV经治",
+        "TAF经治",
+        "TDF经治",
+        "初治",
+        "肾功能风险",
+        "血脂代谢",
+        "骨代谢风险"
+      ],
+      "study_phases": [
+        "48周分析"
+      ],
+      "study_types": [
+        "Ⅲ期临床试验"
+      ],
+      "total_sample_size": 0,
+      "max_follow_up_weeks": 48,
+      "highest_evidence_level": "A",
+      "trial_registration": "",
+      "publication_years": [
+        2022
+      ],
+      "publication_count": 1
     }
   ],
-  "generated_at": "2026-08-30T12:18:36.656723"
+  "generated_at": "2026-08-30T13:05:21.336790"
 }

@@ -34,6 +34,30 @@
           "is_china_study": true
         },
         {
+          "year": 2024,
+          "title": "Efficacy and Safety of Tenofovir Amibufenamide and Tenofovir Alafenamide for First‐Time HBV‐Related Decompensated Cirrhosis",
+          "study_type": "Ⅲ期临床试验",
+          "study_phase": "Ⅰ期",
+          "populations": [
+            "肝硬化",
+            "初治",
+            "ETV经治",
+            "肾功能风险",
+            "骨代谢风险",
+            "血脂代谢",
+            "转换治疗",
+            "TAF经治",
+            "TDF经治"
+          ],
+          "evidence_level": "A",
+          "sample_size": 98,
+          "follow_up_weeks": null,
+          "pmid": "",
+          "doi": "10.1111/jvh.14029",
+          "study_entity_id": "study_001_NCT03903796",
+          "is_china_study": true
+        },
+        {
           "year": 2020,
           "title": "霄) Check for updates",
           "study_type": "Ⅲ期临床试验",
@@ -110,6 +134,30 @@
           "pmid": "21703214",
           "doi": "10.14218/JCTH.2025.00162",
           "study_entity_id": "study_004_NCT05797714",
+          "is_china_study": true
+        },
+        {
+          "year": 2026,
+          "title": "Effects of tenofovir amibufenamide and entecavir on estimatedglomerular filtration rate in treatment-naïve patients with chronichepatitis B",
+          "study_type": "真实世界研究",
+          "study_phase": "Ⅰ期",
+          "populations": [
+            "肝硬化",
+            "初治",
+            "ETV经治",
+            "肾功能风险",
+            "骨代谢风险",
+            "血脂代谢",
+            "HBeAg阳性",
+            "TAF经治",
+            "TDF经治"
+          ],
+          "evidence_level": "B",
+          "sample_size": 187,
+          "follow_up_weeks": null,
+          "pmid": "37517414",
+          "doi": "10.4254/wjh.v18.i2.114346",
+          "study_entity_id": "study_001_NCT03903796",
           "is_china_study": true
         },
         {
@@ -207,6 +255,28 @@
           "doi": "10.3760/cma.j.cn501113-20240319-00142",
           "study_entity_id": "study_001_NCT03903796",
           "is_china_study": true
+        },
+        {
+          "year": 2022,
+          "title": "120  |   wileyonlinelibrary.com/journal/apt Aliment Pharmacol Ther. 2022;55:120.",
+          "study_type": "Ⅲ期临床试验",
+          "study_phase": "48周分析",
+          "populations": [
+            "肾功能风险",
+            "初治",
+            "ETV经治",
+            "骨代谢风险",
+            "血脂代谢",
+            "TAF经治",
+            "TDF经治"
+          ],
+          "evidence_level": "A",
+          "sample_size": null,
+          "follow_up_weeks": 48,
+          "pmid": "",
+          "doi": "10.1111/apt.16668",
+          "study_entity_id": "study_012",
+          "is_china_study": true
         }
       ]
     },
@@ -295,6 +365,34 @@
           "pmid": "29405329",
           "doi": "10.14218/JCTH.2024.00237",
           "study_entity_id": "study_002_NCT05398393",
+          "is_china_study": true
+        },
+        {
+          "year": 2025,
+          "title": "核苷酸类似物荟萃分析",
+          "study_type": "随机对照试验",
+          "study_phase": "96周随访",
+          "populations": [
+            "肝硬化",
+            "初治",
+            "ETV经治",
+            "肾功能风险",
+            "高病毒载量",
+            "骨代谢风险",
+            "血脂代谢",
+            "HBeAg阴性",
+            "HBeAg阳性",
+            "转换治疗",
+            "TAF经治",
+            "老年",
+            "TDF经治"
+          ],
+          "evidence_level": "A",
+          "sample_size": 666,
+          "follow_up_weeks": 96,
+          "pmid": "",
+          "doi": "10.1186/s12876-025-04289-w",
+          "study_entity_id": "study_009",
           "is_china_study": true
         },
         {
@@ -414,7 +512,7 @@
           "follow_up_weeks": 240,
           "pmid": "",
           "doi": "",
-          "study_entity_id": "study_009",
+          "study_entity_id": "study_010",
           "is_china_study": true
         },
         {
@@ -498,7 +596,7 @@
           "follow_up_weeks": 29,
           "pmid": "",
           "doi": "",
-          "study_entity_id": "study_010",
+          "study_entity_id": "study_011",
           "is_china_study": true
         }
       ]
@@ -578,6 +676,30 @@
           "pmid": "",
           "doi": "",
           "study_entity_id": "study_007",
+          "is_china_study": true
+        },
+        {
+          "year": 2024,
+          "title": "Efficacy and Safety of Tenofovir Amibufenamide and Tenofovir Alafenamide for First‐Time HBV‐Related Decompensated Cirrhosis",
+          "study_type": "Ⅲ期临床试验",
+          "study_phase": "Ⅰ期",
+          "populations": [
+            "肝硬化",
+            "初治",
+            "ETV经治",
+            "肾功能风险",
+            "骨代谢风险",
+            "血脂代谢",
+            "转换治疗",
+            "TAF经治",
+            "TDF经治"
+          ],
+          "evidence_level": "A",
+          "sample_size": 98,
+          "follow_up_weeks": null,
+          "pmid": "",
+          "doi": "10.1111/jvh.14029",
+          "study_entity_id": "study_001_NCT03903796",
           "is_china_study": true
         },
         {
@@ -683,6 +805,34 @@
           "pmid": "",
           "doi": "10.1111/a",
           "study_entity_id": "study_003_CTR20161077",
+          "is_china_study": true
+        },
+        {
+          "year": 2025,
+          "title": "核苷酸类似物荟萃分析",
+          "study_type": "随机对照试验",
+          "study_phase": "96周随访",
+          "populations": [
+            "肝硬化",
+            "初治",
+            "ETV经治",
+            "肾功能风险",
+            "高病毒载量",
+            "骨代谢风险",
+            "血脂代谢",
+            "HBeAg阴性",
+            "HBeAg阳性",
+            "转换治疗",
+            "TAF经治",
+            "老年",
+            "TDF经治"
+          ],
+          "evidence_level": "A",
+          "sample_size": 666,
+          "follow_up_weeks": 96,
+          "pmid": "",
+          "doi": "10.1186/s12876-025-04289-w",
+          "study_entity_id": "study_009",
           "is_china_study": true
         },
         {
@@ -792,7 +942,7 @@
           "follow_up_weeks": 240,
           "pmid": "",
           "doi": "",
-          "study_entity_id": "study_009",
+          "study_entity_id": "study_010",
           "is_china_study": true
         },
         {
@@ -818,6 +968,30 @@
           "follow_up_weeks": 144,
           "pmid": "",
           "doi": "10.3760/cma.j.cn501113-20240807-00366",
+          "study_entity_id": "study_001_NCT03903796",
+          "is_china_study": true
+        },
+        {
+          "year": 2026,
+          "title": "Effects of tenofovir amibufenamide and entecavir on estimatedglomerular filtration rate in treatment-naïve patients with chronichepatitis B",
+          "study_type": "真实世界研究",
+          "study_phase": "Ⅰ期",
+          "populations": [
+            "肝硬化",
+            "初治",
+            "ETV经治",
+            "肾功能风险",
+            "骨代谢风险",
+            "血脂代谢",
+            "HBeAg阳性",
+            "TAF经治",
+            "TDF经治"
+          ],
+          "evidence_level": "B",
+          "sample_size": 187,
+          "follow_up_weeks": null,
+          "pmid": "37517414",
+          "doi": "10.4254/wjh.v18.i2.114346",
           "study_entity_id": "study_001_NCT03903796",
           "is_china_study": true
         },
@@ -868,7 +1042,7 @@
           "follow_up_weeks": 29,
           "pmid": "",
           "doi": "",
-          "study_entity_id": "study_010",
+          "study_entity_id": "study_011",
           "is_china_study": true
         },
         {
@@ -931,6 +1105,28 @@
         },
         {
           "year": 2022,
+          "title": "120  |   wileyonlinelibrary.com/journal/apt Aliment Pharmacol Ther. 2022;55:120.",
+          "study_type": "Ⅲ期临床试验",
+          "study_phase": "48周分析",
+          "populations": [
+            "肾功能风险",
+            "初治",
+            "ETV经治",
+            "骨代谢风险",
+            "血脂代谢",
+            "TAF经治",
+            "TDF经治"
+          ],
+          "evidence_level": "A",
+          "sample_size": null,
+          "follow_up_weeks": 48,
+          "pmid": "",
+          "doi": "10.1111/apt.16668",
+          "study_entity_id": "study_012",
+          "is_china_study": true
+        },
+        {
+          "year": 2022,
           "title": "TMF96周文章-96-Week Treatment of Tenofovir Amibufenamide and Tenofovir Disoproxil Fumarate in Chronic Hepatitis B Patients",
           "study_type": "真实世界研究",
           "study_phase": "Ⅰ期",
@@ -966,6 +1162,6 @@
       "items": []
     }
   ],
-  "total_items": 18,
-  "generated_at": "2026-08-30T12:30:12.043463"
+  "total_items": 22,
+  "generated_at": "2026-08-30T13:05:58.289896"
 }
