@@ -1,0 +1,43 @@
+{
+  "product_name": "恒沐®（艾米替诺福韦片，TMF）",
+  "total_gaps": 5,
+  "gaps": [
+    {
+      "gap_id": "gap_01",
+      "importance": "高",
+      "description": "HCC长期结局数据不足",
+      "current_evidence": "现有研究主要关注病毒学应答和安全性终点，HCC发生率数据有限",
+      "research_need": "需要长期随访研究评估TMF对HCC风险的影响"
+    },
+    {
+      "gap_id": "gap_02",
+      "importance": "高",
+      "description": "治疗依从性和患者留存证据有限",
+      "current_evidence": "现有证据主要集中于疗效和安全性，对依从性、患者留存及患者报告结局的直接证据仍然有限",
+      "research_need": "需要真实世界研究评估长期治疗依从性和留存率"
+    },
+    {
+      "gap_id": "gap_03",
+      "importance": "中",
+      "description": "儿童和青少年人群证据缺失",
+      "current_evidence": "现有研究均为成人研究，儿童和青少年数据缺失",
+      "research_need": "需要儿童和青少年人群的药代动力学和疗效安全性研究"
+    },
+    {
+      "gap_id": "gap_04",
+      "importance": "中",
+      "description": "HBsAg清除和功能治愈证据有限",
+      "current_evidence": "核苷类单药治疗HBsAg清除率低，TMF在功能治愈方向的数据有限",
+      "research_need": "需要联合治疗方案研究以提高HBsAg清除率"
+    },
+    {
+      "gap_id": "gap_06",
+      "importance": "中",
+      "description": "超长期（>3年）安全性数据仍在积累",
+      "current_evidence": "现有研究最长随访约144周，超过3年的安全性数据有限",
+      "research_need": "需要5年以上的长期安全性随访数据"
+    }
+  ],
+  "key_gap_summary": "主要证据缺口集中在HCC长期结局、患者依从性和留存、儿童人群以及超长期安全性。这些缺口需要通过长期随访研究和真实世界证据建设逐步填补。",
+  "generated_at": "2026-08-30T12:30:12.056450"
+}

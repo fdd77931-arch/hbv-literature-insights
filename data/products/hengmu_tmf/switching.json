@@ -1,0 +1,79 @@
+{
+  "product_name": "恒沐®（艾米替诺福韦片，TMF）",
+  "stages": [
+    {
+      "key": "prior_treatment",
+      "name": "既往治疗",
+      "items": [
+        {
+          "title": "来源药物",
+          "source_drugs": "TDF/富马酸替诺福韦；TAF/丙酚替诺福韦；ETV/恩替卡韦",
+          "evidence_level": "B",
+          "note": "覆盖16篇转换治疗研究"
+        }
+      ]
+    },
+    {
+      "key": "switch_reason",
+      "name": "转换原因",
+      "items": [
+        {
+          "title": "转换原因报告不足",
+          "has_data": false,
+          "note": "多数研究未明确报告转换原因，可能存在选择偏倚"
+        }
+      ]
+    },
+    {
+      "key": "switch_to_tmf",
+      "name": "转换至TMF",
+      "items": [
+        {
+          "title": "转换至TMF的研究证据",
+          "sample_size": 4630,
+          "study_count": 8,
+          "evidence_level": "B"
+        }
+      ]
+    },
+    {
+      "key": "virologic_response",
+      "name": "病毒学应答",
+      "items": [
+        {
+          "title": "转换后病毒学应答",
+          "reported": true,
+          "study_count": 9,
+          "note": "转换后多数患者维持病毒学抑制"
+        }
+      ]
+    },
+    {
+      "key": "safety_change",
+      "name": "安全性变化",
+      "items": [
+        {
+          "title": "转换后安全性指标变化",
+          "reported": true,
+          "study_count": 6,
+          "note": "部分研究观察到肾安全性或血脂指标变化"
+        }
+      ]
+    },
+    {
+      "key": "long_term",
+      "name": "长期留存",
+      "items": [
+        {
+          "title": "长期依从性和留存",
+          "has_data": false,
+          "note": "现有证据主要集中于疗效和安全性，对依从性、患者留存及患者报告结局的直接证据仍然有限。"
+        }
+      ]
+    }
+  ],
+  "total_switch_studies": 16,
+  "switch_reasons_reporting": "多数转换研究未明确报告转换原因，可能存在选择偏倚。转换治疗应基于临床指征。",
+  "retention_evidence_gap": "现有证据主要集中于疗效和安全性，对依从性、患者留存及患者报告结局的直接证据仍然有限。",
+  "generated_at": "2026-08-30T12:30:12.051850"
+}

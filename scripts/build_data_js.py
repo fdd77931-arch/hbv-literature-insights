@@ -87,29 +87,54 @@ def build_data_js():
     insights = load_json('insights.json')
     report = load_json('report.json')
 
-    # 加载产品数据
+    # 加载产品数据（优先使用 hengmu_tmf 目录的PDF解析数据）
     products_dir = os.path.join(PROJECT_DIR, 'data', 'products')
-    product_files = [
-        'tmf_evidence_summary.json',
-        'tmf_evidence_timeline.json',
-        'tmf_population_matrix.json',
-        'tmf_efficacy_outcomes.json',
-        'tmf_safety_outcomes.json',
-        'tmf_switching_evidence.json',
-        'tmf_comparator_matrix.json',
-        'tmf_market_actions.json',
-        'tmf_evidence_changes.json',
-        'tmf_core_insights.json',
-    ]
+    hengmu_dir = os.path.join(products_dir, 'hengmu_tmf')
+    
     product_data = {}
-    for pf in product_files:
-        product_path = os.path.join(products_dir, pf)
-        if os.path.exists(product_path):
-            with open(product_path, 'r', encoding='utf-8') as f:
-                product_key = pf.replace('.json', '')
-                product_data[product_key] = json.load(f)
-        else:
-            print(f"[WARN] 缺少产品数据: {pf}")
+    
+    # 1. 先尝试从 hengmu_tmf 目录加载新格式数据（PDF解析数据）
+    hengmu_mapping = {
+        'evidence_summary.json': 'tmf_evidence_summary',
+        'timeline.json': 'tmf_evidence_timeline',
+        'populations.json': 'tmf_population_matrix',
+        'efficacy.json': 'tmf_efficacy_outcomes',
+        'safety.json': 'tmf_safety_outcomes',
+        'switching.json': 'tmf_switching_evidence',
+        'comparators.json': 'tmf_comparator_matrix',
+        'market_insights.json': 'tmf_market_actions',
+        'core_insights.json': 'tmf_core_insights',
+        'evidence_gaps.json': 'tmf_evidence_gaps',
+        'literature.json': 'tmf_literature',
+        'studies.json': 'tmf_studies',
+        'import_manifest.json': 'tmf_import_manifest',
+    }
+    
+    hengmu_loaded = 0
+    if os.path.exists(hengmu_dir):
+        for json_file, data_key in hengmu_mapping.items():
+            file_path = os.path.join(hengmu_dir, json_file)
+            if os.path.exists(file_path):
+                with open(file_path, 'r', encoding='utf-8') as f:
+                    product_data[data_key] = json.load(f)
+                hengmu_loaded += 1
+    
+    if hengmu_loaded > 0:
+        print(f"[INFO] 从 hengmu_tmf 加载了 {hengmu_loaded} 个数据文件")
+    
+    # 2. 补充旧格式数据（如果hengmu_tmf中没有的话）
+    legacy_product_files = [
+        'tmf_evidence_changes.json',
+    ]
+    for pf in legacy_product_files:
+        product_key = pf.replace('.json', '')
+        if product_key not in product_data:
+            product_path = os.path.join(products_dir, pf)
+            if os.path.exists(product_path):
+                with open(product_path, 'r', encoding='utf-8') as f:
+                    product_data[product_key] = json.load(f)
+            else:
+                print(f"[WARN] 缺少产品数据: {pf}")
 
     # 加载产品配置
     config_path = os.path.join(PROJECT_DIR, 'config', 'products.json')

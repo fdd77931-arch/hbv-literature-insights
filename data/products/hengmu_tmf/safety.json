@@ -1,0 +1,225 @@
+{
+  "product_name": "恒沐®（艾米替诺福韦片，TMF）",
+  "metrics": [
+    {
+      "metric": "总体不良事件发生率",
+      "key": "adverse_event_rates",
+      "note": "总体不良事件包括所有级别的治疗相关不良事件",
+      "data_points": [
+        {
+          "value": 18.2,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "sample_size": 1361,
+          "evidence_grade": "A",
+          "follow_up": "—",
+          "title": "TMF48周文章-Randomised clinical trial 48 weeks of tre",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
+          "value": 5.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "sample_size": 1361,
+          "evidence_grade": "A",
+          "follow_up": "—",
+          "title": "TMF48周文章-Randomised clinical trial 48 weeks of tre",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
+          "value": 1.8,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "sample_size": 361,
+          "evidence_grade": "A",
+          "follow_up": "144周",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
+          "value": 5.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "sample_size": 666,
+          "evidence_grade": "B",
+          "follow_up": "—",
+          "title": "TMF96周文章-96-Week Treatment of Tenofovir Amibufenam",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        }
+      ]
+    },
+    {
+      "metric": "严重不良事件发生率",
+      "key": "serious_adverse_event_rates",
+      "note": "严重不良事件指导致住院、死亡或危及生命的事件",
+      "data_points": [
+        {
+          "value": 34.8,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "sample_size": 361,
+          "evidence_grade": "A",
+          "follow_up": "144周",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
+          "value": 7.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "sample_size": 666,
+          "evidence_grade": "B",
+          "follow_up": "—",
+          "title": "TMF96周文章-96-Week Treatment of Tenofovir Amibufenam",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        }
+      ]
+    },
+    {
+      "metric": "eGFR变化",
+      "key": "egfr_changes",
+      "note": "eGFR变化反映肾功能影响，正值表示改善，负值表示下降",
+      "data_points": [
+        {
+          "value": 1.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "sample_size": 361,
+          "evidence_grade": "A",
+          "follow_up": "144周",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        }
+      ]
+    },
+    {
+      "metric": "血磷变化",
+      "key": "phosphate_changes",
+      "note": "血磷变化与近端肾小管功能相关",
+      "data_points": [
+        {
+          "value": 48.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "sample_size": 45,
+          "evidence_grade": "B",
+          "follow_up": "96周",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_005_CHICTR2200064306",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
+          "value": 48.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "sample_size": 45,
+          "evidence_grade": "B",
+          "follow_up": "96周",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_005_CHICTR2200064306",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        }
+      ]
+    },
+    {
+      "metric": "LDL-C变化",
+      "key": "ldl_changes",
+      "note": "LDL-C变化反映对血脂代谢的影响",
+      "data_points": [
+        {
+          "value": 48.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "sample_size": 45,
+          "evidence_grade": "B",
+          "follow_up": "96周",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_005_CHICTR2200064306",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
+          "value": 0.5,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "sample_size": 361,
+          "evidence_grade": "A",
+          "follow_up": "144周",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        }
+      ]
+    },
+    {
+      "metric": "总胆固醇变化",
+      "key": "total_cholesterol_changes",
+      "note": "总胆固醇变化反映整体脂质代谢影响",
+      "data_points": [
+        {
+          "value": 3.89,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "sample_size": 159,
+          "evidence_grade": "B",
+          "follow_up": "96周",
+          "title": "中华肝脏病杂志 2024 年12 月第 32 卷第 12 期　Chin J Hepatol, Dec",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
+          "value": 0.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "sample_size": 30,
+          "evidence_grade": "B",
+          "follow_up": "96周",
+          "title": "第  21  卷第  3  期",
+          "study_entity_id": "study_008",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
+          "value": 0.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "sample_size": 30,
+          "evidence_grade": "B",
+          "follow_up": "96周",
+          "title": "第  21  卷第  3  期",
+          "study_entity_id": "study_008",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
+          "value": 0.5,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "sample_size": 361,
+          "evidence_grade": "A",
+          "follow_up": "144周",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        },
+        {
+          "value": 48.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "sample_size": 666,
+          "evidence_grade": "B",
+          "follow_up": "—",
+          "title": "TMF96周文章-96-Week Treatment of Tenofovir Amibufenam",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，需结合更多证据综合判断"
+        }
+      ]
+    }
+  ],
+  "method_note": "不能把\"无统计学显著差异\"表述为\"绝对没有影响\"。安全性数据需结合研究设计、样本量和随访时间综合解读。",
+  "generated_at": "2026-08-30T12:30:12.049794"
+}

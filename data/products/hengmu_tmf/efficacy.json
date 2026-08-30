@@ -1,0 +1,362 @@
+{
+  "product_name": "恒沐®（艾米替诺福韦片，TMF）",
+  "metrics": [
+    {
+      "metric": "HBV DNA病毒学应答",
+      "key": "hbv_dna_response_rates",
+      "note": "不同研究的检测下限和应答定义可能不同，跨研究比较需谨慎",
+      "endpoint_definition": "HBV DNA < 20 IU/mL 或 < 200 IU/mL（各研究定义不同）",
+      "data_points": [
+        {
+          "value": 84.2,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "96周",
+          "sample_size": 159,
+          "evidence_grade": "B",
+          "pmid": "",
+          "title": "中华肝脏病杂志 2024 年12 月第 32 卷第 12 期　Chin J Hepatol, Dec",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 92.0,
+          "population": "初治、TAF经治、ETV经治",
+          "study_design": "真实世界研究",
+          "follow_up": "—",
+          "sample_size": 53,
+          "evidence_grade": "B",
+          "pmid": "37244371",
+          "title": "WJG 2025-TDF转换TMF的脂质变化和144周安全性",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 100.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "96周",
+          "sample_size": 30,
+          "evidence_grade": "B",
+          "pmid": "",
+          "title": "第  21  卷第  3  期",
+          "study_entity_id": "study_008",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 92.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "follow_up": "48周",
+          "sample_size": 440,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "中华肝脏病杂志 2024 年11 月第 32 卷第 11 期　Chin J Hepatol, Nov",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 60.7,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "follow_up": "48周",
+          "sample_size": 440,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "中华肝脏病杂志 2024 年11 月第 32 卷第 11 期　Chin J Hepatol, Nov",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 76.7,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "follow_up": "—",
+          "sample_size": 1361,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "TMF48周文章-Randomised clinical trial 48 weeks of tre",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 50.2,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "follow_up": "—",
+          "sample_size": 193,
+          "evidence_grade": "A",
+          "pmid": "21703214",
+          "title": "Promote研究48周",
+          "study_entity_id": "study_004_NCT05797714",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 100.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "96周",
+          "sample_size": 45,
+          "evidence_grade": "B",
+          "pmid": "",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_005_CHICTR2200064306",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 73.3,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "96周",
+          "sample_size": 45,
+          "evidence_grade": "B",
+          "pmid": "",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_005_CHICTR2200064306",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 66.67,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "—",
+          "sample_size": 123,
+          "evidence_grade": "B",
+          "pmid": "35738290",
+          "title": "Effectiveness and Safety of Tenofovir Amibufenamid",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 85.7,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "follow_up": "240周",
+          "sample_size": 880,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 78.4,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "follow_up": "240周",
+          "sample_size": 880,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        }
+      ]
+    },
+    {
+      "metric": "ALT复常率",
+      "key": "alt_normalization_rates",
+      "note": "ALT复常定义在不同研究中可能不同",
+      "endpoint_definition": "ALT恢复至正常上限以下",
+      "data_points": [
+        {
+          "value": 100.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "96周",
+          "sample_size": 30,
+          "evidence_grade": "B",
+          "pmid": "",
+          "title": "第  21  卷第  3  期",
+          "study_entity_id": "study_008",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 62.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "96周",
+          "sample_size": 30,
+          "evidence_grade": "B",
+          "pmid": "",
+          "title": "第  21  卷第  3  期",
+          "study_entity_id": "study_008",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 94.9,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "follow_up": "48周",
+          "sample_size": 440,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "中华肝脏病杂志 2024 年11 月第 32 卷第 11 期　Chin J Hepatol, Nov",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 92.1,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "follow_up": "48周",
+          "sample_size": 440,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "中华肝脏病杂志 2024 年11 月第 32 卷第 11 期　Chin J Hepatol, Nov",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 88.9,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "96周",
+          "sample_size": 45,
+          "evidence_grade": "B",
+          "pmid": "",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_005_CHICTR2200064306",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 78.3,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "—",
+          "sample_size": 123,
+          "evidence_grade": "B",
+          "pmid": "35738290",
+          "title": "Effectiveness and Safety of Tenofovir Amibufenamid",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 95.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "follow_up": "240周",
+          "sample_size": 880,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 74.4,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "follow_up": "240周",
+          "sample_size": 880,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 66.04,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "96周",
+          "sample_size": 109,
+          "evidence_grade": "B",
+          "pmid": "15470215",
+          "title": "Tenofovir amibufenamide vs tenofovir alafenamide f",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 55.96,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "96周",
+          "sample_size": 109,
+          "evidence_grade": "B",
+          "pmid": "15470215",
+          "title": "Tenofovir amibufenamide vs tenofovir alafenamide f",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 74.4,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "—",
+          "sample_size": 666,
+          "evidence_grade": "B",
+          "pmid": "35738290",
+          "title": "TMF96周文章-96-Week Treatment of Tenofovir Amibufenam",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        }
+      ]
+    },
+    {
+      "metric": "HBeAg血清学转换",
+      "key": "hbeag_seroconversion_rates",
+      "note": "仅在HBeAg阳性患者中评估",
+      "endpoint_definition": "HBeAg转阴伴抗-HBe转阳",
+      "data_points": [
+        {
+          "value": 100.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "96周",
+          "sample_size": 30,
+          "evidence_grade": "B",
+          "pmid": "",
+          "title": "第  21  卷第  3  期",
+          "study_entity_id": "study_008",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 9.4,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "follow_up": "—",
+          "sample_size": 1361,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "TMF48周文章-Randomised clinical trial 48 weeks of tre",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 17.2,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "真实世界研究",
+          "follow_up": "—",
+          "sample_size": 123,
+          "evidence_grade": "B",
+          "pmid": "35738290",
+          "title": "Effectiveness and Safety of Tenofovir Amibufenamid",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        },
+        {
+          "value": 17.0,
+          "population": "初治、TAF经治、HBeAg阳性",
+          "study_design": "随机对照试验",
+          "follow_up": "240周",
+          "sample_size": 880,
+          "evidence_grade": "A",
+          "pmid": "",
+          "title": "中华肝脏病杂志 2024 年10 月第 32 卷第 10 期　Chin J Hepatol, Oct",
+          "study_entity_id": "study_001_NCT03903796",
+          "limitations": "单研究数据，不代表类效应"
+        }
+      ]
+    },
+    {
+      "metric": "HBsAg清除/下降",
+      "key": "hbsag_clearance_rates",
+      "note": "HBsAg清除在核苷类治疗中较为罕见",
+      "endpoint_definition": "HBsAg低于检测下限",
+      "data_points": []
+    }
+  ],
+  "method_note": "不同随访时间、人群和终点定义的研究不直接计算简单平均。所有数据点均标注来源研究和人群。",
+  "generated_at": "2026-08-30T12:30:12.047712"
+}

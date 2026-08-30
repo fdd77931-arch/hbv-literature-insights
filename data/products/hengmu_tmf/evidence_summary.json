@@ -1,0 +1,28 @@
+{
+  "product_name": "恒沐®（艾米替诺福韦片，TMF）",
+  "total_pdfs": 18,
+  "valid_literature": 18,
+  "independent_studies": 10,
+  "rct_count": 5,
+  "real_world_count": 10,
+  "observational_count": 10,
+  "preclinical_count": 1,
+  "china_study_count": 17,
+  "china_study_pct": 94.4,
+  "latest_year": 2025,
+  "parsed_count": 18,
+  "pending_review_count": 18,
+  "treatment_naive_studies": 14,
+  "switching_studies": 16,
+  "special_population_studies": 17,
+  "evidence_levels": {
+    "A": 6,
+    "B": 10,
+    "C": 1,
+    "D": 1
+  },
+  "cumulative_sample_size": 1839,
+  "sample_size_note": "累计报告样本量，同一研究不同分析报告可能包含重复患者人群",
+  "note": "文献数 ≠ 独立研究数。同一临床试验的不同时间点分析、亚组分析分别计入文献数，但归属于同一研究实体。",
+  "generated_at": "2026-08-30T12:30:12.042675"
+}

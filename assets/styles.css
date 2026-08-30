@@ -3458,6 +3458,235 @@ a:focus, button:focus, input:focus, select:focus {
   text-align: center;
 }
 
+/* 经治转换证据路径 */
+.switching-path {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.switching-stage {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  position: relative;
+}
+
+.switching-stage-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.switching-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.switching-item {
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  background: rgba(0,0,0,0.02);
+  border-radius: var(--radius-sm);
+}
+
+.si-title {
+  font-weight: 500;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
+.si-detail {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.si-note {
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-style: italic;
+}
+
+.switching-more {
+  font-size: 0.7rem;
+  color: var(--muted);
+  text-align: center;
+  padding-top: 0.25rem;
+}
+
+/* 证据缺口 */
+.evidence-gaps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.evidence-gap-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+}
+
+.eg-importance {
+  flex-shrink: 0;
+  width: 3rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 0.5rem 0;
+  border-radius: var(--radius-sm);
+  height: fit-content;
+}
+
+.eg-importance.高 {
+  background: #fef2f2;
+  color: #dc2626;
+}
+
+.eg-importance.中 {
+  background: #fffbeb;
+  color: #d97706;
+}
+
+.eg-importance.低 {
+  background: #f0fdf4;
+  color: #16a34a;
+}
+
+.eg-content {
+  flex: 1;
+}
+
+.eg-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0 0 0.5rem 0;
+}
+
+.eg-current, .eg-need {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.6;
+  margin-top: 0.25rem;
+}
+
+/* 文献列表卡片 */
+.tmf-literature-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.tmf-lit-card {
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  padding: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.tmf-lit-card:hover {
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.tmf-lit-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tmf-lit-num {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted);
+  font-family: var(--mono);
+}
+
+.tmf-lit-type {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  background: rgba(14, 116, 144, 0.1);
+  color: #0e7490;
+  border-radius: 999px;
+}
+
+.tmf-lit-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 0.25rem 0 0.5rem 0;
+  line-height: 1.5;
+}
+
+.tmf-lit-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.tmf-lit-pops {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.tmf-pop-tag {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.4rem;
+  background: rgba(16, 185, 129, 0.1);
+  color: #059669;
+  border-radius: 4px;
+}
+
+.tmf-pop-more {
+  font-size: 0.65rem;
+  padding: 0.15rem 0.4rem;
+  color: var(--muted);
+}
+
+.tmf-lit-conclusion {
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height: 1.6;
+  padding: 0.5rem;
+  background: rgba(0,0,0,0.02);
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+}
+
+.tmf-lit-footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+  border-top: 1px solid var(--rule);
+  padding-top: 0.5rem;
+}
+
+.tmf-lit-id, .tmf-lit-study {
+  font-family: var(--mono);
+}
+
 /* 响应式 */
 @media (max-width: 768px) {
   .tmf-stat-grid {
@@ -3469,5 +3698,17 @@ a:focus, button:focus, input:focus, select:focus {
   .tmf-data-point {
     flex-direction: column;
     align-items: flex-start;
+  }
+  .switching-path {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .tmf-literature-list {
+    grid-template-columns: 1fr;
+  }
+  .evidence-gap-item {
+    flex-direction: column;
+  }
+  .eg-importance {
+    width: 100%;
   }
 }

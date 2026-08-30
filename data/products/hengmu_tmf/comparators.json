@@ -1,0 +1,68 @@
+{
+  "product_name": "恒沐®（艾米替诺福韦片，TMF）",
+  "comparators": [
+    {
+      "drug": "恒沐®（艾米替诺福韦，TMF）",
+      "is_tmf": true,
+      "mechanism": "替诺福韦前体药物，肝靶向",
+      "antiviral_potency": "强效",
+      "resistance_barrier": "高",
+      "renal_safety": "较优",
+      "bone_safety": "较优",
+      "metabolic_impact": "需关注血脂",
+      "long_term_maturity": "Ⅲ期临床+RWE",
+      "china_rwe": "较多",
+      "accessibility": "中国获批上市",
+      "evidence_level": "A"
+    },
+    {
+      "drug": "韦立得®（丙酚替诺福韦，TAF）",
+      "is_tmf": false,
+      "mechanism": "替诺福韦前体药物，肝靶向",
+      "antiviral_potency": "强效",
+      "resistance_barrier": "高",
+      "renal_safety": "较优",
+      "bone_safety": "较优",
+      "metabolic_impact": "血脂升高",
+      "long_term_maturity": "长期临床数据充分",
+      "china_rwe": "较多",
+      "accessibility": "全球上市",
+      "evidence_level": "A"
+    },
+    {
+      "drug": "韦瑞德®（替诺福韦酯，TDF）",
+      "is_tmf": false,
+      "mechanism": "替诺福韦前体药物",
+      "antiviral_potency": "强效",
+      "resistance_barrier": "高",
+      "renal_safety": "需监测",
+      "bone_safety": "需监测",
+      "metabolic_impact": "较小",
+      "long_term_maturity": "长期临床数据充分",
+      "china_rwe": "较多",
+      "accessibility": "全球上市",
+      "evidence_level": "A"
+    },
+    {
+      "drug": "博路定®（恩替卡韦，ETV）",
+      "is_tmf": false,
+      "mechanism": "核苷类似物",
+      "antiviral_potency": "强效",
+      "resistance_barrier": "高（初治）",
+      "renal_safety": "较好",
+      "bone_safety": "较好",
+      "metabolic_impact": "较小",
+      "long_term_maturity": "长期临床数据充分",
+      "china_rwe": "多",
+      "accessibility": "全球上市",
+      "evidence_level": "A"
+    }
+  ],
+  "comparison_rules": [
+    "比较基于已发表文献证据，不构成临床推荐",
+    "不同研究的人群、终点定义和随访时间不同，跨药物比较需谨慎",
+    "证据等级反映该药物整体证据强度，不代表单研究质量",
+    "中国RWE数量反映在中国人群中的真实世界证据丰富度"
+  ],
+  "generated_at": "2026-08-30T12:30:12.052665"
+}

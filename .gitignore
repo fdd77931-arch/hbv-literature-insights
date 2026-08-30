@@ -9,6 +9,10 @@ data/private/
 *_literature.ndjson
 *_insights.ndjson
 
+# PDF raw files (copyright protected)
+data/tmf_pdfs/raw/
+data/tmf_pdfs/extracted/
+
 # Dependencies
 node_modules/
 __pycache__/

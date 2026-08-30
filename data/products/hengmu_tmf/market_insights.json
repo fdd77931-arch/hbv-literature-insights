@@ -1,0 +1,112 @@
+{
+  "product_name": "恒沐®（艾米替诺福韦片，TMF）",
+  "total_actions": 5,
+  "actions": [
+    {
+      "action_id": "ma_01",
+      "priority": "高",
+      "market_opportunity": "经治不完全应答/低病毒血症患者优化治疗",
+      "evidence_findings": "已有研究显示TMF在经治患者中的抗病毒活性，低病毒血症患者存在未满足需求",
+      "key_patients": "ETV/TDF/TAF经治不完全应答患者、低病毒血症患者",
+      "unmet_need": "低病毒血症与疾病进展和HCC风险相关，现有方案优化空间大",
+      "meaning_2030": "提高病毒学应答率有助于降低肝硬化和HCC风险",
+      "recommended_actions": [
+        "开展低病毒血症患者识别和管理项目",
+        "支持医生进行经治患者规范评估",
+        "建设区域病例登记和随访体系"
+      ],
+      "kpis": [
+        "低病毒血症患者识别率",
+        "方案优化率",
+        "病毒学应答改善率"
+      ],
+      "evidence_limitations": "直接头对头比较研究有限，多为单中心小样本研究",
+      "compliance_boundary": "不得主动推荐换药；治疗决策应由医生基于临床指征判断"
+    },
+    {
+      "action_id": "ma_02",
+      "priority": "高",
+      "market_opportunity": "老年及肝硬化患者长期安全管理",
+      "evidence_findings": "老年和肝硬化患者中有初步疗效和安全性证据，肾骨安全性特征受到关注",
+      "key_patients": "60岁以上老年CHB患者、肝硬化患者、合并肾骨代谢风险患者",
+      "unmet_need": "老年和肝硬化患者合并症多，长期治疗安全性需求高",
+      "meaning_2030": "提高特殊人群规范治疗率和长期管理质量",
+      "recommended_actions": [
+        "开展老年肝病患者管理项目",
+        "支持肝硬化患者长期随访监测",
+        "建设肾骨安全性监测体系"
+      ],
+      "kpis": [
+        "老年患者治疗率",
+        "肾骨指标监测率",
+        "长期治疗依从率"
+      ],
+      "evidence_limitations": "部分研究样本量较小，需更多大样本多中心研究验证",
+      "compliance_boundary": "特殊人群证据有限，不得夸大疗效或安全性优势"
+    },
+    {
+      "action_id": "ma_03",
+      "priority": "中",
+      "market_opportunity": "TDF经治患者安全性优化",
+      "evidence_findings": "TDF转换为TMF的研究显示病毒学保持抑制，部分安全性指标有改善趋势",
+      "key_patients": "TDF长期治疗患者、存在肾骨风险因素患者",
+      "unmet_need": "部分TDF长期治疗患者存在肾骨安全性顾虑",
+      "meaning_2030": "优化经治患者管理有助于提高长期治疗质量",
+      "recommended_actions": [
+        "支持TDF经治患者肾骨安全评估",
+        "开展医生安全性管理教育",
+        "建设转换治疗规范路径"
+      ],
+      "kpis": [
+        "TDF患者肾骨评估率",
+        "安全性监测覆盖率",
+        "患者满意度"
+      ],
+      "evidence_limitations": "转换原因多未明确报告，存在选择偏倚，无随机头对头比较",
+      "compliance_boundary": "不得主动推动TDF患者换药；转换应基于临床指征和医生判断"
+    },
+    {
+      "action_id": "ma_04",
+      "priority": "中",
+      "market_opportunity": "中国真实世界证据体系建设",
+      "evidence_findings": "已有多项中国真实世界研究发表，覆盖不同人群和中心",
+      "key_patients": "真实世界临床实践中的CHB患者",
+      "unmet_need": "中国本土真实世界证据仍需积累，支持指南更新和医保决策",
+      "meaning_2030": "真实世界证据支持临床路径优化和指南更新",
+      "recommended_actions": [
+        "支持多中心真实世界研究合作",
+        "建设区域患者登记数据库",
+        "开展真实世界证据医生教育"
+      ],
+      "kpis": [
+        "新增真实世界研究数",
+        "研究中心覆盖数",
+        "数据质量达标率"
+      ],
+      "evidence_limitations": "现有真实世界研究多为单中心，样本量有限",
+      "compliance_boundary": "真实世界证据不能替代RCT，不得夸大证据等级"
+    },
+    {
+      "action_id": "ma_05",
+      "priority": "探索性",
+      "market_opportunity": "全国肝病联盟患者管理项目合作",
+      "evidence_findings": "规范化随访和长期管理是提高治疗质量的关键",
+      "key_patients": "接受抗病毒治疗的CHB患者",
+      "unmet_need": "患者随访依从性和长期管理质量有待提高",
+      "meaning_2030": "提高治疗覆盖率和长期管理质量是2030目标的关键",
+      "recommended_actions": [
+        "探索与全国肝病联盟合作模式",
+        "支持患者教育和随访管理项目",
+        "建设数字化患者管理工具"
+      ],
+      "kpis": [
+        "项目覆盖患者数",
+        "随访依从率",
+        "患者留存率"
+      ],
+      "evidence_limitations": "依从性和患者留存直接证据有限",
+      "compliance_boundary": "患者管理项目以医学教育和服务为目的，不得转化为促销行为"
+    }
+  ],
+  "generated_at": "2026-08-30T12:30:12.055656"
+}

@@ -1,0 +1,327 @@
+{
+  "total": 10,
+  "studies": [
+    {
+      "study_id": "study_001_NCT03903796",
+      "publications": [
+        "015d3dd5-23c8-4cb3-be8f-3e1772412edd_79aacdd5-bb02-49c3-bbf1-58a6ccd8d841_20-胡小雄-艾米替诺福韦和丙酚替诺福韦对机体脂质代谢的影响比较.pdf",
+        "08d54f86-6e91-420b-9529-8a3ef41ed0ed_1c80d94b-6a02-40b6-a844-2566abb0de44_22-张旻-WJG 2025-TDF转换TMF的脂质变化和144周安全性.pdf",
+        "414dcfe0-3ba2-4fe2-825b-70d95d4a23e0_369048f0-85d5-4130-ad26-234119e92bc0_17-曾庆磊-艾米替诺福韦与富马酸丙酚替诺福韦治疗慢性乙型肝炎患者的疗效比较一项真实世界单中心研究.pdf",
+        "59e649f8-f3c2-4ace-8f85-f6be71a2d87e_bb66dbc0-67c2-46f2-a514-d6364886e57e_2-TMF48周文章-Randomised clinical trial 48 weeks of treatment with tenofovir amibufenamide versus tenofovir disoproxil fumarate for.pdf",
+        "96b0cef7-83df-4e8d-b3c0-00672df4dfae_e251701d-81ed-40c6-bb65-fec24872d05b_5-延长或转换至艾米替诺福韦治疗慢性乙型肝炎患者的安全性：一项Ⅲ期、多中心、随机对照研究.pdf",
+        "aefec210-5d92-43a4-b991-1fcfacf3c89f_3d9344b4-aaa7-4a32-bce4-2a9de222bfbd_18-党双锁-Effectiveness and Safety of Tenofovir Amibufenamide in the Treatment of Chronic Hepatitis B A Real-world, Multicenter.pdf",
+        "de1351b9-3423-44c1-9668-e63b9138ce76_c19318bd-9387-4d97-bf5b-ce0dcd210a95_4-延长或转换为艾米替诺福韦治疗在慢性乙型肝炎患者中的疗效评估：一项Ⅲ期随机对照研究.pdf",
+        "e241dcd7-cd8e-4d58-ba6c-d4e920f3bdbc_5dab7375-85c0-4b99-a1bd-17c6756941e8_12-傅蕾-Tenofovir amibufenamide vs tenofovir alafenamide for treating chronic hepatitis B A real-world study.pdf",
+        "fba7e6c4-ae87-4e65-bbf7-98dfcd453c35_ec1bbbe1-8456-4dba-a889-0404fb99bc82_3-TMF96周文章-96-Week Treatment of Tenofovir Amibufenamide and Tenofovir Disoproxil Fumarate in Chronic Hepatitis B Patients.pdf"
+      ],
+      "patient_population": [
+        "ETV经治",
+        "HBeAg阳性",
+        "HBeAg阴性",
+        "TAF经治",
+        "TDF经治",
+        "不完全应答",
+        "低病毒血症",
+        "初治",
+        "经治",
+        "老年",
+        "肝硬化",
+        "肝纤维化",
+        "肾功能风险",
+        "血脂代谢",
+        "转换治疗",
+        "骨代谢风险",
+        "高病毒载量"
+      ],
+      "study_phases": [
+        "144周/延长期",
+        "48周分析",
+        "96周随访",
+        "Ⅰ期"
+      ],
+      "study_types": [
+        "真实世界研究",
+        "随机对照试验"
+      ],
+      "total_sample_size": 1361,
+      "max_follow_up_weeks": 240,
+      "highest_evidence_level": "A",
+      "trial_registration": "NCT03903796",
+      "publication_years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "publication_count": 9
+    },
+    {
+      "study_id": "study_002_NCT05398393",
+      "publications": [
+        "381111fd-cc88-4697-898a-a0e7c88d2a2f_d44fa899-c149-4e8b-8976-6df1ee96d366_15-杨玲-Anti-hepatitis B Virus Treatment with Tenofovir Amibufenamide Has No Impact on Blood Lipids.pdf"
+      ],
+      "patient_population": [
+        "ETV经治",
+        "HBeAg阳性",
+        "TAF经治",
+        "TDF经治",
+        "初治",
+        "肝硬化",
+        "肝纤维化",
+        "肾功能风险",
+        "血脂代谢",
+        "转换治疗"
+      ],
+      "study_phases": [
+        "96周随访"
+      ],
+      "study_types": [
+        "真实世界研究"
+      ],
+      "total_sample_size": 174,
+      "max_follow_up_weeks": 96,
+      "highest_evidence_level": "B",
+      "trial_registration": "NCT05398393",
+      "publication_years": [
+        2024
+      ],
+      "publication_count": 1
+    },
+    {
+      "study_id": "study_003_CTR20161077",
+      "publications": [
+        "420de9bd-9bef-4e25-8b39-78ec1fa96f5c_ea85aaec-4389-4815-91e2-86869605bd0d_1-HS-10234 Ib期临床研究公开文献.pdf"
+      ],
+      "patient_population": [
+        "ETV经治",
+        "HBeAg阳性",
+        "HBeAg阴性",
+        "TAF经治",
+        "TDF经治",
+        "肾功能风险",
+        "血脂代谢",
+        "转换治疗"
+      ],
+      "study_phases": [
+        "Ⅰ期"
+      ],
+      "study_types": [
+        "Ⅲ期临床试验"
+      ],
+      "total_sample_size": 12,
+      "max_follow_up_weeks": 0,
+      "highest_evidence_level": "A",
+      "trial_registration": "CTR20161077",
+      "publication_years": [
+        2020
+      ],
+      "publication_count": 1
+    },
+    {
+      "study_id": "study_004_NCT05797714",
+      "publications": [
+        "76b2aca8-125c-4f8a-be2a-22fda246c182_a25d2ece-7f65-4377-bc3e-a35fb68c0012_21-谢青桂红莲-Promote研究48周.pdf"
+      ],
+      "patient_population": [
+        "ETV经治",
+        "HBeAg阳性",
+        "HBeAg阴性",
+        "TAF经治",
+        "TDF经治",
+        "初治",
+        "老年",
+        "肝硬化",
+        "肝纤维化",
+        "肾功能风险",
+        "血脂代谢",
+        "转换治疗",
+        "高病毒载量"
+      ],
+      "study_phases": [
+        "Ⅰ期"
+      ],
+      "study_types": [
+        "随机对照试验"
+      ],
+      "total_sample_size": 193,
+      "max_follow_up_weeks": 0,
+      "highest_evidence_level": "A",
+      "trial_registration": "NCT05797714",
+      "publication_years": [
+        2025
+      ],
+      "publication_count": 1
+    },
+    {
+      "study_id": "study_005_CHICTR2200064306",
+      "publications": [
+        "7911cb9e-3069-4e05-8ebd-d9f0a83ba62e_ffa0c8e5-e650-4d26-9a0b-dee4fbadfbb2_19-高峰-艾米替诺福韦治疗65岁以上慢性乙型肝炎及肝硬化患者的有效性及安全性.pdf"
+      ],
+      "patient_population": [
+        "ETV经治",
+        "HBeAg阳性",
+        "HBeAg阴性",
+        "TAF经治",
+        "TDF经治",
+        "初治",
+        "经治",
+        "老年",
+        "肝硬化",
+        "肝纤维化",
+        "肾功能风险",
+        "血脂代谢",
+        "转换治疗",
+        "骨代谢风险"
+      ],
+      "study_phases": [
+        "96周随访"
+      ],
+      "study_types": [
+        "真实世界研究"
+      ],
+      "total_sample_size": 45,
+      "max_follow_up_weeks": 96,
+      "highest_evidence_level": "B",
+      "trial_registration": "ChiCTR2200064306",
+      "publication_years": [
+        2024
+      ],
+      "publication_count": 1
+    },
+    {
+      "study_id": "study_006",
+      "publications": [
+        "066c4468-fe13-4c37-879f-3def89f170d9_a12bd129-9e0f-4b05-8363-c1d50289bf8f_9-丁洋-艾米替诺福韦治疗HBeAg阳性高病毒血症慢性乙型肝炎口服一线核昔(酸)类似物经治不完全应答患者的临床疗效分析.pdf"
+      ],
+      "patient_population": [
+        "未明确"
+      ],
+      "study_phases": [],
+      "study_types": [],
+      "total_sample_size": 0,
+      "max_follow_up_weeks": 0,
+      "highest_evidence_level": "C",
+      "trial_registration": "",
+      "publication_years": [],
+      "publication_count": 1
+    },
+    {
+      "study_id": "study_007",
+      "publications": [
+        "1488f4c7-9207-48a8-b164-b60b7e388278_13cf6889-50fb-45d2-acf1-49d385ee8cad_6-程能能-我国首个原研口服抗HBV药物TMF结构优势解读  神奇的甲基化 (1).pdf"
+      ],
+      "patient_population": [
+        "骨代谢风险"
+      ],
+      "study_phases": [
+        "24周分析"
+      ],
+      "study_types": [
+        "机制/药代研究"
+      ],
+      "total_sample_size": 0,
+      "max_follow_up_weeks": 28,
+      "highest_evidence_level": "D",
+      "trial_registration": "",
+      "publication_years": [],
+      "publication_count": 1
+    },
+    {
+      "study_id": "study_008",
+      "publications": [
+        "2b331cb4-073c-4eab-8d75-0335c3691129_8560326d-07ea-4ac9-9a94-c126bee728f3_11-曾庆磊-艾米替诺福韦治疗乙肝病毒相关肝硬化患者的早期疗效及安全性研究.pdf"
+      ],
+      "patient_population": [
+        "ETV经治",
+        "HBeAg阳性",
+        "TAF经治",
+        "TDF经治",
+        "不完全应答",
+        "初治",
+        "经治",
+        "老年",
+        "肝硬化",
+        "肝纤维化",
+        "肾功能风险",
+        "血脂代谢",
+        "转换治疗",
+        "高病毒载量"
+      ],
+      "study_phases": [
+        "96周随访"
+      ],
+      "study_types": [
+        "真实世界研究"
+      ],
+      "total_sample_size": 30,
+      "max_follow_up_weeks": 96,
+      "highest_evidence_level": "B",
+      "trial_registration": "",
+      "publication_years": [
+        2023
+      ],
+      "publication_count": 1
+    },
+    {
+      "study_id": "study_009",
+      "publications": [
+        "8f8a7eda-a0a3-4bc0-a605-6e5e69cba8f7_0d8963b8-9af5-4d0f-ab8b-57ba0e7dccf9_13-吕日英-恩替卡韦治疗后慢性乙型肝炎...艾米替诺福韦治疗的效果研究_向文耀.pdf"
+      ],
+      "patient_population": [
+        "ETV经治",
+        "HBeAg阳性",
+        "TAF经治",
+        "TDF经治",
+        "低病毒血症",
+        "经治",
+        "肝硬化",
+        "肝纤维化",
+        "肾功能风险",
+        "转换治疗"
+      ],
+      "study_phases": [
+        "144周/延长期"
+      ],
+      "study_types": [
+        "真实世界研究"
+      ],
+      "total_sample_size": 0,
+      "max_follow_up_weeks": 240,
+      "highest_evidence_level": "B",
+      "trial_registration": "",
+      "publication_years": [
+        2023
+      ],
+      "publication_count": 1
+    },
+    {
+      "study_id": "study_010",
+      "publications": [
+        "ce85f21a-4db8-439d-a29b-b5952e578060_ad43c721-754e-4f00-a14d-fde21081fd51_8-党双锁-艾米替诺福韦治疗慢性乙型肝炎患者的早期疗效_一项真实世界多中心临床研究.pdf"
+      ],
+      "patient_population": [
+        "TAF经治",
+        "不完全应答",
+        "初治",
+        "经治",
+        "肾功能风险",
+        "血脂代谢",
+        "转换治疗"
+      ],
+      "study_phases": [
+        "24周分析"
+      ],
+      "study_types": [
+        "真实世界研究"
+      ],
+      "total_sample_size": 24,
+      "max_follow_up_weeks": 29,
+      "highest_evidence_level": "B",
+      "trial_registration": "",
+      "publication_years": [],
+      "publication_count": 1
+    }
+  ],
+  "generated_at": "2026-08-30T12:18:36.656723"
+}

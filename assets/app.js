@@ -526,32 +526,33 @@ var App = (function() {
         html += '<div class="insight-card tmf-card">';
         html += '<div class="ic-conclusion">' + esc(ins.conclusion) + '</div>';
         html += '<div class="ic-meta">';
-        html += '<span>人群: ' + esc(ins.population) + '</span>';
-        html += '<span>文献: ' + (ins.evidence_count || 0) + '篇</span>';
-        html += '<span>等级: ' + esc(ins.highest_evidence_level) + '</span>';
+        html += '<span>人群: ' + esc(ins.applicable_population || ins.population || '') + '</span>';
+        html += '<span>文献: ' + (ins.support_literature_count || ins.evidence_count || 0) + '篇</span>';
+        html += '<span>等级: ' + esc(ins.highest_evidence_level || '') + '</span>';
         html += '</div>';
         if (ins.market_implication) {
           html += '<div class="ic-detail"><strong>市场启示:</strong> ' + esc(ins.market_implication) + '</div>';
         }
-        if (ins.uncertainty) {
-          html += '<div class="ic-detail ic-uncertainty"><strong>不确定性:</strong> ' + esc(ins.uncertainty) + '</div>';
+        if (ins.main_limitations || ins.uncertainty) {
+          html += '<div class="ic-detail ic-uncertainty"><strong>局限性:</strong> ' + esc(ins.main_limitations || ins.uncertainty || '') + '</div>';
         }
         if (ins.compliance_note) {
           html += '<div class="ic-compliance">' + esc(ins.compliance_note) + '</div>';
         }
+        var popLabel = ins.applicable_population || ins.population || '恒沐洞察';
         if (ins.source_ids && ins.source_ids.length) {
-          html += '<button class="hi-evidence-btn" onclick="App.openEvidenceDrawer(\'' + esc(ins.population).replace(/'/g, '&#39;') + '\', ' + JSON.stringify(ins.source_ids).replace(/"/g, '&quot;') + ')">查看证据 (' + (ins.evidence_count || 0) + '篇)</button>';
+          html += '<button class="hi-evidence-btn" onclick="App.openEvidenceDrawer(\'' + esc(popLabel).replace(/'/g, '&#39;') + '\', ' + JSON.stringify(ins.source_ids).replace(/"/g, '&quot;') + ')">查看证据 (' + (ins.support_literature_count || ins.evidence_count || 0) + '篇)</button>';
         }
         html += '</div>';
       });
       html += '</div>';
       html += '<div style="text-align:center;margin-top:1.5rem;">';
-      html += '<button class="nav-btn" onclick="App.navigate(\'tmf\')">查看TMF证据全景 →</button>';
+      html += '<button class="nav-btn" onclick="App.navigate(\'tmf\')">查看恒沐®证据全景 →</button>';
       html += '</div>';
     } else if (tmfInsights.note) {
       html += '<div class="callout callout-info">' + esc(tmfInsights.note) + '</div>';
       html += '<div style="text-align:center;margin-top:1rem;">';
-      html += '<button class="nav-btn" onclick="App.navigate(\'tmf\')">查看TMF证据全景 →</button>';
+      html += '<button class="nav-btn" onclick="App.navigate(\'tmf\')">查看恒沐®证据全景 →</button>';
       html += '</div>';
     }
 
@@ -2026,7 +2027,7 @@ var App = (function() {
     }
   }
 
-  // ==================== TMF产品证据全景页 ====================
+  // ==================== 恒沐®/TMF产品证据全景页 ====================
   function renderTMFPage() {
     var container = document.getElementById('tmfContent');
     if (!container) return;
@@ -2040,52 +2041,62 @@ var App = (function() {
     var safety = products.tmf_safety_outcomes || {};
     var switching = products.tmf_switching_evidence || {};
     var comparator = products.tmf_comparator_matrix || {};
-    var marketActions = products.tmf_market_actions || {};
-    var changes = products.tmf_evidence_changes || {};
+    var marketInsights = products.tmf_market_actions || {};
+    var evidenceGaps = products.tmf_evidence_gaps || {};
+    var litData = products.tmf_literature || {};
 
     var html = '';
 
-    // 1. 产品证据总览（统计卡片网格）
+    // 1. 证据总览（统计卡片网格）
     html += '<div class="chapter-section">';
-    html += '<h2 class="chapter-title">产品证据总览</h2>';
+    html += '<h2 class="chapter-title">证据总览</h2>';
     html += '<div class="stat-grid tmf-stat-grid">';
-    html += buildTMFStatCard('TMF相关文献', summary.total_literature || 0, '篇');
+    html += buildTMFStatCard('PDF总数', summary.total_pdfs || summary.total_literature || 0, '篇');
+    html += buildTMFStatCard('独立研究', summary.independent_studies || 0, '项');
     html += buildTMFStatCard('随机对照试验', summary.rct_count || 0, '篇');
     html += buildTMFStatCard('真实世界研究', summary.real_world_count || 0, '篇');
-    html += buildTMFStatCard('系统综述', summary.systematic_review_count || 0, '篇');
-    html += buildTMFStatCard('特殊人群研究', summary.special_population_count || 0, '篇');
-    html += buildTMFStatCard('中国证据', (summary.china_evidence_count || 0) + '篇 (' + (summary.china_evidence_pct || 0) + '%)', '');
-    html += buildTMFStatCard('最新证据日期', summary.latest_evidence_date || '—', '');
-    html += buildTMFStatCard('累计报告样本量', summary.cumulative_sample_size || 0, '例');
+    html += buildTMFStatCard('中国研究', (summary.china_study_count || summary.china_evidence_count || 0) + '篇 (' + (summary.china_study_pct || summary.china_evidence_pct || 0) + '%)', '');
+    html += buildTMFStatCard('特殊人群研究', summary.special_population_studies || summary.special_population_count || 0, '篇');
+    html += buildTMFStatCard('最高证据等级', summary.evidence_levels ? (Object.keys(summary.evidence_levels).find(function(k) { return summary.evidence_levels[k] > 0; }) || '—') : '—', '');
+    html += buildTMFStatCard('累计样本量', summary.cumulative_sample_size || 0, '例');
     html += '</div>';
     if (summary.sample_size_note) {
       html += '<div class="callout callout-warning"><strong>注意：</strong>' + esc(summary.sample_size_note) + '</div>';
     }
+    if (summary.note) {
+      html += '<div class="callout callout-info"><strong>说明：</strong>' + esc(summary.note) + '</div>';
+    }
     html += '</div>';
 
-    // 2. TMF核心洞察
+    // 2. 核心洞察
     if (insights.insights && insights.insights.length > 0) {
       html += '<div class="chapter-section">';
-      html += '<h2 class="chapter-title">TMF产品核心洞察</h2>';
+      html += '<h2 class="chapter-title">核心洞察</h2>';
       html += '<div class="insight-grid tmf-insight-grid">';
       insights.insights.forEach(function(ins) {
         html += '<div class="insight-card tmf-insight-card">';
         html += '<div class="ic-conclusion">' + esc(ins.conclusion) + '</div>';
         html += '<div class="ic-meta">';
-        html += '<span>人群: ' + esc(ins.population) + '</span>';
-        html += '<span>文献: ' + (ins.evidence_count || 0) + '篇</span>';
-        html += '<span>最高等级: ' + esc(ins.highest_evidence_level) + '</span>';
+        html += '<span>人群: ' + esc(ins.applicable_population || ins.population || '') + '</span>';
+        html += '<span>文献: ' + (ins.support_literature_count || ins.evidence_count || 0) + '篇</span>';
+        html += '<span>等级: ' + esc(ins.highest_evidence_level || '') + '</span>';
         html += '</div>';
-        html += '<div class="ic-detail"><strong>一致性:</strong> ' + esc(ins.evidence_consistency) + '</div>';
-        html += '<div class="ic-detail"><strong>中国实践:</strong> ' + esc(ins.china_practice_relevance) + '</div>';
-        html += '<div class="ic-detail"><strong>2030意义:</strong> ' + esc(ins.meaning_2030) + '</div>';
-        html += '<div class="ic-detail"><strong>市场启示:</strong> ' + esc(ins.market_implication) + '</div>';
-        html += '<div class="ic-detail ic-uncertainty"><strong>不确定性:</strong> ' + esc(ins.uncertainty) + '</div>';
+        html += '<div class="ic-detail"><strong>一致性:</strong> ' + esc(ins.evidence_consistency || '') + '</div>';
+        html += '<div class="ic-detail"><strong>中国实践:</strong> ' + esc(ins.china_practice_relevance || '') + '</div>';
+        html += '<div class="ic-detail"><strong>2030意义:</strong> ' + esc(ins.meaning_2030 || '') + '</div>';
+        html += '<div class="ic-detail"><strong>市场启示:</strong> ' + esc(ins.market_implication || '') + '</div>';
+        var limitations = ins.main_limitations || ins.uncertainty || '';
+        if (limitations) {
+          html += '<div class="ic-detail ic-uncertainty"><strong>局限性:</strong> ' + esc(limitations) + '</div>';
+        }
         if (ins.compliance_note) {
           html += '<div class="ic-compliance">' + esc(ins.compliance_note) + '</div>';
         }
+        var popLabel = ins.applicable_population || ins.population || '恒沐洞察';
         if (ins.source_ids && ins.source_ids.length) {
-          html += '<button class="hi-evidence-btn" onclick="App.openEvidenceDrawer(\'' + esc(ins.population).replace(/'/g, '&#39;') + '\', ' + JSON.stringify(ins.source_ids).replace(/"/g, '&quot;') + ')">查看证据 (' + (ins.evidence_count || 0) + '篇)</button>';
+          html += '<button class="hi-evidence-btn" onclick="App.openEvidenceDrawer(\'恒沐洞察: ' + esc(popLabel).replace(/'/g, '&#39;') + '\', ' + JSON.stringify(ins.source_ids).replace(/"/g, '&quot;') + ')">查看证据 (' + (ins.support_literature_count || ins.evidence_count || 0) + '篇)</button>';
+        } else {
+          html += '<div class="ic-no-evidence">无关联文献</div>';
         }
         html += '</div>';
       });
@@ -2093,7 +2104,7 @@ var App = (function() {
       html += '</div>';
     } else {
       html += '<div class="chapter-section">';
-      html += '<div class="callout callout-info"><strong>TMF证据不足</strong>' + esc(insights.note || '当前文献库中尚未识别到TMF相关文献。随着飞书文献库每日更新，TMF相关文献将被自动识别并生成跨文献洞察。') + '</div>';
+      html += '<div class="callout callout-info"><strong>恒沐证据不足</strong>' + esc(insights.note || '当前文献库中尚未识别到恒沐相关文献。随着飞书文献库每日更新，恒沐相关文献将被自动识别并生成跨文献洞察。') + '</div>';
       html += '</div>';
     }
 
@@ -2202,7 +2213,52 @@ var App = (function() {
     }
     html += '</div>';
 
-    // 7. 药物对比矩阵
+    // 7. 经治转换证据
+    html += '<div class="chapter-section">';
+    html += '<h2 class="chapter-title">经治转换证据</h2>';
+    if (switching.stages && switching.stages.length) {
+      html += '<div class="switching-path">';
+      switching.stages.forEach(function(stage) {
+        html += '<div class="switching-stage">';
+        html += '<h3 class="switching-stage-title">' + esc(stage.name) + '</h3>';
+        if (stage.items && stage.items.length > 0) {
+          html += '<div class="switching-items">';
+          stage.items.slice(0, 5).forEach(function(item) {
+            html += '<div class="switching-item">';
+            html += '<div class="si-title">' + esc(item.title || '') + '</div>';
+            if (item.has_data === false) {
+              html += '<div class="si-note">' + esc(item.note || '证据不足') + '</div>';
+            } else if (item.reported === false) {
+              html += '<div class="si-note">' + esc(item.note || '未报告') + '</div>';
+            } else {
+              if (item.source_drugs) html += '<div class="si-detail"><strong>来源药物:</strong> ' + esc(item.source_drugs) + '</div>';
+              if (item.sample_size) html += '<div class="si-detail"><strong>样本量:</strong> ' + item.sample_size + '</div>';
+              if (item.evidence_level) html += '<div class="si-detail"><strong>证据等级:</strong> ' + item.evidence_level + '</div>';
+            }
+            html += '</div>';
+          });
+          if (stage.items.length > 5) {
+            html += '<div class="switching-more">+ ' + (stage.items.length - 5) + ' 更多研究</div>';
+          }
+          html += '</div>';
+        } else {
+          html += '<p class="no-data">暂无数据</p>';
+        }
+        html += '</div>';
+      });
+      html += '</div>';
+      if (switching.switch_reasons_reporting) {
+        html += '<div class="callout callout-info">' + esc(switching.switch_reasons_reporting) + '</div>';
+      }
+      if (switching.retention_evidence_gap) {
+        html += '<div class="callout callout-warning">' + esc(switching.retention_evidence_gap) + '</div>';
+      }
+    } else {
+      html += '<p class="no-data">暂无转换治疗证据</p>';
+    }
+    html += '</div>';
+
+    // 8. 药物对比矩阵
     html += '<div class="chapter-section">';
     html += '<h2 class="chapter-title">中国口服核苷（酸）类似物治疗格局</h2>';
     if (comparator.comparators) {
@@ -2211,7 +2267,8 @@ var App = (function() {
       html += '<th>药物</th><th>作用机制</th><th>抗病毒效力</th><th>耐药屏障</th><th>肾安全性</th><th>骨安全性</th><th>代谢影响</th><th>长期证据</th><th>中国RWE</th><th>可及性</th><th>证据等级</th>';
       html += '</tr></thead><tbody>';
       comparator.comparators.forEach(function(c) {
-        html += '<tr' + (c.drug && c.drug.indexOf('TMF') >= 0 ? ' class="tmf-highlight-row"' : '') + '>';
+        var isTMF = c.is_tmf || (c.drug && (c.drug.indexOf('TMF') >= 0 || c.drug.indexOf('恒沐') >= 0 || c.drug.indexOf('艾米替诺福韦') >= 0));
+        html += '<tr' + (isTMF ? ' class="tmf-highlight-row"' : '') + '>';
         html += '<td>' + esc(c.drug) + '</td>';
         html += '<td>' + esc(c.mechanism) + '</td>';
         html += '<td>' + esc(c.antiviral_potency) + '</td>';
@@ -2219,8 +2276,8 @@ var App = (function() {
         html += '<td>' + esc(c.renal_safety) + '</td>';
         html += '<td>' + esc(c.bone_safety) + '</td>';
         html += '<td>' + esc(c.metabolic_impact) + '</td>';
-        html += '<td>' + esc(c.long_term_evidence_maturity) + '</td>';
-        html += '<td>' + esc(c.china_rwe_evidence) + '</td>';
+        html += '<td>' + esc(c.long_term_maturity || c.long_term_evidence_maturity || '') + '</td>';
+        html += '<td>' + esc(c.china_rwe || c.china_rwe_evidence || '') + '</td>';
         html += '<td>' + esc(c.accessibility) + '</td>';
         html += '<td><span class="ev-level-badge level-' + (c.evidence_level || 'B') + '">' + (c.evidence_level || 'B') + '</span></td>';
         html += '</tr>';
@@ -2237,36 +2294,118 @@ var App = (function() {
     }
     html += '</div>';
 
-    // 8. 市场行动
+    // 9. 市场部策略洞察
     html += '<div class="chapter-section">';
-    html += '<h2 class="chapter-title">市场部行动建议</h2>';
-    if (marketActions.actions) {
+    html += '<h2 class="chapter-title">市场部策略洞察</h2>';
+    var actions = marketInsights.actions || marketInsights.action_list || [];
+    if (actions.length > 0) {
       html += '<div class="tmf-action-grid">';
-      marketActions.actions.forEach(function(a) {
+      actions.forEach(function(a) {
         var priClass = a.priority === '高' ? 'priority-high' : (a.priority === '中' ? 'priority-medium' : 'priority-exploratory');
         html += '<div class="strategy-action-card tmf-action-card ' + priClass + '">';
-        html += '<div class="sac-priority ' + priClass + '">' + esc(a.priority) + '</div>';
-        html += '<h3 class="sac-title">' + esc(a.action) + '</h3>';
-        html += '<div class="sac-field"><strong>证据基础:</strong> ' + esc(a.evidence_basis) + '</div>';
-        html += '<div class="sac-field"><strong>目标患者:</strong> ' + esc(a.target_patients) + '</div>';
-        html += '<div class="sac-field"><strong>未满足需求:</strong> ' + esc(a.unmet_need) + '</div>';
-        html += '<div class="sac-field"><strong>合作方:</strong> ' + esc(a.collaboration) + '</div>';
-        html += '<div class="sac-kpis">';
-        (a.kpis || []).forEach(function(k) {
-          html += '<span class="kpi-badge">' + esc(k) + '</span>';
-        });
-        html += '</div>';
-        html += '<div class="sac-compliance">' + esc(a.compliance_note) + '</div>';
+        html += '<div class="sac-priority ' + priClass + '">' + esc(a.priority || '中') + '</div>';
+        html += '<h3 class="sac-title">' + esc(a.market_opportunity || a.action || '') + '</h3>';
+        html += '<div class="sac-field"><strong>证据发现:</strong> ' + esc(a.evidence_findings || a.evidence_basis || '') + '</div>';
+        html += '<div class="sac-field"><strong>关键患者:</strong> ' + esc(a.key_patients || a.target_patients || '') + '</div>';
+        html += '<div class="sac-field"><strong>未满足需求:</strong> ' + esc(a.unmet_need || '') + '</div>';
+        if (a.recommended_actions && a.recommended_actions.length > 0) {
+          html += '<div class="sac-field"><strong>推荐行动:</strong></div>';
+          html += '<ul class="sac-actions">';
+          a.recommended_actions.forEach(function(act) {
+            html += '<li>' + esc(act) + '</li>';
+          });
+          html += '</ul>';
+        }
+        if (a.kpis && a.kpis.length > 0) {
+          html += '<div class="sac-kpis">';
+          a.kpis.forEach(function(k) {
+            html += '<span class="kpi-badge">' + esc(k) + '</span>';
+          });
+          html += '</div>';
+        }
+        html += '<div class="sac-compliance">' + esc(a.compliance_boundary || a.compliance_note || '') + '</div>';
         html += '</div>';
       });
       html += '</div>';
     }
     html += '</div>';
 
-    // 9. 证据变化
+    // 10. 证据缺口
     html += '<div class="chapter-section">';
-    html += '<h2 class="chapter-title">TMF证据更新</h2>';
-    html += '<div class="callout callout-info">' + esc(changes.summary || '本次新增证据未改变当前核心判断。') + '</div>';
+    html += '<h2 class="chapter-title">证据缺口</h2>';
+    if (evidenceGaps.gaps && evidenceGaps.gaps.length > 0) {
+      html += '<div class="evidence-gaps">';
+      evidenceGaps.gaps.forEach(function(gap) {
+        html += '<div class="evidence-gap-item">';
+        html += '<div class="eg-importance ' + (gap.importance || 'medium').toLowerCase() + '">' + (gap.importance || '中') + '</div>';
+        html += '<div class="eg-content">';
+        html += '<h3 class="eg-title">' + esc(gap.description || '') + '</h3>';
+        html += '<div class="eg-current"><strong>当前证据:</strong> ' + esc(gap.current_evidence || '') + '</div>';
+        html += '<div class="eg-need"><strong>研究需求:</strong> ' + esc(gap.research_need || '') + '</div>';
+        html += '</div>';
+        html += '</div>';
+      });
+      html += '</div>';
+      if (evidenceGaps.key_gap_summary) {
+        html += '<div class="callout callout-info"><strong>主要证据缺口:</strong> ' + esc(evidenceGaps.key_gap_summary) + '</div>';
+      }
+    } else {
+      html += '<p class="no-data">暂无证据缺口分析</p>';
+    }
+    html += '</div>';
+
+    // 11. 文献证据列表
+    html += '<div class="chapter-section">';
+    html += '<h2 class="chapter-title">文献证据列表</h2>';
+    var records = litData.records || [];
+    if (records.length > 0) {
+      html += '<div class="tmf-lit-filter" style="margin-bottom:1rem;">';
+      html += '<span class="tmf-lit-count">共 ' + records.length + ' 篇文献 · ' + (summary.independent_studies || 0) + ' 项独立研究</span>';
+      html += '</div>';
+      html += '<div class="tmf-literature-list">';
+      records.forEach(function(r, idx) {
+        var title = r.title_cn || r.title_en || r.filename || '未命名文献';
+        html += '<div class="tmf-lit-card">';
+        html += '<div class="tmf-lit-header">';
+        html += '<span class="tmf-lit-num">#' + (idx + 1) + '</span>';
+        if (r.evidence_level) {
+          html += '<span class="ev-level-badge level-' + r.evidence_level + '">' + r.evidence_level + '</span>';
+        }
+        if (r.study_type) {
+          html += '<span class="tmf-lit-type">' + esc(r.study_type) + '</span>';
+        }
+        html += '</div>';
+        html += '<h4 class="tmf-lit-title">' + esc(title.substring(0, 80)) + (title.length > 80 ? '...' : '') + '</h4>';
+        html += '<div class="tmf-lit-meta">';
+        if (r.first_author) html += '<span>' + esc(r.first_author) + ' 等</span>';
+        if (r.journal) html += '<span>' + esc(r.journal) + '</span>';
+        if (r.year) html += '<span>' + r.year + '</span>';
+        if (r.sample_size) html += '<span>n=' + r.sample_size + '</span>';
+        html += '</div>';
+        if (r.patient_population && r.patient_population.length > 0) {
+          html += '<div class="tmf-lit-pops">';
+          r.patient_population.slice(0, 5).forEach(function(p) {
+            html += '<span class="tmf-pop-tag">' + esc(p) + '</span>';
+          });
+          if (r.patient_population.length > 5) {
+            html += '<span class="tmf-pop-more">+' + (r.patient_population.length - 5) + '</span>';
+          }
+          html += '</div>';
+        }
+        if (r.conclusion) {
+          html += '<div class="tmf-lit-conclusion">' + esc(r.conclusion.substring(0, 120)) + (r.conclusion.length > 120 ? '...' : '') + '</div>';
+        }
+        html += '<div class="tmf-lit-footer">';
+        if (r.pmid) html += '<span class="tmf-lit-id">PMID: ' + esc(r.pmid) + '</span>';
+        if (r.doi) html += '<span class="tmf-lit-id">DOI: ' + esc(r.doi) + '</span>';
+        if (r.study_entity_id) html += '<span class="tmf-lit-study">研究: ' + esc(r.study_entity_id) + '</span>';
+        html += '</div>';
+        html += '</div>';
+      });
+      html += '</div>';
+    } else {
+      html += '<p class="no-data">暂无文献列表数据</p>';
+    }
     html += '</div>';
 
     container.innerHTML = html;
