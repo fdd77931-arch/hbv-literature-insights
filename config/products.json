@@ -3,7 +3,7 @@
   "updated_at": "2026-08-30T00:00:00+08:00",
   "products": {
     "hengmu_tmf": {
-      "brand_name": "横木®",
+      "brand_name": "恒沐®",
       "generic_name_cn": "艾米替诺福韦片",
       "generic_name_en": "tenofovir amibufenamide",
       "abbreviation": "TMF",
@@ -16,8 +16,8 @@
         "TMF",
         "HS-10234",
         "HS-10234",
-        "横木",
-        "横木®"
+        "恒沐",
+        "恒沐®"
       ],
       "tmf_context_required": [
         "HBV",
@@ -33,7 +33,7 @@
       "mechanism": "替诺福韦前体药物，在体内转化为替诺福韦发挥抗病毒作用",
       "indication": "慢性乙型肝炎",
       "approval_status": "中国国家药品监督管理局批准上市",
-      "display_name": "横木®（艾米替诺福韦片，TMF）"
+      "display_name": "恒沐®（艾米替诺福韦片，TMF）"
     }
   }
 }

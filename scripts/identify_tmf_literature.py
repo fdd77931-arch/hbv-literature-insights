@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-TMF/横木文献识别与数据生成脚本
+TMF/恒沐文献识别与数据生成脚本
 从飞书文献库中识别TMF相关文献，生成产品证据数据文件
 """
 
@@ -25,7 +25,7 @@ TMF_ALIASES = [
     'tenofovir amibufenamide fumarate',
     'HS-10234',
     'HS10234',
-    '横木',
+    '恒沐',
 ]
 
 # TMF上下文关键词（TMF缩写需要HBV上下文）
@@ -299,7 +299,7 @@ def identify_duplicate_studies(records):
 def generate_tmf_data():
     """主函数：生成所有TMF数据文件"""
     print("=" * 60)
-    print("TMF/横木文献识别与数据生成")
+    print("TMF/恒沐文献识别与数据生成")
     print("=" * 60)
     
     # 加载飞书文献数据
@@ -475,7 +475,7 @@ def generate_evidence_summary(records):
         all_endpoints.update(r['endpoints'])
     
     return {
-        'product_name': '横木®（艾米替诺福韦片，TMF）',
+        'product_name': '恒沐®（艾米替诺福韦片，TMF）',
         'total_literature': total,
         'rct_count': rct_count,
         'real_world_count': rws_count,
@@ -531,7 +531,7 @@ def generate_evidence_timeline(records):
                 break
     
     return {
-        'product_name': '横木®（艾米替诺福韦片，TMF）',
+        'product_name': '恒沐®（艾米替诺福韦片，TMF）',
         'stages': stages,
         'total_items': len(records),
         'generated_at': datetime.now().isoformat(),
@@ -589,7 +589,7 @@ def generate_population_matrix(records):
         })
     
     return {
-        'product_name': '横木®（艾米替诺福韦片，TMF）',
+        'product_name': '恒沐®（艾米替诺福韦片，TMF）',
         'populations': populations,
         'scoring_method': '未满足需求评分基于：基线疾病风险(1-5)、现有管理难度(1-5)、药物安全性关注(1-5)、依从性风险(1-5)、现有证据缺口(1-5)、对2030治疗覆盖率影响(1-5)。取均值。',
         'evidence_maturity_method': '证据成熟度评分：5=≥3篇含RCT，4=≥2篇研究，3=≥1篇研究，1=无证据',
@@ -645,7 +645,7 @@ def generate_efficacy_outcomes(records):
             })
     
     return {
-        'product_name': '横木®（艾米替诺福韦片，TMF）',
+        'product_name': '恒沐®（艾米替诺福韦片，TMF）',
         'metrics': metrics,
         'method_note': '不同随访时间、人群和终点定义的研究不直接计算简单平均。采用结构化证据并列展示。',
         'generated_at': datetime.now().isoformat(),
@@ -700,7 +700,7 @@ def generate_safety_outcomes(records):
         })
     
     return {
-        'product_name': '横木®（艾米替诺福韦片，TMF）',
+        'product_name': '恒沐®（艾米替诺福韦片，TMF）',
         'metrics': metrics,
         'method_note': '安全性指标同时标明基线情况、变化方向、随访时间、统计显著性和临床意义。不能把"无统计学显著差异"表述为"绝对没有影响"。',
         'generated_at': datetime.now().isoformat(),
@@ -737,7 +737,7 @@ def generate_switching_evidence(records):
             })
     
     return {
-        'product_name': '横木®（艾米替诺福韦片，TMF）',
+        'product_name': '恒沐®（艾米替诺福韦片，TMF）',
         'total_switching_studies': len(switch_records),
         'stages': stages,
         'switch_reasons_available': False,
@@ -824,7 +824,7 @@ def generate_comparator_matrix(records):
     ]
     
     return {
-        'product_name': '横木®（艾米替诺福韦片，TMF）',
+        'product_name': '恒沐®（艾米替诺福韦片，TMF）',
         'comparators': comparators,
         'comparison_rules': [
             '只有真实头对头研究才能形成直接比较结论',
@@ -907,7 +907,7 @@ def generate_market_actions(records):
     ]
     
     return {
-        'product_name': '横木®（艾米替诺福韦片，TMF）',
+        'product_name': '恒沐®（艾米替诺福韦片，TMF）',
         'actions': actions,
         'total_actions': len(actions),
         'generated_at': datetime.now().isoformat(),
@@ -917,7 +917,7 @@ def generate_market_actions(records):
 def generate_evidence_changes(records):
     """生成证据变化报告"""
     return {
-        'product_name': '横木®（艾米替诺福韦片，TMF）',
+        'product_name': '恒沐®（艾米替诺福韦片，TMF）',
         'new_tmf_articles_count': 0,
         'new_populations': [],
         'new_endpoints': [],
@@ -938,10 +938,10 @@ def generate_tmf_insights(records):
     # 基于已有文献内容生成洞察，不是关键词计数
     if total == 0:
         return {
-            'product_name': '横木®（艾米替诺福韦片，TMF）',
+            'product_name': '恒沐®（艾米替诺福韦片，TMF）',
             'total_insights': 0,
             'insights': [],
-            'note': '当前文献库中尚未识别到TMF/横木相关文献。随着飞书文献库每日更新，TMF相关文献将被自动识别并生成跨文献洞察。',
+            'note': '当前文献库中尚未识别到TMF/恒沐相关文献。随着飞书文献库每日更新，TMF相关文献将被自动识别并生成跨文献洞察。',
             'evidence_gap': 'TMF证据不足，待文献库补充TMF相关研究后自动生成洞察',
             'generated_at': datetime.now().isoformat(),
         }
@@ -1003,7 +1003,7 @@ def generate_tmf_insights(records):
         })
     
     return {
-        'product_name': '横木®（艾米替诺福韦片，TMF）',
+        'product_name': '恒沐®（艾米替诺福韦片，TMF）',
         'total_insights': len(insights),
         'insights': insights,
         'generated_at': datetime.now().isoformat(),

@@ -606,7 +606,7 @@
     changeReport: sd.change_report || {},
     // 策略图表数据
     charts: sd.charts || {},
-    // 产品数据（TMF/横木）
+    // 产品数据（TMF/恒沐）
     products: sd.products || {},
     productConfig: sd.product_config || {},
     // 辅助函数
