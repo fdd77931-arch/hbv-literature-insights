@@ -1068,7 +1068,158 @@
     initHCCRiskChart: initHCCRiskChart,
     initAllianceMatrixChart: initAllianceMatrixChart,
     initMarketStrategyChart: initMarketStrategyChart,
-    initEvidenceQualityChart: initEvidenceQualityChart
+    initEvidenceQualityChart: initEvidenceQualityChart,
+    initTMFPopulationChart: initTMFPopulationChart,
+    initTMFEfficacyChart: initTMFEfficacyChart,
+    initTMFSafetyChart: initTMFSafetyChart
   };
+
+  // ==================== TMF图表函数 ====================
+
+  function initTMFPopulationChart(container) {
+    if (!container || !window.echarts) return;
+    var data = (window.APP_DATA || {}).products || {};
+    var popMatrix = data.tmf_population_matrix || {};
+    var populations = popMatrix.populations || [];
+
+    if (!populations.length) {
+      container.innerHTML = '<div style="text-align:center;padding:3rem;color:#999;">当前文献库中暂无TMF患者人群证据</div>';
+      return;
+    }
+
+    var chart = echarts.init(container);
+    var series = populations.map(function(p) {
+      return {
+        name: p.pop_name,
+        value: [p.unmet_need_score, p.evidence_maturity, p.study_count],
+        itemStyle: {
+          color: p.evidence_maturity >= 4 ? '#2d8659' : (p.evidence_maturity >= 3 ? '#00688f' : '#c75d2c'),
+          opacity: 0.7
+        }
+      };
+    });
+
+    chart.setOption({
+      tooltip: {
+        formatter: function(params) {
+          var d = params.data;
+          return '<strong>' + params.name + '</strong><br/>' +
+            '未满足需求: ' + d.value[0] + '/5<br/>' +
+            '证据成熟度: ' + d.value[1] + '/5<br/>' +
+            '研究数量: ' + d.value[2] + '篇';
+        }
+      },
+      grid: { left: '8%', right: '8%', bottom: '12%', top: '10%' },
+      xAxis: {
+        type: 'value',
+        name: '临床未满足需求',
+        min: 0, max: 6,
+        nameLocation: 'middle',
+        nameGap: 30
+      },
+      yAxis: {
+        type: 'value',
+        name: '证据成熟度',
+        min: 0, max: 6,
+        nameLocation: 'middle',
+        nameGap: 40
+      },
+      series: [{
+        type: 'scatter',
+        symbolSize: function(data) {
+          return Math.max(15, data[2] * 10);
+        },
+        data: series,
+        label: {
+          show: true,
+          formatter: function(params) {
+            return params.name;
+          },
+          position: 'top',
+          fontSize: 11
+        }
+      }]
+    });
+    window.addEventListener('resize', function() { chart.resize(); });
+  }
+
+  function initTMFEfficacyChart(container) {
+    if (!container || !window.echarts) return;
+    var data = (window.APP_DATA || {}).products || {};
+    var efficacy = data.tmf_efficacy_outcomes || {};
+    var metrics = efficacy.metrics || [];
+
+    if (!metrics.length) {
+      container.innerHTML = '<div style="text-align:center;padding:3rem;color:#999;">暂无TMF疗效数据</div>';
+      return;
+    }
+
+    var chart = echarts.init(container);
+    var categories = metrics.map(function(m) { return m.metric; });
+    var counts = metrics.map(function(m) { return m.evidence_count || 0; });
+
+    chart.setOption({
+      tooltip: { trigger: 'axis' },
+      grid: { left: '15%', right: '8%', bottom: '15%', top: '10%' },
+      xAxis: {
+        type: 'category',
+        data: categories,
+        axisLabel: { rotate: 30, fontSize: 10 }
+      },
+      yAxis: {
+        type: 'value',
+        name: '研究数量',
+        minInterval: 1
+      },
+      series: [{
+        type: 'bar',
+        data: counts,
+        itemStyle: { color: '#00688f' },
+        label: { show: true, position: 'top' }
+      }]
+    });
+    window.addEventListener('resize', function() { chart.resize(); });
+  }
+
+  function initTMFSafetyChart(container) {
+    if (!container || !window.echarts) return;
+    var data = (window.APP_DATA || {}).products || {};
+    var safety = data.tmf_safety_outcomes || {};
+    var metrics = safety.metrics || [];
+
+    if (!metrics.length) {
+      container.innerHTML = '<div style="text-align:center;padding:3rem;color:#999;">暂无TMF安全性数据</div>';
+      return;
+    }
+
+    var chart = echarts.init(container);
+    var categories = metrics.map(function(m) { return m.metric; });
+    var counts = metrics.map(function(m) { return m.evidence_count || 0; });
+
+    chart.setOption({
+      tooltip: { trigger: 'axis' },
+      grid: { left: '15%', right: '8%', bottom: '15%', top: '10%' },
+      xAxis: {
+        type: 'category',
+        data: categories,
+        axisLabel: { rotate: 30, fontSize: 10 }
+      },
+      yAxis: {
+        type: 'value',
+        name: '研究数量',
+        minInterval: 1
+      },
+      series: [{
+        type: 'bar',
+        data: counts,
+        itemStyle: { color: '#c75d2c' },
+        label: { show: true, position: 'top' }
+      }]
+    });
+    window.addEventListener('resize', function() { chart.resize(); });
+  }
+
+
+
 
 })();

@@ -1,0 +1,87 @@
+{
+  "product_name": "横木®（艾米替诺福韦片，TMF）",
+  "actions": [
+    {
+      "action": "经治转换患者规范评估项目",
+      "priority": "高",
+      "evidence_basis": "基于0篇TMF相关文献",
+      "target_patients": "ETV/TDF/TAF经治患者",
+      "target_doctors": "感染科、肝病科医生",
+      "unmet_need": "经治患者转换治疗缺乏标准化评估路径",
+      "collaboration": "全国肝病联盟、区域中心医院",
+      "kpis": [
+        "转换评估率",
+        "转换后病毒学应答率",
+        "6个月留存率"
+      ],
+      "evidence_strength": "有限",
+      "compliance_note": "不形成超适应证推广建议"
+    },
+    {
+      "action": "老年及肝硬化患者精细化管理",
+      "priority": "高",
+      "evidence_basis": "基于特殊人群安全性证据",
+      "target_patients": "老年CHB患者、肝硬化代偿期患者",
+      "target_doctors": "肝病科、老年医学科",
+      "unmet_need": "老年和肝硬化患者需要兼顾疗效和安全性的方案",
+      "collaboration": "全国肝病联盟、老年医学联盟",
+      "kpis": [
+        "老年患者评估率",
+        "肾骨安全性监测率",
+        "治疗持续性"
+      ],
+      "evidence_strength": "有限",
+      "compliance_note": "安全性数据不等同于依从性改善"
+    },
+    {
+      "action": "肾脏、骨骼和代谢指标标准化监测",
+      "priority": "中",
+      "evidence_basis": "基于TMF安全性研究证据",
+      "target_patients": "长期治疗CHB患者",
+      "target_doctors": "感染科、肝病科、肾内科",
+      "unmet_need": "长期核苷类似物治疗患者缺乏标准化安全监测",
+      "collaboration": "全国肝病联盟、检验科",
+      "kpis": [
+        "eGFR监测率",
+        "骨密度检查率",
+        "血脂监测率"
+      ],
+      "evidence_strength": "有限",
+      "compliance_note": "监测方案不构成产品推广"
+    },
+    {
+      "action": "HBV DNA与ALT动态随访项目",
+      "priority": "中",
+      "evidence_basis": "基于TMF疗效研究证据",
+      "target_patients": "所有接受抗病毒治疗的CHB患者",
+      "target_doctors": "感染科、肝病科、全科",
+      "unmet_need": "治疗后缺乏规范的动态随访体系",
+      "collaboration": "全国肝病联盟、基层医疗机构",
+      "kpis": [
+        "DNA复查率",
+        "ALT复查率",
+        "随访依从率"
+      ],
+      "evidence_strength": "有限",
+      "compliance_note": "随访方案适用于所有核苷类似物，非特定产品推广"
+    },
+    {
+      "action": "区域病例登记与多中心真实世界研究",
+      "priority": "探索性",
+      "evidence_basis": "基于TMF现有证据缺口",
+      "target_patients": "TMF治疗患者",
+      "target_doctors": "区域中心医院",
+      "unmet_need": "TMF在中国真实世界中的长期疗效和安全性数据不足",
+      "collaboration": "全国肝病联盟、CRO",
+      "kpis": [
+        "登记患者数",
+        "随访完成率",
+        "数据质量评分"
+      ],
+      "evidence_strength": "不足",
+      "compliance_note": "真实世界研究不等于RCT，结果需谨慎解读"
+    }
+  ],
+  "total_actions": 5,
+  "generated_at": "2026-08-30T10:15:03.990321"
+}

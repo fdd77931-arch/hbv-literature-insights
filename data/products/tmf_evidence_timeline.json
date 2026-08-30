@@ -1,0 +1,83 @@
+{
+  "product_name": "横木®（艾米替诺福韦片，TMF）",
+  "stages": [
+    {
+      "key": "early",
+      "name": "早期药代与剂量探索",
+      "years": [
+        2019,
+        2020
+      ],
+      "items": []
+    },
+    {
+      "key": "pivotal",
+      "name": "关键临床试验",
+      "years": [
+        2020,
+        2021,
+        2022
+      ],
+      "items": []
+    },
+    {
+      "key": "post_launch",
+      "name": "上市后研究",
+      "years": [
+        2022,
+        2023
+      ],
+      "items": []
+    },
+    {
+      "key": "switch",
+      "name": "经治转换研究",
+      "years": [
+        2023,
+        2024
+      ],
+      "items": []
+    },
+    {
+      "key": "special",
+      "name": "特殊人群研究",
+      "years": [
+        2023,
+        2024,
+        2025
+      ],
+      "items": []
+    },
+    {
+      "key": "long_term",
+      "name": "长期随访",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "items": []
+    },
+    {
+      "key": "real_world",
+      "name": "真实世界证据",
+      "years": [
+        2024,
+        2025,
+        2026
+      ],
+      "items": []
+    },
+    {
+      "key": "heor",
+      "name": "卫生经济学证据",
+      "years": [
+        2025,
+        2026
+      ],
+      "items": []
+    }
+  ],
+  "total_items": 0,
+  "generated_at": "2026-08-30T10:15:03.989623"
+}

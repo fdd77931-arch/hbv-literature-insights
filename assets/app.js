@@ -135,6 +135,7 @@ var App = (function() {
       case 'alliance': renderAlliancePage(); break;
       case 'evidence': renderEvidencePage(); break;
       case 'updates': renderUpdatesPage(); break;
+      case 'tmf': renderTMFPage(); break;
     }
   }
 
@@ -178,6 +179,9 @@ var App = (function() {
 
     // 4. 市场行动卡片
     renderMarketActionCards();
+
+    // 4.5 TMF产品相关核心洞察
+    renderTMFOverviewSection();
 
     // 5. 最新证据动态
     renderLatestUpdates();
@@ -506,6 +510,52 @@ var App = (function() {
     }).join('');
 
     document.getElementById('marketActionCards').innerHTML = html;
+  }
+
+  // ==================== 首页TMF产品核心洞察 ====================
+  function renderTMFOverviewSection() {
+    var container = document.getElementById('tmfOverviewSection');
+    if (!container) return;
+
+    var tmfInsights = (D.products || {}).tmf_core_insights || {};
+    var html = '';
+
+    if (tmfInsights.insights && tmfInsights.insights.length > 0) {
+      html += '<div class="insight-grid">';
+      tmfInsights.insights.slice(0, 6).forEach(function(ins) {
+        html += '<div class="insight-card tmf-card">';
+        html += '<div class="ic-conclusion">' + esc(ins.conclusion) + '</div>';
+        html += '<div class="ic-meta">';
+        html += '<span>人群: ' + esc(ins.population) + '</span>';
+        html += '<span>文献: ' + (ins.evidence_count || 0) + '篇</span>';
+        html += '<span>等级: ' + esc(ins.highest_evidence_level) + '</span>';
+        html += '</div>';
+        if (ins.market_implication) {
+          html += '<div class="ic-detail"><strong>市场启示:</strong> ' + esc(ins.market_implication) + '</div>';
+        }
+        if (ins.uncertainty) {
+          html += '<div class="ic-detail ic-uncertainty"><strong>不确定性:</strong> ' + esc(ins.uncertainty) + '</div>';
+        }
+        if (ins.compliance_note) {
+          html += '<div class="ic-compliance">' + esc(ins.compliance_note) + '</div>';
+        }
+        if (ins.source_ids && ins.source_ids.length) {
+          html += '<button class="hi-evidence-btn" onclick="App.openEvidenceDrawer(\'' + esc(ins.population).replace(/'/g, '&#39;') + '\', ' + JSON.stringify(ins.source_ids).replace(/"/g, '&quot;') + ')">查看证据 (' + (ins.evidence_count || 0) + '篇)</button>';
+        }
+        html += '</div>';
+      });
+      html += '</div>';
+      html += '<div style="text-align:center;margin-top:1.5rem;">';
+      html += '<button class="nav-btn" onclick="App.navigate(\'tmf\')">查看TMF证据全景 →</button>';
+      html += '</div>';
+    } else if (tmfInsights.note) {
+      html += '<div class="callout callout-info">' + esc(tmfInsights.note) + '</div>';
+      html += '<div style="text-align:center;margin-top:1rem;">';
+      html += '<button class="nav-btn" onclick="App.navigate(\'tmf\')">查看TMF证据全景 →</button>';
+      html += '</div>';
+    }
+
+    container.innerHTML = html;
   }
 
   // ==================== 总体核心洞察 ====================
@@ -1974,6 +2024,269 @@ var App = (function() {
         }
       }, 200);
     }
+  }
+
+  // ==================== TMF产品证据全景页 ====================
+  function renderTMFPage() {
+    var container = document.getElementById('tmfContent');
+    if (!container) return;
+
+    var products = D.products || {};
+    var summary = products.tmf_evidence_summary || {};
+    var insights = products.tmf_core_insights || {};
+    var timeline = products.tmf_evidence_timeline || {};
+    var popMatrix = products.tmf_population_matrix || {};
+    var efficacy = products.tmf_efficacy_outcomes || {};
+    var safety = products.tmf_safety_outcomes || {};
+    var switching = products.tmf_switching_evidence || {};
+    var comparator = products.tmf_comparator_matrix || {};
+    var marketActions = products.tmf_market_actions || {};
+    var changes = products.tmf_evidence_changes || {};
+
+    var html = '';
+
+    // 1. 产品证据总览（统计卡片网格）
+    html += '<div class="chapter-section">';
+    html += '<h2 class="chapter-title">产品证据总览</h2>';
+    html += '<div class="stat-grid tmf-stat-grid">';
+    html += buildTMFStatCard('TMF相关文献', summary.total_literature || 0, '篇');
+    html += buildTMFStatCard('随机对照试验', summary.rct_count || 0, '篇');
+    html += buildTMFStatCard('真实世界研究', summary.real_world_count || 0, '篇');
+    html += buildTMFStatCard('系统综述', summary.systematic_review_count || 0, '篇');
+    html += buildTMFStatCard('特殊人群研究', summary.special_population_count || 0, '篇');
+    html += buildTMFStatCard('中国证据', (summary.china_evidence_count || 0) + '篇 (' + (summary.china_evidence_pct || 0) + '%)', '');
+    html += buildTMFStatCard('最新证据日期', summary.latest_evidence_date || '—', '');
+    html += buildTMFStatCard('累计报告样本量', summary.cumulative_sample_size || 0, '例');
+    html += '</div>';
+    if (summary.sample_size_note) {
+      html += '<div class="callout callout-warning"><strong>注意：</strong>' + esc(summary.sample_size_note) + '</div>';
+    }
+    html += '</div>';
+
+    // 2. TMF核心洞察
+    if (insights.insights && insights.insights.length > 0) {
+      html += '<div class="chapter-section">';
+      html += '<h2 class="chapter-title">TMF产品核心洞察</h2>';
+      html += '<div class="insight-grid tmf-insight-grid">';
+      insights.insights.forEach(function(ins) {
+        html += '<div class="insight-card tmf-insight-card">';
+        html += '<div class="ic-conclusion">' + esc(ins.conclusion) + '</div>';
+        html += '<div class="ic-meta">';
+        html += '<span>人群: ' + esc(ins.population) + '</span>';
+        html += '<span>文献: ' + (ins.evidence_count || 0) + '篇</span>';
+        html += '<span>最高等级: ' + esc(ins.highest_evidence_level) + '</span>';
+        html += '</div>';
+        html += '<div class="ic-detail"><strong>一致性:</strong> ' + esc(ins.evidence_consistency) + '</div>';
+        html += '<div class="ic-detail"><strong>中国实践:</strong> ' + esc(ins.china_practice_relevance) + '</div>';
+        html += '<div class="ic-detail"><strong>2030意义:</strong> ' + esc(ins.meaning_2030) + '</div>';
+        html += '<div class="ic-detail"><strong>市场启示:</strong> ' + esc(ins.market_implication) + '</div>';
+        html += '<div class="ic-detail ic-uncertainty"><strong>不确定性:</strong> ' + esc(ins.uncertainty) + '</div>';
+        if (ins.compliance_note) {
+          html += '<div class="ic-compliance">' + esc(ins.compliance_note) + '</div>';
+        }
+        if (ins.source_ids && ins.source_ids.length) {
+          html += '<button class="hi-evidence-btn" onclick="App.openEvidenceDrawer(\'' + esc(ins.population).replace(/'/g, '&#39;') + '\', ' + JSON.stringify(ins.source_ids).replace(/"/g, '&quot;') + ')">查看证据 (' + (ins.evidence_count || 0) + '篇)</button>';
+        }
+        html += '</div>';
+      });
+      html += '</div>';
+      html += '</div>';
+    } else {
+      html += '<div class="chapter-section">';
+      html += '<div class="callout callout-info"><strong>TMF证据不足</strong>' + esc(insights.note || '当前文献库中尚未识别到TMF相关文献。随着飞书文献库每日更新，TMF相关文献将被自动识别并生成跨文献洞察。') + '</div>';
+      html += '</div>';
+    }
+
+    // 3. 证据时间轴
+    html += '<div class="chapter-section">';
+    html += '<h2 class="chapter-title">证据发展时间轴</h2>';
+    if (timeline.stages && timeline.stages.length) {
+      html += '<div class="tmf-timeline">';
+      timeline.stages.forEach(function(stage) {
+        html += '<div class="tmf-timeline-stage' + (stage.items.length === 0 ? ' empty' : '') + '">';
+        html += '<div class="tmf-timeline-dot"></div>';
+        html += '<div class="tmf-timeline-content">';
+        html += '<h3 class="tmf-timeline-title">' + esc(stage.name) + '</h3>';
+        if (stage.items.length === 0) {
+          html += '<p class="tmf-timeline-empty">暂无证据</p>';
+        } else {
+          stage.items.forEach(function(item) {
+            html += '<div class="tmf-timeline-item">';
+            html += '<span class="tmf-timeline-year">' + (item.year || '—') + '</span>';
+            html += '<span class="tmf-timeline-text">' + esc((item.title || '').substring(0, 60)) + '</span>';
+            if (item.evidence_level) {
+              html += '<span class="ev-level-badge level-' + item.evidence_level + '">' + item.evidence_level + '</span>';
+            }
+            html += '</div>';
+          });
+        }
+        html += '</div></div>';
+      });
+      html += '</div>';
+    } else {
+      html += '<p class="no-data">暂无时间轴数据</p>';
+    }
+    html += '</div>';
+
+    // 4. 患者人群证据矩阵
+    html += '<div class="chapter-section">';
+    html += '<h2 class="chapter-title">患者人群证据地图</h2>';
+    html += '<div id="chartTMFPopulation" style="width:100%;height:400px;"></div>';
+    if (popMatrix.scoring_method) {
+      html += '<div class="method-note"><strong>评分方法：</strong>' + esc(popMatrix.scoring_method) + '</div>';
+    }
+    html += '<div class="strategy-panel">';
+    html += '<div class="sp-section"><div class="sp-label">关键洞察</div><div class="sp-value">患者人群证据矩阵展示了TMF在不同患者群体中的证据覆盖和成熟度。</div></div>';
+    html += '<div class="sp-section"><div class="sp-label">证据强度</div><div class="sp-value">' + (popMatrix.populations && popMatrix.populations.length > 0 ? '有限-中等' : '不足') + '</div></div>';
+    html += '<div class="sp-compliance-section">未满足需求评分基于可审计规则，不由AI主观打分。证据成熟度分级：5=≥3篇含RCT，4=≥2篇，3=≥1篇，1=无证据。</div>';
+    html += '</div>';
+    html += '</div>';
+
+    // 5. 核心疗效图表
+    html += '<div class="chapter-section">';
+    html += '<h2 class="chapter-title">核心疗效证据</h2>';
+    if (efficacy.metrics) {
+      efficacy.metrics.forEach(function(m) {
+        html += '<div class="tmf-metric-block">';
+        html += '<h3 class="tmf-metric-title">' + esc(m.metric) + '</h3>';
+        if (m.data_points && m.data_points.length > 0) {
+          html += '<p class="tmf-metric-note">' + esc(m.note || '') + '</p>';
+          html += '<div class="tmf-data-points">';
+          m.data_points.forEach(function(dp) {
+            html += '<div class="tmf-data-point">';
+            html += '<span class="dp-pop">' + esc(dp.population) + '</span>';
+            html += '<span class="dp-design">' + esc(dp.study_design) + '</span>';
+            html += '<span class="dp-followup">' + esc(dp.follow_up) + '</span>';
+            if (dp.sample_size) html += '<span class="dp-sample">n=' + dp.sample_size + '</span>';
+            if (dp.evidence_grade) html += '<span class="ev-level-badge level-' + dp.evidence_grade + '">' + dp.evidence_grade + '</span>';
+            if (dp.pmid) html += '<span class="dp-pmid">PMID: ' + esc(dp.pmid) + '</span>';
+            if (dp.limitations) html += '<div class="dp-limit">' + esc(dp.limitations) + '</div>';
+            html += '</div>';
+          });
+          html += '</div>';
+        } else {
+          html += '<p class="no-data">' + esc(m.note || '暂无该终点的TMF证据') + '</p>';
+        }
+        html += '</div>';
+      });
+      html += '<div class="callout callout-warning"><strong>方法说明：</strong>' + esc(efficacy.method_note || '不同随访时间、人群和终点定义的研究不直接计算简单平均。') + '</div>';
+    }
+    html += '</div>';
+
+    // 6. 安全性证据
+    html += '<div class="chapter-section">';
+    html += '<h2 class="chapter-title">安全性证据面板</h2>';
+    if (safety.metrics) {
+      safety.metrics.forEach(function(m) {
+        html += '<div class="tmf-metric-block">';
+        html += '<h3 class="tmf-metric-title">' + esc(m.metric) + '</h3>';
+        if (m.data_points && m.data_points.length > 0) {
+          html += '<p class="tmf-metric-note">' + esc(m.note || '') + '</p>';
+          html += '<div class="tmf-data-points">';
+          m.data_points.forEach(function(dp) {
+            html += '<div class="tmf-data-point">';
+            html += '<span class="dp-pop">' + esc(dp.population) + '</span>';
+            html += '<span class="dp-design">' + esc(dp.study_design) + '</span>';
+            if (dp.sample_size) html += '<span class="dp-sample">n=' + dp.sample_size + '</span>';
+            if (dp.evidence_grade) html += '<span class="ev-level-badge level-' + dp.evidence_grade + '">' + dp.evidence_grade + '</span>';
+            html += '<div class="dp-limit">' + esc(dp.limitations || '') + '</div>';
+            html += '</div>';
+          });
+          html += '</div>';
+        } else {
+          html += '<p class="no-data">' + esc(m.note || '暂无该安全性终点的TMF证据') + '</p>';
+        }
+        html += '</div>';
+      });
+      html += '<div class="callout callout-warning"><strong>方法说明：</strong>' + esc(safety.method_note || '不能把"无统计学显著差异"表述为"绝对没有影响"。') + '</div>';
+    }
+    html += '</div>';
+
+    // 7. 药物对比矩阵
+    html += '<div class="chapter-section">';
+    html += '<h2 class="chapter-title">中国口服核苷（酸）类似物治疗格局</h2>';
+    if (comparator.comparators) {
+      html += '<div class="table-scroll"><table class="data-table tmf-comparator-table">';
+      html += '<thead><tr>';
+      html += '<th>药物</th><th>作用机制</th><th>抗病毒效力</th><th>耐药屏障</th><th>肾安全性</th><th>骨安全性</th><th>代谢影响</th><th>长期证据</th><th>中国RWE</th><th>可及性</th><th>证据等级</th>';
+      html += '</tr></thead><tbody>';
+      comparator.comparators.forEach(function(c) {
+        html += '<tr' + (c.drug && c.drug.indexOf('TMF') >= 0 ? ' class="tmf-highlight-row"' : '') + '>';
+        html += '<td>' + esc(c.drug) + '</td>';
+        html += '<td>' + esc(c.mechanism) + '</td>';
+        html += '<td>' + esc(c.antiviral_potency) + '</td>';
+        html += '<td>' + esc(c.resistance_barrier) + '</td>';
+        html += '<td>' + esc(c.renal_safety) + '</td>';
+        html += '<td>' + esc(c.bone_safety) + '</td>';
+        html += '<td>' + esc(c.metabolic_impact) + '</td>';
+        html += '<td>' + esc(c.long_term_evidence_maturity) + '</td>';
+        html += '<td>' + esc(c.china_rwe_evidence) + '</td>';
+        html += '<td>' + esc(c.accessibility) + '</td>';
+        html += '<td><span class="ev-level-badge level-' + (c.evidence_level || 'B') + '">' + (c.evidence_level || 'B') + '</span></td>';
+        html += '</tr>';
+      });
+      html += '</tbody></table></div>';
+
+      if (comparator.comparison_rules) {
+        html += '<div class="callout callout-warning"><strong>比较规则：</strong><ul>';
+        comparator.comparison_rules.forEach(function(r) {
+          html += '<li>' + esc(r) + '</li>';
+        });
+        html += '</ul></div>';
+      }
+    }
+    html += '</div>';
+
+    // 8. 市场行动
+    html += '<div class="chapter-section">';
+    html += '<h2 class="chapter-title">市场部行动建议</h2>';
+    if (marketActions.actions) {
+      html += '<div class="tmf-action-grid">';
+      marketActions.actions.forEach(function(a) {
+        var priClass = a.priority === '高' ? 'priority-high' : (a.priority === '中' ? 'priority-medium' : 'priority-exploratory');
+        html += '<div class="strategy-action-card tmf-action-card ' + priClass + '">';
+        html += '<div class="sac-priority ' + priClass + '">' + esc(a.priority) + '</div>';
+        html += '<h3 class="sac-title">' + esc(a.action) + '</h3>';
+        html += '<div class="sac-field"><strong>证据基础:</strong> ' + esc(a.evidence_basis) + '</div>';
+        html += '<div class="sac-field"><strong>目标患者:</strong> ' + esc(a.target_patients) + '</div>';
+        html += '<div class="sac-field"><strong>未满足需求:</strong> ' + esc(a.unmet_need) + '</div>';
+        html += '<div class="sac-field"><strong>合作方:</strong> ' + esc(a.collaboration) + '</div>';
+        html += '<div class="sac-kpis">';
+        (a.kpis || []).forEach(function(k) {
+          html += '<span class="kpi-badge">' + esc(k) + '</span>';
+        });
+        html += '</div>';
+        html += '<div class="sac-compliance">' + esc(a.compliance_note) + '</div>';
+        html += '</div>';
+      });
+      html += '</div>';
+    }
+    html += '</div>';
+
+    // 9. 证据变化
+    html += '<div class="chapter-section">';
+    html += '<h2 class="chapter-title">TMF证据更新</h2>';
+    html += '<div class="callout callout-info">' + esc(changes.summary || '本次新增证据未改变当前核心判断。') + '</div>';
+    html += '</div>';
+
+    container.innerHTML = html;
+
+    // 初始化图表
+    setTimeout(function() {
+      if (window.ChartFns && window.echarts) {
+        var popChart = document.getElementById('chartTMFPopulation');
+        if (popChart && ChartFns.initTMFPopulationChart) {
+          ChartFns.initTMFPopulationChart(popChart);
+        }
+      }
+    }, 200);
+  }
+
+  function buildTMFStatCard(label, value, unit) {
+    return '<div class="stat-card tmf-stat-card">' +
+      '<div class="stat-value">' + esc(String(value)) + (unit ? '<span class="stat-unit">' + unit + '</span>' : '') + '</div>' +
+      '<div class="stat-label">' + esc(label) + '</div>' +
+      '</div>';
   }
 
   // ==================== 证据抽屉交互 ====================

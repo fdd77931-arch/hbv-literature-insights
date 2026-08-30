@@ -1,0 +1,44 @@
+{
+  "product_name": "横木®（艾米替诺福韦片，TMF）",
+  "total_switching_studies": 0,
+  "stages": [
+    {
+      "stage": "prior_therapy",
+      "name": "既往ETV/TDF/TAF治疗",
+      "items": []
+    },
+    {
+      "stage": "switch_reason",
+      "name": "转换原因",
+      "items": []
+    },
+    {
+      "stage": "early_response",
+      "name": "早期病毒学反应",
+      "items": []
+    },
+    {
+      "stage": "alt_change",
+      "name": "ALT变化",
+      "items": []
+    },
+    {
+      "stage": "safety_indicators",
+      "name": "肾脏/骨骼/代谢指标",
+      "items": []
+    },
+    {
+      "stage": "retention",
+      "name": "6-12个月留存",
+      "items": []
+    },
+    {
+      "stage": "long_term",
+      "name": "长期随访",
+      "items": []
+    }
+  ],
+  "switch_reasons_available": false,
+  "note": "如文献未报告转换原因，不进行AI推测。转换原因分析仅在原文明确报告时展示。",
+  "generated_at": "2026-08-30T10:15:03.990127"
+}

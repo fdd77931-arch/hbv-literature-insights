@@ -121,6 +121,11 @@ jobs:
           echo "飞书数据无变化，跳过AI调用和部署"
 
       # ==================== Build data.js ====================
+      - name: Identify TMF literature and generate product data
+        if: steps.mode.outputs.mode != 'deploy-only' && (steps.mode.outputs.mode != 'sync-only' || steps.changes.outputs.has_changes == 'true' || steps.secrets.outputs.has_secrets != 'true')
+        run: |
+          python scripts/identify_tmf_literature.py
+
       - name: Build data.js
         if: steps.mode.outputs.mode != 'deploy-only' && (steps.mode.outputs.mode != 'sync-only' || steps.changes.outputs.has_changes == 'true' || steps.secrets.outputs.has_secrets != 'true')
         run: |
@@ -147,7 +152,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/public/ data/state/ assets/data.js 2>/dev/null || true
+          git add data/public/ data/state/ data/products/ config/ assets/data.js 2>/dev/null || true
           if git diff --cached --quiet; then
             echo "has_commit=false" >> $GITHUB_OUTPUT
             echo "无数据变化需要提交"

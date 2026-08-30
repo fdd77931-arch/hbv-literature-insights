@@ -32,6 +32,7 @@
       <li class="nav-item" data-page="screening" onclick="App.navigate('screening')">筛</li>
       <li class="nav-item" data-page="diagnosis" onclick="App.navigate('diagnosis')">诊</li>
       <li class="nav-item" data-page="treatment" onclick="App.navigate('treatment')">治</li>
+      <li class="nav-item" data-page="tmf" onclick="App.navigate('tmf')">横木/TMF证据</li>
       <li class="nav-item" data-page="management" onclick="App.navigate('management')">管/康</li>
       <li class="nav-item" data-page="hbvhcc" onclick="App.navigate('hbvhcc')">HBV→HCC</li>
       <li class="nav-item" data-page="strategy" onclick="App.navigate('strategy')">市场行动</li>
@@ -49,6 +50,7 @@
       <li onclick="App.navigate('screening'); App.toggleMobileMenu()">筛</li>
       <li onclick="App.navigate('diagnosis'); App.toggleMobileMenu()">诊</li>
       <li onclick="App.navigate('treatment'); App.toggleMobileMenu()">治</li>
+      <li onclick="App.navigate('tmf'); App.toggleMobileMenu()">横木/TMF证据</li>
       <li onclick="App.navigate('management'); App.toggleMobileMenu()">管/康</li>
       <li onclick="App.navigate('hbvhcc'); App.toggleMobileMenu()">HBV→HCC</li>
       <li onclick="App.navigate('strategy'); App.toggleMobileMenu()">市场行动</li>
@@ -246,6 +248,18 @@
     </div>
   </section>
 
+  <!-- TMF产品相关核心洞察 -->
+  <section class="chapter tmf-section">
+    <div class="container">
+      <h2>
+        <span class="ch-label">TMF Evidence</span>
+        横木/TMF产品相关核心洞察
+      </h2>
+      <p class="chapter-intro">基于飞书文献库自动识别TMF相关文献，形成跨文献产品证据洞察</p>
+      <div id="tmfOverviewSection"></div>
+    </div>
+  </section>
+
   <!-- 最新证据动态 -->
   <section class="chapter">
     <div class="container">
@@ -327,6 +341,17 @@
 </section>
 
 <!-- ============================================================ -->
+<!-- 页面：横木/TMF产品证据 -->
+<section class="page" id="page-tmf">
+  <div class="container">
+    <div class="page-header">
+      <h1 class="page-title">横木®（艾米替诺福韦片，TMF）证据全景</h1>
+      <p class="page-subtitle">基于飞书文献库自动识别TMF相关文献，形成跨文献产品证据洞察</p>
+    </div>
+    <div id="tmfContent"></div>
+  </div>
+</section>
+
 <!-- 页面：患者管理与依从性（第四章·管/康） -->
 <!-- ============================================================ -->
 <section class="page" id="page-management">

@@ -87,6 +87,37 @@ def build_data_js():
     insights = load_json('insights.json')
     report = load_json('report.json')
 
+    # 加载产品数据
+    products_dir = os.path.join(PROJECT_DIR, 'data', 'products')
+    product_files = [
+        'tmf_evidence_summary.json',
+        'tmf_evidence_timeline.json',
+        'tmf_population_matrix.json',
+        'tmf_efficacy_outcomes.json',
+        'tmf_safety_outcomes.json',
+        'tmf_switching_evidence.json',
+        'tmf_comparator_matrix.json',
+        'tmf_market_actions.json',
+        'tmf_evidence_changes.json',
+        'tmf_core_insights.json',
+    ]
+    product_data = {}
+    for pf in product_files:
+        product_path = os.path.join(products_dir, pf)
+        if os.path.exists(product_path):
+            with open(product_path, 'r', encoding='utf-8') as f:
+                product_key = pf.replace('.json', '')
+                product_data[product_key] = json.load(f)
+        else:
+            print(f"[WARN] 缺少产品数据: {pf}")
+
+    # 加载产品配置
+    config_path = os.path.join(PROJECT_DIR, 'config', 'products.json')
+    product_config = None
+    if os.path.exists(config_path):
+        with open(config_path, 'r', encoding='utf-8') as f:
+            product_config = json.load(f)
+
     # 构建数据对象
     site_data = {
         'literature': literature,
@@ -116,8 +147,10 @@ def build_data_js():
         'insights': insights,
         'report': report,
         'charts': chart_data,
+        'products': product_data,
+        'product_config': product_config,
         'generated_at': datetime.now().isoformat(),
-        'version': '4.0.0'
+        'version': '5.0.0'
     }
 
     # 生成JavaScript

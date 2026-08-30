@@ -1,0 +1,39 @@
+{
+  "product_name": "横木®（艾米替诺福韦片，TMF）",
+  "metrics": [
+    {
+      "metric": "HBV DNA病毒学应答",
+      "metric_key": "hbv_dna_response",
+      "data_points": [],
+      "evidence_count": 0,
+      "note": "当前文献库中暂无该终点的TMF证据",
+      "confidence": "证据不足"
+    },
+    {
+      "metric": "ALT复常",
+      "metric_key": "alt_normalization",
+      "data_points": [],
+      "evidence_count": 0,
+      "note": "当前文献库中暂无该终点的TMF证据",
+      "confidence": "证据不足"
+    },
+    {
+      "metric": "HBeAg血清学应答",
+      "metric_key": "hbeag_serology",
+      "data_points": [],
+      "evidence_count": 0,
+      "note": "当前文献库中暂无该终点的TMF证据",
+      "confidence": "证据不足"
+    },
+    {
+      "metric": "HBsAg水平变化",
+      "metric_key": "hbsag_change",
+      "data_points": [],
+      "evidence_count": 0,
+      "note": "当前文献库中暂无该终点的TMF证据",
+      "confidence": "证据不足"
+    }
+  ],
+  "method_note": "不同随访时间、人群和终点定义的研究不直接计算简单平均。采用结构化证据并列展示。",
+  "generated_at": "2026-08-30T10:15:03.989970"
+}
