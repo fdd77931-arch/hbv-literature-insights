@@ -1,0 +1,35 @@
+:root{--bg:#f7f7f2;--bg2:#eef2ec;--ink:#19343a;--muted:#53696b;--accent:#216b65;--accent-dark:#134f4a;--rule:#cbd7cf;--rule-light:#dce3db;--radius:12px;--sheet:min(1216px,calc(100% - 64px))}
+.top-nav{background:#fbfcf8f5}
+.nav-container,.container{width:var(--sheet);max-width:none;padding-inline:0}
+.nav-container{height:66px}
+.brand-title{font-size:17px;color:var(--ink)}.brand-subtitle{margin-top:3px}
+#page-overview{padding-top:0}
+.report-cover{width:var(--sheet);margin:auto;padding:clamp(30px,5vw,78px) 0 0;display:grid;grid-template-columns:minmax(0,1.65fr) minmax(260px,1fr);gap:30px clamp(30px,7vw,110px);align-items:center}
+.report-kicker,.ch-label{font-family:var(--font-mono);letter-spacing:.13em;text-transform:uppercase;font-size:12px;color:var(--accent);font-weight:650}
+.report-cover h1{font:700 clamp(38px,4.5vw,66px)/1.22 var(--font-serif);letter-spacing:-.055em;margin:16px 0}
+.report-cover h1 span{display:block;color:#22635a}
+.report-deck{color:var(--muted);max-width:40em;line-height:1.85;font-size:16px}
+.report-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.report-actions>*{font:600 14px/1.5 var(--font-sans);padding:12px 18px;border-radius:7px}
+.report-actions a{background:#19574f;color:#fff}.report-actions button{border:1px solid #b9c9bf;color:#194f47;background:#fff}
+.path-index{background:#173e40;border-radius:16px;color:#fff;padding:24px 28px}.path-index h2{font:600 15px var(--font-sans);color:#c0d9cf;margin:0 0 12px}
+.path-index button{display:flex;align-items:center;gap:15px;text-align:left;color:white;border-top:1px solid #ffffff28;width:100%;padding:10px 0;font-size:15px}
+.path-index b{display:grid;place-items:center;width:36px;height:36px;border:1px solid #a3c1b975;border-radius:50%;color:#e0efe4;font:500 19px var(--font-serif)}
+.path-index button::after{content:'↗';margin-left:auto;color:#a5cbbc}.path-index button:hover{color:#b9e8cf}
+.report-stats{grid-column:1/-1;border-block:1px solid var(--rule);padding:18px 0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.report-stats div{padding-left:28px;border-left:1px solid var(--rule)}.report-stats div:first-child{padding:0;border:0}
+.report-stats dt{font-size:13px;color:var(--muted)}.report-stats dd{font:600 clamp(16px,2vw,28px)/1.4 var(--font-serif);overflow-wrap:anywhere}
+#core-reading{scroll-margin-top:66px}.chapter h2,.page-title{color:var(--ink)}
+.hero-insights{gap:14px}.hero-insight-item{padding:20px;gap:9px;background:#fff;color:var(--ink);border:1px solid var(--rule-light);border-top:3px solid #739e91;backdrop-filter:none}
+.hi-conclusion-title{font:700 19px/1.5 var(--font-serif)}
+.hero-insight-item .hi-trend{align-self:flex-start;margin:0}.hi-trend.stable{background:#e8f0ec;color:#325f52}
+.hero-insight-item .hi-conclusion{color:#344f51;font-size:15px;font-weight:400;line-height:1.75}
+.hero-insight-item .hi-meta{color:#4d6768;font-size:12px;gap:8px}
+.finding-notes,.snapshot-details{font-size:13px;color:#47655e}.finding-notes summary,.snapshot-details summary{cursor:pointer}
+.hi-2030-meaning,.hi-market-implication{font:400 14px/1.7 var(--font-sans);color:#3b5353;margin:.6rem 0}
+.hi-evidence-btn{background:#eaf4ee;border-color:#cdded4;color:#26594a;font-size:13px}.hi-evidence-btn:hover{background:#d6e8dc;color:#174534}
+.snapshot-details{margin-top:15px}.chart-insight-card{box-shadow:none;border-color:var(--rule-light)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #379c91;outline-offset:3px}
+@media(max-width:1080px){.nav-menu{display:none}.mobile-menu-btn{display:flex}}
+@media(max-width:760px){:root{--sheet:calc(100% - 32px)}.nav-container{height:56px}.report-cover{grid-template-columns:1fr;gap:22px}.path-index{padding:16px;display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.path-index h2{grid-column:1/-1}.path-index button{gap:7px;font-size:13px}.path-index b{width:26px;height:26px;font-size:15px}.report-stats{grid-template-columns:1fr 1fr;gap:14px}.report-stats div{padding:0;border:none}.hero-insights{grid-template-columns:1fr}#core-reading{scroll-margin-top:56px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.page.active{animation:none}}
+@media(max-width:760px){.update-item{flex-wrap:wrap;align-items:center}.update-title{flex:1 1 100%;order:-1;overflow-wrap:anywhere}.update-journal{flex-shrink:1;min-width:0;overflow-wrap:anywhere}}

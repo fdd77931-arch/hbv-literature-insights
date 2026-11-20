@@ -140,7 +140,8 @@ var App = (function() {
   }
 
   function toggleMobileMenu() {
-    document.getElementById('mobileMenu').classList.toggle('show');
+    var open = document.getElementById('mobileMenu').classList.toggle('show');
+    document.getElementById('mobileMenuBtn').setAttribute('aria-expanded',String(open));
   }
 
   // ==================== 首页渲染 ====================
@@ -162,7 +163,7 @@ var App = (function() {
     document.getElementById('ovChartCount').textContent = chartCount;
     var firstChart = charts[Object.keys(charts)[0]];
     if (firstChart && firstChart.generated_at) {
-      document.getElementById('ovChartDate').textContent = firstChart.generated_at.slice(0, 10).replace(/-/g, '年') + '月';
+      document.getElementById('ovChartDate').textContent = firstChart.generated_at.slice(0, 10);
     }
 
     // 1. Hero首屏核心洞察
@@ -284,12 +285,12 @@ var App = (function() {
           '<span>最高证据等级: ' + esc(topLevel) + '</span>' +
           (ins.abCount ? '<span>AB级 ' + ins.abCount + ' 篇</span>' : '') +
         '</div>' +
-        '<div class="hi-2030-meaning">' +
+        '<details class="finding-notes"><summary>2030 目标与市场启示</summary><div class="hi-2030-meaning">' +
           '<span class="hi-sub-label">2030目标意义：</span>' + esc(meaning2030) +
         '</div>' +
         '<div class="hi-market-implication">' +
           '<span class="hi-sub-label">市场部启示：</span>' + esc(marketImplication) +
-        '</div>' +
+        '</div></details>' +
         '<button class="hi-evidence-btn" onclick="App.openEvidenceDrawer(\'' + esc(ins.title || '') + '\', ' + JSON.stringify(sourceIds).replace(/"/g, '&quot;') + ')">查看证据 →</button>' +
       '</div>';
     }).join('');

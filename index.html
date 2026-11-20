@@ -5,9 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>慢乙肝—HBV相关HCC文献洞察与2030市场策略报告</title>
 <link rel="stylesheet" href="assets/styles.css?v=4">
-<script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+<script src="hbv-insights/_shared/js/echarts.min.js"></script>
 <script src="assets/data.js?v=4"></script>
 <script src="assets/data-adapter.js?v=4"></script>
+<link rel="stylesheet" href="assets/reading-room.css">
 </head>
 <body>
 
@@ -40,7 +41,7 @@
       <li class="nav-item" data-page="updates" onclick="App.navigate('updates')">最新变化</li>
       <li class="nav-item" data-page="evidence" onclick="App.navigate('evidence')">方法与证据</li>
     </ul>
-    <button class="mobile-menu-btn" id="mobileMenuBtn" onclick="App.toggleMobileMenu()">
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="专题导航" aria-controls="mobileMenu" aria-expanded="false" onclick="App.toggleMobileMenu()">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -76,34 +77,23 @@
 <section class="page active" id="page-overview">
 
   <!-- Hero + 首屏核心洞察 -->
-  <header class="hero">
-    <h1>中国HBV—HCC筛诊治康<br>2030策略洞察仪表盘</h1>
-    <p class="subtitle">基于飞书文献库中近1000篇研究、指南、共识和临床证据动态生成</p>
-    <div class="tag-row">
-      <span class="tag">2030总览</span>
-      <span class="tag">筛查</span>
-      <span class="tag">诊断</span>
-      <span class="tag">治疗</span>
-      <span class="tag">患者管理</span>
-      <span class="tag">功能性治愈</span>
-      <span class="tag">HBV→HCC</span>
-      <span class="tag">全国联盟</span>
+  <header class="report-cover">
+    <div class="report-intro">
+      <p class="report-kicker" lang="en">HBV Literature Insights</p>
+      <h1>从慢乙肝到肝癌<span>筛诊治康的文献洞察</span></h1>
+      <p class="report-deck">沿患者诊疗路径阅读研究、指南与共识，查看各环节的证据与 2030 策略。</p>
+      <div class="report-actions"><a href="#core-reading">阅读核心洞察 ↓</a><button onclick="App.navigate('evidence')">检索文献证据 ↗</button></div>
     </div>
-    <!-- 首屏5条核心洞察 -->
-    <div class="hero-insights" id="heroCoreInsights"></div>
-    <div class="meta">
-      <div class="meta-row">
-        <span>飞书有效文献数：<strong id="ovTotalLit">--</strong></span>
-        <span>数据更新时间：<strong id="ovUpdateDate">--</strong></span>
-        <span>图表数据截至：<strong id="ovChartDate">--</strong></span>
-      </div>
-      <div class="meta-row">
-        <span>洞察版本：<strong id="ovInsightVersion">v5.0</strong></span>
-        <span>本次新增：<strong id="ovNewCount">--</strong></span>
-        <span>策略图表：<strong id="ovChartCount">--</strong>张</span>
-      </div>
-    </div>
+    <nav class="path-index" aria-label="按诊疗环节阅读"><h2>按诊疗环节阅读</h2>
+    <button onclick="App.navigate('screening')"><b>筛</b><span>筛查与转诊</span></button>
+    <button onclick="App.navigate('diagnosis')"><b>诊</b><span>诊断与标志物</span></button>
+    <button onclick="App.navigate('treatment')"><b>治</b><span>治疗与功能性治愈</span></button>
+    <button onclick="App.navigate('management')"><b>管</b><span>随访与长期管理</span></button></nav>
+    <dl class="report-stats"><div><dt>纳入文献</dt><dd id="ovTotalLit">—</dd></div><div><dt>策略图表</dt><dd id="ovChartCount">—</dd></div><div><dt>数据更新</dt><dd id="ovUpdateDate">—</dd></div><div><dt>报告版本</dt><dd id="ovInsightVersion">—</dd></div></dl>
   </header>
+  <section id="core-reading" class="chapter"><div class="container"><h2><span class="ch-label">Key findings</span>核心洞察</h2><div class="hero-insights" id="heroCoreInsights"></div>
+    <details class="snapshot-details"><summary>查看数据快照信息</summary><p>图表数据截至 <span id="ovChartDate">—</span> · 该期新增 <span id="ovNewCount">—</span></p></details>
+  </div></section>
 
   <!-- 第二屏：2030总体差距仪表盘 -->
   <section class="chapter">
@@ -480,6 +470,6 @@
 
 <!-- ========== 脚本 ========== -->
 <script src="assets/charts.js?v=4"></script>
-<script src="assets/app.js?v=4"></script>
+<script src="assets/app.js?v=journal"></script>
 </body>
 </html>
