@@ -913,7 +913,7 @@ var App = (function() {
     });
     cardsHtml += '</div>';
 
-    var statusColors = { '正常': '#2d8659', '疑似字段错配': '#c75d2c', '信息不足': '#e8a030', '主题不相关': '#dc3545' };
+    var statusColors = { '正常': '#be976f', '疑似字段错配': '#884431', '信息不足': '#af7536', '主题不相关': '#913f35' };
     var statusHtml = '<div class="audit-status-bar">';
     Object.entries(a.statusDistribution).forEach(function(s) {
       statusHtml += '<div class="audit-status-item"><span class="audit-status-dot" style="background:' + (statusColors[s[0]] || '#999') + '"></span>' + s[0] + '：' + s[1] + ' 条</div>';
@@ -1354,7 +1354,7 @@ var App = (function() {
       '</div>';
     });
     html += '</div>';
-    html += '<p style="font-size:0.78rem;color:var(--muted);margin-top:0.5rem;">橙色阶段=高风险脱落 · 绿色阶段=可干预行动 · 基于飞书同步文献证据</p>';
+    html += '<p style="font-size:0.78rem;color:var(--muted);margin-top:0.5rem;">砖红标记高风险脱落 · 沙棕标记可干预行动 · 基于飞书同步文献证据</p>';
     html += '</div>';
 
     return html;
@@ -1723,12 +1723,12 @@ var App = (function() {
     var layers = aa && aa.architecture ? aa.architecture : [];
     if (layers.length === 0) {
       layers = [
-        { layer: '国家级中心', role: '牵头制定标准、质量控制、多中心研究', target_count: '5', color: '#00688f' },
-        { layer: '省级中心', role: '区域转诊、技术指导、医生培训', target_count: '31', color: '#2a80a3' },
-        { layer: '地市级医院', role: '核心诊疗、患者管理、数据上报', target_count: '300', color: '#2d8659' },
-        { layer: '县级医院', role: '初筛初治、双向转诊、基层管理', target_count: '2000', color: '#3a9a6a' },
-        { layer: '基层机构', role: '社区筛查、健康宣教、随访管理', target_count: '10000', color: '#7a9a8a' },
-        { layer: '患者管理平台', role: '数字化随访、依从性管理、数据整合', target_count: '1', color: '#c75d2c' }
+        { layer: '国家级中心', role: '牵头制定标准、质量控制、多中心研究', target_count: '5', color: '#b05b36' },
+        { layer: '省级中心', role: '区域转诊、技术指导、医生培训', target_count: '31', color: '#c57d51' },
+        { layer: '地市级医院', role: '核心诊疗、患者管理、数据上报', target_count: '300', color: '#be976f' },
+        { layer: '县级医院', role: '初筛初治、双向转诊、基层管理', target_count: '2000', color: '#a87548' },
+        { layer: '基层机构', role: '社区筛查、健康宣教、随访管理', target_count: '10000', color: '#a18264' },
+        { layer: '患者管理平台', role: '数字化随访、依从性管理、数据整合', target_count: '1', color: '#884431' }
       ];
     }
     html += '<div class="alliance-layers">';
@@ -1736,7 +1736,7 @@ var App = (function() {
       var name = l.layer || l.name || '';
       var role = l.role || '';
       var count = l.target_count || l.count || '';
-      var color = l.color || '#2d8659';
+      var color = l.color || '#be976f';
       html += '<div class="alliance-layer">' +
         '<div class="alliance-layer-icon" style="background:' + color + ';">' + name.charAt(0) + '</div>' +
         '<div class="alliance-layer-info"><div class="alliance-layer-name">' + esc(name) + '</div><div class="alliance-layer-role">' + esc(role) + '</div></div>' +

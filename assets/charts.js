@@ -20,41 +20,44 @@
     return;
   }
 
+  const chartPalette = ['#af603c','#896345','#cf9663','#984b42','#b6854b','#795647','#d6ae8a','#aa7f71'];
   echarts.registerTheme('hbv-report', {
-    textStyle: {fontFamily: getComputedStyle(document.documentElement).getPropertyValue('--font-sans').trim()}
+    color: chartPalette,
+    axisPointer: {shadowStyle:{color:'rgba(140,102,75,0.07)'}},
+    textStyle: {color:'#49382d',fontFamily: getComputedStyle(document.documentElement).getPropertyValue('--font-sans').trim()}
   });
 
   // 颜色常量 — 报告式设计系统
   const COLORS = {
-    primary: '#00688f',
-    primaryDark: '#004a68',
-    primaryLight: '#2a80a3',
-    secondary: '#2d8659',
-    secondaryDark: '#1f6b45',
-    secondaryLight: '#3a9a6a',
-    accent: '#c75d2c',
-    accentLight: '#d9764a',
-    danger: '#dc3545',
-    success: '#2d8659',
-    warning: '#e8a030',
-    purple: '#6366f1',
-    ink900: '#1a2332',
-    ink700: '#2d3748',
-    ink600: '#4a5568',
-    ink500: '#5a6c80',
-    ink400: '#7a8a9a',
-    ink300: '#cbd5e0',
-    ink200: '#d4dde5',
-    ink100: '#eef2f5'
+    primary: '#b05b36',
+    primaryDark: '#753b28',
+    primaryLight: '#c57d51',
+    secondary: '#be976f',
+    secondaryDark: '#876544',
+    secondaryLight: '#a87548',
+    accent: '#884431',
+    accentLight: '#c78461',
+    danger: '#913f35',
+    success: '#be976f',
+    warning: '#af7536',
+    purple: '#795647',
+    ink900: '#36291f',
+    ink700: '#49382d',
+    ink600: '#655044',
+    ink500: '#705b4f',
+    ink400: '#796659',
+    ink300: '#d9c7b6',
+    ink200: '#e5d6c7',
+    ink100: '#f2e9df'
   };
 
   // 公共tooltip样式
   const tooltipStyle = {
-    backgroundColor: 'rgba(15, 26, 38, 0.92)',
-    borderColor: 'rgba(0, 86, 145, 0.3)',
+    backgroundColor: '#fff9f1',
+    borderColor: 'rgba(175,104,60, 0.3)',
     borderWidth: 1,
     padding: [10, 14],
-    textStyle: { color: '#fff', fontSize: 12, lineHeight: 1.5 },
+    textStyle: { color: '#49382d', fontSize: 13, lineHeight: 20 },
     extraCssText: 'border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.2);'
   };
 
@@ -101,8 +104,8 @@
         itemStyle: { color: COLORS.primary, borderColor: '#fff', borderWidth: 2 },
         areaStyle: {
           color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
-            { offset: 0, color: 'rgba(0, 86, 145, 0.2)' },
-            { offset: 1, color: 'rgba(0, 86, 145, 0.02)' }
+            { offset: 0, color: 'rgba(175,104,60, 0.2)' },
+            { offset: 1, color: 'rgba(175,104,60, 0.02)' }
           ])
         },
         label: { show: true, position: 'top', color: COLORS.ink700, fontSize: 11, fontWeight: 600 }
@@ -393,7 +396,7 @@
           color: COLORS.ink700,
           fontSize: 11,
           fontWeight: 600,
-          formatter: function(p) { return p.value + '分'; }
+          formatter: function(p) { return p.value + '分 · ' + (gapLabels[p.data.stageData.gap_level] || '未分级'); }
         }
       }]
     });
@@ -411,6 +414,8 @@
 
     const chart = echarts.init(dom, 'hbv-report');
 
+    const fills = ['#f3dfc7','#ebcdad','#dfb58e','#d09d76','#bd835b','#a86b48','#8e5339','#733f2e','#593128'];
+    const ordered = [...stages].sort((a,b) => b.related_studies-a.related_studies);
     // 用文献数量做相对漏斗展示（注明非实际人群比例）
     const values = stages.map(function(s) { return Math.max(1, s.related_studies); });
     const maxVal = Math.max.apply(null, values);
@@ -455,12 +460,11 @@
           borderWidth: 2
         },
         data: stages.map(function(s, i) {
-          const colors = [COLORS.primary, '#1a7ba3', '#2a80a3', '#3a90b3',
-                         COLORS.secondary, '#3a9a6a', '#4aaa7a', COLORS.accent, COLORS.accent2];
           return {
             value: Math.max(1, s.related_studies),
             name: s.name,
-            itemStyle: { color: colors[i % colors.length] }
+            label: {color: ordered.indexOf(s) < 5 ? '#30231b' : '#fff'},
+            itemStyle: { color: fills[Math.min(ordered.indexOf(s),fills.length-1)] }
           };
         })
       }],
@@ -675,7 +679,7 @@
           return {
             name: d.name,
             value: [d.efficacy_score, d.stage, d.bubble_size * 0.8],
-            itemStyle: { color: d.color, opacity: d.is_clinical_human ? 1 : 0.6 }
+            itemStyle: { color: chartPalette[[...new Set(drugs.map(item=>item.category))].indexOf(d.category) % chartPalette.length], opacity: d.is_clinical_human ? 1 : 0.6 }
           };
         }),
         label: {
@@ -1028,7 +1032,7 @@
       series: [{
         type: 'bar',
         data: levels.map(function(l) {
-          return { value: l.count, itemStyle: { color: l.color } };
+          return { value: l.count, itemStyle: { color: chartPalette[[...new Set(levels.map(item=>item.name))].indexOf(l.name) % chartPalette.length] } };
         }),
         barWidth: '55%',
         label: {
@@ -1097,7 +1101,7 @@
         name: p.pop_name,
         value: [p.unmet_need_score, p.evidence_maturity, p.study_count],
         itemStyle: {
-          color: p.evidence_maturity >= 4 ? '#2d8659' : (p.evidence_maturity >= 3 ? '#00688f' : '#c75d2c'),
+          color: p.evidence_maturity >= 4 ? '#be976f' : (p.evidence_maturity >= 3 ? '#b05b36' : '#884431'),
           opacity: 0.7
         }
       };
@@ -1178,7 +1182,7 @@
       series: [{
         type: 'bar',
         data: counts,
-        itemStyle: { color: '#00688f' },
+        itemStyle: { color: '#b05b36' },
         label: { show: true, position: 'top' }
       }]
     });
@@ -1216,7 +1220,7 @@
       series: [{
         type: 'bar',
         data: counts,
-        itemStyle: { color: '#c75d2c' },
+        itemStyle: { color: '#884431' },
         label: { show: true, position: 'top' }
       }]
     });
