@@ -8,21 +8,21 @@
 :root {
   /* 色彩系统 */
   --bg: #fcf8f2;
-  --bg2: #f2e9df;
-  --ink: #36291f;
-  --ink-light: #49382d;
-  --muted: #705b4f;
-  --muted-light: #796659;
-  --rule: #e5d6c7;
+  --bg2: #ecf0eb;
+  --ink: #273632;
+  --ink-light: #31423d;
+  --muted: #58665e;
+  --muted-light: #647169;
+  --rule: #d6dfd8;
   --rule-light: #eee4d9;
   
-  --accent: #b05b36;       /* 深蓝绿 — 核心证据 */
-  --accent-dark: #753b28;
-  --accent-light: #c57d51;
-  --accent2: #884431;      /* 橙色 — 争议/风险 */
-  --accent2-light: #c78461;
-  --accent3: #be976f;      /* 绿色 — 行动机会 */
-  --accent3-light: #a87548;
+  --accent: #587d91;       /* 深蓝绿 — 核心证据 */
+  --accent-dark: #345462;
+  --accent-light: #a8cadb;
+  --accent2: #cc9ca8;      /* 橙色 — 争议/风险 */
+  --accent2-light: #dfbcc5;
+  --accent3: #a2c4af;      /* 绿色 — 行动机会 */
+  --accent3-light: #c6dfcf;
   
   --surface: #ffffff;
   --shadow: 0 1px 3px rgba(82,53,38, 0.08);

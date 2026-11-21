@@ -20,44 +20,44 @@
     return;
   }
 
-  const chartPalette = ['#af603c','#896345','#cf9663','#984b42','#b6854b','#795647','#d6ae8a','#aa7f71'];
+  const chartPalette = ['#719786','#86a9ba','#ceb67c','#bc8d9a','#a7b895','#897393','#cbc1ac','#a69aaf'];
   echarts.registerTheme('hbv-report', {
     color: chartPalette,
     axisPointer: {shadowStyle:{color:'rgba(140,102,75,0.07)'}},
-    textStyle: {color:'#49382d',fontFamily: getComputedStyle(document.documentElement).getPropertyValue('--font-sans').trim()}
+    textStyle: {color:'#31423d',fontFamily: getComputedStyle(document.documentElement).getPropertyValue('--font-sans').trim()}
   });
 
   // 颜色常量 — 报告式设计系统
   const COLORS = {
-    primary: '#b05b36',
-    primaryDark: '#753b28',
-    primaryLight: '#c57d51',
-    secondary: '#be976f',
-    secondaryDark: '#876544',
-    secondaryLight: '#a87548',
-    accent: '#884431',
-    accentLight: '#c78461',
-    danger: '#913f35',
-    success: '#be976f',
-    warning: '#af7536',
-    purple: '#795647',
-    ink900: '#36291f',
-    ink700: '#49382d',
-    ink600: '#655044',
-    ink500: '#705b4f',
-    ink400: '#796659',
-    ink300: '#d9c7b6',
-    ink200: '#e5d6c7',
-    ink100: '#f2e9df'
+    primary: '#587d91',
+    primaryDark: '#345462',
+    primaryLight: '#a8cadb',
+    secondary: '#a2c4af',
+    secondaryDark: '#54725e',
+    secondaryLight: '#c6dfcf',
+    accent: '#cc9ca8',
+    accentLight: '#dfbcc5',
+    danger: '#904e62',
+    success: '#a2c4af',
+    warning: '#9d7935',
+    purple: '#897393',
+    ink900: '#273632',
+    ink700: '#31423d',
+    ink600: '#4a5953',
+    ink500: '#58665e',
+    ink400: '#647169',
+    ink300: '#c4cec6',
+    ink200: '#d6dfd8',
+    ink100: '#ecf0eb'
   };
 
   // 公共tooltip样式
   const tooltipStyle = {
-    backgroundColor: '#fff9f1',
+    backgroundColor: '#fffefb',
     borderColor: 'rgba(175,104,60, 0.3)',
     borderWidth: 1,
     padding: [10, 14],
-    textStyle: { color: '#49382d', fontSize: 13, lineHeight: 20 },
+    textStyle: { color: '#31423d', fontSize: 13, lineHeight: 20 },
     extraCssText: 'border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.2);'
   };
 
@@ -347,7 +347,7 @@
     if (!stages.length) return null;
 
     const chart = echarts.init(dom, 'hbv-report');
-    const gapColors = { 'low': COLORS.secondary, 'medium': COLORS.primary, 'high': COLORS.accent };
+    const gapColors = { 'low': COLORS.secondary, 'medium': '#dfc887', 'high': COLORS.accent };
     const gapLabels = { 'low': '低', 'medium': '中', 'high': '高' };
 
     chart.setOption({
@@ -414,7 +414,7 @@
 
     const chart = echarts.init(dom, 'hbv-report');
 
-    const fills = ['#f3dfc7','#ebcdad','#dfb58e','#d09d76','#bd835b','#a86b48','#8e5339','#733f2e','#593128'];
+    const fills = ['#efe1b9','#e5d29e','#c9dfd0','#b2d0be','#b9d8e5','#a5c5d5','#e9ced7','#dcb7c4','#cba0b0'];
     const ordered = [...stages].sort((a,b) => b.related_studies-a.related_studies);
     // 用文献数量做相对漏斗展示（注明非实际人群比例）
     const values = stages.map(function(s) { return Math.max(1, s.related_studies); });
@@ -463,7 +463,7 @@
           return {
             value: Math.max(1, s.related_studies),
             name: s.name,
-            label: {color: ordered.indexOf(s) < 5 ? '#30231b' : '#fff'},
+            label: {color: '#273632'},
             itemStyle: { color: fills[Math.min(ordered.indexOf(s),fills.length-1)] }
           };
         })
@@ -716,7 +716,7 @@
 
     const chart = echarts.init(dom, 'hbv-report');
 
-    const riskColors = { 'low': COLORS.secondary, 'medium': COLORS.primary, 'high': COLORS.accent };
+    const riskColors = { 'low': COLORS.secondary, 'medium': '#dfc887', 'high': COLORS.accent };
 
     chart.setOption({
       animation: false,
@@ -1101,7 +1101,7 @@
         name: p.pop_name,
         value: [p.unmet_need_score, p.evidence_maturity, p.study_count],
         itemStyle: {
-          color: p.evidence_maturity >= 4 ? '#be976f' : (p.evidence_maturity >= 3 ? '#b05b36' : '#884431'),
+          color: p.evidence_maturity >= 4 ? '#a2c4af' : (p.evidence_maturity >= 3 ? '#587d91' : '#cc9ca8'),
           opacity: 0.7
         }
       };
@@ -1182,7 +1182,7 @@
       series: [{
         type: 'bar',
         data: counts,
-        itemStyle: { color: '#b05b36' },
+        itemStyle: { color: '#587d91' },
         label: { show: true, position: 'top' }
       }]
     });
@@ -1220,7 +1220,7 @@
       series: [{
         type: 'bar',
         data: counts,
-        itemStyle: { color: '#884431' },
+        itemStyle: { color: '#cc9ca8' },
         label: { show: true, position: 'top' }
       }]
     });
