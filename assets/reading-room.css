@@ -46,3 +46,17 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid #af
 .ch-label,.chapter h2 .ch-label,.page-header .ch-label{color:var(--orange)}
 .page-header{border-bottom-color:#ce936b}
 .page-title{color:#482d20}
+
+:root {
+  --font-sans: Arial, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", SimHei, sans-serif;
+  --font-serif: var(--font-sans);
+  --font-mono: var(--font-sans);
+  --mono: var(--font-sans);
+}
+.hero-insight-item .hi-trend, .trend-badge[class] {
+  color:#873907;
+  background:#fff0df;
+  border:1px solid #eabf9b;
+}
+.hi-conclusion-title {font-weight:650;line-height:1.55}
+.report-cover h1 {letter-spacing:-.035em}

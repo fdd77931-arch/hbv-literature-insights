@@ -20,6 +20,10 @@
     return;
   }
 
+  echarts.registerTheme('hbv-report', {
+    textStyle: {fontFamily: getComputedStyle(document.documentElement).getPropertyValue('--font-sans').trim()}
+  });
+
   // 颜色常量 — 报告式设计系统
   const COLORS = {
     primary: '#00688f',
@@ -70,7 +74,7 @@
     const data = window.APP_DATA.statistics.yearTrend;
     if (!data || !data.length) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
     chart.setOption({
       tooltip: {
         ...tooltipStyle, trigger: 'axis',
@@ -114,7 +118,7 @@
     if (!dom || typeof echarts === 'undefined') return null;
     const data = window.APP_DATA.statistics.levelDistribution;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
     const pieData = [
       { value: data.A || 0, name: 'A级', itemStyle: { color: COLORS.primary } },
       { value: data.B || 0, name: 'B级', itemStyle: { color: COLORS.secondary } },
@@ -146,7 +150,7 @@
     if (!dom || typeof echarts === 'undefined') return null;
     const data = window.APP_DATA.statistics.topicDistribution;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
     const colors = [COLORS.primary, COLORS.secondary, COLORS.accent, COLORS.purple, COLORS.secondaryLight];
 
     chart.setOption({
@@ -182,7 +186,7 @@
     if (!dom || typeof echarts === 'undefined') return null;
     const data = window.APP_DATA.statistics.chinaVsIntl;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
     chart.setOption({
       tooltip: { ...tooltipStyle, trigger: 'item', formatter: '{b}：{c}篇 ({d}%)' },
       legend: { bottom: 0, textStyle: { color: COLORS.ink600, fontSize: 12 } },
@@ -212,7 +216,7 @@
     if (!dom || typeof echarts === 'undefined') return null;
     if (!yearTrend || !yearTrend.length) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
     chart.setOption({
       tooltip: {
         ...tooltipStyle, trigger: 'axis',
@@ -254,7 +258,7 @@
     if (!dom || typeof echarts === 'undefined') return null;
     if (!evidenceDist) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
     const levelMap = {
       '高': { color: COLORS.primary, label: '高' },
       '中-高': { color: COLORS.secondary, label: '中-高' },
@@ -290,7 +294,7 @@
     if (!dom || typeof echarts === 'undefined') return null;
     if (!designDist) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
     const entries = Object.entries(designDist)
       .map(([design, count]) => ({ design, count }))
       .sort((a, b) => b.count - a.count)
@@ -339,7 +343,7 @@
     const stages = chartData.stages || [];
     if (!stages.length) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
     const gapColors = { 'low': COLORS.secondary, 'medium': COLORS.primary, 'high': COLORS.accent };
     const gapLabels = { 'low': '低', 'medium': '中', 'high': '高' };
 
@@ -405,7 +409,7 @@
     const stages = chartData.stages || [];
     if (!stages.length) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
 
     // 用文献数量做相对漏斗展示（注明非实际人群比例）
     const values = stages.map(function(s) { return Math.max(1, s.related_studies); });
@@ -483,7 +487,7 @@
     const biomarkers = chartData.biomarkers || [];
     if (!biomarkers.length) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
 
     const statusColors = {
       'clinical_practice': COLORS.primary,
@@ -556,7 +560,7 @@
     const populations = chartData.populations || [];
     if (!populations.length) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
 
     chart.setOption({
       animation: false,
@@ -631,7 +635,7 @@
     const stageLabels = chartData.stage_labels || [];
     if (!drugs.length) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
 
     chart.setOption({
       animation: false,
@@ -706,7 +710,7 @@
     const stages = chartData.stages || [];
     if (!stages.length) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
 
     const riskColors = { 'low': COLORS.secondary, 'medium': COLORS.primary, 'high': COLORS.accent };
 
@@ -777,7 +781,7 @@
     const factors = chartData.risk_factors || [];
     if (!factors.length) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
 
     const strengthMap = { 'strong': 3, 'moderate': 2, 'weak': 1 };
     const contributionMap = { 'high': 3, 'medium': 2, 'low': 1 };
@@ -850,7 +854,7 @@
     const domains = chartData.domains || [];
     if (!domains.length) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
 
     const priorityColors = { 'high': COLORS.primary, 'medium': COLORS.accent, 'low': COLORS.secondary };
 
@@ -921,7 +925,7 @@
     const strategies = chartData.strategies || [];
     if (!strategies.length) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
 
     const priorityColors = { 'high': COLORS.primary, 'medium': COLORS.accent, 'low': COLORS.secondary };
 
@@ -992,7 +996,7 @@
     const levels = chartData.levels || [];
     if (!levels.length) return null;
 
-    const chart = echarts.init(dom);
+    const chart = echarts.init(dom, 'hbv-report');
 
     chart.setOption({
       animation: false,
@@ -1087,7 +1091,7 @@
       return;
     }
 
-    var chart = echarts.init(container);
+    var chart = echarts.init(container, 'hbv-report');
     var series = populations.map(function(p) {
       return {
         name: p.pop_name,
@@ -1154,7 +1158,7 @@
       return;
     }
 
-    var chart = echarts.init(container);
+    var chart = echarts.init(container, 'hbv-report');
     var categories = metrics.map(function(m) { return m.metric; });
     var counts = metrics.map(function(m) { return m.evidence_count || 0; });
 
@@ -1192,7 +1196,7 @@
       return;
     }
 
-    var chart = echarts.init(container);
+    var chart = echarts.init(container, 'hbv-report');
     var categories = metrics.map(function(m) { return m.metric; });
     var counts = metrics.map(function(m) { return m.evidence_count || 0; });
 
