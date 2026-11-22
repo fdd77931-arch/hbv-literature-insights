@@ -11,8 +11,8 @@
   --bg2: #ecf0eb;
   --ink: #273632;
   --ink-light: #31423d;
-  --muted: #58665e;
-  --muted-light: #647169;
+  --muted: #49584f;
+  --muted-light: #546159;
   --rule: #d6dfd8;
   --rule-light: #eee4d9;
   
@@ -289,8 +289,8 @@ strong { font-weight: 700; color: var(--ink); }
   font-weight: 700;
 }
 .chapter-meta-value.accent { color: var(--accent); }
-.chapter-meta-value.orange { color: var(--accent2); }
-.chapter-meta-value.green { color: var(--accent3); }
+.chapter-meta-value.orange { color: #804e60; }
+.chapter-meta-value.green { color: #41674f; }
 
 /* ============================================================
    核心洞察卡片（总体核心洞察）
@@ -368,8 +368,8 @@ strong { font-weight: 700; color: var(--ink); }
   flex-shrink: 0;
 }
 .meta-tag.blue { background: rgba(176,91,54,0.1); color: var(--accent); }
-.meta-tag.orange { background: rgba(136,68,49,0.1); color: var(--accent2); }
-.meta-tag.green { background: rgba(190,151,111,0.1); color: var(--accent3); }
+.meta-tag.orange { background: rgba(136,68,49,0.1); color: #804e60; }
+.meta-tag.green { background: rgba(190,151,111,0.1); color: #41674f; }
 .meta-tag.teal { background: rgba(176,91,54,0.08); color: var(--accent-dark); }
 
 /* ============================================================
@@ -577,8 +577,8 @@ strong { font-weight: 700; color: var(--ink); }
   color: var(--accent);
   margin-bottom: 0.4rem;
 }
-.callout.orange .callout-label { color: var(--accent2); }
-.callout.green .callout-label { color: var(--accent3); }
+.callout.orange .callout-label { color: #804e60; }
+.callout.green .callout-label { color: #41674f; }
 .callout.teal .callout-label { color: var(--accent-dark); }
 .callout p { margin-bottom: 0.5rem; font-size: 0.88rem; line-height: 1.7; }
 .callout p:last-child { margin-bottom: 0; }
@@ -681,8 +681,8 @@ td .col-study:hover { color: var(--accent); }
   font-size: 0.78rem;
 }
 .level-A { background: rgba(176,91,54,0.12); color: var(--accent); }
-.level-B { background: rgba(190,151,111,0.12); color: var(--accent3); }
-.level-C { background: rgba(136,68,49,0.1); color: var(--accent2); }
+.level-B { background: rgba(190,151,111,0.12); color: #41674f; }
+.level-C { background: rgba(136,68,49,0.1); color: #804e60; }
 .level-D { background: rgba(112,91,79,0.1); color: var(--muted); }
 .bar-cell {
   display: flex;
@@ -721,9 +721,9 @@ td .col-study:hover { color: var(--accent); }
   margin-bottom: 0.5rem;
   letter-spacing: 0.05em;
 }
-.priority-tag.high { background: rgba(136,68,49,0.12); color: var(--accent2); }
+.priority-tag.high { background: rgba(136,68,49,0.12); color: #804e60; }
 .priority-tag.med { background: rgba(176,91,54,0.1); color: var(--accent); }
-.priority-tag.low { background: rgba(190,151,111,0.1); color: var(--accent3); }
+.priority-tag.low { background: rgba(190,151,111,0.1); color: #41674f; }
 
 .strategy-card h4 {
   font-size: 0.95rem;
@@ -751,7 +751,7 @@ td .col-study:hover { color: var(--accent); }
 }
 .strategy-card .sc-kpi {
   font-weight: 600;
-  color: var(--accent3);
+  color: #41674f;
 }
 
 /* ============================================================
@@ -850,7 +850,7 @@ td .col-study:hover { color: var(--accent); }
   font-weight: 700;
   color: var(--ink);
 }
-.cluster-stat-value.teal { color: var(--accent3); }
+.cluster-stat-value.teal { color: #41674f; }
 .cluster-stat-label {
   font-size: 0.68rem;
   color: var(--muted);
@@ -982,7 +982,7 @@ td .col-study:hover { color: var(--accent); }
 }
 .journey-stage .stage-risk {
   font-size: 0.7rem;
-  color: var(--accent2);
+  color: #804e60;
   margin-bottom: 0.2rem;
 }
 .journey-stage .stage-detail {
@@ -1016,7 +1016,7 @@ td .col-study:hover { color: var(--accent); }
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--accent3);
+  color: #41674f;
   margin-bottom: 0.3rem;
 }
 .patient-mgmt-text {
@@ -1051,8 +1051,8 @@ td .col-study:hover { color: var(--accent); }
   flex-shrink: 0;
 }
 .update-level.level-A { background: rgba(176,91,54,0.12); color: var(--accent); }
-.update-level.level-B { background: rgba(190,151,111,0.12); color: var(--accent3); }
-.update-level.level-C { background: rgba(136,68,49,0.1); color: var(--accent2); }
+.update-level.level-B { background: rgba(190,151,111,0.12); color: #41674f; }
+.update-level.level-C { background: rgba(136,68,49,0.1); color: #804e60; }
 .update-level.level-D { background: rgba(112,91,79,0.1); color: var(--muted); }
 .update-year {
   font-size: 0.75rem;
@@ -1073,7 +1073,7 @@ td .col-study:hover { color: var(--accent); }
 .update-china {
   font-size: 0.68rem;
   background: rgba(190,151,111,0.1);
-  color: var(--accent3);
+  color: #41674f;
   padding: 0.1rem 0.35rem;
   border-radius: 3px;
   flex-shrink: 0;
@@ -1144,7 +1144,7 @@ td .col-study:hover { color: var(--accent); }
   color: var(--accent);
   margin-bottom: 0.25rem;
 }
-.consistency-item:nth-child(2) .consistency-item-title { color: var(--accent2); }
+.consistency-item:nth-child(2) .consistency-item-title { color: #804e60; }
 .consistency-item:nth-child(3) .consistency-item-title { color: var(--muted); }
 .consistency-item-text {
   font-size: 0.82rem;
@@ -1195,7 +1195,7 @@ td .col-study:hover { color: var(--accent); }
 .alliance-action-label {
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--accent3);
+  color: #41674f;
   margin-bottom: 0.25rem;
 }
 .alliance-action-text {
@@ -1221,7 +1221,7 @@ td .col-study:hover { color: var(--accent); }
 .controversy-label {
   font-size: 0.78rem;
   font-weight: 700;
-  color: var(--accent2);
+  color: #804e60;
   margin-bottom: 0.25rem;
 }
 .controversy-text {
@@ -1521,15 +1521,15 @@ td .col-study:hover { color: var(--accent); }
   border-radius: 3px;
 }
 .evidence-level-badge.A { background: rgba(176,91,54,0.12); color: var(--accent); }
-.evidence-level-badge.B { background: rgba(190,151,111,0.12); color: var(--accent3); }
-.evidence-level-badge.C { background: rgba(136,68,49,0.1); color: var(--accent2); }
+.evidence-level-badge.B { background: rgba(190,151,111,0.12); color: #41674f; }
+.evidence-level-badge.C { background: rgba(136,68,49,0.1); color: #804e60; }
 .evidence-level-badge.D { background: rgba(112,91,79,0.1); color: var(--muted); }
 .china-badge {
   font-size: 0.68rem;
   padding: 0.12rem 0.35rem;
   border-radius: 3px;
 }
-.china-badge.yes { background: rgba(190,151,111,0.1); color: var(--accent3); }
+.china-badge.yes { background: rgba(190,151,111,0.1); color: #41674f; }
 .china-badge.no { background: rgba(112,91,79,0.1); color: var(--muted); }
 .evidence-item-impl {
   font-size: 0.78rem;
@@ -1712,7 +1712,7 @@ td .col-study:hover { color: var(--accent); }
   border: 1px solid rgba(136,68,49,0.15);
   border-radius: var(--radius);
   font-size: 0.85rem;
-  color: var(--accent2);
+  color: #804e60;
   margin: 1rem 0;
 }
 .significance-box {
@@ -1778,8 +1778,8 @@ td .col-study:hover { color: var(--accent); }
   font-weight: 600;
 }
 .linked-lit-level.high { background: rgba(176,91,54,0.12); color: var(--accent); }
-.linked-lit-level.mid-high { background: rgba(190,151,111,0.12); color: var(--accent3); }
-.linked-lit-level.mid { background: rgba(136,68,49,0.1); color: var(--accent2); }
+.linked-lit-level.mid-high { background: rgba(190,151,111,0.12); color: #41674f; }
+.linked-lit-level.mid { background: rgba(136,68,49,0.1); color: #804e60; }
 .linked-lit-level.low { background: rgba(112,91,79,0.1); color: var(--muted); }
 .linked-lit-level.unknown { background: var(--bg2); color: var(--muted); }
 
@@ -1794,7 +1794,7 @@ td .col-study:hover { color: var(--accent); }
   font-size: 0.72rem;
   padding: 0.2rem 0.5rem;
   background: rgba(190,151,111,0.08);
-  color: var(--accent3);
+  color: #41674f;
   border-radius: 4px;
   border: 1px solid rgba(190,151,111,0.15);
 }
@@ -1819,8 +1819,8 @@ td .col-study:hover { color: var(--accent); }
   font-weight: 700;
   color: var(--ink);
 }
-.audit-value.success { color: var(--accent3); }
-.audit-value.danger { color: var(--accent2); }
+.audit-value.success { color: #41674f; }
+.audit-value.danger { color: #804e60; }
 .audit-label {
   font-size: 0.72rem;
   color: var(--muted);
@@ -2008,8 +2008,8 @@ footer {
   margin-bottom: 0.4rem;
 }
 
-.chart-insight-card.accent2 .chart-badge { color: var(--accent2); }
-.chart-insight-card.accent3 .chart-badge { color: var(--accent3); }
+.chart-insight-card.accent2 .chart-badge { color: #804e60; }
+.chart-insight-card.accent3 .chart-badge { color: #41674f; }
 
 .chart-header h3 {
   font-family: var(--font-serif);
@@ -2084,8 +2084,8 @@ footer {
   min-width: 5.5rem;
 }
 
-.chart-insight-card.accent2 .insight-panel .insight-label { color: var(--accent2); }
-.chart-insight-card.accent3 .insight-panel .insight-label { color: var(--accent3); }
+.chart-insight-card.accent2 .insight-panel .insight-label { color: #804e60; }
+.chart-insight-card.accent3 .insight-panel .insight-label { color: #41674f; }
 
 .insight-panel .insight-value {
   color: var(--ink-light);
@@ -2127,9 +2127,9 @@ footer {
   letter-spacing: 0.05em;
 }
 
-.sa-priority.high { background: rgba(136,68,49,0.12); color: var(--accent2); }
+.sa-priority.high { background: rgba(136,68,49,0.12); color: #804e60; }
 .sa-priority.medium { background: rgba(176,91,54,0.1); color: var(--accent); }
-.sa-priority.exploratory { background: rgba(190,151,111,0.1); color: var(--accent3); }
+.sa-priority.exploratory { background: rgba(190,151,111,0.1); color: #41674f; }
 
 .strategy-action-card .sa-grid {
   display: grid;
@@ -2352,14 +2352,14 @@ footer {
 /* 增强 — 绿色背景，向上箭头 */
 .trend-badge.strengthening {
   background: rgba(190,151,111, 0.12);
-  color: var(--accent3);
+  color: #41674f;
   border: 1px solid rgba(190,151,111, 0.25);
 }
 
 /* 减弱 — 橙色背景，向下箭头 */
 .trend-badge.weakening {
   background: rgba(136,68,49, 0.12);
-  color: var(--accent2);
+  color: #804e60;
   border: 1px solid rgba(136,68,49, 0.25);
 }
 
@@ -2373,7 +2373,7 @@ footer {
 /* 存在争议 — 橙色边框，感叹号图标 */
 .trend-badge.controversial {
   background: transparent;
-  color: var(--accent2);
+  color: #804e60;
   border: 1px solid var(--accent2);
 }
 
@@ -2488,11 +2488,11 @@ footer {
 }
 
 .chart-insight-card.accent2 .sp-actions-list li::marker {
-  color: var(--accent2);
+  color: #804e60;
 }
 
 .chart-insight-card.accent3 .sp-actions-list li::marker {
-  color: var(--accent3);
+  color: #41674f;
 }
 
 /* KPI — 绿色徽章样式 */
@@ -2513,7 +2513,7 @@ footer {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent3);
+  color: #41674f;
   padding-top: 0.1rem;
 }
 
@@ -2525,7 +2525,7 @@ footer {
 }
 
 .sp-kpi-value strong {
-  color: var(--accent3);
+  color: #41674f;
   font-weight: 700;
 }
 
@@ -2583,7 +2583,7 @@ footer {
 }
 
 .chart-insight-card.accent2 .evidence-drawer-btn {
-  color: var(--accent2);
+  color: #804e60;
 }
 
 .chart-insight-card.accent2 .evidence-drawer-btn:hover {
@@ -2592,7 +2592,7 @@ footer {
 }
 
 .chart-insight-card.accent3 .evidence-drawer-btn {
-  color: var(--accent3);
+  color: #41674f;
 }
 
 .chart-insight-card.accent3 .evidence-drawer-btn:hover {
@@ -2794,12 +2794,12 @@ footer {
 
 .drawer-evidence-level.B {
   background: rgba(190,151,111, 0.12);
-  color: var(--accent3);
+  color: #41674f;
 }
 
 .drawer-evidence-level.C {
   background: rgba(136,68,49, 0.1);
-  color: var(--accent2);
+  color: #804e60;
 }
 
 .drawer-evidence-level.D {
@@ -2813,7 +2813,7 @@ footer {
   padding: 0.1rem 0.35rem;
   border-radius: 3px;
   background: rgba(190,151,111, 0.1);
-  color: var(--accent3);
+  color: #41674f;
 }
 
 .drawer-evidence-journal {
@@ -2891,12 +2891,12 @@ footer {
 
 .crc-type-badge.strengthening {
   background: rgba(190,151,111, 0.12);
-  color: var(--accent3);
+  color: #41674f;
 }
 
 .crc-type-badge.weakening {
   background: rgba(136,68,49, 0.12);
-  color: var(--accent2);
+  color: #804e60;
 }
 
 .crc-type-badge.emerging {
@@ -2989,11 +2989,11 @@ footer {
 }
 
 .change-report-card.change-strengthening .crc-lit-count .count-num {
-  color: var(--accent3);
+  color: #41674f;
 }
 
 .change-report-card.change-weakening .crc-lit-count .count-num {
-  color: var(--accent2);
+  color: #804e60;
 }
 
 .crc-view-btn {
@@ -3048,7 +3048,7 @@ footer {
 
 .mam-priority.high {
   background: rgba(136,68,49, 0.12);
-  color: var(--accent2);
+  color: #804e60;
 }
 
 .mam-priority.medium {
@@ -3058,7 +3058,7 @@ footer {
 
 .mam-priority.exploratory {
   background: rgba(190,151,111, 0.1);
-  color: var(--accent3);
+  color: #41674f;
 }
 
 /* 行动名称 */
@@ -3115,7 +3115,7 @@ footer {
 
 /* 预期KPI — 绿色强调 */
 .mam-detail-value.kpi {
-  color: var(--accent3);
+  color: #41674f;
   font-weight: 600;
 }
 
@@ -3409,7 +3409,7 @@ a:focus, button:focus, input:focus, select:focus {
 
 .dp-limit {
   width: 100%;
-  color: var(--accent2);
+  color: #804e60;
   font-size: 0.78rem;
   font-style: italic;
 }

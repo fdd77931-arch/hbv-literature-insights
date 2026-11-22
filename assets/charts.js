@@ -44,8 +44,8 @@
     ink900: '#273632',
     ink700: '#31423d',
     ink600: '#4a5953',
-    ink500: '#58665e',
-    ink400: '#647169',
+    ink500: '#49584f',
+    ink400: '#546159',
     ink300: '#c4cec6',
     ink200: '#d6dfd8',
     ink100: '#ecf0eb'
@@ -1091,7 +1091,7 @@
     var populations = popMatrix.populations || [];
 
     if (!populations.length) {
-      container.innerHTML = '<div style="text-align:center;padding:3rem;color:#999;">当前文献库中暂无TMF患者人群证据</div>';
+      container.innerHTML = '<div style="text-align:center;padding:3rem;color:#58655e;">当前文献库中暂无TMF患者人群证据</div>';
       return;
     }
 
@@ -1158,7 +1158,7 @@
     var metrics = efficacy.metrics || [];
 
     if (!metrics.length) {
-      container.innerHTML = '<div style="text-align:center;padding:3rem;color:#999;">暂无TMF疗效数据</div>';
+      container.innerHTML = '<div style="text-align:center;padding:3rem;color:#58655e;">暂无TMF疗效数据</div>';
       return;
     }
 
@@ -1196,7 +1196,7 @@
     var metrics = safety.metrics || [];
 
     if (!metrics.length) {
-      container.innerHTML = '<div style="text-align:center;padding:3rem;color:#999;">暂无TMF安全性数据</div>';
+      container.innerHTML = '<div style="text-align:center;padding:3rem;color:#58655e;">暂无TMF安全性数据</div>';
       return;
     }
 
